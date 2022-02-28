@@ -1,4 +1,5 @@
 ---
+type: fff
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@
                 <div class="row">
 
                     <div class="col-12" style="color: white;">
-                        {% if page.title == site.title %}
+                        {% if page.title == site.title or page.type == "Blog" %}
                         <img class="" src="assets/images/farama_white.svg" width="125" height="135" />
                         {% endif %}
                         <h1 class="">
