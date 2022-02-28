@@ -38,10 +38,10 @@
     // https://stackoverflow.com/questions/23706003/changing-nav-bar-color-after-scrolling
     $(function () {
         $(document).scroll(function () {
-            if (screen.width <= 991) {
+            // if (screen.width <= 991) {
                 var $nav = $(".navbar-fixed-top");
                 $nav.toggleClass('scrolled', $(this).scrollTop() > 3 * $nav.height());
-            }
+            // }
         });
     });
 
