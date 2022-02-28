@@ -1,0 +1,20 @@
+- name: Jordan Terry
+  position: CEO, Chair of Board<br>University of Maryland, Swarm Labs
+  image: jordan.jpeg
+  site: https://github.com/jkterry1
+- name: Benjamin Black
+  position: PettingZoo Maintainer, Board member<br>
+  image: ben.jpg
+  site: https://benblack769.github.io
+- name: John Dickerson
+  position: Board member<br>University of Maryland, <a href="https://arthur.ai/">Arthur.ai</a>
+  image: john.jpg
+  site: http://jpdickerson.com
+- name: Ariel Kwiatkowski
+  position: Gym Maintainer<br>École Polytechnique, Ubisoft
+  image: ariel.jpg
+  site: https://redtachyon.me
+- name: Sander Schulhoff
+  position: Web/Software Developer<br>University of Maryland
+  image: sander.jpeg
+  site: https://trigaten.github.io

@@ -1,0 +1,39 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include nav.html %}
+    <div class="pt-5 shadow-lg py-3" style="background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 10%, rgba(31,31,101,1) 88%);">
+        <div class="jumbotron mb-5 pt-5">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-12" style="color: white;">
+                        {% if page.title == site.title %}
+                        <img class="" src="assets/images/farama_white.svg" width="125" height="135" />
+                        {% endif %}
+                        <h1 class="">
+                            {{page.title}}
+                        </h1>
+                        <h5>
+                            {{page.subtitle}}
+    
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{content}}
+    
+    {% include footer.html %}
+</body>
+
+
+
+</html>
