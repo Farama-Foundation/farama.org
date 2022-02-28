@@ -29,11 +29,20 @@ description: >- # this means to ignore newlines until "baseurl:"
 url    : "farama.org" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
 github: https://github.com/Farama-Foundation
+
+logo: assets/images/farama_solid_white.png
+
+favicon: assets/images/farama_solid_white.png
+
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  
 google_analytics: G-F8B6SYES1P
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -7,14 +7,14 @@
   site: https://www.pettingzoo.ml
   image: PettingZoo.svg
   desc: Gym for multi-agent environments
-- name: Supersuit
+- name: SuperSuit
   site: https://github.com/Farama-Foundation/SuperSuit
   image: SuperSuit.svg
   desc: A collection of reinforcement learning environment wrappers
 - name: Tinyscaler
   site: https://github.com/Farama-Foundation/tinyscaler
   desc: A small and fast image rescaling library with SIMD support
-- name: Gym-robotics
+- name: Gym-Robotics
   site: https://github.com/Farama-Foundation/gym-robotics
   desc: A collection of robotics environments for reinforcement learning
 - name: AutoROM
@@ -23,7 +23,7 @@
 - name: MAgent
   site: https://github.com/Farama-Foundation/MAgent
   desc: An engine to create efficient 2D environments with hundreds or thousands of agents
-- name: Gym-mujoco
+- name: Gym-MuJoCo
   desc: All of the MuJoCo class environments formerly in Gym (recommend for reproducing results only)
 
 # - name: Multi-Agent-ALE
