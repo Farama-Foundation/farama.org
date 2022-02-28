@@ -1,0 +1,8 @@
+- name: arthur.ai 
+  image: arthur.svg
+  site: https://arthur.ai
+  color: "000000"
+- name: anyscale
+  image: anyscale.svg
+  site: https://www.anyscale.com
+  color: 2295ff

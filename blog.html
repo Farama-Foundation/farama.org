@@ -1,0 +1,26 @@
+---
+title: Blog
+---
+
+<div class="container-fluid mt-5 pt-5" style="text-align: left;">
+    {% for post in site.posts %}
+        <div class="row">
+            
+            <div class="col-4 offset-2">
+                
+                <a href="{{post.url | relative_url}}" style="text-decoration: none;color:black">
+                    <h3>{{post.title}}</h3>
+                    <span class="text-muted">{{ post.excerpt | strip_html }}</span>
+                </a>
+                
+            </div>
+            <div class="col-2 offset-2">
+                {{post.date | date: "%-d %B %Y" }}
+            </div>
+
+            
+            
+        </div>
+        <hr>
+    {% endfor %}
+</div>

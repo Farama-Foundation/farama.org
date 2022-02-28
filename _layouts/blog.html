@@ -1,0 +1,43 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include nav.html %}
+    <div class="pt-5 shadow-lg py-3" style="background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 10%, rgba(31,31,101,1) 88%);">
+        <div class="jumbotron mb-5 pt-5">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-12" style="color: white;">
+
+                        <h1 class="">
+                            Blog
+                        </h1>
+                        <h5>
+                            {{page.title}}
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5" style="text-align: left;" markdown="1">
+        <div class="row">
+            <div class="col">
+                {{content}}
+            </div>
+        </div>
+    </div>
+    
+    
+    {% include footer.html %}
+</body>
+
+
+
+</html>

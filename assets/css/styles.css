@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto
+}
+
+img.light-shadow {
+    filter: drop-shadow(4px 4px 3px rgba(70, 65, 68, 0.8));
+}
+
+@media (min-width: 200px) {
+    .third{
+        width: 90%;
+    }
+}
+@media (min-width: 600px) {
+    .third{
+        width: 33.3333%;
+    }
+}

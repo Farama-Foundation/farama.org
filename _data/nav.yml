@@ -1,0 +1,12 @@
+- name: Home
+  link: index.html
+- name: About
+  link: about.html
+- name: Team
+  link: team.html
+- name: Contact
+  link: contact.html
+- name: Blog
+  link: blog.html
+- name: Donors
+  link: donors.html
