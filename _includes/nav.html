@@ -35,19 +35,34 @@
 </style>
 
 <script>
+    sandwich_open = false
     // https://stackoverflow.com/questions/23706003/changing-nav-bar-color-after-scrolling
     $(function () {
         $(document).scroll(function () {
-            // if (screen.width <= 991) {
-                var $nav = $(".navbar-fixed-top");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > 3 * $nav.height());
-            // }
+            checkMenuBackground()
         });
     });
 
     $('.navbar-toggler').click(function () {
-
-        document.getElementById("nav").classList.toggle("lin-grad")
-
+        sandwich_open =  !sandwich_open
+        checkMenuBackground()
     });
+
+    // checks whether the background should be a gradient or clear
+    // and sets it appropriately
+    function checkMenuBackground(){
+        
+        if (sandwich_open) {
+            document.getElementById("nav").classList.add("scrolled")
+        }else{
+            var $nav = $(".navbar-fixed-top");
+            
+            if ($(document).scrollTop() > $nav.height() + 50){
+                document.getElementById("nav").classList.add("scrolled")
+            }else{
+                document.getElementById("nav").classList.remove("scrolled")
+            }
+            
+        }
+    }
 </script>
