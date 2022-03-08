@@ -1,0 +1,8 @@
+- name: Github Sponsors
+  image: github.png
+  site: https://github.com/sponsors/Farama-Foundation
+  fees: No fees for user accounts<br>10% fee for organization accounts
+- name: LiberaPay
+  image: liberapay.svg
+  site: https://en.liberapay.com/Farama-Foundation/
+  fees: No fees
