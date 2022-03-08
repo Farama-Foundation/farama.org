@@ -1,8 +1,8 @@
 
-- name: Gym
-  site: https://www.gymlibrary.ml
-  image: hexlogo_black.svg
-  desc: A standard API for reinforcement learning and a diverse set of reference environments
+# - name: Gym
+#   site: https://www.gymlibrary.ml
+#   image: hexlogo_black.svg
+#   desc: A standard API for reinforcement learning and a diverse set of reference environments
 - name: PettingZoo
   site: https://www.pettingzoo.ml
   image: PettingZoo.svg

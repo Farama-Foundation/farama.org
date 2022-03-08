@@ -20,13 +20,14 @@
 
 title: The Farama Foundation
 email: contact@farama.org
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- 
   The Farama Foundation is a non-profit organization which promotes reinforcement
   learning through the maintenance of open source libraries such as Gym, the standard
   reinforcement learning API, 
   Pettingzoo, a multiagent reinforcement learning library, and Supersuit, a collection
   of popular Gym wrappers, as well as a number of other open source projects.
-url    : "farama.org" # the base hostname & protocol for your site, e.g. http://example.com
+  
+url: "farama.org" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
 github: https://github.com/Farama-Foundation
 

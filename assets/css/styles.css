@@ -24,3 +24,11 @@ img.light-shadow {
         width: 33.3333%;
     }
 }
+
+.donor {
+    color: #059d05;
+}
+
+.nav-link{
+    color: white;font-size: 20px;font-weight: 600;
+}
