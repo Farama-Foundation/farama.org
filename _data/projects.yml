@@ -13,6 +13,7 @@
   desc: A collection of reinforcement learning environment wrappers
 - name: Tinyscaler
   site: https://github.com/Farama-Foundation/tinyscaler
+  image: TinyScalar.svg
   desc: A small and fast image rescaling library with SIMD support
 - name: Gym-Robotics
   site: https://github.com/Farama-Foundation/gym-robotics
