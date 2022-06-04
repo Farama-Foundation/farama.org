@@ -4,13 +4,18 @@ title: The Farama Foundation
 index: true
 ---
 
+<!-- <style>
+    *{
+        border: 1px solid black
+    }
+</style> -->
 <div class="container-fluid pt-5">
     <div class="row">
         {% for project in site.data.projects %}
-        <div class="col-4 mb-5">
+        <div class="col-4 mb-5 pb-5" style="height:30vh ">
             <h3>{{project.name}}</h3>
             <a href="{{project.site}}">
-                <img src="assets/images/{{project.image}}" class="mx-md-auto third"
+                <img src="assets/images/{{project.image}}" style="height: 80%;width:90%"
                     alt="">
             </a>
             <h5 class="d-none d-md-block mx-5 mt-2">{{project.desc}}</h5>

@@ -18,12 +18,15 @@
 - name: Gym-Robotics
   site: https://github.com/Farama-Foundation/gym-robotics
   desc: A collection of robotics environments for reinforcement learning
+  image: GymRobotics.svg
 - name: AutoROM
   site: https://github.com/Farama-Foundation/AutoROM
   desc: A tool to automate installing Atari ROMs for the Arcade Learning Environment
+  image: AutoRom.svg
 - name: MAgent
   site: https://github.com/Farama-Foundation/MAgent
   desc: An engine to create efficient 2D environments with hundreds or thousands of agents
+  image: Magent.svg
 - name: Gym-MuJoCo
   desc: All of the MuJoCo class environments formerly in Gym (recommend for reproducing results only)
 

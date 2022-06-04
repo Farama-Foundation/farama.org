@@ -14,14 +14,15 @@ img.light-shadow {
     filter: drop-shadow(4px 4px 3px rgba(70, 65, 68, 0.8));
 }
 
-@media (min-width: 200px) {
+/* @media (min-width: 200px) {
     .third{
-        width: 90%;
+        height: 90%;
     }
-}
+} */
+
 @media (min-width: 600px) {
     .third{
-        width: 33.3333%;
+        height: 10%;
     }
 }
 
