@@ -1,7 +1,7 @@
 - name: Home
-  link: index.html
-- name: About
   link: about.html
+- name: Projects
+  link: index.html
 - name: Team
   link: team.html
 - name: Contact

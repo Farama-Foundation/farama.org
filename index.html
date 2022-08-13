@@ -12,14 +12,97 @@ index: true
 <div class="container-fluid pt-5">
     <div class="row">
         {% for project in site.data.projects %}
-        <div class="col-4 mb-5 pb-5" style="height:30vh ">
+        <div class="col-4 mb-5 pb-5" style="height:30vh">
             <h3>{{project.name}}</h3>
-            <a href="{{project.site}}">
-                <img src="assets/images/{{project.image}}" style="height: 80%;width:90%"
-                    alt="">
-            </a>
+            <img src="assets/images/{{project.image}}" style="height: 80%;width:90%"
+                 alt="">
             <h5 class="d-none d-md-block mx-5 mt-2">{{project.desc}}</h5>
+            <a style="margin-right: 5px" href="{{project.github}}">Github</a>
+            <a href="{{project.doc}}">Documentation</a>
         </div>
         {% endfor %}
     </div>
+    <br>
+    <h1>How to Submit Projects</h1>
+    <div>
+        If you'd like your reinforcement learning project to us to be maintained long term,
+        please reach out to us at jkterry@farama.org. In general, we're only looking for
+        projects that have already become widely used or clearly have a profound technical
+        use in the field if they're not currently widely used. We work to bring all new and
+        existing projects to our [standards], and generally request that new projects meet
+        the vast majority of these requirements before submission (though please reach out
+        to us if you have any questions).
+    </div>
+    <br>
+    <div style="text-align: left">
+        <h1>List of Project Standards</h1>
+        <div>
+            <h2>Standardization</h2>
+            <ul>
+                <li>Support Gym and/or PettingZoo API at the newest version (alternative APIs in addition to these are
+                    fine)
+                </li>
+                <li>
+                    Support all supported versions of Python (currently 3.7-3.10)
+                </li>
+            </ul>
+            <h2>Good Science</h2>
+            <ul>
+                <li>Be fully reproducible given seeds and tested to confirm this
+                </li>
+                <li>
+                    Deterministic builds for compiled libraries
+                </li>
+                <li>
+                    Have hooks for hyperparameter tuning (learning libraries only)
+                </li>
+            </ul>
+            <h2>Quality of Life</h2>
+            <ul>
+                <li>
+                    Good documentation website (if library is large enough)
+                </li>
+                <li>
+                    Support for Linux and macOS (x86_64 and ARM)
+                </li>
+                <li>
+                    Natively support PyPI
+                </li>
+            </ul>
+            <h2>Testing</h2>
+            <ul>
+                <li>CI with API compliance tests
+                </li>
+                <li>Pre-commit with black, flake8 and isort
+                </li>
+                <li>Add type hinting with pyright (with testing at pre-commit)
+                </li>
+                <li>Add docstrings for all reasonable functions (using pydocstyle and google style)</li>
+            </ul>
+            <h2>Long Term Support</h2>
+            <ul>
+                <li>Releases cut via GitHub action on GitHub release</li>
+                <li>Jordan is an owner on PyPI in case someone gets hit by a bus</li>
+            </ul>
+            <h2>Branding</h2>
+            <ul>
+                <li>Logo (in the same style as other projects)</li>
+                <li>Have documentation be at  ___.farama.org (or have that address forward to documentation site), with Google analytics setup
+                </li>
+                <li>Include readme.md on PyPI page</li>
+            </ul>
+            <h2>Licensing</h2>
+            <ul>
+                <li>MIT license of similar (Apache 2.0 is fine)</li>
+            </ul>
+            <h2>Future Standards</h2>
+            <ul>
+                <li>Expose vector API via envpool for C based environments</li>
+                <li>Poetry based requirements.txt autogeneration</li>
+                <li>Natively support Conda</li>
+            </ul>
+        </div>
+    </div>
+
+
 </div>
