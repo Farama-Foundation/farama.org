@@ -1,8 +1,9 @@
 
-# - name: Gym
-#   site: https://www.gymlibrary.ml
-#   image: hexlogo_black.svg
-#   desc: A standard API for reinforcement learning and a diverse set of reference environments
+- name: Gymnasium
+  github: https://github.com/openai/gym
+  doc: https://www.gymlibrary.ml
+  image: hexlogo_black.svg
+  desc: A standard API for reinforcement learning and a diverse set of reference environments
 - name: PettingZoo
   github: https://github.com/Farama-Foundation/PettingZoo
   doc: https://www.pettingzoo.ml
@@ -18,7 +19,7 @@
   doc:
   image: TinyScalar.svg
   desc: A small and fast image rescaling library with SIMD support
-- name: Gym-Robotics
+- name: Gymnasium-Robotics
   github: https://github.com/Farama-Foundation/gym-robotics
   doc:
   desc: A collection of robotics environments for reinforcement learning
@@ -33,4 +34,23 @@
   doc:
   desc: An engine to create efficient 2D environments with hundreds or thousands of agents
   image: Magent.svg
-
+- name: Procgen2
+  github: https://github.com/Farama-Foundation/procgen2
+  doc:
+  desc: A maintained version of Procgen
+  image:
+- name: MicroRTS
+  github: https://github.com/Farama-Foundation/gym-microrts
+  doc:
+  desc:
+  image:
+- name: Minigrid
+  github: https://github.com/Farama-Foundation/gym-minigrid
+  doc:
+  desc:
+  image:
+- name: Miniworld
+  github: https://github.com/Farama-Foundation/gym-miniworld
+  doc:
+  desc: A minimalistic 3D interior environment simulator for reinforcement learning & robotics research
+  image:
