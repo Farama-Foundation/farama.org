@@ -1,8 +1,8 @@
-- name: arthur.ai 
-  image: arthur.svg
-  site: https://arthur.ai
+- name: Hugging Face
+  image: huggingface.svg
+  site: https://huggingface.co/
   color: "000000"
-- name: anyscale
-  image: anyscale.svg
-  site: https://www.anyscale.com
+- name: Google
+  image: google.svg
+  site: https://about.google/
   color: 2295ff

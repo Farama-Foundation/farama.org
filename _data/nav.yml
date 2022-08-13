@@ -1,14 +1,12 @@
 - name: Home
   link: about.html
 - name: Projects
-  link: index.html
+  link: projects.html
 - name: Team
   link: team.html
 - name: Contact
   link: contact.html
 - name: Blog
   link: blog.html
-- name: Donors
-  link: donors.html
-- name: Donate
-  link: donate.html
+- name: Donations
+  link: donations.html
