@@ -1,0 +1,32 @@
+--- 
+title: Donations
+---
+
+<div class="container-fluid" >
+    <div class="row pt-5">
+        <h3 class="mb-5">Donors</h3>
+        {% for org in site.data.donors %}
+        <div class="col-12 col-sm-6 col-md-4 mb-5">
+            <a href="{{org.site}}">
+                <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3" style="background-color: #{{org.color}}; height: 150px;"
+                     alt="">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container-fluid" >
+    <div class="row pt-5">
+        <h3 class="mb-5">We accept donations through a number of payment services</h3>
+        {% for org in site.data.donate %}
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <h2>{{org.name}}</h2>
+                <a href="{{org.site}}">
+                    <img src="assets/donate/{{org.image}}" class="mx-auto img-fluid px-3" style="height: 150px;"
+                        alt="">
+                </a>
+                <h5 class="mt-2">{{org.fees}}</h5>
+            </div>
+        {% endfor %}
+    </div>
+</div>

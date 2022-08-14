@@ -1,34 +1,55 @@
-
-# - name: Gym
-#   site: https://www.gymlibrary.ml
-#   image: hexlogo_black.svg
-#   desc: A standard API for reinforcement learning and a diverse set of reference environments
+- name: Gymnasium
+  github: https://github.com/openai/gym
+  website: https://www.gymlibrary.ml
+  image: hexlogo_black.svg
+  desc: A standard API for reinforcement learning and a diverse set of reference environments
 - name: PettingZoo
-  site: https://www.pettingzoo.ml
+  github: https://github.com/Farama-Foundation/PettingZoo
+  website: https://www.pettingzoo.ml
   image: PettingZoo.svg
   desc: Gym for multi-agent environments
 - name: SuperSuit
-  site: https://github.com/Farama-Foundation/SuperSuit
+  github: https://github.com/Farama-Foundation/SuperSuit
+  website:
   image: SuperSuit.svg
   desc: A collection of reinforcement learning environment wrappers
 - name: Tinyscaler
-  site: https://github.com/Farama-Foundation/tinyscaler
+  github: https://github.com/Farama-Foundation/tinyscaler
+  website:
   image: TinyScalar.svg
   desc: A small and fast image rescaling library with SIMD support
-- name: Gym-Robotics
-  site: https://github.com/Farama-Foundation/gym-robotics
+- name: Gymnasium-Robotics
+  github: https://github.com/Farama-Foundation/gym-robotics
+  website:
   desc: A collection of robotics environments for reinforcement learning
   image: GymRobotics.svg
 - name: AutoROM
-  site: https://github.com/Farama-Foundation/AutoROM
+  github: https://github.com/Farama-Foundation/AutoROM
+  website:
   desc: A tool to automate installing Atari ROMs for the Arcade Learning Environment
   image: AutoRom.svg
 - name: MAgent
-  site: https://github.com/Farama-Foundation/MAgent
+  github: https://github.com/Farama-Foundation/MAgent
+  website:
   desc: An engine to create efficient 2D environments with hundreds or thousands of agents
   image: Magent.svg
-- name: Gym-MuJoCo
-  desc: All of the MuJoCo class environments formerly in Gym (recommend for reproducing results only)
-
-# - name: Multi-Agent-ALE
-# - name: Jumpy
+- name: Procgen2
+  github: https://github.com/Farama-Foundation/procgen2
+  website:
+  desc: A maintained version of Procgen
+  image:
+- name: MicroRTS
+  github: https://github.com/Farama-Foundation/gym-microrts
+  website:
+  desc:
+  image:
+- name: Minigrid
+  github: https://github.com/Farama-Foundation/gym-minigrid
+  website:
+  desc:
+  image:
+- name: Miniworld
+  github: https://github.com/Farama-Foundation/gym-miniworld
+  website:
+  desc: A minimalistic 3D interior environment simulator for reinforcement learning & robotics research
+  image:
