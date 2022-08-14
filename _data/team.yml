@@ -3,22 +3,30 @@
   image: jordan.jpeg
   site: https://github.com/jkterry1
 - name: Benjamin Black
-  position: PettingZoo Maintainer, Board member<br>Accendero
+  position: Board member<br>Techcyte
   image: ben.jpg
   site: https://benblack769.github.io
-- name: John Dickerson
-  position: Board member<br>University of Maryland, Arthur.ai
-  image: john.jpg
-  site: http://jpdickerson.com
+- name: Mark Towers
+  position: Gymnasium maintainer and project manager
+  image: missingavatar.png
+  site:
+- name: Feng Gu
+  position: Web Developer
+  image: missingavatar.png
+  site: https://siddargu.github.io/
 - name: Ariel Kwiatkowski
   position: Gym Maintainer<br>École Polytechnique
   image: ariel.jpg
   site: https://redtachyon.me
-- name: Sander Schulhoff
-  position: Web/Software Developer<br>University of Maryland
-  image: sander.jpeg
-  site: https://trigaten.github.io
 - name: Shengyi “Costa” Huang
   position: Gym Contributor<br>Drexel University
   image: costa.png
   site: https://costa.sh
+- name: Jun Jet Tai
+  position: Maintainer of PettingZoo
+  image: missingavatar.png
+  site: https://jjshoots.github.io/jet.io/
+- name: Rodrigo de Lazcano Perez-Vicente
+  position: Maintainer of Gymnasium-Robotics and Minigrid
+  image: rodrigo.jpg
+  site: https://rodrigodelazcano.com/
