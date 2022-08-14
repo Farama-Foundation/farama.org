@@ -4,9 +4,9 @@
   link: projects.html
 - name: Team
   link: team.html
-- name: Contact
-  link: contact.html
-- name: Blog
-  link: blog.html
 - name: Donations
   link: donations.html
+- name: Blog
+  link: blog.html
+- name: Contact
+  link: contact.html
