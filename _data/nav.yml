@@ -1,5 +1,5 @@
 - name: Home
-  link: about.html
+  link: index.html
 - name: Projects
   link: projects.html
 - name: Team

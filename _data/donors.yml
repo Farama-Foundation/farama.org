@@ -1,8 +1,8 @@
 - name: Hugging Face
   image: huggingface.svg
   site: https://huggingface.co/
-  color: "000000"
+  color: "ffffff"
 - name: Google
   image: google.svg
   site: https://about.google/
-  color: 2295ff
+  color: ffffff

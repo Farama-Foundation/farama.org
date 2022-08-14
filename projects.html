@@ -1,7 +1,5 @@
 ---
-subtitle: For the Promotion of Open Source Reinforcement Learning
-title: The Farama Foundation
-index: true
+title: Projects
 ---
 
 <!-- <style>
@@ -18,7 +16,9 @@ index: true
                  alt="">
             <h5 class="d-none d-md-block mx-5 mt-2">{{project.desc}}</h5>
             <a style="margin-right: 5px" href="{{project.github}}">Github</a>
-            <a href="{{project.doc}}">Documentation</a>
+            {% if project.doc %}
+                <a href="{{project.doc}}">Documentation</a>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
