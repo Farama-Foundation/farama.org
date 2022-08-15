@@ -4,8 +4,28 @@ title: Donations
 
 <div class="container-fluid" >
     <div class="row pt-5">
-        <h3 class="mb-5">Donors</h3>
-        {% for org in site.data.donors %}
+        <h2 class="mb-5">Annual Donation Tiers</h2>
+
+        <h3>Silver - 10k</h3>
+        {% for org in site.data.silver_donors %}
+        <div class=" mb-5">
+            <a href="{{org.site}}">
+                <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3" style="background-color: #{{org.color}}; height: 150px;"
+                     alt="">
+            </a>
+        </div>
+        {% endfor %}
+        <h3>Gold - 25k</h3>
+        {% for org in site.data.gold_donors %}
+        <div class="mb-5">
+            <a href="{{org.site}}">
+                <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3" style="background-color: #{{org.color}}; height: 150px;"
+                     alt="">
+            </a>
+        </div>
+        {% endfor %}
+        <h3>Platnum - 50k</h3>
+        {% for org in site.data.platnum_donors %}
         <div class="col-12 col-sm-6 col-md-4 mb-5">
             <a href="{{org.site}}">
                 <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3" style="background-color: #{{org.color}}; height: 150px;"
@@ -13,6 +33,8 @@ title: Donations
             </a>
         </div>
         {% endfor %}
+        <h3>Diamond - 150k</h3>
+
     </div>
 </div>
 <div class="container-fluid" >
