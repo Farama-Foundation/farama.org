@@ -31,6 +31,8 @@ url: "farama.org" # the base hostname & protocol for your site, e.g. http://exam
 baseurl: ""
 github: https://github.com/Farama-Foundation
 twitter: https://twitter.com/FaramaFound
+reddit: https://www.reddit.com/r/farama/
+discord: https://discord.gg/PfR7a79FpQ
 
 logo: assets/images/farama_solid_white.png
 
@@ -44,7 +46,7 @@ plugins:
   
 google_analytics: G-F8B6SYES1P
 
-
+permalink: /:title
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

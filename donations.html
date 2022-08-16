@@ -1,6 +1,28 @@
 --- 
 title: Donations
 ---
+<!-- for paypal payments -->
+<script src="https://www.paypal.com/sdk/js?client-id=ARoTYDvrwPvrGBON3veeIccmNVa3YnB4Hxx5cJxnTgXmlWa__vkKa7aiIKfqmA111wc1x-43VjsGQXBZ&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+    paypal.Buttons({
+        style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'paypal'
+        },
+        createSubscription: function(data, actions) {
+            return actions.subscription.create({
+                /* Creates the subscription */
+                plan_id: 'P-4VD91427ED786441GML5L2ZQ',
+                quantity: 1 // The quantity of the product for a subscription
+            });
+        },
+        onApprove: function(data, actions) {
+            alert(data.subscriptionID); // You can add optional success message for the subscriber here
+        }
+    }).render('#paypal-button-container-P-4VD91427ED786441GML5L2ZQ'); // Renders the PayPal button
+</script>
 
 <div class="container-fluid" >
     <div class="row pt-5">
@@ -15,6 +37,10 @@ title: Donations
             <h5 class="mt-2">{{org.fees}}</h5>
         </div>
         {% endfor %}
+        <div class="col-12 col-sm-6 col-md-4 mb-5">
+            <h2>Paypal</h2>
+            <div id="paypal-button-container-P-4VD91427ED786441GML5L2ZQ"><img height="150px" src="assets/donate/paypal.png"</div>
+        </div>
     </div>
 </div>
 
