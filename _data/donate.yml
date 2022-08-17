@@ -9,8 +9,12 @@
 - name: Paypal
   image: paypal.png
   site: paypal
-  fees: 1.99% + .49 cents
+  fees: Fees are 1.99% + .49 cents
 - name: every.org
   image: every.svg
-  site: everyorg
+  site: https://www.every.org/farama-inc#donate
+  fees: <a href="https://www.every.org/disbursements">Variable fees</a> based on payment method, accepts cryptocurrencies
+- name: Contact us directly
+  image: farama.svg
+  site: mailto:contact@farama.org
   fees: No fees
