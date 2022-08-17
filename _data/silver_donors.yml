@@ -1,0 +1,4 @@
+- name: Hugging Face
+  image: huggingface.svg
+  site: https://huggingface.co/
+  color: "ffffff"

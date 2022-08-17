@@ -1,0 +1,4 @@
+- name: Google
+  image: google.svg
+  site: https://about.google/
+  color: ffffff

@@ -4,29 +4,84 @@ title: Donations
 
 <div class="container-fluid" >
     <div class="row pt-5">
-        <h3 class="mb-5">Donors</h3>
-        {% for org in site.data.donors %}
+        <h3 >We accept donations through a number of payment services</h3>
+        <i class="mb-5">We will pay the transaction fees</i>
+        {% for org in site.data.donate %}
         <div class="col-12 col-sm-6 col-md-4 mb-5">
+            <h2>{{org.name}}</h2>
             <a href="{{org.site}}">
-                <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3" style="background-color: #{{org.color}}; height: 150px;"
+                <img src="assets/donate/{{org.image}}" class="mx-auto img-fluid px-3" style="height: 150px;"
                      alt="">
             </a>
+            <h5 class="mt-2">{{org.fees}}</h5>
         </div>
         {% endfor %}
+
     </div>
-</div>
-<div class="container-fluid" >
-    <div class="row pt-5">
-        <h3 class="mb-5">We accept donations through a number of payment services</h3>
-        {% for org in site.data.donate %}
-            <div class="col-12 col-sm-6 col-md-4 mb-5">
-                <h2>{{org.name}}</h2>
+    <div>
+        <div class="row pt-5">
+            <h2 class="mb-5">Annual Donation Tiers</h2>
+
+            <h3>Silver - 10k</h3>
+            {% for org in site.data.silver_donors %}
+            <div class=" mb-5">
                 <a href="{{org.site}}">
-                    <img src="assets/donate/{{org.image}}" class="mx-auto img-fluid px-3" style="height: 150px;"
-                        alt="">
+                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3" style="background-color: #{{org.color}}; height: 150px;"
+                         alt="">
                 </a>
-                <h5 class="mt-2">{{org.fees}}</h5>
             </div>
-        {% endfor %}
+            {% endfor %}
+            <h3>Gold - 25k</h3>
+            {% for org in site.data.gold_donors %}
+            <div class="mb-5">
+                <a href="{{org.site}}">
+                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3" style="background-color: #{{org.color}}; height: 150px;"
+                         alt="">
+                </a>
+            </div>
+            {% endfor %}
+            <h3>Platinum - 50k</h3>
+            {% for org in site.data.platinum_donors %}
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <a href="{{org.site}}">
+                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3" style="background-color: #{{org.color}}; height: 150px;"
+                         alt="">
+                </a>
+            </div>
+            {% endfor %}
+            <h3>Diamond - 150k</h3>
+
+        </div>
+    </div>
+
+    <div style="text-align: left">
+        <h2>Benefits</h2>
+        <h3>Silver</h3>
+        <ul>
+            <li>Recognition on our “donors page” and as a sponsor on talks that we host
+            </li>
+        </ul>
+        <h3>Gold</h3>
+        <ul>
+            <li>Developer meet and greet and access to chat room with senior developers
+            </li>
+            <li>Thank you on Twitter
+            </li>
+        </ul>
+        <h3>Platinum</h3>
+        <ul>
+            <li>Ability to post recruitment ads etc. in our discord server, reaching hundreds of AI developers and users around the world (with far more diversity than the general AI developer population)
+            </li>
+            <li>Invitation to future in person events
+            </li>
+            <li>Priority support on bugs
+            </li>
+        </ul>
+        <h3>Diamond</h3>
+        <ul>
+            <li>Have an employee's title named after you (non-profit equivalent of endowed university professorships, e.g., "Google Director of AI Design")</li>
+            <li>This tier can be repeated if desired</li>
+        </ul>
+        <i>Please contact us to get the corresponding benefits</i>
     </div>
 </div>
