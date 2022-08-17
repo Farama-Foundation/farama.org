@@ -6,3 +6,11 @@
   image: liberapay.svg
   site: https://en.liberapay.com/Farama-Foundation/
   fees: No fees
+- name: Paypal
+  image: paypal.png
+  site: paypal
+  fees: 1.99% + .49 cents
+- name: every.org
+  image: every.svg
+  site: everyorg
+  fees: No fees
