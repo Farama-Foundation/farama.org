@@ -40,6 +40,10 @@ title: Donations
 
 <!-- setting paypal button z indexes-->
 <style>
+    #email :hover {
+        color:
+    }
+
     iframe {
         z-index: 0 !important;
     }
@@ -72,6 +76,10 @@ title: Donations
                 </div>
 
             </div>
+            {% elsif org.name == "Contact Us Directly" %}
+            <a id="email" style="color: black; " href="{{org.site}}">{{ org.image }}</a>
+
+
             {% else %}
             <a href="{{org.site}}">
                 <img src="assets/donate/{{org.image}}" class="mx-auto img-fluid px-3" style="height: 150px;"
@@ -88,7 +96,7 @@ title: Donations
         <div class="row pt-5">
             <h2 class="mb-5">Donors</h2>
 
-            <h3>Silver - 10k+</h3>
+            <h3>Silver - $10k+</h3>
             {% for org in site.data.silver_donors %}
             <div class=" mb-5">
                 <a href="{{org.site}}">
@@ -98,7 +106,7 @@ title: Donations
                 </a>
             </div>
             {% endfor %}
-            <h3>Gold - 25k+</h3>
+            <h3>Gold - $25k+</h3>
             {% for org in site.data.gold_donors %}
             <div class="mb-5">
                 <a href="{{org.site}}">
@@ -108,7 +116,7 @@ title: Donations
                 </a>
             </div>
             {% endfor %}
-            <h3>Platinum - 50k+</h3>
+            <h3>Platinum - $50k+</h3>
             {% for org in site.data.platinum_donors %}
             <div class="col-12 col-sm-6 col-md-4 mb-5">
                 <a href="{{org.site}}">
@@ -118,14 +126,15 @@ title: Donations
                 </a>
             </div>
             {% endfor %}
-            <h3>Diamond - 150k+</h3>
+            <h3>Diamond - $150k+</h3>
 
         </div>
     </div>
 
     <div style="text-align: left">
         <h2>Donor Perks</h2>
-        <i>Please <a href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits</i>
+        <i>Please <a href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits. Note that
+            donation tiers are annual.</i>
         <h3>Silver</h3>
         <ul>
             <li>Recognition on our “donors page” and as a sponsor on talks that we host
@@ -133,25 +142,25 @@ title: Donations
         </ul>
         <h3>Gold</h3>
         <ul>
-            <li>Developer meet and greet and access to chat room with senior developers
+            <li>Access to developer meet and greet chat room
             </li>
             <li>Thank you on Twitter
             </li>
         </ul>
         <h3>Platinum</h3>
         <ul>
-            <li>Ability to post recruitment ads etc. in our discord server, reaching hundreds of AI developers and users
-                around the world (with far more diversity than the general AI developer population)
+            <li>Ability to post recruitment ads etc. in a channel on our discord server
             </li>
-            <li>Invitation to future in person events
+            <li>Invitation to future in-person events
             </li>
-            <li>Priority support on bugs
+            <li>Priority support on bugs if you email us
             </li>
         </ul>
         <h3>Diamond</h3>
         <ul>
             <li>Have an employee's title named after you (non-profit equivalent of endowed university professorships,
-                e.g., "Google Director of AI Design")
+                e.g., "Google Director of AI Design"). This tier can be repeated if desired.
+
             </li>
             <li>This tier can be repeated if desired</li>
         </ul>
@@ -163,5 +172,6 @@ title: Donations
         document.getElementById("buttons").style.display = "none";
         return null;
     }
+
     window.onload = hideButton();
 </script>

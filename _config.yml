@@ -20,9 +20,8 @@
 
 title: The Farama Foundation
 email: contact@farama.org
-payment_email: jkterry0@gmail.com
 description: >- 
-  The Farama Foundation is a non-profit organization which promotes reinforcement
+  Farama Foundation is a non-profit organization which promotes reinforcement
   learning through the maintenance of open source libraries such as Gym, the standard
   reinforcement learning API, 
   Pettingzoo, a multiagent reinforcement learning library, and Supersuit, a collection

@@ -14,7 +14,7 @@
   image: every.svg
   site: https://www.every.org/farama-inc#donate
   fees: <a href="https://www.every.org/disbursements">Variable fees</a> based on payment method, accepts cryptocurrencies
-- name: Contact us directly
-  image: farama.svg
+- name: Contact Us Directly
+  image: <i class="fa-solid fa-envelope fa-10x" onmouseover="this.className = 'fa-solid fa-envelope-open fa-10x'"; onmouseout="this.className='fa-solid fa-envelope fa-10x'"></i>
   site: mailto:contact@farama.org
   fees: No fees

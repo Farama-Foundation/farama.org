@@ -5,7 +5,7 @@
 - name: Benjamin Black
   position: Board member<br>Techcyte
   image: ben.jpg
-  site: https://benblack769.github.io
+  site: https://github.com/benblack769
 - name: John Dickerson
   position: Board member<br>University of Maryland, Arthur.ai
   image: john.jpg
@@ -15,21 +15,21 @@
   image: missingavatar.png
   site: https://github.com/pseudo-rnd-thoughts
 - name: Feng Gu
-  position: Web Developer
+  position: Web Developer<br>University of Maryland
   image: missingavatar.png
-  site: https://siddargu.github.io/
+  site: https://github.com/SiddarGu
 - name: Ariel Kwiatkowski
-  position: Gym Maintainer<br>École Polytechnique
+  position: Gymnasium Maintainer<br>École Polytechnique
   image: ariel.jpg
   site: https://github.com/RedTachyon
 - name: Shengyi “Costa” Huang
-  position: Gym Contributor<br>Drexel University
+  position: Gymnasium Contributor<br>Drexel University
   image: costa.png
   site: https://github.com/vwxyzjn
-- name: Jun Jet Tai
-  position: Maintainer of PettingZoo
-  image: missingavatar.png
-  site: https://jjshoots.github.io/jet.io/
+- name: Jet Tai
+  position: PettingZoo Maintainer<br>Coventry University
+  image: jet.png
+  site: https://github.com/jjshoots
 - name: Rodrigo de Lazcano Perez-Vicente
   position: Maintainer of Gymnasium-Robotics and Minigrid
   image: rodrigo.jpg

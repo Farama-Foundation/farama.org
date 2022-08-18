@@ -10,14 +10,14 @@ title: Projects
 <div class="container-fluid pt-5">
     <div class="row">
         {% for project in site.data.projects %}
-        <div class="col-4 mb-5 pb-5" style="height:30vh">
+        <div class="col-12 col-sm-6 col-md-4 my-2">
             <h3>{{project.name}}</h3>
-            <img src="assets/images/{{project.image}}" style="height: 80%;width:90%"
+            <img src="assets/images/{{project.image}}" style="height: 150px; width: 150px;"
                  alt="">
-            <h5 class="d-none d-md-block mx-5 mt-2">{{project.desc}}</h5>
-            <a style="margin-right: 5px" href="{{project.github}}">Github</a>
+            <div class="d-md-block" >{{project.desc}}</div>
+            <a class="mb-5" style="margin-right: 5px" href="{{project.github}}">Github</a>
             {% if project.website %}
-                <a href="{{project.website}}">Website</a>
+                <a class="mb-5" href="{{project.website}}">Website</a>
             {% endif %}
         </div>
         {% endfor %}
@@ -25,7 +25,7 @@ title: Projects
     <br>
     <h1>How to Submit Projects</h1>
     <div class="mb-5">
-        If you'd like your reinforcement learning project to us to be maintained long term,
+        If you'd like your reinforcement learning project to be maintained by us long term,
         please reach out to us at jkterry@farama.org. In general, we're only looking for
         projects that have already become widely used or clearly have a profound technical
         use in the field if they're not currently widely used. We work to bring all new and
