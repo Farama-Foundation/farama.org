@@ -12,7 +12,7 @@
   github: https://github.com/Farama-Foundation/SuperSuit
   website:
   image: SuperSuit.svg
-  desc: A collection of reinforcement learning environment wrappers
+  desc: A collection of wrappers for Gymnasium and PettingZoo environments
 - name: Tinyscaler
   github: https://github.com/Farama-Foundation/tinyscaler
   website:
@@ -21,7 +21,7 @@
 - name: Gymnasium-Robotics
   github: https://github.com/Farama-Foundation/gym-robotics
   website:
-  desc: A collection of robotics environments for reinforcement learning
+  desc: A collection of robotics simulation environments for reinforcement learning
   image: GymRobotics.svg
 - name: AutoROM
   github: https://github.com/Farama-Foundation/AutoROM
@@ -31,17 +31,17 @@
 - name: MAgent
   github: https://github.com/Farama-Foundation/MAgent
   website:
-  desc: An engine to create efficient 2D environments with hundreds or thousands of agents
+  desc: An engine to create high performance multi-agent gridworld environments with hundreds or thousands of agents, along with a set of reference environments
   image: Magent.svg
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
   website:
-  desc: Fast procedurally generated game-like graphical environments (formerly Procgen)
+  desc: Fast and procedurally generated side-scroller-game-like graphical environments (formerly Procgen)
   image:
 - name: MicroRTS
   github: https://github.com/Farama-Foundation/gym-microrts
   website:
-  desc: A simple and very fast RTS game inspired environment for reinforcement learning
+  desc: A simple and very efficient RTS-game-inspired environment for reinforcement learning
   image:
 - name: Minigrid
   github: https://github.com/Farama-Foundation/gym-minigrid
@@ -51,7 +51,7 @@
 - name: Miniworld
   github: https://github.com/Farama-Foundation/gym-miniworld
   website:
-  desc: Simple and easily configurable 3D FPS-game like environments for reinforcement learning
+  desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
   image:
 - name: Jumpy
   github: https://github.com/Farama-Foundation/Jumpy
