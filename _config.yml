@@ -46,6 +46,7 @@ plugins:
   
 google_analytics: G-F8B6SYES1P
 
+markdown: GFM
 
 permalink: /:title
 # Exclude from processing.
