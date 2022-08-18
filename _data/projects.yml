@@ -1,13 +1,13 @@
 - name: Gymnasium
   github: https://github.com/openai/gym
   website: https://www.gymlibrary.ml
-  image: hexlogo_black.svg
-  desc: A standard API for reinforcement learning and a diverse set of reference environments
+  image: gymnasium_black.svg
+  desc: A standard API for reinforcement learning and a diverse set of reference environments (formerly Gym)
 - name: PettingZoo
   github: https://github.com/Farama-Foundation/PettingZoo
   website: https://www.pettingzoo.ml
   image: PettingZoo.svg
-  desc: Gym for multi-agent environments
+  desc: Gymnasium for multi-agent environments
 - name: SuperSuit
   github: https://github.com/Farama-Foundation/SuperSuit
   website:
@@ -36,20 +36,23 @@
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
   website:
-  desc: A maintained version of Procgen
+  desc: Fast procedurally generated game-like graphical environments (formerly Procgen)
   image:
 - name: MicroRTS
   github: https://github.com/Farama-Foundation/gym-microrts
   website:
-  desc:
+  desc: A simple and very fast RTS game inspired environment for reinforcement learning
   image:
 - name: Minigrid
   github: https://github.com/Farama-Foundation/gym-minigrid
   website:
-  desc:
+  desc: Simple and easily configurable gridworld environments for reinforcement learning
   image:
 - name: Miniworld
   github: https://github.com/Farama-Foundation/gym-miniworld
   website:
-  desc: A minimalistic 3D interior environment simulator for reinforcement learning & robotics research
+  desc: Simple and easily configurable 3D FPS-game like environments for reinforcement learning
   image:
+- name: Jumpy
+  github: https://github.com/Farama-Foundation/Jumpy
+  desc: On-the-fly conversions between Jax and NumPy tensors
