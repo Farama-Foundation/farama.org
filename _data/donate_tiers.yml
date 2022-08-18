@@ -2,7 +2,7 @@
   price: $10k+
   benefits:
     <ul>
-    <li>Recognition on our “donors page” and as a sponsor on talks that we host
+    <li>Recognition on our <a href="donations.html">donors page</a> and as a sponsor on talks that we host
     </li>
     </ul>
 - name: Gold
@@ -30,5 +30,4 @@
     e.g., "Google Director of AI Design"). This tier can be repeated if desired.
     
     </li>
-    <li>This tier can be repeated if desired</li>
     </ul>
