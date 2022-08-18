@@ -1,0 +1,11 @@
+- name: Hugging Face
+  image: huggingface.svg
+  site: https://huggingface.co/
+  color: "ffffff"
+  tier: Silver
+
+- name: Google
+  image: google.svg
+  site: https://about.google/
+  color: "ffffff"
+  tier: Gold
