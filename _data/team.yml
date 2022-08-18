@@ -11,8 +11,8 @@
   image: john.jpg
   site: http://jpdickerson.com
 - name: Mark Towers
-  position: Gymnasium maintainer and project manager
-  image: missingavatar.png
+  position: Gymnasium maintainer and project manager<br>University of Southampton
+  image: mark.png
   site: https://github.com/pseudo-rnd-thoughts
 - name: Feng Gu
   position: Web Developer<br>University of Maryland
