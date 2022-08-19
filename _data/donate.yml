@@ -8,7 +8,7 @@
   fees: No fees
 - name: Paypal
   image: paypal.png
-  site: paypal
+  site: https://www.paypal.com/donate/?hosted_button_id=L8FW3MK66B5X6
   fees: Fees are 1.99% + .49 cents
 - name: every.org
   image: every.svg

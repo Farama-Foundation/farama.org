@@ -46,7 +46,10 @@ plugins:
   
 google_analytics: G-F8B6SYES1P
 
-markdown: GFM
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
 
 permalink: /:title
 # Exclude from processing.
