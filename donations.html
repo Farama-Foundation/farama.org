@@ -24,58 +24,23 @@ title: Donations
             alert(data.subscriptionID); // You can add optional success message for the subscriber here
         }
     }).render('#paypal-button-container-P-4VD91427ED786441GML5L2ZQ'); // Renders the PayPal button
-
-
-    function toggleVisibility() {
-        let iframe = document.getElementById("buttons");
-        let visibility = iframe.style.display;
-
-        if (visibility == "none") {
-            iframe.style.display = "block";
-        } else {
-            iframe.style.display = "none";
-        }
-    }
 </script>
-
-<!-- setting paypal button z indexes-->
-<style>
-    #email :hover {
-        color:
-    }
-
-    iframe {
-        z-index: 0 !important;
-    }
-
-    #buttons {
-        display: none;
-    }
-</style>
 
 <!-- main page -->
 <div class="container-fluid">
     <div class="row pt-5">
-        <h3 class="mb-5">We are a registered 501c3 nonprofit and accept donations through a number of payment services</h3>
+        <h3 class="mb-5">We are a registered 501c3 nonprofit and accept donations through a number of payment
+            services</h3>
         {% for org in site.data.donate %}
         <div class="col-12 col-sm-6 col-md-4 mb-5">
             <h2>{{org.name}}</h2>
             {% if org.name == "every.org" %}
+            <div id="edo-donate-btn" class="container-md"><img height="150px" src="assets/donate/{{org.image}}"></div>
+            {% elsif org.name == "Paypal" %}
             <a href="{{org.site}}" onclick="window.open('{{org.site}}','popup','width=600,height=600'); return false;">
                 <img src="assets/donate/{{org.image}}" class="mx-auto img-fluid px-3" style="height: 150px;"
                      alt="">
             </a>
-            {% elsif org.name == "Paypal" %}
-            <img height="150px"
-                 width="250px"
-                 src="assets/donate/paypal.png"
-                 onclick="toggleVisibility()">
-            <div class="container-fluid" id="buttons">
-                <div id="paypal-button-container-P-4VD91427ED786441GML5L2ZQ"
-                     style="display: flex; flex-direction: column; align-items: center">
-                </div>
-
-            </div>
             {% elsif org.name == "Contact Us Directly" %}
             <a id="email" style="color: black; " href="{{org.site}}">{{ org.image }}</a>
 
@@ -90,6 +55,31 @@ title: Donations
             <h5 class="mt-2">{{org.fees}}</h5>
         </div>
         {% endfor %}
+
+        <!-- for every dot org -->
+        <script async defer src="https://assets.every.org/dist/donate-button/0.3/index.js"
+                class="edo-donate-btn-js"></script>
+        <script>function createWidget() {
+            everyDotOrgDonateButton.createWidget({
+                selector: "#edo-donate-btn", options: {
+                    nonprofitSlug: "farama-inc",
+                    showInitialMessage: false,
+                    defaultFrequency: "monthly",
+                    infoPages: [{
+                        key: "faq",
+                        name: "FAQ",
+                        source: `## How does this donate button work?This button is powered by Every.org, a tax-exempt US 501(c)(3) nonprofit building accessible giving infrastructure to help every person and organization do more good.You will be directed to www.every.org to securely complete your donation. You can donate cash via Bank, Card, Google Pay, Apple Pay, or PayPal. You can also elect to donate Crypto, Stock, or via a DAF.## Is my donation tax-deductible?Yes, your donation will be made to Every.org, a US 501(c)(3) tax-exempt organization with EIN 61-1913297, and you will instantly get a receipt emailed to you.We do not provide legal or tax advise to individuals, but generally speaking in the US if you itemize your tax return, then tax deductible donations can reduce taxable income.## How long does it take for my donation to arrive?Your donation information will be sent instantly and funds are disbursed weekly.`,
+                    },],
+                    currencies: [{countryCodes: ["US"], name: "USD", symbol: "$", minimumAmount: 10,},],
+                },
+            });
+        }
+
+        if (window.everyDotOrgDonateButton) {
+            createWidget();
+        } else {
+            document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidget);
+        }</script>
 
     </div>
     <div>
@@ -161,12 +151,3 @@ title: Donations
         {% endfor %}
     </div>
 </div>
-
-<script>
-    function hideButton() {
-        document.getElementById("buttons").style.display = "none";
-        return null;
-    }
-
-    window.onload = hideButton();
-</script>
