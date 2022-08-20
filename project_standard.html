@@ -12,7 +12,7 @@ title: Project Standard
     <div>
         <h2>Standardization</h2>
         <ul>
-            <li>Support Gym and/or PettingZoo API at the newest version (alternative APIs in addition to these are
+            <li>Support Gymnasium and/or PettingZoo API at the newest version (alternative APIs in addition to these are
                 fine)
             </li>
             <li>
@@ -21,13 +21,10 @@ title: Project Standard
         </ul>
         <h2>Good Science</h2>
         <ul>
-            <li>Be fully reproducible given seeds and tested to confirm this
+            <li>Full reproducibility with deterministic (seeded) tests
             </li>
             <li>
                 Deterministic builds for compiled libraries
-            </li>
-            <li>
-                Have hooks for hyperparameter tuning (learning libraries only)
             </li>
         </ul>
         <h2>Quality of Life</h2>
@@ -50,12 +47,14 @@ title: Project Standard
             </li>
             <li>Add type hinting with pyright (with testing at pre-commit)
             </li>
-            <li>Add docstrings for all reasonable functions (using pydocstyle and google style)</li>
+            <li>Docstrings for most or all functions (using pydocstyle and google style)
+            </li>
         </ul>
         <h2>Long Term Support</h2>
         <ul>
             <li>Releases cut via GitHub action on GitHub release</li>
-            <li>Jordan is an owner on PyPI in case someone gets hit by a bus</li>
+            <li>Jordan Terry and Mark Towers are listed as owners on PyPI
+            </li>
         </ul>
         <h2>Branding</h2>
         <ul>
@@ -66,13 +65,14 @@ title: Project Standard
         </ul>
         <h2>Licensing</h2>
         <ul>
-            <li>MIT license of similar (Apache 2.0 is fine)</li>
+            <li>MIT or similar license (specifically, Apache 2.0 is fine)</li>
         </ul>
         <h2>Future Standards</h2>
         <ul>
-            <li>Expose vector API via envpool for C based environments</li>
+            <li>Expose vector API via envpool for environments written in compiled languages</li>
             <li>Poetry based requirements.txt autogeneration</li>
             <li>Natively support Conda</li>
+            <li>Have hooks for hyperparameter tuning (learning libraries only)</li>
         </ul>
     </div>
 </div>
