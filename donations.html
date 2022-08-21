@@ -147,7 +147,10 @@ title: Donations
 
         {% for tier in site.data.donate_tiers %}
         <h3>{{tier.name}}</h3>
-        {{tier.benefits}}
+        <ul>
+            {{tier.benefits}}
+        </ul>
+
         {% endfor %}
     </div>
 </div>
