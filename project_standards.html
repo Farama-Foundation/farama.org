@@ -1,0 +1,76 @@
+---
+title: Project Standards
+---
+
+<!-- <style>
+    *{
+        border: 1px solid black
+    }
+</style> -->
+<div class="container-fluid pt-5" style="text-align: left">
+    <h1>List of Project Standards</h1>
+    <div>
+        <h2>Standardization</h2>
+        <ul>
+        {% for standard in site.data.project_standards %}
+        {% if standard.type == "Standardization" %}
+            <li>{{ standard.name }}</li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Good Science</h2>
+        <ul>
+        {% for standard in site.data.project_standards %}
+        {% if standard.type == "Good Science" %}
+            <li>{{ standard.name }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Quality of Life</h2>
+        <ul>
+        {% for standard in site.data.project_standards %}
+        {% if standard.type == "Quality of Life" %}
+            <li>{{ standard.name }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Testing</h2>
+        <ul>
+        {% for standard in site.data.project_standards %}
+        {% if standard.type == "Testing" %}
+            <li>{{ standard.name }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Long Term Support</h2>
+        <ul>
+        {% for standard in site.data.project_standards %}
+        {% if standard.type == "Long Term Support" %}
+            <li>{{ standard.name }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Branding</h2>
+        <ul>
+        {% for standard in site.data.project_standards %}
+        {% if standard.type == "Branding" %}
+            <li>{{ standard.name }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Licensing</h2>
+        <ul>
+        {% for standard in site.data.project_standards %}
+        {% if standard.type == "Licensing" %}
+            <li>{{ standard.name }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+</div>
