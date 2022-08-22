@@ -41,7 +41,7 @@
 - name: MicroRTS
   github: https://github.com/Farama-Foundation/gym-microrts
   website:
-  desc: A simple and very efficient RTS-game-inspired environment for reinforcement learning
+  desc: A simple and highly efficient RTS-game-inspired environment for reinforcement learning
   image:
 - name: Minigrid
   github: https://github.com/Farama-Foundation/gym-minigrid
