@@ -34,9 +34,9 @@ twitter: https://twitter.com/FaramaFound
 reddit: https://www.reddit.com/r/farama/
 discord: https://discord.gg/PfR7a79FpQ
 
-logo: assets/images/farama_solid_white.png
+logo: assets/images/farama_solid_white.svg
 
-favicon: assets/images/farama_solid_white.png
+favicon: assets/images/farama_solid_white.svg
 
 # Build settings
 theme: minima

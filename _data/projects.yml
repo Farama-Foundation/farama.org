@@ -42,17 +42,18 @@
   github: https://github.com/Farama-Foundation/gym-microrts
   website:
   desc: A simple and highly efficient RTS-game-inspired environment for reinforcement learning
-  image:
+  image: 
 - name: Minigrid
   github: https://github.com/Farama-Foundation/gym-minigrid
-  website:
+  website: 
   desc: Simple and easily configurable gridworld environments for reinforcement learning
-  image:
+  image: minigrid.svg
 - name: Miniworld
   github: https://github.com/Farama-Foundation/gym-miniworld
   website:
   desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
-  image:
+  image: miniworld.svg
 - name: Jumpy
   github: https://github.com/Farama-Foundation/Jumpy
   desc: On-the-fly conversions between Jax and NumPy tensors
+  image:
