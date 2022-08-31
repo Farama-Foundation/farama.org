@@ -27,12 +27,32 @@ title: Team
                         {{person.position}}
                     </span>
                 </p>
-                
-                
             </div>
         {% endfor %}
 
         <svg src="assets/images/farama_black.svg">
           </svg>
+    </div>
+
+    <div class="row pt-5">
+        <h2>Board of Technical Advisors</h2>
+        {% for person in site.data.tech_advisors %}
+        <div class="col-12 col-sm-6 col-md-4 my-2">
+            <a href="{{person.site}}">
+                <img src="assets/people/{{person.image}}" class="mx-auto light-shadow" style="height: 250px; border-radius: 5%;overflow-y: hidden;border: 2px solid rgba(31,31,101,1)"
+                     alt="">
+            </a>
+            <p class="mt-2">
+                <strong><span style="font-size: 17px;text-align: center;font-weight: 800px;" class="mt-5">
+                        {{person.name}}
+                    </span>
+                </strong>
+                <br>
+                <span style="font-size: 17px;text-align: center;">
+                        {{person.position}}
+                    </span>
+            </p>
+        </div>
+        {% endfor %}
     </div>
 </div>
