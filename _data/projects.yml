@@ -55,5 +55,11 @@
   image: miniworld.svg
 - name: Jumpy
   github: https://github.com/Farama-Foundation/Jumpy
+  website:
   desc: On-the-fly conversions between Jax and NumPy tensors
+  image:
+- name: D4RL
+  github: https://github.com/Farama-Foundation/D4RL
+  website:
+  desc: A collection of reference environments for offline reinforcement learning
   image:
