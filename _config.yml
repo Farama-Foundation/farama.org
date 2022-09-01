@@ -27,8 +27,8 @@ description: >-
   Pettingzoo, a multiagent reinforcement learning library, and Supersuit, a collection
   of popular Gym wrappers, as well as a number of other open source projects.
   
-url: "farama.org" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: ""
+url:  # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: 
 github: https://github.com/Farama-Foundation
 twitter: https://twitter.com/FaramaFound
 reddit: https://www.reddit.com/r/farama/
