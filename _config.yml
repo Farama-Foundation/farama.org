@@ -43,6 +43,7 @@ theme: minima
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
   
 google_analytics: G-F8B6SYES1P
 
