@@ -62,4 +62,4 @@
   github: https://github.com/Farama-Foundation/D4RL
   website:
   desc: A collection of reference environments for offline reinforcement learning
-  image:
+  image: d4rl.svg
