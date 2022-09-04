@@ -31,7 +31,7 @@
 - name: MAgent
   github: https://github.com/Farama-Foundation/MAgent
   website:
-  desc: An engine to create high performance multi-agent gridworld environments with hundreds or thousands of agents, along with a set of reference environments
+  desc: An engine to create high performance multi-agent grid world environments with hundreds or thousands of agents, along with a set of reference environments
   image: Magent.svg
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
@@ -46,7 +46,7 @@
 - name: Minigrid
   github: https://github.com/Farama-Foundation/gym-minigrid
   website: 
-  desc: Simple and easily configurable gridworld environments for reinforcement learning
+  desc: Simple and easily configurable grid world environments for reinforcement learning
   image: minigrid.svg
 - name: Miniworld
   github: https://github.com/Farama-Foundation/gym-miniworld
