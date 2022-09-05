@@ -8,8 +8,10 @@ title: Projects
     }
 </style> -->
 <div class="container-fluid pt-5">
-    <div class="row">
+    <h2><strong>Mature</strong></h2>
+    <div class="row mb-5">
         {% for project in site.data.projects %}
+        {% if project.type == "mature" %}
         <div class="col-12 col-sm-6 col-md-4 my-2">
             <h3>{{project.name}}</h3>
             <img src="assets/images/{{project.image}}" style="height: 150px; width: 150px;"
@@ -20,6 +22,24 @@ title: Projects
                 <a class="mb-5" href="{{project.website}}">Website</a>
             {% endif %}
         </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <h2><strong>Incubating</strong></h2>
+    <div class="row mb-5">
+        {% for project in site.data.projects %}
+        {% if project.type == "incubating" %}
+        <div class="col-12 col-sm-6 col-md-4 my-2">
+            <h3>{{project.name}}</h3>
+            <img src="assets/images/{{project.image}}" style="height: 150px; width: 150px;"
+                 alt="">
+            <div class="d-md-block" >{{project.desc}}</div>
+            <a class="mb-5" style="margin-right: 5px" href="{{project.github}}">Github</a>
+            {% if project.website %}
+                <a class="mb-5" href="{{project.website}}">Website</a>
+            {% endif %}
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
     <br>

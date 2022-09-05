@@ -1,65 +1,90 @@
 - name: Gymnasium
   github: https://github.com/openai/gym
-  website: https://www.gymlibrary.ml
+  website: https://www.gymlibrary.dev
   image: gymnasium_black.svg
   desc: A standard API for reinforcement learning and a diverse set of reference environments (formerly Gym)
+  type: mature
+
 - name: PettingZoo
   github: https://github.com/Farama-Foundation/PettingZoo
   website: https://www.pettingzoo.ml
   image: PettingZoo.svg
   desc: Gymnasium for multi-agent environments
+  type: mature
+
 - name: SuperSuit
   github: https://github.com/Farama-Foundation/SuperSuit
   website:
   image: SuperSuit.svg
   desc: A collection of wrappers for Gymnasium and PettingZoo environments
+  type: mature
+
 - name: Tinyscaler
   github: https://github.com/Farama-Foundation/tinyscaler
   website:
   image: TinyScalar.svg
   desc: A small and fast image rescaling library with SIMD support
+  type: mature
+
 - name: Gymnasium-Robotics
   github: https://github.com/Farama-Foundation/gym-robotics
   website:
   desc: A collection of robotics simulation environments for reinforcement learning
   image: GymRobotics.svg
+  type: mature
+
 - name: AutoROM
   github: https://github.com/Farama-Foundation/AutoROM
   website:
   desc: A tool to automate installing Atari ROMs for the Arcade Learning Environment
   image: AutoRom.svg
-- name: MAgent
-  github: https://github.com/Farama-Foundation/MAgent
+  type: mature
+
+- name: MAgent2
+  github: https://github.com/Farama-Foundation/MAgent2
   website:
   desc: An engine to create high performance multi-agent gridworld environments with hundreds or thousands of agents, along with a set of reference environments
   image: Magent.svg
+  type: incubating
+
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
   website:
   desc: Fast and procedurally generated side-scroller-game-like graphical environments (formerly Procgen)
   image:
+  type: incubating
+
 - name: MicroRTS
-  github: https://github.com/Farama-Foundation/gym-microrts
+  github: https://github.com/Farama-Foundation/Gym-MicroRTS
   website:
   desc: A simple and highly efficient RTS-game-inspired environment for reinforcement learning
   image: 
-- name: Minigrid
-  github: https://github.com/Farama-Foundation/gym-minigrid
+  type: incubating
+
+- name: MiniGrid
+  github: https://github.com/Farama-Foundation/MiniGrid
   website: 
   desc: Simple and easily configurable gridworld environments for reinforcement learning
   image: minigrid.svg
-- name: Miniworld
-  github: https://github.com/Farama-Foundation/gym-miniworld
+  type: mature
+  
+- name: MiniWorld
+  github: https://github.com/Farama-Foundation/MiniWorld
   website:
   desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
   image: miniworld.svg
-- name: Jumpy
+  type: incubating
+
+- name: JumPy
   github: https://github.com/Farama-Foundation/Jumpy
   website:
   desc: On-the-fly conversions between Jax and NumPy tensors
   image:
+  type: mature
+
 - name: D4RL
   github: https://github.com/Farama-Foundation/D4RL
   website:
   desc: A collection of reference environments for offline reinforcement learning
   image: d4rl.svg
+  type: incubating
