@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "New Step API #1"
+title: "Terminated / Truncated Step API"
 date:   "2022-08-01"
 excerpt: "We have recently changed the Gym Env.step API to return 5 elements instead of 4 elements."
 ---
