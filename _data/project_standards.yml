@@ -32,6 +32,8 @@
   type: Branding
 - name: Have documentation be at ___.farama.org, with Google analytics setup
   type: Branding
+- name: Uses standard Farama code of conduct
+  type: Branding
 - name: Include readme.md on PyPI page
   type: Branding
 - name: MIT or similar license (specifically, Apache 2.0 is fine)
