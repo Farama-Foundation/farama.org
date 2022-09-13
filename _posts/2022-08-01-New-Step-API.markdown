@@ -53,11 +53,13 @@ The reason that most users are unaware of this difference between truncation and
 In this Section, we discuss the (new) terminated / truncated step API along with the changes made to Gym that will affect users. We should note that these changes might not be implemented by all python modules or tutorials that use Gym. In `v0.25`, this behaviour will be turned off by default (in a majority of cases) but in `v0.26+`, support for the old step API is provided solely through the `EnvCompatibility` and `StepAPICompatibility` wrapper. 
 
 1. All environments, wrappers, utils and vector implementations within Gym (i.e., CartPole) have been changed to the new API. Warnings, this might not be true outside of gym.
-```python
-# (old) done step API
+<br/>
+<em> (old) done step API </em>
+```
 def step(self, action) -> Tuple[ObsType, float, bool, dict]:
-
-# (new) terminated / truncated step API
+```
+<em> (new) terminated / truncated step API </em>
+```
 def step(self, action) -> Tuple[ObsType, float, bool, bool, dict]:
 ```
 2. Changes in phrasing - In the vector environments, `terminal_reward`, `terminal_observation` etc. is replaced with `final_reward`, `final_observation` etc. The intention is to reserve the 'termination' word for only if `terminated=True`. (for some motivation, Sutton and Barto use terminal states to specifically refer to special states whose values are 0, states at the end of the MDP. This is not true for a truncation where the value of the final state need not be 0. So the current usage of `terminal_obs` etc. would be incorrect if we adopt this definition)
