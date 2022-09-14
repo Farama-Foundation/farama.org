@@ -1,6 +1,6 @@
 - name: Gymnasium
-  github: https://github.com/openai/gym
-  website: https://www.gymlibrary.dev
+  github: https://github.com/Farama-Foundation/Gymnasium
+  website: https://gymnasium.farama.org/
   image: gymnasium_black.svg
   desc: A standard API for reinforcement learning and a diverse set of reference environments (formerly Gym)
   type: mature
