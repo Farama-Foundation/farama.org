@@ -79,7 +79,7 @@
   github: https://github.com/Farama-Foundation/Jumpy
   website:
   desc: On-the-fly conversions between Jax and NumPy tensors
-  image:
+  image: jumpy.svg
   type: mature
 
 - name: D4RL
