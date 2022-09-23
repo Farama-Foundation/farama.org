@@ -51,7 +51,7 @@
   github: https://github.com/Farama-Foundation/procgen2
   website:
   desc: Fast and procedurally generated side-scroller-game-like graphical environments (formerly Procgen)
-  image:
+  image: procgen2.svg
   type: incubating
 
 - name: MicroRTS
