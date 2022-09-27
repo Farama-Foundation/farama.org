@@ -58,7 +58,7 @@
   github: https://github.com/Farama-Foundation/Gym-MicroRTS
   website:
   desc: A simple and highly efficient RTS-game-inspired environment for reinforcement learning
-  image: 
+  image: microrts.svg
   type: incubating
 
 - name: MiniGrid
