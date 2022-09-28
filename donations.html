@@ -1,4 +1,5 @@
 ---
+layout: donations
 title: Donations
 ---
 
@@ -27,34 +28,60 @@ title: Donations
 </script>
 
 <!-- main page -->
-<div class="container-fluid">
-    <div class="row pt-5">
-        <h3 class="mb-5">We accept donations through a number of payment services shown below. We are a registered 501c3
-            nonprofit in the US, meaning that donations are tax deductible.</h3>
-        {% for org in site.data.donate %}
-        <div class="col-12 col-sm-6 col-md-4 mb-5">
-            <h2>{{org.name}}</h2>
-            {% if org.name == "every.org" %}
-            <div id="edo-donate-btn" class="container-md"><img height="150px" src="assets/donate/{{org.image}}"></div>
-            {% elsif org.name == "Paypal" %}
-            <a href="{{org.site}}" onclick="window.open('{{org.site}}','popup','width=600,height=600'); return false;">
-                <img src="assets/donate/{{org.image}}" class="mx-auto img-fluid px-3" style="height: 150px;"
-                     alt="">
-            </a>
-            {% elsif org.name == "Contact Us Directly" %}
-            <a id="email" style="color: black; " href="{{org.site}}">{{ org.image }}</a>
+<div class="farama-gradient-container">
+    <div class="pt-5 shadow-lg py-3 farama-gradient-bg">
+        <div class="jumbotron mb-4 pt-5">
+            <div class="container-fluid">
+                <div style="max-width: 900px; text-align: left;
+                        margin: auto; color: white;">
+                    <h1>
+                        {{page.title}}
+                    </h1>
 
+                        <h3 class="mb-5">We accept donations through a number of payment services shown below. We are a registered 501c3
+                            nonprofit in the US, meaning that donations are tax deductible.</h3>
+                        <div class="row pt-5" style="display: flex; flex-wrap:wrap">
+                        {% for org in site.data.donate %}
+                        <div class="col-12 col-xl-3 col-lg-4 col-sm-5 my-2">
+                            <div class="card farama-donation-card  p-3 mx-2" style="max-width: 540px;height: 100%;" {% if org.name == "every.org" %} id="edo-donate-btn" {% endif %}>
 
-            {% else %}
-            <a href="{{org.site}}">
-                <img src="assets/donate/{{org.image}}" class="mx-auto img-fluid px-3" style="height: 150px;"
-                     alt="">
-            </a>
-            {% endif %}
-
-            <h5 class="mt-2">{{org.fees}}</h5>
+                            {% if org.name == "every.org" %}
+                                <a href="#">
+                            {% elsif org.name == "Paypal" %}
+                                <a href="{{org.site}}" onclick="window.open('{{org.site}}','popup','width=600,height=600'); return false;">
+                            {% elsif org.name == "Contact Us Directly" %}
+                                <a id="email" style="color: black; " href="{{org.site}}">
+                            {% else %}
+                                <a href="{{org.site}}">
+                            {% endif %}
+                                <div class="row g-0">
+                                <div class="col-md-2 pe-3">
+                                    {% if org.name == "Contact Us Directly" %}
+                                    {{org.image}}
+                                    {% else %}
+                                    <img src="assets/donate/{{org.image}}" class="img-fluid rounded-start" alt="{{org.name}}">
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                    <h5 class="card-title">{{org.name}}</h5>
+                                    <p class="card-text"><small class="text-muted">{{org.fees}}</small></p>
+                                    </div>
+                                </div>
+                                </div>
+                                </a>
+                            </div>
+                          </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
-        {% endfor %}
+    </div>
+</div>
+
+<div class="content-container mb-5">
+
 
         <!-- for every dot org -->
         <script async defer src="https://assets.every.org/dist/donate-button/0.3/index.js"
@@ -79,9 +106,9 @@ title: Donations
             createWidget();
         } else {
             document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidget);
-        }</script>
+        }
+        </script>
 
-    </div>
     <div>
         <div class="row pt-5">
             <h2 class="mb-5">Donors</h2>

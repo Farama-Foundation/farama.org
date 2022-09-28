@@ -4,6 +4,7 @@
   image: gymnasium_black.svg
   desc: A standard API for reinforcement learning and a diverse set of reference environments (formerly Gym)
   type: mature
+  popular: true
 
 - name: PettingZoo
   github: https://github.com/Farama-Foundation/PettingZoo
@@ -11,6 +12,7 @@
   image: PettingZoo.svg
   desc: Gymnasium for multi-agent environments
   type: mature
+  popular: true
 
 - name: SuperSuit
   github: https://github.com/Farama-Foundation/SuperSuit
@@ -18,6 +20,7 @@
   image: SuperSuit.svg
   desc: A collection of wrappers for Gymnasium and PettingZoo environments
   type: mature
+  popular: true
 
 - name: Tinyscaler
   github: https://github.com/Farama-Foundation/tinyscaler
@@ -25,6 +28,7 @@
   image: TinyScalar.svg
   desc: A small and fast image rescaling library with SIMD support
   type: mature
+  popular: false
 
 - name: Gymnasium-Robotics
   github: https://github.com/Farama-Foundation/gym-robotics
@@ -32,6 +36,7 @@
   desc: A collection of robotics simulation environments for reinforcement learning
   image: GymRobotics.svg
   type: mature
+  popular: false
 
 - name: AutoROM
   github: https://github.com/Farama-Foundation/AutoROM
@@ -39,6 +44,7 @@
   desc: A tool to automate installing Atari ROMs for the Arcade Learning Environment
   image: AutoRom.svg
   type: mature
+  popular: false
 
 - name: MAgent2
   github: https://github.com/Farama-Foundation/MAgent2
@@ -63,11 +69,11 @@
 
 - name: MiniGrid
   github: https://github.com/Farama-Foundation/MiniGrid
-  website: 
+  website:
   desc: Simple and easily configurable grid world environments for reinforcement learning
   image: minigrid.svg
   type: mature
-  
+
 - name: MiniWorld
   github: https://github.com/Farama-Foundation/MiniWorld
   website:

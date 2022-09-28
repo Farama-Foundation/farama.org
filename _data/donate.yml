@@ -19,6 +19,6 @@
   site: https://causes.benevity.org/causes/840-873090474
   fees: Our listing on a commonly used platform for corporate donations (no donation portal for individuals). Variable fees.
 - name: Contact Us Directly
-  image: <i class="fa-solid fa-envelope fa-10x" onmouseover="this.className = 'fa-solid fa-envelope-open fa-10x'"; onmouseout="this.className='fa-solid fa-envelope fa-10x'"></i>
+  image: <i class="fa-solid fa-envelope fa-10x"></i>
   site: mailto:contact@farama.org
   fees: No fees
