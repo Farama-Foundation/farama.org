@@ -1,10 +1,21 @@
 ---
+layout: no_jumbotron
 title: Contact
 ---
-<div class="content-container mb-5">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="mt-5">Contact us at <a href="mailto:{{site.email}}">{{site.email}}</a></h1>
+
+<div class="farama-gradient-container">
+    <div class="pt-5 py-3 farama-gradient-bg">
+        <div class="jumbotron mb-4 pt-5">
+            <div class="container-fluid">
+                <div style="max-width: 900px; text-align: left;
+                        margin: auto; color: white;">
+                    <h1>
+                        {{page.title}}
+                    </h1>
+                    <h4 class="mb-5 mt-4 "><a class="text-white" href="mailto:{{site.email}}">{{site.email}}</a></h4>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

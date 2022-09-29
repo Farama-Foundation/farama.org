@@ -1,7 +1,9 @@
 :root {
-    --bs-primary: #011433;
-    --bs-primary-light:#0f4a65;
-    --bs-primary-lighter:#2a7fa6;
+    --bs-primary-background-dark: #03121e;
+    --bs-primary-background: #011433;
+    --bs-primary:#0f4a65;
+    --bs-primary-rgb:15, 74, 101;
+    --bs-primary-light:#2a7fa6;
     --bs-secondary:#6d5842;
     --bs-secondary-light: #bd8a42
 }
@@ -63,7 +65,7 @@ body {
 }
 
 .farama-card:hover {
-    border-color: var(--bs-primary-light);
+    border-color: var(--bs-primary);
 }
 
 .farama-card img {
@@ -73,7 +75,7 @@ body {
 }
 
 .farama-card .card-title {
-    color: var(--bs-primary-light)
+    color: var(--bs-primary)
 }
 
 .farama-card .btn {
@@ -104,6 +106,10 @@ body {
     text-align: center;
 }
 
+.farama-profile-card a:hover {
+    color: initial
+}
+
 .farama-profile-card img {
     width: 45%;
     aspect-ratio: 1;
@@ -116,8 +122,12 @@ body {
     padding: 12px 24px
 }
 
-.farama-profile-card .card-body hr {
-    width: 50px;
+.farama-profile-card .card-title {
+    color: var(--bs-primary)
+}
+
+.farama-profile-card__separator {
+    width: 60px;
     height: 2px;
     margin: 12px auto;
     background-color: #001633;
@@ -132,8 +142,12 @@ body {
     color: var(--bs-body-color)
 }
 
-.farama-donation-card img, .farama-donation-card i::before {
+.farama-donation-card img {
     width: 42px;
+}
+
+.farama-donation-card i {
+    font-size: 28px;
 }
 
 .farama-donation-card .card-body {

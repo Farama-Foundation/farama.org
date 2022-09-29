@@ -13,7 +13,7 @@
 - name: every.org
   image: every.svg
   site: https://www.every.org/farama-inc#donate
-  fees: <a href="https://www.every.org/disbursements">Variable fees</a> based on payment method, accepts cryptocurrencies
+  fees: Variable fees based on payment method, accepts cryptocurrencies
 - name: Benevity
   image: benevity.png
   site: https://causes.benevity.org/causes/840-873090474

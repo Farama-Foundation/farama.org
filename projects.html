@@ -8,7 +8,7 @@ title: Projects
     }
 </style> -->
 <div class="content-container mt-5">
-    <h2><strong>Mature</strong></h2>
+    <h2 class="text-primary">Mature</h2>
     <div class="row mb-5" style="display: flex; flex-wrap:wrap">
         {% for project in site.data.projects %}
             {% if project.type == "mature" %}
@@ -39,7 +39,7 @@ title: Projects
             {% endif %}
         {% endfor %}
     </div>
-    <h2><strong>Incubating</strong></h2>
+    <h2 class="text-primary">Incubating</h2>
     <div class="row mb-5">
         {% for project in site.data.projects %}
         {% if project.type == "incubating" %}
@@ -72,8 +72,8 @@ title: Projects
         {% endfor %}
     </div>
     <br>
-    <h1>How to Submit Projects</h1>
-    <div class="mb-5">
+    <h2 class="text-primary">How to Submit Projects</h2>
+    <div class="mb-5 mt-3">
         If you would like your reinforcement learning project to be maintained by us long term,
         please reach out to us at jkterry@farama.org. In general, we're only looking for
         projects that have already become widely used or clearly have a profound technical
