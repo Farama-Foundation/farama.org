@@ -2,35 +2,55 @@
   position: CEO, Chair of Board<br>University of Maryland, Swarm Labs
   image: jordan.jpeg
   site: https://github.com/jkterry1
-- name: Benjamin Black
-  position: Board member<br>Techcyte
-  image: ben.jpg
-  site: https://github.com/benblack769
-- name: John Dickerson
-  position: Board member<br>University of Maryland, Arthur.ai
-  image: john.jpg
-  site: http://jpdickerson.com
 - name: Mark Towers
   position: Gymnasium maintainer and project manager<br>University of Southampton
   image: mark.png
   site: https://github.com/pseudo-rnd-thoughts
 - name: Feng Gu
-  position: Web Developer<br>University of Maryland
+  position: Web developer<br>University of Maryland
   image: feng.jpg
   site: https://github.com/SiddarGu
 - name: Ariel Kwiatkowski
-  position: Gymnasium Maintainer<br>École Polytechnique
+  position: Gymnasium maintainer<br>École Polytechnique
   image: ariel.jpg
   site: https://github.com/RedTachyon
 - name: Shengyi “Costa” Huang
-  position: Gymnasium Contributor<br>Drexel University
+  position: Gymnasium contributor<br>Drexel University
   image: costa.png
   site: https://github.com/vwxyzjn
 - name: Jet Tai
-  position: PettingZoo Maintainer<br>Coventry University
+  position: PettingZoo maintainer<br>Coventry University
   image: jet.png
   site: https://github.com/jjshoots
 - name: Rodrigo de Lazcano Perez-Vicente
-  position: Maintainer of Gymnasium-Robotics and Minigrid
+  position: Gymnasium-Robotics and Minigrid maintainer<br>NIST
   image: rodrigo.jpg
   site: https://github.com/rodrigodelazcano
+- name: William Dudley
+  position: PettingZoo maintainer<br>Imperial College London
+  image: will.jpg
+  site:
+- name: Manuel Goulão
+  position: Web developer<br>Técnico Lisboa
+  image: manuel.jpg
+  site:
+- name: Eric
+  position: Procgen2 and TinyScaler maintainer<br>Ogma Corp
+  image: eric.jpg
+  site:
+- name: Daniel Scott
+  position: MAgent and assorted projects maintainer<br>Georgia Institute of Technology
+  image: daniel.png
+  site:
+- name: Markus
+  position: Gymnasium and assorted projects contributor<br>ETH Zürich
+  image: markus.jpg
+  site:
+- name: Arjun KG
+  position: Gymnasium and assorted projects contributor<br>Connectome.Design
+  image: arjun.jpg
+  site:
+- name: Omar G. Younis
+  position: Gymnasium and assorted projects contributor<br>ETH Zürich
+  image: omar.jpg
+  site:
