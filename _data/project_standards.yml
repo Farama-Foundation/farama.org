@@ -3,9 +3,11 @@
   type: Standardization
 - name: Support all supported versions of Python (currently 3.7-3.10)
   type: Standardization
-- name: Environments, wrappers, and similar objects impacting reproducibility have explicit versioning in their names (e.g. "Pong-v5")
+- name: Full reproducibility with deterministic (seeded) tests
   type: Good Science
 - name: Deterministic builds for compiled libraries
+  type: Good Science
+- name: Environments, wrappers, and similar objects impacting reproducibility have explicit versioning in their names (e.g. "Pong-v5")
   type: Good Science
 - name: Good documentation website (if library is large enough)
   type: Quality of Life

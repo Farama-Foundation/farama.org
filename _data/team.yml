@@ -30,8 +30,8 @@
   position: PettingZoo maintainer<br>Imperial College London
   image: will.jpg
   site:
-- name: Manuel
-  position: Web developer
+- name: Manuel Goulão
+  position: Web developer<br>Técnico Lisboa
   image: manuel.jpg
   site:
 - name: Eric
@@ -43,10 +43,14 @@
   image: daniel.png
   site:
 - name: Markus
-  position: Gymnasium and assorted projects contributor
+  position: Gymnasium and assorted projects contributor<br>ETH Zürich
   image: markus.jpg
   site:
-- name: Arjun
-  position: Gymnasium and assorted projects contributor
+- name: Arjun KG
+  position: Gymnasium and assorted projects contributor<br>Connectome.Design
   image: arjun.jpg
+  site:
+- name: Omar G. Younis
+  position: Gymnasium and assorted projects contributor<br>ETH Zürich
+  image: omar.jpg
   site:
