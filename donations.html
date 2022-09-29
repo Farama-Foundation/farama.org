@@ -40,18 +40,18 @@ title: Donations
 
                         <h4 class="mb-5 mt-4">We accept donations through a number of payment services shown below. We are a registered 501c3
                             nonprofit in the US, meaning that donations are tax deductible.</h4>
-                        <div class="row pt-3 gx-2" style="display: flex; flex-wrap:wrap; justify-content: center;">
+                        <div class="row pt-3 gx-2 farama-donation-cards-container" style="display: flex; flex-wrap:wrap; justify-content: center;">
                         {% for org in site.data.donate %}
                         <div class="col-12 col-xl-4 col-lg-4 col-sm-5 my-2">
-                            <div class="card farama-donation-card  p-3 mx-1" style="max-width: 540px;height: 100%;" id="{% if org.name == 'every.org' %}edo-donate-btn{% endif %}">
 
                             {% if org.name == "Paypal" %}
-                                <a href="{{org.site}}" onclick="window.open('{{org.site}}','popup','width=600,height=600'); return false;">
-                            {% elsif org.name == "Contact Us Directly" %}
+                            <a href="{{org.site}}" onclick="window.open('{{org.site}}','popup','width=600,height=600'); return false;">
+                                {% elsif org.name == "Contact Us Directly" %}
                                 <a id="email" style="color: black; " href="{{org.site}}">
-                            {% else %}
-                                <a href="{{org.site}}">
-                            {% endif %}
+                                    {% else %}
+                                    <a href="{{org.site}}">
+                                        {% endif %}
+                                <div class="card farama-donation-card  p-3 mx-1" style="max-width: 540px;height: 100%;" id="{% if org.name == 'every.org' %}edo-donate-btn{% endif %}">
                                     <div class="row g-0">
                                         <div class="col-md-2" style="padding-right: 8px;">
 
@@ -68,8 +68,8 @@ title: Donations
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                         {% endfor %}
                     </div>
@@ -107,6 +107,24 @@ document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidg
 
 <div class="content-container mb-5">
 
+       <!-- donation perks section -->
+    <h2 class="my-4">Donor Benefits</h2>
+    <i>Please <a href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits. Note that
+        donation tiers are annual.</i>
+    <div class="row">
+        {% for tier in site.data.donate_tiers %}
+        <div class="card farama-perks-card text-center col-lg-3 col-sm-6 col-12 ">
+            <h3 class="card-title my-4">{{tier.name}}</h3>
+            <ul class="list-group">
+                {% for item in tier.benefits %}
+                <li class="list-group-item">
+                    {{item.benefit}}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
 
     <div>
         <div class="row pt-5 text-center">
@@ -165,18 +183,5 @@ document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidg
         </div>
     </div>
 
-    <!-- donation perks section -->
-    <div style="text-align: left">
-        <h2 class="my-4">Donor Benefits</h2>
-        <i>Please <a href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits. Note that
-            donation tiers are annual.</i>
 
-        {% for tier in site.data.donate_tiers %}
-        <h3 class="my-4">{{tier.name}}</h3>
-        <ul>
-            {{tier.benefits}}
-        </ul>
-
-        {% endfor %}
-    </div>
 </div>

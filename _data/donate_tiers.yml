@@ -1,21 +1,19 @@
 - name: Silver
   price: $10k+
   benefits:
-    <li>Recognition on our <a href="donations">donors page</a> and as a sponsor on talks that we host
-    </li>
+    - benefit: Recognition on our <a href="donations">donors page</a> and as a sponsor on talks that we host
 - name: Gold
   price: $25k+
   benefits:
-    <li>Access to developer meet and greet chat room</li>
-    <li>Thank you on Twitter</li>
+    - benefit: Access to developer meet and greet chat room
+    - benefit: Thank you on Twitter
 - name: Platinum
   price: $50k+
   benefits:
-    <li>Ability to post recruitment ads etc. in a channel on our discord server</li>
-    <li>Invitation to future in-person events</li>
-    <li>Priority support on bugs if you email us</li>
+    - benefit: Ability to post recruitment ads etc. in a channel on our discord server
+    - benefit: Invitation to future in-person events
+    - benefit: Priority support on bugs if you email us
 - name: Diamond
   price: $150k+
   benefits:
-    <li>Have an employee's title named after you (non-profit equivalent of endowed university professorships,
-    e.g., "Google Director of AI Design"). This tier can be repeated if desired.</li>
+    - benefit: Have an employee's title named after you (non-profit equivalent of endowed university professorships, e.g., "Google Director of AI Design"). This tier can be repeated if desired.

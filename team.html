@@ -9,8 +9,9 @@ title: Team
     }
 </style> -->
 
-<div class="content-container mb-5">
-    <div class="row pt-5">
+<div class="content-container mb-5 pt-5">
+    <h2 class="text-primary mb-4">Core Team</h2>
+    <div class="row">
         {% for person in site.data.team %}
         <div class="col-12 col-sm-6 col-md-4 my-2 mb-4">
             <a href="{{person.site}}" class="farama-profile-link">
@@ -29,8 +30,8 @@ title: Team
         {% endfor %}
     </div>
 
-    <div class="row pt-5">
-        <h2>Board of Technical Advisors</h2>
+    <h2 class="text-primary my-4">Board of Technical Advisors</h2>
+    <div class="row">
         {% for person in site.data.tech_advisors %}
         <div class="col-12 col-sm-6 col-md-4 my-2 mb-4">
             <a href="{{person.site}}" class="farama-profile-link">
