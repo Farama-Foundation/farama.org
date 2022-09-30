@@ -7,9 +7,9 @@ title: Projects
         border: 1px solid black
     }
 </style> -->
-<div class="content-container mt-5">
+<div class="container mt-5">
     <h2 class="text-primary">Mature</h2>
-    <div class="row mb-5" style="display: flex; flex-wrap:wrap">
+    <div class="row mb-5 " style="display: flex; flex-wrap:wrap">
         {% for project in site.data.projects %}
         {% if project.type == "mature" %}
         <div class="col-12 col-sm-6 col-md-4 my-2">
@@ -40,7 +40,7 @@ title: Projects
         {% endfor %}
     </div>
     <h2 class="text-primary">Incubating</h2>
-    <div class="row mb-5">
+    <div class="row mb-5 ">
         {% for project in site.data.projects %}
         {% if project.type == "incubating" %}
         <div class="col-12 col-sm-6 col-md-4 my-2">
