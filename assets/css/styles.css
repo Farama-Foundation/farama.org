@@ -183,6 +183,19 @@ body {
     margin: 12px auto
 }
 
+.farama-standards-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.farama-standards-card__separator {
+    height: 2px;
+    background-color: var(--bs-secondary);
+    width: 10px;
+    margin: 12px auto
+}
+
 footer {
     margin-top: auto
 }
