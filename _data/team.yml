@@ -1,10 +1,10 @@
 - name: Jordan Terry
   position: CEO, Chair of Board<br>University of Maryland, Swarm Labs
-  image: jordan.jpeg
+  image: jordan.jpg
   site: https://github.com/jkterry1
 - name: Mark Towers
   position: Gymnasium maintainer and project manager<br>University of Southampton
-  image: mark.png
+  image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
 - name: Feng Gu
   position: Web developer<br>University of Maryland
@@ -16,11 +16,11 @@
   site: https://github.com/RedTachyon
 - name: Shengyi “Costa” Huang
   position: Gymnasium contributor<br>Drexel University
-  image: costa.png
+  image: costa.jpg
   site: https://github.com/vwxyzjn
 - name: Jet Tai
   position: PettingZoo maintainer<br>Coventry University
-  image: jet.png
+  image: jet.jpg
   site: https://github.com/jjshoots
 - name: Rodrigo de Lazcano Perez-Vicente
   position: Gymnasium-Robotics and Minigrid maintainer<br>NIST
@@ -40,7 +40,7 @@
   site:
 - name: Daniel Scott
   position: MAgent and assorted projects maintainer<br>Georgia Institute of Technology
-  image: daniel.png
+  image: daniel.jpg
   site:
 - name: Markus
   position: Gymnasium and assorted projects contributor<br>ETH Zürich
