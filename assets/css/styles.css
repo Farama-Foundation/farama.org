@@ -191,6 +191,10 @@ img.light-shadow {
     filter: drop-shadow(4px 4px 3px rgba(70, 65, 68, 0.8));
 }
 
+.bg-dark a {
+    color: #8cbaff
+}
+
 /* @media (min-width: 200px) {
     .third{
         height: 90%;

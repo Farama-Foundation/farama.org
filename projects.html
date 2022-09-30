@@ -11,32 +11,32 @@ title: Projects
     <h2 class="text-primary">Mature</h2>
     <div class="row mb-5" style="display: flex; flex-wrap:wrap">
         {% for project in site.data.projects %}
-            {% if project.type == "mature" %}
-            <div class="col-12 col-sm-6 col-md-4 my-2">
-                <div class="card farama-card me-1 ms-1" style="height:100%">
-                    <img src="assets/images/{{project.image}}" class="card-img-top" alt="{{project.name}}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{project.name}}</h5>
-                        <p class="card-text">{{project.desc}}</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="{{project.github}}" class="btn">
-                            <i class="fa fa-github fa-lg"></i>
-                            Github
-                        </a>
-                        {% if project.website %}
-                        <a class="btn" href="{{project.website}}">
-                            <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-1.5 5.505v9.995h-15v-9.995zm0-1.5h-15v-3.505h15zm-2.3-2.527c.442 0 .8.359.8.8 0 .442-.358.8-.8.8s-.8-.358-.8-.8c0-.441.358-.8.8-.8zm-1.65.777c0-.397-.352-.75-.75-.75-1.695 0-6.355 0-8.05 0-.399 0-.75.353-.75.75s.351.75.75.75h8.05c.398 0 .75-.353.75-.75z"
-                                    fill-rule="nonzero" />
-                            </svg>Website</a>
-                        {% endif %}
-                    </div>
+        {% if project.type == "mature" %}
+        <div class="col-12 col-sm-6 col-md-4 my-2">
+            <div class="card farama-card me-1 ms-1" style="height:100%">
+                <img src="assets/images/{{project.image}}" class="card-img-top" alt="{{project.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{project.name}}</h5>
+                    <p class="card-text">{{project.desc}}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{project.github}}" class="btn">
+                        <i class="fa fa-github fa-lg"></i>
+                        Github
+                    </a>
+                    {% if project.website %}
+                    <a class="btn" href="{{project.website}}">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-1.5 5.505v9.995h-15v-9.995zm0-1.5h-15v-3.505h15zm-2.3-2.527c.442 0 .8.359.8.8 0 .442-.358.8-.8.8s-.8-.358-.8-.8c0-.441.358-.8.8-.8zm-1.65.777c0-.397-.352-.75-.75-.75-1.695 0-6.355 0-8.05 0-.399 0-.75.353-.75.75s.351.75.75.75h8.05c.398 0 .75-.353.75-.75z"
+                                fill-rule="nonzero" />
+                        </svg>Website</a>
+                    {% endif %}
                 </div>
             </div>
-            {% endif %}
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
     <h2 class="text-primary">Incubating</h2>
@@ -71,15 +71,20 @@ title: Projects
         {% endif %}
         {% endfor %}
     </div>
-    <br>
-    <h2 class="text-primary">How to Submit Projects</h2>
-    <div class="mb-5 mt-3">
-        If you would like your reinforcement learning project to be maintained by us long term,
-        please reach out to us at jkterry@farama.org. In general, we're only looking for
-        projects that have already become widely used or clearly have a profound technical
-        use in the field if they're not currently widely used. We work to bring all new and
-        existing projects to our <a href="project_standards">standards</a>, and generally request that new projects meet
-        the vast majority of these requirements before submission (though please reach out
-        to us if you have any questions).
+
+    <div class="card text-white bg-dark mb-5 p-3">
+        <div class="card-body">
+            <h5 class="card-title">
+                Mature projects comply with our <a href="project_standards">standards</a>, and we're consistently
+                working to
+                bring our incubating projects up
+                to these standards. If you're interested in submitting a project to us, you can read more [here]. If
+                you'd like
+                to get involved in contributing, the best way is to join our <a
+                    href="https://discord.gg/PfR7a79FpQ">discord
+                    server</a> and have the submission instructions be on a separate page
+            </h5>
+        </div>
     </div>
+
 </div>

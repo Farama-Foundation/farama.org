@@ -20,7 +20,7 @@
   image: SuperSuit.svg
   desc: A collection of wrappers for Gymnasium and PettingZoo environments
   type: mature
-  popular: true
+  popular: false
 
 - name: Tinyscaler
   github: https://github.com/Farama-Foundation/tinyscaler
@@ -49,7 +49,7 @@
 - name: MAgent2
   github: https://github.com/Farama-Foundation/MAgent2
   website:
-  desc: An engine to create high performance multi-agent grid world environments with hundreds or thousands of agents, along with a set of reference environments
+  desc: An engine for high performance multi-agent environments with very large numbers of agents, along with a set of reference environments
   image: Magent.svg
   type: incubating
 
@@ -61,7 +61,7 @@
   type: incubating
 
 - name: MicroRTS
-  github: https://github.com/Farama-Foundation/Gym-MicroRTS
+  github: https://github.com/Farama-Foundation/MicroRTS
   website:
   desc: A simple and highly efficient RTS-game-inspired environment for reinforcement learning
   image: microrts.svg
@@ -69,10 +69,11 @@
 
 - name: MiniGrid
   github: https://github.com/Farama-Foundation/MiniGrid
-  website:
+  website: https://minigrid.farama.org
   desc: Simple and easily configurable grid world environments for reinforcement learning
   image: minigrid.svg
   type: mature
+  popular: true
 
 - name: MiniWorld
   github: https://github.com/Farama-Foundation/MiniWorld
