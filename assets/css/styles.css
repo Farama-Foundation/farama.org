@@ -158,6 +158,16 @@ body {
     line-height: 12px;
 }
 
+.farama-perks-cards-container {
+    border-color: transparent;
+    background:
+    radial-gradient(
+   farthest-corner at top right,
+   #7A603E,
+   #038ea3
+   );
+}
+
 .farama-perks-card {
     padding: 0;
 }

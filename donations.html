@@ -3,9 +3,181 @@ layout: no_jumbotron
 title: Donations
 ---
 
+<!-- main page -->
+<div class="farama-gradient-container">
+    <div class="pt-5 py-3 farama-gradient-bg">
+        <div class="jumbotron mb-4 pt-5">
+            <div class="container-fluid">
+                <div style="max-width: 900px; text-align: left;
+                        margin: auto; color: white;">
+                    <h1>
+                        {{page.title}}
+                    </h1>
+
+                    <h4 class="mb-5 mt-4">We accept donations through a number of payment services shown below. We are a
+                        registered 501c3
+                        nonprofit in the US, meaning that donations are tax deductible.</h4>
+                    <div class="row pt-3 gx-2 farama-donation-cards-container"
+                        style="display: flex; flex-wrap:wrap; justify-content: center;">
+                        {% for org in site.data.donate %}
+                        <div class="col-12 col-xl-4 col-lg-4 col-sm-5 my-2">
+
+                            {% if org.name == "Paypal" %}
+                            <a href="{{org.site}}"
+                                onclick="window.open('{{org.site}}','popup','width=600,height=600'); return false;">
+                                {% elsif org.name == "Contact Us Directly" %}
+                                <a id="email" style="color: black; " href="{{org.site}}">
+                                    {% else %}
+                                    <a href="{{org.site}}">
+                                        {% endif %}
+                                        <div class="card farama-donation-card  p-3 mx-1"
+                                            style="max-width: 540px;height: 100%;"
+                                            id="{% if org.name == 'every.org' %}edo-donate-btn{% endif %}">
+                                            <div class="row g-0">
+                                                <div class="col-md-2" style="padding-right: 8px;">
+
+                                                    {% if org.name == "Contact Us Directly" %}
+                                                    {{org.image}}
+                                                    {% else %}
+                                                    <img src="assets/donate/{{org.image}}"
+                                                        class="img-fluid rounded-start" alt="{{org.name}}">
+                                                    {% endif %}
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{org.name}}</h5>
+                                                        <p class="card-text"><small
+                                                                class="text-muted">{{org.fees}}</small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-container mb-5">
+
+    <!-- donation perks section -->
+    <h2 class="mb-4 mt-5">Donor Benefits</h2>
+    <div class="card farama-perks-cards-container px-4">
+        <div class="row mt-4" style="display: flex; flex-wrap:wrap; justify-content: center;">
+            {% for tier in site.data.donate_tiers %}
+            <div class=" col-lg-3 col-sm-6 col-12 mb-4">
+                <div class="card farama-perks-card text-center" style="height: 100%; margin:0 auto">
+                    <h5 class="card-title pt-3 mx-5">{{tier.name}}</h5>
+                    <ul>
+                        <div class="farama-perks-card__separator" style="width: 70px; margin-top: 0px"></div>
+                        {% for item in tier.benefits %}
+                        <li class="mx-3">
+                            {{item.benefit}}
+                        </li>
+                        {% if forloop.last %}{% else %}
+                        <div class="farama-perks-card__separator"></div>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <i>Please <a href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits. Note that
+        donation tiers are annual.</i>
+
+    <div>
+        <div class="row pt-3 text-center">
+            <h2 class="mb-5">Donors</h2>
+
+            <h3 class="text-primary my-3">Silver - $10k+</h3>
+            {% for org in site.data.donors %}
+            {% if org.tier == 'Silver' %}
+            <div class="mb-5">
+                <a href="{{org.site}}">
+                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
+                        style="background-color: #{{org.color}}; height: 150px;" alt="">
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <h3 class="text-primary my-3">Gold - $25k+</h3>
+            {% for org in site.data.donors %}
+            {% if org.tier == 'Gold' %}
+            <div class="mb-5">
+                <a href="{{org.site}}">
+                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
+                        style="background-color: #{{org.color}}; height: 150px;" alt="">
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <h3 class="text-primary my-3">Platinum - $50k+</h3>
+            {% for org in site.data.donors %}
+            {% if org.tier == 'Platinum' %}
+            <div class="mb-5">
+                <a href="{{org.site}}">
+                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
+                        style="background-color: #{{org.color}}; height: 150px;" alt="">
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <h3 class="text-primary my-3">Diamond - $150k+</h3>
+            {% for org in site.data.donors %}
+            {% if org.tier == 'Diamond' %}
+            <div class="mb-5">
+                <a href="{{org.site}}">
+                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
+                        style="background-color: #{{org.color}}; height: 150px;" alt="">
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+
+<!-- for every dot org -->
+<script async defer src="https://assets.every.org/dist/donate-button/0.3/index.js" class="edo-donate-btn-js"></script>
+<script>
+function createWidget() {
+        everyDotOrgDonateButton.createWidget({
+            selector: "#edo-donate-btn", options: {
+                nonprofitSlug: "farama-inc",
+                showInitialMessage: false,
+                defaultFrequency: "monthly",
+                infoPages: [{
+                    key: "faq",
+                    name: "FAQ",
+                    source: `## How does this donate button work?This button is powered by Every.org, a tax-exempt US 501(c)(3) nonprofit building accessible giving infrastructure to help every person and organization do more good.You will be directed to www.every.org to securely complete your donation. You can donate cash via Bank, Card, Google Pay, Apple Pay, or PayPal. You can also elect to donate Crypto, Stock, or via a DAF.## Is my donation tax-deductible?Yes, your donation will be made to Every.org, a US 501(c)(3) tax-exempt organization with EIN 61-1913297, and you will instantly get a receipt emailed to you.We do not provide legal or tax advise to individuals, but generally speaking in the US if you itemize your tax return, then tax deductible donations can reduce taxable income.## How long does it take for my donation to arrive?Your donation information will be sent instantly and funds are disbursed weekly.`,
+                },],
+                currencies: [{ countryCodes: ["US"], name: "USD", symbol: "$", minimumAmount: 10, },],
+            },
+        });
+    }
+
+    if (window.everyDotOrgDonateButton) {
+        createWidget();
+    } else {
+        document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidget);
+    }
+</script>
+
 <!-- for paypal payments -->
-<script src="https://www.paypal.com/sdk/js?client-id=ARoTYDvrwPvrGBON3veeIccmNVa3YnB4Hxx5cJxnTgXmlWa__vkKa7aiIKfqmA111wc1x-43VjsGQXBZ&vault=true&intent=subscription"
-        data-sdk-integration-source="button-factory"></script>
+<script
+    async defer
+    src="https://www.paypal.com/sdk/js?client-id=ARoTYDvrwPvrGBON3veeIccmNVa3YnB4Hxx5cJxnTgXmlWa__vkKa7aiIKfqmA111wc1x-43VjsGQXBZ&vault=true&intent=subscription"
+    data-sdk-integration-source="button-factory"></script>
 <script>
     paypal.Buttons({
         style: {
@@ -26,166 +198,3 @@ title: Donations
         }
     }).render('#paypal-button-container-P-4VD91427ED786441GML5L2ZQ'); // Renders the PayPal button
 </script>
-
-<!-- main page -->
-<div class="farama-gradient-container">
-    <div class="pt-5 py-3 farama-gradient-bg">
-        <div class="jumbotron mb-4 pt-5">
-            <div class="container-fluid">
-                <div style="max-width: 900px; text-align: left;
-                        margin: auto; color: white;">
-                    <h1>
-                        {{page.title}}
-                    </h1>
-
-                        <h4 class="mb-5 mt-4">We accept donations through a number of payment services shown below. We are a registered 501c3
-                            nonprofit in the US, meaning that donations are tax deductible.</h4>
-                        <div class="row pt-3 gx-2 farama-donation-cards-container" style="display: flex; flex-wrap:wrap; justify-content: center;">
-                        {% for org in site.data.donate %}
-                        <div class="col-12 col-xl-4 col-lg-4 col-sm-5 my-2">
-
-                            {% if org.name == "Paypal" %}
-                            <a href="{{org.site}}" onclick="window.open('{{org.site}}','popup','width=600,height=600'); return false;">
-                                {% elsif org.name == "Contact Us Directly" %}
-                                <a id="email" style="color: black; " href="{{org.site}}">
-                                    {% else %}
-                                    <a href="{{org.site}}">
-                                        {% endif %}
-                                <div class="card farama-donation-card  p-3 mx-1" style="max-width: 540px;height: 100%;" id="{% if org.name == 'every.org' %}edo-donate-btn{% endif %}">
-                                    <div class="row g-0">
-                                        <div class="col-md-2" style="padding-right: 8px;">
-
-                                            {% if org.name == "Contact Us Directly" %}
-                                            {{org.image}}
-                                            {% else %}
-                                            <img src="assets/donate/{{org.image}}" class="img-fluid rounded-start" alt="{{org.name}}">
-                                            {% endif %}
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title">{{org.name}}</h5>
-                                                <p class="card-text"><small class="text-muted">{{org.fees}}</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- for every dot org -->
-<script async defer src="https://assets.every.org/dist/donate-button/0.3/index.js"
-class="edo-donate-btn-js"></script>
-<script>function createWidget() {
-everyDotOrgDonateButton.createWidget({
-selector: "#edo-donate-btn", options: {
-    nonprofitSlug: "farama-inc",
-    showInitialMessage: false,
-    defaultFrequency: "monthly",
-    infoPages: [{
-        key: "faq",
-        name: "FAQ",
-        source: `## How does this donate button work?This button is powered by Every.org, a tax-exempt US 501(c)(3) nonprofit building accessible giving infrastructure to help every person and organization do more good.You will be directed to www.every.org to securely complete your donation. You can donate cash via Bank, Card, Google Pay, Apple Pay, or PayPal. You can also elect to donate Crypto, Stock, or via a DAF.## Is my donation tax-deductible?Yes, your donation will be made to Every.org, a US 501(c)(3) tax-exempt organization with EIN 61-1913297, and you will instantly get a receipt emailed to you.We do not provide legal or tax advise to individuals, but generally speaking in the US if you itemize your tax return, then tax deductible donations can reduce taxable income.## How long does it take for my donation to arrive?Your donation information will be sent instantly and funds are disbursed weekly.`,
-    },],
-    currencies: [{countryCodes: ["US"], name: "USD", symbol: "$", minimumAmount: 10,},],
-},
-});
-}
-
-if (window.everyDotOrgDonateButton) {
-createWidget();
-} else {
-document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidget);
-}
-</script>
-
-<div class="content-container mb-5">
-
-       <!-- donation perks section -->
-    <h2 class="mb-4 mt-5">Donor Benefits</h2>
-    <i>Please <a href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits. Note that
-        donation tiers are annual.</i>
-    <div class="row mt-4"  style="display: flex; flex-wrap:wrap; justify-content: center;">
-        {% for tier in site.data.donate_tiers %}
-        <div class=" col-lg-3 col-sm-6 col-12 mb-4">
-            <div class="card farama-perks-card text-center"  style="height: 100%; margin:0 auto">
-                <h5 class="card-title pt-3 mx-5">{{tier.name}}</h5>
-                <ul>
-                    {% for item in tier.benefits %}
-                    <div class="farama-perks-card__separator"></div>
-                    <li class="mx-3">
-                        {{item.benefit}}
-                    </li>
-                    {% endfor %}
-                    <div class="farama-perks-card__separator"></div>
-                </ul>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-
-    <div>
-        <div class="row pt-3 text-center">
-            <h2 class="mb-5">Donors</h2>
-
-            <h3 class="text-primary my-3">Silver - $10k+</h3>
-            {% for org in site.data.donors %}
-            {% if org.tier == 'Silver' %}
-            <div class="mb-5">
-                <a href="{{org.site}}">
-                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                         style="background-color: #{{org.color}}; height: 150px;"
-                         alt="">
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-
-            <h3 class="text-primary my-3">Gold - $25k+</h3>
-            {% for org in site.data.donors %}
-            {% if org.tier == 'Gold' %}
-            <div class="mb-5">
-                <a href="{{org.site}}">
-                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                         style="background-color: #{{org.color}}; height: 150px;"
-                         alt="">
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-
-            <h3 class="text-primary my-3">Platinum - $50k+</h3>
-            {% for org in site.data.donors %}
-            {% if org.tier == 'Platinum' %}
-            <div class="mb-5">
-                <a href="{{org.site}}">
-                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                         style="background-color: #{{org.color}}; height: 150px;"
-                         alt="">
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-            <h3 class="text-primary my-3">Diamond - $150k+</h3>
-            {% for org in site.data.donors %}
-            {% if org.tier == 'Diamond' %}
-            <div class="mb-5">
-                <a href="{{org.site}}">
-                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                         style="background-color: #{{org.color}}; height: 150px;"
-                         alt="">
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-
-
-</div>

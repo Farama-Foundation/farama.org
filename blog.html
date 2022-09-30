@@ -9,6 +9,15 @@ title: Blog
             <div class="col-7" style="border-right: 1px solid #00788A">
                     <h3>{{post.title}}</h3>
                     <span class="text-muted">{{post.date | date: "%-d %B %Y" }}</span>
+                    <span class="text-muted ps-2">
+                        {% assign words = post.content | number_of_words %}
+                        {% if words < 360 %}
+                            1 min
+                        {% else %}
+                            {{ words | divided_by:180 }} mins
+                        {% endif %}
+                            read
+                    </span>
             </div>
             <div class="col-5">
                 {{ post.excerpt | strip_html }}
