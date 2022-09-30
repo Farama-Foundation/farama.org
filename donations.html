@@ -111,17 +111,21 @@ document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidg
     <h2 class="my-4">Donor Benefits</h2>
     <i>Please <a href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits. Note that
         donation tiers are annual.</i>
-    <div class="row">
+    <div class="row mt-4"  style="display: flex; flex-wrap:wrap; justify-content: center;">
         {% for tier in site.data.donate_tiers %}
-        <div class="card farama-perks-card text-center col-lg-3 col-sm-6 col-12 ">
-            <h3 class="card-title my-4">{{tier.name}}</h3>
-            <ul class="list-group">
-                {% for item in tier.benefits %}
-                <li class="list-group-item">
-                    {{item.benefit}}
-                </li>
-                {% endfor %}
-            </ul>
+        <div class=" col-lg-3 col-sm-6 col-12 mb-4">
+            <div class="card farama-perks-card text-center"  style="height: 100%; margin:0 auto">
+                <h5 class="card-title pt-3 mx-5">{{tier.name}}</h5>
+                <ul>
+                    {% for item in tier.benefits %}
+                    <div class="farama-perks-card__separator"></div>
+                    <li class="mx-3">
+                        {{item.benefit}}
+                    </li>
+                    {% endfor %}
+                    <div class="farama-perks-card__separator"></div>
+                </ul>
+            </div>
         </div>
         {% endfor %}
     </div>

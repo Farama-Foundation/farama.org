@@ -159,12 +159,28 @@ body {
 }
 
 .farama-perks-card {
-    --bs-card-inner-border-radius: 0;
-    --bs-card-border-radius: 0;
-    border-radius: 0;
     padding: 0;
-    background-color: var(--bs-primary);
-    color: white
+}
+
+.farama-perks-card:hover {
+    border-color: var(--bs-primary);
+}
+
+.farama-perks-card .card-title {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.farama-perks-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.farama-perks-card__separator {
+    height: 2px;
+    background-color: var(--bs-secondary);
+    width: 10px;
+    margin: 12px auto
 }
 
 footer {
