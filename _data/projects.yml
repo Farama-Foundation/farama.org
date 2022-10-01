@@ -61,7 +61,8 @@
   type: incubating
 
 - name: MicroRTS
-  github: https://github.com/Farama-Foundation/MicroRTS
+  github: https://github.com/Farama-Foundation/Gym-MicroRTS
+  core_github: https://github.com/Farama-Foundation/MicroRTS
   website:
   desc: A simple and highly efficient RTS-game-inspired environment for reinforcement learning
   image: microrts.svg

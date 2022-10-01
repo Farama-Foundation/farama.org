@@ -20,8 +20,11 @@ title: Team
                     <div class="card-body">
                         <h5 class="card-title">{{person.name}}</h5>
                         <div class="farama-profile-card__separator"></div>
-                        <div class="card-text" style="color:#3d4246">
-                            {{person.position}}
+                        <div class="card-text" style="color: #3d4246">
+                            {{person.role}}
+                        </div>
+                        <div class="card-text mt-2 text-muted" style="color: #3d4246">
+                            {{person.affiliation}}
                         </div>
                     </div>
                 </div>
@@ -41,7 +44,13 @@ title: Team
                         <h5 class="card-title">{{person.name}}</h5>
                         <div class="farama-profile-card__separator"></div>
                         <div class="card-text">
-                            {{person.position}}
+                            {{person.role}}
+                        </div>
+                        <div class="card-text" style="color: #3d4246">
+                            {{person.role}}
+                        </div>
+                        <div class="card-text" style="color: #3d4246">
+                            {{person.affiliation}}
                         </div>
                     </div>
                 </div>

@@ -1,56 +1,70 @@
 - name: Jordan Terry
-  position: CEO, Chair of Board<br>University of Maryland, Swarm Labs
+  role: CEO, Chair of Board
+  affiliation: University of Maryland, Swarm Labs
   image: jordan.jpeg
   site: https://github.com/jkterry1
 - name: Mark Towers
-  position: Gymnasium maintainer and project manager<br>University of Southampton
+  role: Board member, Gymnasium maintainer and project manager
+  affiliation: University of Southampton
   image: mark.png
   site: https://github.com/pseudo-rnd-thoughts
-- name: Feng Gu
-  position: Web developer<br>University of Maryland
-  image: feng.jpg
-  site: https://github.com/SiddarGu
 - name: Ariel Kwiatkowski
-  position: Gymnasium maintainer<br>École Polytechnique
+  role: Board member, Gymnasium maintainer
+  affiliation: École Polytechnique
   image: ariel.jpg
   site: https://github.com/RedTachyon
+- name: Feng Gu
+  role: Web developer
+  affiliation: University of Maryland
+  image: feng.jpg
+  site: https://github.com/SiddarGu
 - name: Shengyi “Costa” Huang
-  position: Gymnasium contributor<br>Drexel University
+  role: Gymnasium contributor
+  affiliation: Drexel University
   image: costa.png
   site: https://github.com/vwxyzjn
 - name: Jet Tai
-  position: PettingZoo maintainer<br>Coventry University
+  role: PettingZoo maintainer
+  affiliation: Coventry University
   image: jet.png
   site: https://github.com/jjshoots
 - name: Rodrigo de Lazcano Perez-Vicente
-  position: Gymnasium-Robotics and Minigrid maintainer<br>NIST
+  role: Gymnasium-Robotics and Minigrid maintainer
+  affiliation: NIST
   image: rodrigo.jpg
   site: https://github.com/rodrigodelazcano
 - name: William Dudley
-  position: PettingZoo maintainer<br>Imperial College London
+  role: PettingZoo maintainer
+  affiliation: Imperial College London
   image: will.jpg
   site:
 - name: Manuel Goulão
-  position: Web developer<br>Técnico Lisboa
+  role: Web developer
+  affiliation: Técnico Lisboa
   image: manuel.jpg
   site:
 - name: Eric
-  position: Procgen2 and TinyScaler maintainer<br>Ogma Corp
+  role: Procgen2 and TinyScaler maintainer
+  affiliation: Ogma Corp
   image: eric.jpg
   site:
 - name: Daniel Scott
-  position: MAgent and assorted projects maintainer<br>Georgia Institute of Technology
+  role: MAgent and assorted projects maintainer
+  affiliation: Georgia Institute of Technology
   image: daniel.png
   site:
 - name: Markus
-  position: Gymnasium and assorted projects contributor<br>ETH Zürich
+  role: Gymnasium and assorted projects contributor
+  affiliation: ETH Zürich
   image: markus.jpg
   site:
 - name: Arjun KG
-  position: Gymnasium and assorted projects contributor<br>Connectome.Design
+  role: Gymnasium and assorted projects contributor
+  affiliation: Connectome.Design
   image: arjun.jpg
   site:
 - name: Omar G. Younis
-  position: Gymnasium and assorted projects contributor<br>ETH Zürich
+  role: Gymnasium and assorted projects contributor
+  affiliation: ETH Zürich
   image: omar.jpg
   site:

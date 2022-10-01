@@ -13,7 +13,7 @@ title: Project Standards
         <div class="col-12 col-lg-4 col-md-6 col-sm-12 mb-4" style="display: flex; flex-wrap:wrap">
             <div class="card farama-standards-card text-dark bg-light" style="height: 100%;">
                 <div class="card-header fw-bold text-center">{{ item.type }}</div>
-                <div class="card-body">
+                <div class="card-body bg-white" style="border-radius: var(--bs-card-inner-border-radius)">
                     <ul>
                         {% for standard in item.standards %}
                         <li>{{ standard.name }}</li>
