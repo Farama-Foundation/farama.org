@@ -1,12 +1,12 @@
 - name: Jordan Terry
   role: CEO, Chair of Board
   affiliation: University of Maryland, Swarm Labs
-  image: jordan.jpeg
+  image: jordan.jpg
   site: https://github.com/jkterry1
 - name: Mark Towers
   role: Board member, Gymnasium maintainer and project manager
   affiliation: University of Southampton
-  image: mark.png
+  image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
 - name: Ariel Kwiatkowski
   role: Board member, Gymnasium maintainer
@@ -21,12 +21,12 @@
 - name: Shengyi “Costa” Huang
   role: Gymnasium contributor
   affiliation: Drexel University
-  image: costa.png
+  image: costa.jpg
   site: https://github.com/vwxyzjn
 - name: Jet Tai
   role: PettingZoo maintainer
   affiliation: Coventry University
-  image: jet.png
+  image: jet.jpg
   site: https://github.com/jjshoots
 - name: Rodrigo de Lazcano Perez-Vicente
   role: Gymnasium-Robotics and Minigrid maintainer
@@ -51,7 +51,7 @@
 - name: Daniel Scott
   role: MAgent and assorted projects maintainer
   affiliation: Georgia Institute of Technology
-  image: daniel.png
+  image: daniel.jpg
   site:
 - name: Markus
   role: Gymnasium and assorted projects contributor
