@@ -29,28 +29,28 @@
 - name: William Dudley
   position: PettingZoo maintainer<br>Imperial College London
   image: will.jpg
-  site:
+  site: https://github.com/WillDudley
 - name: Manuel Goulão
   position: Web developer<br>Técnico Lisboa
   image: manuel.jpg
-  site:
+  site: https://github.com/mgoulao
 - name: Eric
   position: Procgen2 and TinyScaler maintainer<br>Ogma Corp
   image: eric.jpg
-  site:
+  site: https://github.com/222464
 - name: Daniel Scott
   position: MAgent and assorted projects maintainer<br>Georgia Institute of Technology
   image: daniel.jpg
-  site:
-- name: Markus
+  site: https://github.com/dsctt
+- name: Markus Krimmel
   position: Gymnasium and assorted projects contributor<br>ETH Zürich
   image: markus.jpg
-  site:
+  site: https://github.com/Markus28
 - name: Arjun KG
   position: Gymnasium and assorted projects contributor<br>Connectome.Design
   image: arjun.jpg
-  site:
+  site: https://github.com/arjun-kg
 - name: Omar G. Younis
   position: Gymnasium and assorted projects contributor<br>ETH Zürich
   image: omar.jpg
-  site:
+  site: https://github.com/younik
