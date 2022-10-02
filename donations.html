@@ -57,98 +57,65 @@ title: Donations
                         {% endfor %}
                     </div>
                 </div>
+                <div class="farama-perks-cards-container px-4 mt-3 mb-4">
+
+                    <h2 class="mt-3 text-white">Donor Benefits</h2>
+                    <span class="text-white text-center" style="font-size: 18px;">Please <a style="color:#c7deff"
+                            href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits.</span>
+                    <div class="row mt-4" style="display: flex; flex-wrap:wrap; justify-content: center;">
+                        {% for tier in site.data.donate_tiers %}
+                        <div class=" col-lg-3 col-sm-6 col-12 mb-4">
+                            <div class="card farama-perks-card text-center" style="height: 100%; margin:0 auto;">
+                                <h5 class="card-title pt-3 mx-5">{{tier.name}}</h5>
+                                <ul>
+                                    <div class="farama-perks-card__separator" style="width: 70px; margin-top: 0px">
+                                    </div>
+                                    {% for item in tier.benefits %}
+                                    <li class="mx-3 text-muted"  style="line-height: 1.2rem;">
+                                        <small>
+                                            {{item.benefit}}
+
+                                        </small>
+                                    </li>
+                                    {% if forloop.last %}{% else %}
+                                    <div class="farama-perks-card__separator"></div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <i class="text-white">* Note that donation tiers are annual.</i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container mb-5">
+<!-- donation perks section -->
 
-    <!-- donation perks section -->
-    <h2 class="mb-4 mt-5 class="text-primary"">Donor Benefits</h2>
-    <div class="card farama-perks-cards-container px-4">
-        <div class="row mt-4" style="display: flex; flex-wrap:wrap; justify-content: center;">
-            {% for tier in site.data.donate_tiers %}
-            <div class=" col-lg-3 col-sm-6 col-12 mb-4">
-                <div class="card farama-perks-card text-center" style="height: 100%; margin:0 auto">
-                    <h5 class="card-title pt-3 mx-5">{{tier.name}}</h5>
-                    <ul>
-                        <div class="farama-perks-card__separator" style="width: 70px; margin-top: 0px"></div>
-                        {% for item in tier.benefits %}
-                        <li class="mx-3">
-                            {{item.benefit}}
-                        </li>
-                        {% if forloop.last %}{% else %}
-                        <div class="farama-perks-card__separator"></div>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
+<div class="container mb-5">
+    <div class="row pt-3 text-center w-100">
+        <h2 class="mb-2">Donors</h2>
+        {% for item in site.data.donors %}
+            <h3 class="text-primary my-3">{{item.tier}}</h3>
+            {% for org in item.donors %}
+            <div class="mb-5">
+                <a href="{{org.site}}">
+                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
+                        style="background-color: #{{org.color}}; height: 110px;" alt="">
+                </a>
             </div>
             {% endfor %}
-        </div>
-    </div>
-    <i>Please <a href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits. Note that
-        donation tiers are annual.</i>
-
-    <div class="row pt-3 text-center w-100">
-        <h2 class="mb-5">Donors</h2>
-
-        <h3 class="text-primary my-3">Silver - $10k+</h3>
-        {% for org in site.data.donors %}
-        {% if org.tier == 'Silver' %}
-        <div class="mb-5">
-            <a href="{{org.site}}">
-                <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                    style="background-color: #{{org.color}}; height: 150px;" alt="">
-            </a>
-        </div>
-        {% endif %}
-        {% endfor %}
-
-        <h3 class="text-primary my-3">Gold - $25k+</h3>
-        {% for org in site.data.donors %}
-        {% if org.tier == 'Gold' %}
-        <div class="mb-5">
-            <a href="{{org.site}}">
-                <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                    style="background-color: #{{org.color}}; height: 150px;" alt="">
-            </a>
-        </div>
-        {% endif %}
-        {% endfor %}
-
-        <h3 class="text-primary my-3">Platinum - $50k+</h3>
-        {% for org in site.data.donors %}
-        {% if org.tier == 'Platinum' %}
-        <div class="mb-5">
-            <a href="{{org.site}}">
-                <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                    style="background-color: #{{org.color}}; height: 150px;" alt="">
-            </a>
-        </div>
-        {% endif %}
-        {% endfor %}
-        <h3 class="text-primary my-3">Diamond - $150k+</h3>
-        {% for org in site.data.donors %}
-        {% if org.tier == 'Diamond' %}
-        <div class="mb-5">
-            <a href="{{org.site}}">
-                <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                    style="background-color: #{{org.color}}; height: 150px;" alt="">
-            </a>
-        </div>
-        {% endif %}
         {% endfor %}
     </div>
-
-
 </div>
 
 <!-- for every dot org -->
 <script async defer src="https://assets.every.org/dist/donate-button/0.3/index.js" class="edo-donate-btn-js"></script>
 <script>
-function createWidget() {
+    function createWidget() {
         everyDotOrgDonateButton.createWidget({
             selector: "#edo-donate-btn", options: {
                 nonprofitSlug: "farama-inc",
@@ -169,30 +136,4 @@ function createWidget() {
     } else {
         document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidget);
     }
-</script>
-
-<!-- for paypal payments -->
-<script
-    async defer
-    src="https://www.paypal.com/sdk/js?client-id=ARoTYDvrwPvrGBON3veeIccmNVa3YnB4Hxx5cJxnTgXmlWa__vkKa7aiIKfqmA111wc1x-43VjsGQXBZ&vault=true&intent=subscription"
-    data-sdk-integration-source="button-factory"></script>
-<script>
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal'
-        },
-        createSubscription: function (data, actions) {
-            return actions.subscription.create({
-                /* Creates the subscription */
-                plan_id: 'P-4VD91427ED786441GML5L2ZQ',
-                quantity: 1 // The quantity of the product for a subscription
-            });
-        },
-        onApprove: function (data, actions) {
-            alert(data.subscriptionID); // You can add optional success message for the subscriber here
-        }
-    }).render('#paypal-button-container-P-4VD91427ED786441GML5L2ZQ'); // Renders the PayPal button
 </script>

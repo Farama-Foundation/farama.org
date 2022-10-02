@@ -22,19 +22,27 @@
   type: mature
   popular: false
 
-- name: Tinyscaler
-  github: https://github.com/Farama-Foundation/tinyscaler
-  website:
-  image: TinyScalar.svg
-  desc: A small and fast image rescaling library with SIMD support
+- name: MiniGrid
+  github: https://github.com/Farama-Foundation/MiniGrid
+  website: https://minigrid.farama.org
+  desc: Simple and easily configurable grid world environments for reinforcement learning
+  image: minigrid.svg
   type: mature
-  popular: false
+  popular: true
 
 - name: Gymnasium-Robotics
   github: https://github.com/Farama-Foundation/gym-robotics
   website:
   desc: A collection of robotics simulation environments for reinforcement learning
   image: GymRobotics.svg
+  type: mature
+  popular: false
+
+- name: Tinyscaler
+  github: https://github.com/Farama-Foundation/tinyscaler
+  website:
+  image: TinyScalar.svg
+  desc: A small and fast image rescaling library with SIMD support
   type: mature
   popular: false
 
@@ -45,6 +53,13 @@
   image: AutoRom.svg
   type: mature
   popular: false
+
+- name: JumPy
+  github: https://github.com/Farama-Foundation/Jumpy
+  website:
+  desc: On-the-fly conversions between Jax and NumPy tensors
+  image: jumpy.svg
+  type: mature
 
 - name: MAgent2
   github: https://github.com/Farama-Foundation/MAgent2
@@ -68,27 +83,12 @@
   image: microrts.svg
   type: incubating
 
-- name: MiniGrid
-  github: https://github.com/Farama-Foundation/MiniGrid
-  website: https://minigrid.farama.org
-  desc: Simple and easily configurable grid world environments for reinforcement learning
-  image: minigrid.svg
-  type: mature
-  popular: true
-
 - name: MiniWorld
   github: https://github.com/Farama-Foundation/MiniWorld
   website:
   desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
   image: miniworld.svg
   type: incubating
-
-- name: JumPy
-  github: https://github.com/Farama-Foundation/Jumpy
-  website:
-  desc: On-the-fly conversions between Jax and NumPy tensors
-  image: jumpy.svg
-  type: mature
 
 - name: D4RL
   github: https://github.com/Farama-Foundation/D4RL
