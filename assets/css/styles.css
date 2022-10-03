@@ -142,9 +142,13 @@ body {
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
-.farama-donation-cards-container a {
+.farama-gradient-bg .farama-donation-cards-container a {
     text-decoration: none;
     color: var(--bs-body-color)
+}
+
+.farama-gradient-bg .farama-perks-card a {
+    color: var(--bs-link-color)
 }
 
 .farama-donation-card img {
@@ -242,6 +246,10 @@ img.light-shadow {
 
 .farama-gradient-container {
     background-color: #001633;
+}
+
+.farama-gradient-container a {
+    color: #c7deff
 }
 
 .farama-gradient-bg {
