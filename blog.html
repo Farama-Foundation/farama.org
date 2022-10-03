@@ -6,7 +6,7 @@ title: Blog
     {% for post in site.posts %}
     <a href="{{post.url | relative_url}}" style="text-decoration: none;color:black">
         <div class="row">
-            <div class="col-7" style="border-right: 1px solid #00788A">
+            <div class="col-md-7 col-12" style="border-right: 1px solid #00788A">
                     <h3>{{post.title}}</h3>
                     <span class="text-muted">{{post.date | date: "%-d %B %Y" }}</span>
                     <span class="text-muted ps-2">
@@ -19,7 +19,7 @@ title: Blog
                             read
                     </span>
             </div>
-            <div class="col-5">
+            <div class="col-md-5 col-12">
                 {{ post.excerpt | strip_html }}
             </div>
 
