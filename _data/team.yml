@@ -37,34 +37,34 @@
   role: PettingZoo maintainer
   affiliation: Imperial College London
   image: will.jpg
-  site:
+  site: https://github.com/WillDudley
 - name: Manuel Goulão
   role: Web developer
   affiliation: Técnico Lisboa
   image: manuel.jpg
-  site:
+  site: https://github.com/mgoulao
 - name: Eric
   role: Procgen2 and TinyScaler maintainer
   affiliation: Ogma Corp
   image: eric.jpg
-  site:
+  site: https://github.com/222464
 - name: Daniel Scott
   role: MAgent and assorted projects maintainer
   affiliation: Georgia Institute of Technology
   image: daniel.jpg
-  site:
-- name: Markus
+  site: https://github.com/dsctt
+- name: Markus Krimmel
   role: Gymnasium and assorted projects contributor
   affiliation: ETH Zürich
   image: markus.jpg
-  site:
+  site: https://github.com/Markus28
 - name: Arjun KG
   role: Gymnasium and assorted projects contributor
   affiliation: Connectome.Design
   image: arjun.jpg
-  site:
+  site: https://github.com/arjun-kg
 - name: Omar G. Younis
   role: Gymnasium and assorted projects contributor
   affiliation: ETH Zürich
   image: omar.jpg
-  site:
+  site: https://github.com/younik
