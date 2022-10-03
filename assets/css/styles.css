@@ -1,9 +1,219 @@
+:root {
+    --bs-primary-background-dark: #03121e;
+    --bs-primary-background: #011433;
+    --bs-primary:#0f4a65;
+    --bs-primary-rgb:15, 74, 101;
+    --bs-primary-light:#2a7fa6;
+    --bs-secondary:#6d5842;
+    --bs-secondary-light: #bd8a42
+}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#nav {
+    position: absolute;
+    width: 100%;
+    min-height: 56px;
+    background-color: rgba(2, 13, 29, 0.60);
+    z-index: 3;
+}
+
+#nav a:hover {
+    color: #d9b481!important
+}
+
+.navbar-dark {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.farama-navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.farama-navbar-toggler .navbar-toggler-icon {
+    width: 36px;
+    height: 36px;
+}
+
+
+.jumbotron {
     text-align: center;
+    font-family: "Source Sans Pro";
+}
+
+.jumbotron hr {
+    width: 100%;
+    max-width: 500px;
+    margin: 12px auto 24px;
+}
+
+.container {
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    --bs-card-border-radius: 1.5rem;
+    --bs-card-inner-border-radius: calc(var(--bs-card-border-radius) - 1px);
+}
+
+.farama-card {
+    text-align: center;
+    transition: border-color 0.05s ease-in;
+}
+
+.farama-card:hover {
+    border-color: var(--bs-primary);
+}
+
+.farama-card img {
+    width: 45%;
+    aspect-ratio: 1;
+    margin: 24px auto;
+    border-radius: 0;
+}
+
+.farama-card .card-title {
+    color: var(--bs-primary)
+}
+
+.farama-card .btn {
+
+}
+
+.farama-card .btn i {
+    margin-right: 7px;
+}
+
+.farama-card .btn svg {
+    width: 21px;
+    height: 21px;
+    margin-right: 7px;
+    margin-bottom: 2px;
+}
+
+.farama-card .card-footer {
+    /* background-color: var(--bs-primary-light); */
+}
+
+.farama-profile-link {
+    text-decoration: none;
+    color: var(--bs-body-color)
+}
+
+.farama-profile-card {
+    text-align: center;
+}
+
+.farama-profile-card a:hover {
+    color: initial
+}
+
+.farama-profile-card img {
+    width: 45%;
+    aspect-ratio: 1;
+    margin: 24px auto 12px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.farama-profile-card .card-body {
+    padding: 12px 24px 24px
+}
+
+.farama-profile-card .card-title {
+    color: var(--bs-primary)
+}
+
+.farama-profile-card__separator {
+    width: 60px;
+    height: 2px;
+    margin: 12px auto;
+    background-color: #001633;
+}
+
+.farama-donation-card {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.farama-gradient-bg .farama-donation-cards-container a {
+    text-decoration: none;
+    color: var(--bs-body-color)
+}
+
+.farama-gradient-bg .farama-perks-card a {
+    color: var(--bs-link-color)
+}
+
+.farama-donation-card img {
+    width: 42px;
+}
+
+.farama-donation-card i {
+    font-size: 28px;
+}
+
+.farama-donation-card .card-body {
+    padding: 0;
+}
+
+.farama-donation-card .card-text {
+    line-height: 12px;
+}
+
+.farama-perks-cards-container {
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 98%;
+    max-width: 950px;
+    margin: auto;
+}
+
+.farama-perks-card {
+    padding: 0;
+    font-family: var(--bs-font-sans-serif);
+}
+
+.farama-perks-card:hover {
+    border-color: var(--bs-primary);
+}
+
+.farama-perks-card .card-title {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.farama-perks-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.farama-perks-card__separator {
+    height: 2px;
+    background-color: var(--bs-secondary);
+    width: 10px;
+    margin: 12px auto
+}
+
+.farama-standards-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.farama-standards-card__separator {
+    height: 2px;
+    background-color: var(--bs-secondary);
+    width: 10px;
+    margin: 12px auto
 }
 
 footer {
@@ -32,4 +242,42 @@ img.light-shadow {
 
 .nav-link{
     color: white;font-size: 20px;font-weight: 600;
+}
+
+.farama-gradient-container {
+    background-color: #001633;
+}
+
+.farama-gradient-container a {
+    color: #c7deff
+}
+
+.farama-gradient-bg {
+    background:
+                 radial-gradient(
+                farthest-side at bottom left,
+                #7A603E,
+                transparent
+                ),
+                radial-gradient(
+                farthest-corner at top right,
+                #005461,
+                transparent
+                ),
+                radial-gradient(
+                farthest-corner at bottom right,
+                #5b4e2a,
+                transparent
+                ),
+                radial-gradient(
+                closest-side at center,
+                #005562,
+                transparent
+                );
+}
+
+@media (max-width: 992px) {
+    #navbarNav {
+        margin-top: 16px;
+    }
 }

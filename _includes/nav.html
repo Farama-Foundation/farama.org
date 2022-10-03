@@ -1,68 +1,25 @@
 <!-- nav bar -->
-<nav class="navbar navbar-expand-lg navbar-dark shadow-lg navbar-fixed-top"
-    style="position: fixed;width: 100%;z-index: 3;" id="nav">
-    <a class="navbar-brand" href="https://farama.org/"></a>
-    <button class="navbar-toggler mx-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            {% for item in site.data.nav %}
-            <li class="nav-item mx-0 mx-lg-1">
-                <a style="color: white;font-size: 20px;font-weight: 600;{% if item.name == 'donors' %} color:green{% endif %}"
-                    class="nav-link " href="{{ item.link | relative_url }}">{{
-                    item.name }}</a>
-            </li>
-            {% endfor %}
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+    <div class="container-fuid d-flex w-100">
+        <a class="navbar-brand position-absolute" style="left: 24px; top: 4px" href="#">
+            <img src="{{'assets/images/farama_solid_white.svg' | relative_url }}" alt="Farama Foundation logo"
+                width="40" height="40">
+        </a>
+        <button class="navbar-toggler farama-navbar-toggler position-absolute" style="right: 16px; top:10px" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                {% for item in site.data.nav %}
+                <li class="nav-item ms-3 me-3">
+                    <a style="color: white;font-weight:400;{% if item.name == page.title %} color:var(--bs-secondary-light) {% endif %}"
+                        class="nav-link " href="{{ item.link | relative_url }}">{{
+                            item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-    {% if page.index != true %}
-    <a href="{{site.baseurl}}" class="d-none d-lg-block"><img style="margin-right: 20px;"
-            src="{{'assets/images/farama_solid_white.svg' | relative_url }}" width="35px" /></a>
-    {% endif %}
+
 </nav>
-
-<style>
-    .navbar-fixed-top.scrolled {
-        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 10%, rgba(31, 31, 101, 1) 88%);
-        transition: background-color 200ms linear;
-    }
-
-    .lin-grad {
-        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 10%, rgba(31, 31, 101, 1) 88%);
-    }
-</style>
-
-<script>
-    sandwich_open = false
-    // https://stackoverflow.com/questions/23706003/changing-nav-bar-color-after-scrolling
-    $(function () {
-        $(document).scroll(function () {
-            checkMenuBackground()
-        });
-    });
-
-    $('.navbar-toggler').click(function () {
-        sandwich_open =  !sandwich_open
-        checkMenuBackground()
-    });
-
-    // checks whether the background should be a gradient or clear
-    // and sets it appropriately
-    function checkMenuBackground(){
-        
-        if (sandwich_open) {
-            document.getElementById("nav").classList.add("scrolled")
-        }else{
-            var $nav = $(".navbar-fixed-top");
-            
-            if ($(document).scrollTop() > $nav.height() + 50){
-                document.getElementById("nav").classList.add("scrolled")
-            }else{
-                document.getElementById("nav").classList.remove("scrolled")
-            }
-            
-        }
-    }
-</script>

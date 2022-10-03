@@ -1,5 +1,4 @@
 ---
-type: fff
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -8,30 +7,39 @@ type: fff
 
 <body>
     {% include nav.html %}
-    <div class="pt-5 shadow-lg py-3" style="background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 10%, rgba(31,31,101,1) 88%);">
-        <div class="jumbotron mb-5 pt-5">
-            <div class="container-fluid">
-                <div class="row">
+    <div class="farama-gradient-container">
+        <div class="pt-5 py-3 farama-gradient-bg">
+            <div class="jumbotron mb-4 pt-5">
+                <div class="container-fluid">
+                    {% if page.title == site.title or page.type == "The Farama Foundation" %}
 
-                    <div class="col-12" style="color: white;">
-                        {% if page.title == site.title or page.type == "Blog" %}
+                    <div style="color: white;">
+                        {% if page.title == site.title %}
                         <img class="" src="assets/images/farama_solid_white.svg" width="125" height="135" />
                         {% endif %}
-                        <h1 class="">
+                        <h1>
                             {{page.title}}
                         </h1>
+                        <hr class="d-flex justify-content-center" style="max-width: 500px;">
                         <h5>
                             {{page.subtitle}}
-    
+
                         </h5>
                     </div>
+                    {% else %}
+                    <div style="max-width: 900px; text-align: left;
+                            margin: auto; color: white;">
+                        <h1>
+                            {{page.title}}
+                        </h1>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
     {{content}}
-    
+
     {% include footer.html %}
 </body>
 

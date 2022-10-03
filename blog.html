@@ -2,25 +2,28 @@
 title: Blog
 ---
 
-<div class="container-fluid mt-5 pt-5" style="text-align: left;">
+<div class="container mt-5">
     {% for post in site.posts %}
+    <a href="{{post.url | relative_url}}" style="text-decoration: none;color:black">
         <div class="row">
-            
-            <div class="col-4 offset-2">
-                
-                <a href="{{post.url | relative_url}}" style="text-decoration: none;color:black">
+            <div class="col-7" style="border-right: 1px solid #00788A">
                     <h3>{{post.title}}</h3>
-                    <span class="text-muted">{{ post.excerpt | strip_html }}</span>
-                </a>
-                
+                    <span class="text-muted">{{post.date | date: "%-d %B %Y" }}</span>
+                    <span class="text-muted ps-2">
+                        {% assign words = post.content | number_of_words %}
+                        {% if words < 360 %}
+                            1 min
+                        {% else %}
+                            {{ words | divided_by:180 }} mins
+                        {% endif %}
+                            read
+                    </span>
             </div>
-            <div class="col-2 offset-2">
-                {{post.date | date: "%-d %B %Y" }}
+            <div class="col-5">
+                {{ post.excerpt | strip_html }}
             </div>
 
-            
-            
         </div>
-        <hr>
+    </a>
     {% endfor %}
 </div>

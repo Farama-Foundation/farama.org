@@ -1,56 +1,120 @@
 ---
+layout: no_jumbotron
 title: Projects
 ---
 
-<!-- <style>
-    *{
-        border: 1px solid black
-    }
-</style> -->
-<div class="container-fluid pt-5">
-    <h2><strong>Mature</strong></h2>
-    <div class="row mb-5">
+<div class="farama-gradient-container">
+    <div class="pt-5 py-3 farama-gradient-bg">
+        <div class="jumbotron mb-4 pt-5">
+            <div class="container-fluid">
+                <div style="max-width: 900px; text-align: left;
+                        margin: auto; color: white;">
+                    <h1>
+                        {{page.title}}
+                    </h1>
+                    <h5>
+                        Mature projects comply with our <a href="project_standards">standards</a>, and we're
+                        consistently
+                        working to
+                        bring our incubating projects up
+                        to these standards. If you're interested in submitting a project to us, you can read more <a
+                            href="submit_projects">here</a>. If
+                        you'd like
+                        to get involved in contributing, the best way is to join our <a
+                            href="https://discord.gg/PfR7a79FpQ">discord
+                            server</a>.
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+
+    <h2 class="text-primary">Mature</h2>
+    <div class="row mb-5 " style="display: flex; flex-wrap:wrap">
         {% for project in site.data.projects %}
         {% if project.type == "mature" %}
         <div class="col-12 col-sm-6 col-md-4 my-2">
-            <h3>{{project.name}}</h3>
-            <img src="assets/images/{{project.image}}" style="height: 150px; width: 150px;"
-                 alt="">
-            <div class="d-md-block" >{{project.desc}}</div>
-            <a class="mb-5" style="margin-right: 5px" href="{{project.github}}">Github</a>
-            {% if project.website %}
-                <a class="mb-5" href="{{project.website}}">Website</a>
-            {% endif %}
+            <div class="card farama-card me-1 ms-1" style="height:100%">
+                <img src="assets/images/{{project.image}}" class="card-img-top" alt="{{project.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{project.name}}</h5>
+                    <p class="card-text">{{project.desc}}</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn" href="{{project.github}}" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>Github
+                    </a>
+                    {% if project.core_github %}
+                    <a class="btn" href="{{project.core_github}}" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>Github (core)
+                    </a>
+                    {% endif %}
+                    {% if project.website %}
+                    <a class="btn" href="{{project.website}}">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-1.5 5.505v9.995h-15v-9.995zm0-1.5h-15v-3.505h15zm-2.3-2.527c.442 0 .8.359.8.8 0 .442-.358.8-.8.8s-.8-.358-.8-.8c0-.441.358-.8.8-.8zm-1.65.777c0-.397-.352-.75-.75-.75-1.695 0-6.355 0-8.05 0-.399 0-.75.353-.75.75s.351.75.75.75h8.05c.398 0 .75-.353.75-.75z"
+                                fill-rule="nonzero" />
+                        </svg>Website
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
         {% endif %}
         {% endfor %}
     </div>
-    <h2><strong>Incubating</strong></h2>
-    <div class="row mb-5">
+    <h2 class="text-primary">Incubating</h2>
+    <div class="row mb-5 ">
         {% for project in site.data.projects %}
         {% if project.type == "incubating" %}
         <div class="col-12 col-sm-6 col-md-4 my-2">
-            <h3>{{project.name}}</h3>
-            <img src="assets/images/{{project.image}}" style="height: 150px; width: 150px;"
-                 alt="">
-            <div class="d-md-block" >{{project.desc}}</div>
-            <a class="mb-5" style="margin-right: 5px" href="{{project.github}}">Github</a>
-            {% if project.website %}
-                <a class="mb-5" href="{{project.website}}">Website</a>
-            {% endif %}
+            <div class="card farama-card me-1 ms-1" style="height:100%">
+                <img src="assets/images/{{project.image}}" class="card-img-top" alt="{{project.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{project.name}}</h5>
+                    <p class="card-text">{{project.desc}}</p>
+                </div>
+                <div class="card-footer">
+                    {% if project.core_github %}
+                    <a href="#" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>Github (core)
+                    </a>
+                    {% endif %}
+                    <a href="#" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>Github
+                    </a>
+                    {% if project.website %}
+                    <a class="btn" href="{{project.website}}">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-1.5 5.505v9.995h-15v-9.995zm0-1.5h-15v-3.505h15zm-2.3-2.527c.442 0 .8.359.8.8 0 .442-.358.8-.8.8s-.8-.358-.8-.8c0-.441.358-.8.8-.8zm-1.65.777c0-.397-.352-.75-.75-.75-1.695 0-6.355 0-8.05 0-.399 0-.75.353-.75.75s.351.75.75.75h8.05c.398 0 .75-.353.75-.75z"
+                                fill-rule="nonzero" />
+                        </svg>Website
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
         {% endif %}
         {% endfor %}
     </div>
-    <br>
-    <h1>How to Submit Projects</h1>
-    <div class="mb-5">
-        If you would like your reinforcement learning project to be maintained by us long term,
-        please reach out to us at jkterry@farama.org. In general, we're only looking for
-        projects that have already become widely used or clearly have a profound technical
-        use in the field if they're not currently widely used. We work to bring all new and
-        existing projects to our <a href="project_standards">standards</a>, and generally request that new projects meet
-        the vast majority of these requirements before submission (though please reach out
-        to us if you have any questions).
-    </div>
+
 </div>

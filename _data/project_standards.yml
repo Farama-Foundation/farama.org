@@ -1,42 +1,40 @@
-- name: Support Gymnasium and/or PettingZoo API at the newest version (alternative APIs in addition to these are
-    fine)
-  type: Standardization
-- name: Support all supported versions of Python (currently 3.7-3.10)
-  type: Standardization
-- name: Full reproducibility with deterministic (seeded) tests
-  type: Good Science
-- name: Deterministic builds for compiled libraries
-  type: Good Science
-- name: Environments, wrappers, and similar objects impacting reproducibility have explicit versioning in their names (e.g. "Pong-v5")
-  type: Good Science
-- name: Good documentation website (if library is large enough)
-  type: Quality of Life
-- name: Support for Linux and macOS (x86_64 and ARM)
-  type: Quality of Life
-- name: Natively support PyPI
-  type: Quality of Life
-- name: For libraries that depend on Gymnasium or PettingZoo, list which versions are depended on in each
-    release
-  type: Quality of Life
-- name: CI with API compliance tests
-  type: Testing
-- name: Pre-commit with black, flake8 and isort
-  type: Testing
-- name: Add type hinting with pyright where reasonable (with testing at pre-commit)
-  type: Testing
-- name: Docstrings for most or all functions (using pydocstyle and Google style)
-  type: Testing
-- name: Releases cut via GitHub action on GitHub release
-  type: Long Term Support
-- name: Jordan Terry and Mark Towers are listed as owners on PyPI
-  type: Long Term Support
-- name: Logo (in the same style as other projects)
-  type: Branding
-- name: Have documentation be at ___.farama.org, with Google analytics setup
-  type: Branding
-- name: Uses standard Farama code of conduct
-  type: Branding
-- name: Include readme.md on PyPI page
-  type: Branding
-- name: MIT or similar license (specifically, Apache 2.0 is fine)
-  type: Licensing
+- type: Standardization
+  standards:
+    - name: Support Gymnasium and/or PettingZoo API at the newest version (alternative APIs in addition to these are fine)
+    - name: Support all supported versions of Python (currently 3.7-3.10)
+
+- type: Good Science
+  standards:
+    - name: Full reproducibility with deterministic (seeded) tests
+    - name: Deterministic builds for compiled libraries
+    - name: Environments, wrappers, and similar objects impacting reproducibility have explicit versioning in their names (e.g. "Pong-v5")
+
+- type: Quality of Life
+  standards:
+    - name: Good documentation website (if library is large enough)
+    - name: Support for Linux and macOS (x86_64 and ARM)
+    - name: Natively support PyPI
+    - name: For libraries that depend on Gymnasium or PettingZoo, list which versions are depended on in each release
+
+- type: Testing
+  standards:
+    - name: CI with API compliance tests
+    - name: Pre-commit with black, flake8 and isort
+    - name: Add type hinting with pyright where reasonable (with testing at pre-commit)
+    - name: Docstrings for most or all functions (using pydocstyle and Google style)
+
+- type: Long Term Support
+  standards:
+    - name: Releases cut via GitHub action on GitHub release
+    - name: Jordan Terry and Mark Towers are listed as owners on PyPI
+
+- type: Branding
+  standards:
+    - name: Logo (in the same style as other projects)
+    - name: Have documentation be at ___.farama.org, with Google analytics setup
+    - name: Uses standard Farama code of conduct
+    - name: Include readme.md on PyPI page
+
+- type: Licensing
+  standards:
+    - name: MIT or similar license (specifically, Apache 2.0 is fine)

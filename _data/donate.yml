@@ -1,7 +1,7 @@
 - name: Github Sponsors
   image: github.png
   site: https://github.com/sponsors/Farama-Foundation
-  fees: No fees for user accounts<br>10% fee for organization accounts
+  fees: No fees for user accounts, 10% fee for organization accounts
 - name: LiberaPay
   image: liberapay.svg
   site: https://en.liberapay.com/Farama-Foundation/
@@ -13,12 +13,12 @@
 - name: every.org
   image: every.svg
   site: https://www.every.org/farama-inc#donate
-  fees: <a href="https://www.every.org/disbursements">Variable fees</a> based on payment method, accepts cryptocurrencies
+  fees: Variable fees based on payment method, accepts cryptocurrencies
 - name: Benevity
   image: benevity.png
   site: https://causes.benevity.org/causes/840-873090474
-  fees: Our listing on a commonly used platform for corporate donations (no donation portal for individuals). Variable fees.
+  fees: Our listing on a commonly used platform for corporate donations (no donation portal for individuals available). Variable fees.
 - name: Contact Us Directly
-  image: <i class="fa-solid fa-envelope fa-10x" onmouseover="this.className = 'fa-solid fa-envelope-open fa-10x'"; onmouseout="this.className='fa-solid fa-envelope fa-10x'"></i>
+  image: <i class="fa-solid fa-envelope fa-10x"></i>
   site: mailto:contact@farama.org
   fees: No fees

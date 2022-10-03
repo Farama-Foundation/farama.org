@@ -9,49 +9,52 @@ title: Team
     }
 </style> -->
 
-<div class="container-fluid" >
-    <div class="row pt-5">
+<div class="container mb-5 pt-5 ">
+    <h2 class="text-primary mb-4">Core Team</h2>
+    <div class="row ">
         {% for person in site.data.team %}
-            <div class="col-12 col-sm-6 col-md-4 my-2">
-                <a href="{{person.site}}">
-                    <img src="assets/people/{{person.image}}" class="mx-auto light-shadow" style="height: 250px; border-radius: 5%;overflow-y: hidden;border: 2px solid rgba(31,31,101,1)"
-                        alt="">
-                </a>
-                <p class="mt-2">
-                    <strong><span style="font-size: 17px;text-align: center;font-weight: 800px;" class="mt-5">
-                        {{person.name}}
-                    </span>
-                    </strong>
-                    <br>
-                    <span style="font-size: 17px;text-align: center;">
-                        {{person.position}}
-                    </span>
-                </p>
-            </div>
+        <div class="col-12 col-sm-6 col-md-4 my-2 mb-4">
+            <a href="{{person.site}}" class="farama-profile-link">
+                <div class="card farama-profile-card me-1 ms-1" style="height:100%">
+                    <img src="assets/people/{{person.image}}" class="card-img-top" alt="{{project.name}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{person.name}}</h5>
+                        <div class="farama-profile-card__separator"></div>
+                        <div class="card-text" style="color: #3d4246">
+                            {{person.role}}
+                        </div>
+                        <div class="card-text mt-2 text-muted" style="color: #3d4246">
+                            {{person.affiliation}}
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
         {% endfor %}
-
-        <svg src="assets/images/farama_black.svg">
-          </svg>
     </div>
 
-    <div class="row pt-5">
-        <h2>Board of Technical Advisors</h2>
+    <h2 class="text-primary my-4">Board of Technical Advisors</h2>
+    <div class="row">
         {% for person in site.data.tech_advisors %}
-        <div class="col-12 col-sm-6 col-md-4 my-2">
-            <a href="{{person.site}}">
-                <img src="assets/people/{{person.image}}" class="mx-auto light-shadow" style="height: 250px; border-radius: 5%;overflow-y: hidden;border: 2px solid rgba(31,31,101,1)"
-                     alt="">
+        <div class="col-12 col-sm-6 col-md-4 my-2 mb-4">
+            <a href="{{person.site}}" class="farama-profile-link">
+                <div class="card farama-profile-card me-1 ms-1" style="height:100%">
+                    <img src="assets/people/{{person.image}}" class="card-img-top" alt="{{project.name}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{person.name}}</h5>
+                        <div class="farama-profile-card__separator"></div>
+                        <div class="card-text">
+                            {{person.role}}
+                        </div>
+                        <div class="card-text" style="color: #3d4246">
+                            {{person.role}}
+                        </div>
+                        <div class="card-text" style="color: #3d4246">
+                            {{person.affiliation}}
+                        </div>
+                    </div>
+                </div>
             </a>
-            <p class="mt-2">
-                <strong><span style="font-size: 17px;text-align: center;font-weight: 800px;" class="mt-5">
-                        {{person.name}}
-                    </span>
-                </strong>
-                <br>
-                <span style="font-size: 17px;text-align: center;">
-                        {{person.position}}
-                    </span>
-            </p>
         </div>
         {% endfor %}
     </div>
