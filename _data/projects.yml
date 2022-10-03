@@ -8,7 +8,7 @@
 
 - name: PettingZoo
   github: https://github.com/Farama-Foundation/PettingZoo
-  website: https://www.pettingzoo.ml
+  website: https://pettingzoo.farama.org
   image: PettingZoo.svg
   desc: Gymnasium for multi-agent environments
   type: mature
@@ -22,7 +22,7 @@
   type: mature
   popular: false
 
-- name: MiniGrid
+- name: Minigrid
   github: https://github.com/Farama-Foundation/MiniGrid
   website: https://minigrid.farama.org
   desc: Simple and easily configurable grid world environments for reinforcement learning
@@ -83,7 +83,7 @@
   image: microrts.svg
   type: incubating
 
-- name: MiniWorld
+- name: Miniworld
   github: https://github.com/Farama-Foundation/MiniWorld
   website:
   desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
