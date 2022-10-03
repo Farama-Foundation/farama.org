@@ -281,6 +281,6 @@ img.light-shadow {
         margin-top: 16px;
     }
     .navbar-brand {
-        left: 12px
+        left: 12px !important
     }
 }
