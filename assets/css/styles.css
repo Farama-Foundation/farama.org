@@ -1,10 +1,10 @@
 :root {
     --bs-primary-background-dark: #03121e;
     --bs-primary-background: #011433;
-    --bs-primary:#0f4a65;
-    --bs-primary-rgb:15, 74, 101;
-    --bs-primary-light:#2a7fa6;
-    --bs-secondary:#6d5842;
+    --bs-primary: #0f4a65;
+    --bs-primary-rgb: 15, 74, 101;
+    --bs-primary-light: #2a7fa6;
+    --bs-secondary: #6d5842;
     --bs-secondary-light: #bd8a42
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 #nav a:hover {
-    color: #d9b481!important
+    color: #d9b481 !important
 }
 
 .navbar-dark {
@@ -83,9 +83,7 @@ body {
     color: var(--bs-primary)
 }
 
-.farama-card .btn {
-
-}
+.farama-card .btn {}
 
 .farama-card .btn i {
     margin-right: 7px;
@@ -139,7 +137,7 @@ body {
 }
 
 .farama-donation-card {
-    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .farama-gradient-bg .farama-donation-cards-container a {
@@ -224,24 +222,14 @@ img.light-shadow {
     filter: drop-shadow(4px 4px 3px rgba(70, 65, 68, 0.8));
 }
 
-/* @media (min-width: 200px) {
-    .third{
-        height: 90%;
-    }
-} */
-
-@media (min-width: 600px) {
-    .third{
-        height: 10%;
-    }
-}
-
 .donor {
     color: #059d05;
 }
 
-.nav-link{
-    color: white;font-size: 20px;font-weight: 600;
+.nav-link {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .farama-gradient-container {
@@ -254,32 +242,34 @@ img.light-shadow {
 
 .farama-gradient-bg {
     background:
-                 radial-gradient(
-                farthest-side at bottom left,
-                #7A603E,
-                transparent
-                ),
-                radial-gradient(
-                farthest-corner at top right,
-                #005461,
-                transparent
-                ),
-                radial-gradient(
-                farthest-corner at bottom right,
-                #5b4e2a,
-                transparent
-                ),
-                radial-gradient(
-                closest-side at center,
-                #005562,
-                transparent
-                );
+        radial-gradient(farthest-side at bottom left,
+            #7A603E,
+            transparent),
+        radial-gradient(farthest-corner at top right,
+            #005461,
+            transparent),
+        radial-gradient(farthest-corner at bottom right,
+            #5b4e2a,
+            transparent),
+        radial-gradient(closest-side at center,
+            #005562,
+            transparent);
 }
+
+.blog-container h1,
+.blog-container h2,
+.blog-container h3,
+.blog-container h4,
+.blog-container h5 {
+    padding-top: 1rem;
+}
+
 
 @media (max-width: 992px) {
     #navbarNav {
         margin-top: 16px;
     }
+
     .navbar-brand {
         left: 12px !important
     }
