@@ -6,6 +6,8 @@
 {% include head.html %}
 
 <body>
+    <link rel="stylesheet" href="{{ "assets/css/code.css" | relative_url}}">
+
     {% include nav.html %}
     <div class="farama-gradient-container">
         <div class="pt-5 py-3 farama-gradient-bg">
@@ -34,7 +36,7 @@
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container blog-container mt-3 mb-5">
         {{content}}
     </div>
 
