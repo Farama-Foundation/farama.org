@@ -65,7 +65,7 @@
   github: https://github.com/Farama-Foundation/MAgent2
   website:
   desc: An engine for high performance multi-agent environments with very large numbers of agents, along with a set of reference environments
-  image: Magent2.svg
+  image: MAgent2.svg
   type: incubating
 
 - name: Procgen2
@@ -100,5 +100,6 @@
 - name: kabuki
   github: https://github.com/Farama-Foundation/Kabuki
   website:
-  desc:
+  desc: Gymnasium Based Offline RL Tooling
   image: kabuki.svg
+  type: incubating
