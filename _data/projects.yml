@@ -41,7 +41,7 @@
 - name: Tinyscaler
   github: https://github.com/Farama-Foundation/tinyscaler
   website:
-  image: TinyScalar.svg
+  image: tinyscaler.svg
   desc: A small and fast image rescaling library with SIMD support
   type: mature
   popular: false
@@ -65,7 +65,7 @@
   github: https://github.com/Farama-Foundation/MAgent2
   website:
   desc: An engine for high performance multi-agent environments with very large numbers of agents, along with a set of reference environments
-  image: Magent.svg
+  image: Magent2.svg
   type: incubating
 
 - name: Procgen2
@@ -96,3 +96,9 @@
   desc: A collection of reference environments for offline reinforcement learning
   image: d4rl.svg
   type: incubating
+
+- name: kabuki
+  github: https://github.com/Farama-Foundation/Kabuki
+  website:
+  desc:
+  image: kabuki.svg

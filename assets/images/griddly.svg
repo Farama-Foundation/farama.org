@@ -9,20 +9,23 @@
    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
    viewBox="0 0 1000 1000"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="d4rl.svg"
-   id="svg18"
+   sodipodi:docname="griddly.svg"
+   inkscape:export-filename="..\100\griddly.png"
+   inkscape:export-xdpi="9.6000004"
+   inkscape:export-ydpi="9.6000004"
+   id="svg297"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
  <defs
-   id="defs4">
+   id="defs282">
   <style
    type="text/css"
-   id="style2">
+   id="style280">
    <![CDATA[
     .str0 {stroke:black;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
-    .fil0 {fill:none}
+    .fil0 {fill:none;fill-rule:nonzero}
    ]]>
   </style>
  </defs>
@@ -40,61 +43,63 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:document-units="px"
+   inkscape:document-units="mm"
    showgrid="false"
-   inkscape:zoom="0.47584683"
-   inkscape:cx="403.49118"
-   inkscape:cy="460.23213"
+   inkscape:zoom="0.39187386"
+   inkscape:cx="89.314454"
+   inkscape:cy="520.57568"
    inkscape:window-width="1538"
    inkscape:window-height="877"
    inkscape:window-x="1974"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="layer2"
-   showguides="true">
+   inkscape:current-layer="layer2">
    <sodipodi:guide
-   position="0,264.58332"
-   orientation="0,999.99994"
-   id="guide295"
+   position="0,264.58333"
+   orientation="0,1000"
+   id="guide302"
    inkscape:locked="false" />
    <sodipodi:guide
-   position="264.58331,264.58332"
+   position="264.58333,264.58333"
    orientation="1000,0"
-   id="guide297"
+   id="guide304"
    inkscape:locked="false" />
    <sodipodi:guide
-   position="264.58331,0"
-   orientation="0,-999.99994"
-   id="guide299"
+   position="264.58333,0"
+   orientation="0,-1000"
+   id="guide306"
    inkscape:locked="false" />
    <sodipodi:guide
    position="0,0"
    orientation="-1000,0"
-   id="guide301"
+   id="guide308"
    inkscape:locked="false" />
+   <inkscape:grid
+   type="xygrid"
+   id="grid919"
+   dotted="true" />
   </sodipodi:namedview>
-  <g
-   id="layer1"
-   inkscape:label="Layer 1"
-   inkscape:groupmode="layer">
-  </g>
   <g
    id="layer2"
    inkscape:groupmode="layer"
    inkscape:label="Layer 2">
    <g
-   id="d4rl"
-   inkscape:label="d4rl">
-    <path
-   id="path1010"
+   id="g1876">
+    <polygon
+   id="path1658"
    class="fil0 str0"
-   d="M519.03 492.09c181,353.11 466.19,418.4 465.41,417.6"
-   sodipodi:nodetypes="cc" />
-    <path
-   id="path1008"
+   points="59.61,12 940.39,12 940.39,107.22 154.83,107.22 154.83,892.78 845.17,892.78 845.17,535.71 440.49,535.71 440.49,821.37 345.27,821.37 345.27,440.49 940.39,440.49 940.39,988 59.61,988 "
+   sodipodi:nodetypes="ccccccccccccccc" />
+    <polygon
+   id="path1660"
    class="fil0 str0"
-   d="M517.75 935.83l1.28 -871.66 159.6 0c305.81,0 305.81,427.92 0,427.92l-595.87 0c-37.43,0 -94.04,0 -42.07,58.18l320.41 358.67c33.46,37.46 59.9,34.52 59.9,-9.94l0 -834.83 -334.68 0c-92.03,0 -70.33,64.26 -63.87,89.36"
-   sodipodi:nodetypes="ccccccccccc" />
+   points="226.24,392.88 297.66,392.88 297.66,250.05 440.49,250.05 440.49,178.63 226.24,178.63 "
+   sodipodi:nodetypes="ccccccc" />
+    <polygon
+   id="path1662"
+   class="fil0 str0"
+   points="559.51,749.95 702.34,749.95 702.34,607.12 773.76,607.12 773.76,821.37 559.51,821.37 "
+   sodipodi:nodetypes="ccccccc" />
    </g>
   </g>
  </g>
