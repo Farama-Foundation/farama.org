@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: The Farama Foundation
+tagline: A Nonprofit Organization Dedicated To Managing The World's Reinforcement Learning Libraries
 email: contact@farama.org
 description: >-
   The Farama Foundation is a non-profit organization which promotes reinforcement
@@ -34,7 +35,7 @@ reddit: https://www.reddit.com/r/farama/
 discord: https://discord.gg/PfR7a79FpQ
 
 logo: assets/images/farama_solid_white.svg
-
+image:
 favicon: assets/images/farama_solid_white.svg
 
 # Build settings
