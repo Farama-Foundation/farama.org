@@ -141,7 +141,19 @@ body {
 }
 
 .farama-gradient-bg {
-    height: 390px;
+    background:
+    radial-gradient(farthest-side at bottom left,
+        #7A603E,
+        transparent),
+    radial-gradient(farthest-corner at top right,
+        #005461,
+        transparent),
+    radial-gradient(farthest-corner at bottom right,
+        #5b4e2a,
+        transparent),
+    radial-gradient(closest-side at center,
+        #005562,
+        transparent);
 }
 
 .farama-gradient-bg .farama-donation-cards-container a {
@@ -244,22 +256,6 @@ img.light-shadow {
     color: #c7deff
 }
 
-.farama-gradient-bg {
-    background:
-        radial-gradient(farthest-side at bottom left,
-            #7A603E,
-            transparent),
-        radial-gradient(farthest-corner at top right,
-            #005461,
-            transparent),
-        radial-gradient(farthest-corner at bottom right,
-            #5b4e2a,
-            transparent),
-        radial-gradient(closest-side at center,
-            #005562,
-            transparent);
-}
-
 .blog-container h1,
 .blog-container h2,
 .blog-container h3,
@@ -268,7 +264,6 @@ img.light-shadow {
     padding-top: 1rem;
 }
 
-
 @media (max-width: 992px) {
     #navbarNav {
         margin-top: 16px;
@@ -276,17 +271,5 @@ img.light-shadow {
 
     .navbar-brand {
         left: 12px !important
-    }
-}
-
-@media (max-width: 800px) {
-    .farama-gradient-bg {
-        height: 400px;
-    }
-}
-
-@media (max-width: 600px) {
-    .farama-gradient-bg {
-        height: 420px;
     }
 }

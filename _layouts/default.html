@@ -10,10 +10,10 @@
     <div class="farama-gradient-container">
         <div class="pt-5 py-3 farama-gradient-bg">
             <div class="jumbotron mb-4 pt-5">
-                <div class="container-fluid">
+                <div class="container-fluid" style="color: white;">
                     {% if page.title == site.title or page.type == "The Farama Foundation" %}
 
-                    <div style="color: white;">
+                    <div class="mb-4">
                         {% if page.title == site.title %}
                         <img class="" src="assets/images/farama_solid_white.svg" width="125" height="135" alt="Farama Foundation"/>
                         {% endif %}
@@ -28,7 +28,7 @@
                     </div>
                     {% else %}
                     <div style="max-width: 900px; text-align: left;
-                            margin: auto; color: white;">
+                            margin: auto;">
                         <h1>
                             {{page.title}}
                         </h1>
