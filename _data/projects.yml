@@ -97,7 +97,7 @@
   image: d4rl.svg
   type: incubating
 
-- name: kabuki
+- name: Kabuki
   github: https://github.com/Farama-Foundation/Kabuki
   website:
   desc: Gymnasium Based Offline RL Tooling
