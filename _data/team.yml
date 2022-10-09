@@ -49,7 +49,7 @@
   image: eric.jpg
   site: https://github.com/222464
 - name: Daniel Scott
-  role: MAgent and assorted projects maintainer
+  role: MAgent2 maintainer and assorted projects contributor
   affiliation: Georgia Institute of Technology
   image: daniel.jpg
   site: https://github.com/dsctt
@@ -68,3 +68,18 @@
   affiliation: ETH Zürich
   image: omar.jpg
   site: https://github.com/younik
+- name: John U. Balis
+  role: Gymnasium contributor
+  affiliation: University of Wisconsin-Madison
+  image: john.png
+  site: https://github.com/balisujohn
+- name: Gianluca De Cola
+  role: Gymnasium contributor
+  affiliation: Prima
+  image: gianluca.png
+  site: https://github.com/gianlucadecola
+- name: Andrea Pierré
+  role: Assorted projects contributor
+  affiliation: Brown University
+  image: andrea.jpg
+  site: https://github.com/kir0ul
