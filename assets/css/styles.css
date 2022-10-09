@@ -43,7 +43,7 @@ body {
 
 .jumbotron {
     text-align: center;
-    font-family: "Source Sans Pro";
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .jumbotron hr {
@@ -138,6 +138,10 @@ body {
 
 .farama-donation-card {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.farama-gradient-bg {
+    height: 390px;
 }
 
 .farama-gradient-bg .farama-donation-cards-container a {
@@ -272,5 +276,17 @@ img.light-shadow {
 
     .navbar-brand {
         left: 12px !important
+    }
+}
+
+@media (max-width: 800px) {
+    .farama-gradient-bg {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .farama-gradient-bg {
+        height: 420px;
     }
 }
