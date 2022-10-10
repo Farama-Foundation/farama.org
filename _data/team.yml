@@ -4,12 +4,12 @@
   image: jordan.jpg
   site: https://github.com/jkterry1
 - name: Mark Towers
-  role: Board member, Gymnasium maintainer and project manager
+  role: Gymnasium maintainer and project manager
   affiliation: University of Southampton
   image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
 - name: Ariel Kwiatkowski
-  role: Board member, Gymnasium maintainer
+  role: Gymnasium maintainer
   affiliation: École Polytechnique
   image: ariel.jpg
   site: https://github.com/RedTachyon
