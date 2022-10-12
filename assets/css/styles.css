@@ -14,12 +14,26 @@ body {
     flex-direction: column;
 }
 
+a {
+    color: var(--bs-primary-light)
+}
+
 #nav {
     position: absolute;
     width: 100%;
     min-height: 56px;
-    background-color: rgba(2, 13, 29, 0.60);
+    background-color: rgba(2, 13, 29, 0.50);
+    transition: background-color 0.2s ease-in;
     z-index: 3;
+}
+
+/* Use :has for a better experiance */
+#nav:has(button[aria-expanded="false"]) {
+    background-color: rgba(2, 13, 29, 0.30);
+}
+
+#nav:has(button[aria-expanded="true"]) {
+    background-color: rgba(2, 13, 29, 0.80);
 }
 
 #nav a:hover {
@@ -162,7 +176,7 @@ body {
 }
 
 .farama-gradient-bg .farama-perks-card a {
-    color: var(--bs-link-color)
+    color: var(--bs-primary-light)
 }
 
 .farama-donation-card img {
@@ -240,12 +254,6 @@ img.light-shadow {
 
 .donor {
     color: #059d05;
-}
-
-.nav-link {
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .farama-gradient-container {
