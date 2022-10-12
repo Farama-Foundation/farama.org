@@ -22,7 +22,7 @@ a {
     position: absolute;
     width: 100%;
     min-height: 56px;
-    background-color: rgba(2, 13, 29, 0.50);
+    background-color: rgba(2, 13, 29, 0.70);
     transition: background-color 0.2s ease-in;
     z-index: 3;
 }
@@ -32,8 +32,8 @@ a {
     background-color: rgba(2, 13, 29, 0.30);
 }
 
-#nav:has(button[aria-expanded="true"]) {
-    background-color: rgba(2, 13, 29, 0.80);
+#nav:has(button[aria-expanded="true"]){
+    background-color: rgba(2, 13, 29, 1.0);
 }
 
 #nav a:hover {
@@ -272,6 +272,11 @@ img.light-shadow {
     padding-top: 1rem;
 }
 
+.farama-social-container span {
+    width: 32px;
+    height: 32px;
+}
+
 @media (max-width: 992px) {
     #navbarNav {
         margin-top: 16px;
@@ -279,5 +284,11 @@ img.light-shadow {
 
     .navbar-brand {
         left: 12px !important
+    }
+    ul.navbar-nav {
+        height: 100vh;
+    }
+    body:has(.navbar-collapse.show, .navbar-collapse.collapsing) {
+        overflow-y: hidden;
     }
 }
