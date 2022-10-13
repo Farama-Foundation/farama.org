@@ -9,7 +9,7 @@
 - name: PettingZoo
   github: https://github.com/Farama-Foundation/PettingZoo
   website: https://pettingzoo.farama.org
-  image: PettingZoo.svg
+  image: pettingzoo.svg
   desc: Gymnasium for multi-agent environments
   type: mature
   popular: true
@@ -17,7 +17,7 @@
 - name: SuperSuit
   github: https://github.com/Farama-Foundation/SuperSuit
   website:
-  image: SuperSuit.svg
+  image: supersuit.svg
   desc: A collection of wrappers for Gymnasium and PettingZoo environments
   type: mature
   popular: false
@@ -34,7 +34,7 @@
   github: https://github.com/Farama-Foundation/gym-robotics
   website:
   desc: A collection of robotics simulation environments for reinforcement learning
-  image: GymRobotics.svg
+  image: gymnasium-robotics.svg
   type: mature
   popular: false
 
@@ -50,7 +50,7 @@
   github: https://github.com/Farama-Foundation/AutoROM
   website:
   desc: A tool to automate installing Atari ROMs for the Arcade Learning Environment
-  image: AutoRom.svg
+  image: autorom.svg
   type: mature
   popular: false
 
@@ -102,4 +102,9 @@
   website:
   desc: Gymnasium Based Offline RL Tooling
   image: kabuki.svg
+  type: incubating
+
+- name: MiniWoB++
+  github: https://github.com/Farama-Foundation/miniwob-plusplus
+  desc: The MiniWoB++ benchmark is an extension of the OpenAI MiniWoB benchmark.
   type: incubating
