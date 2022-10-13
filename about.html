@@ -3,11 +3,61 @@ layout: default
 title: About
 ---
 
-<div class="container mt-4">
+<div class="container-fuild my-4">
 
-    <h3 class="text-primary">Contact</h3>
-    <span>
-        Email us at:
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-    </span>
+    <div class="mt-5 mb-4 container content-container">
+        <div class="row mb-3">
+            <div class="col-4" style="text-align: center;">
+                <h2 class="text-primary" style="font-size: 2.1rem;">Who we are</h2>
+            </div>
+            <div class="col" style="text-align: center;">
+                <h4 class="text-end">The Farama Foundation is a nonprofit organization aimed at housing, maintaining,
+                    disseminating and ensuring reproducibility compliance for the most commonly used open-source
+                    software for reinforcement learning.</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 mb-4 content-container farama-highlight">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="text-center">
+                    <h2 class="mb-5" style="font-size: 2.1rem;">Our motivation</h2>
+                </div>
+                <div>
+                    <h4 class="text-center"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-primary mb-4">Why we're of interest to:</h3>
+            <div class="row px-4">
+                <div class="row col-12 col-sm-6 pb-4">
+                    <h4 class="text-secondary">Academics</h4>
+                    <h6>
+                        Reliable libraries so you can spend more time on scientific research and less time debugging
+                    </h6>
+                </div>
+                <div class="row col-12 col-sm-6">
+                    <h4 class="text-secondary">Industry</h4>
+                    <h6>
+                        Developing a robust RLOps tech stack similar to existing MLOps tech stacks for seamless
+                        application of RL-driven systems
+                    </h6>
+                </div>
+            </div>
+
+
+    </div>
+
+    <div class="container my-5">
+        <h3 class="text-primary">Contact</h3>
+        <span>
+            Email us at:
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </span>
+    </div>
+
 </div>
