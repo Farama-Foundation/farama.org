@@ -31,7 +31,7 @@ reddit: https://www.reddit.com/r/farama/
 discord: https://discord.gg/PfR7a79FpQ
 
 logo: assets/images/farama_solid_white.svg
-favicon: assets/images/farama-logo48.png
+favicon: assets/images/farama-logo-favicon.png
 
 # Build settings
 theme: minima

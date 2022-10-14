@@ -106,5 +106,5 @@
 
 - name: MiniWoB++
   github: https://github.com/Farama-Foundation/miniwob-plusplus
-  desc: The MiniWoB++ is a reinforcement learning environment for learning to do simple website interaction tasks
+  desc: MiniWoB++ is a collection of reinforcement learning environments for simple web interaction tasks
   type: incubating

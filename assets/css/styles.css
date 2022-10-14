@@ -20,6 +20,11 @@ a {
     color: var(--bs-primary-light)
 }
 
+a:hover {
+    color: var(--bs-primary)
+
+}
+
 #nav {
     position: absolute;
     width: 100%;

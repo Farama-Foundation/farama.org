@@ -6,10 +6,13 @@
 - type: Release Details
   standards:
     - name: Be released on PyPI, so that users can easily install libraries via `pip` without having to clone Git repositories
-    - name: Be deterministically compiled if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of difficult-to-track-down reproducibility issues
-    - name: Ship binaries for both x86_64 and Arm architectures and both Linux and macOS if binaries are shipped. All supported operating systems should have wheels provided, and Arm Macs and Arm based Linux servers are becoming fairly common. Note- we're temporarily handling Arm based Mac wheels by having them compile on installation instead of releasing issues due to an issue with PyPI support.
     - name: Include a full package description for the PyPI page (generally by repurposing the readme file), so that users can quickly see what a package is when searching through packages on PyPI.
     - name: Cut releases to PyPI via GitHub actions that run when cutting a release on GitHub. This ensures that releases are fully automated to remove human error, and allows anyone to easily take over a project if needed.
+
+- type: Binaries
+  standards:
+    - name: Be deterministically compiled if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of difficult-to-track-down reproducibility issues
+    - name: Ship binaries for both x86_64 and Arm architectures and both Linux and macOS if binaries are shipped. All supported operating systems should have wheels provided, and Arm Macs and Arm based Linux servers are becoming fairly common. Note- we're temporarily handling Arm based Mac wheels by having them compile on installation instead of releasing issues due to an issue with PyPI support.
 
 - type: Quality of Life
   standards:
