@@ -1,43 +1,115 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Creator: CorelDRAW -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1000px" height="1000px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 1000 1000"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:xodm="http://www.corel.com/coreldraw/odm/2003"
- sodipodi:docname="MAgent.svg"
- inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
- inkscape:export-filename="F:\Vicky\Desktop\toolkit suite\Finished\white\MAgent-white40.png"
- inkscape:export-xdpi="10.603575"
- inkscape:export-ydpi="10.603575"
- xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
- xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
- xmlns:svg="http://www.w3.org/2000/svg">
- <defs>
-  <style type="text/css">
+
+<svg
+   xml:space="preserve"
+   width="1000px"
+   height="1000px"
+   version="1.1"
+   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+   viewBox="0 0 1000 1000"
+   sodipodi:docname="MAgent2.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:export-filename="..\48\MAgent248.png"
+   inkscape:export-xdpi="4.6079998"
+   inkscape:export-ydpi="4.6079998"
+   id="svg20"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+ <defs
+   id="defs4">
+  <style
+   type="text/css"
+   id="style2">
    <![CDATA[
     .str0 {stroke:black;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
     .fil0 {fill:none}
    ]]>
   </style>
  </defs>
- <g id="Layer_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <sodipodi:namedview id="namedview826" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" showgrid="false" showguides="true" inkscape:guide-bbox="true" inkscape:snap-global="true" inkscape:zoom="0.26124924" inkscape:cx="623.92527" inkscape:cy="493.78135" inkscape:window-width="1304" inkscape:window-height="745" inkscape:window-x="54" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1"/>
-  <g id="g830" inkscape:groupmode="layer" inkscape:label="Image">
-  </g>
-  <g id="layer1" inkscape:groupmode="layer" inkscape:label="Image 1">
-   <g id="g3556">
-    <path id="path5551" class="fil0 str0" d="M896.68 397.39l-373.85 280.14 -5.66 4.37c5.72,-78.65 29.56,-144.29 53.25,-168.38 -43.67,-66.94 10.18,-128.61 10.18,-128.61 -67.88,-23.94 -61.68,-52.9 -36.99,-54.02 17.99,-0.82 47.15,7.19 77.55,-4.53 38.4,-14.82 51.25,-70.53 68.63,-144.1l140.15 48.25c-41.73,90.98 -76.54,171.92 -105.89,256.55m-259.44 234.11l-81.49 61.06 -24.13 168.89 215.29 -165.18 14.84 -66.81 86.16 -66.52c-22.95,94 -41.38,200.1 -56.71,331.79 -31.77,-30.43 -54.83,-65.75 -70.95,-103.14" sodipodi:nodetypes="ccccsscccccccccccc" inkscape:export-filename="F:\Vicky\Desktop\Misc\toolkit suite\Finished\48\army48.png" inkscape:export-xdpi="4.6079998" inkscape:export-ydpi="4.6079998"/>
-    <path id="path8946" class="fil0 str0" d="M711.56 118.88c0,0 -31.59,30.19 2.1,71.6" sodipodi:nodetypes="cc"/>
-    <path id="path5551-9" class="fil0 str0" d="M896.14 250.31l-60.43 45.29m-314.7 235.81l-126.3 94.65 -5.67 4.37c5.73,-78.66 29.56,-144.3 53.26,-168.39 -43.68,-66.93 10.18,-128.61 10.18,-128.61 -67.89,-23.94 -61.69,-52.91 -37,-54.02 17.99,-0.81 47.15,7.19 77.55,-4.54 38.4,-14.8 51.25,-70.52 68.64,-144.08l87.1 29.98m-310.81 507.81l-82.96 62.17 -24.13 168.89 152.25 -117.41" sodipodi:nodetypes="ccccccssccccccc" inkscape:export-filename="F:\Vicky\Desktop\Misc\toolkit suite\Finished\48\army48.png" inkscape:export-xdpi="4.6079998" inkscape:export-ydpi="4.6079998"/>
-    <path id="path8946-5" class="fil0 str0" d="M583.43 67.4c0,0 -31.59,30.19 2.12,71.6" sodipodi:nodetypes="cc"/>
-    <path id="path5551-5" class="fil0 str0" d="M392.34 480.44l-125.19 93.81 -5.67 4.37c5.73,-78.65 29.56,-144.29 53.27,-168.38 -43.69,-66.94 10.17,-128.62 10.17,-128.62 -67.89,-23.95 -61.69,-52.9 -37,-54.01 17.99,-0.82 47.16,7.19 77.56,-4.54 38.39,-14.81 51.24,-70.54 68.63,-144.09l88.32 30.41m-311.21 506.78l-83.78 62.77 -24.12 168.88 151.68 -117.07" sodipodi:nodetypes="ccccssccccccc" inkscape:export-filename="F:\Vicky\Desktop\Misc\toolkit suite\Finished\48\army48.png" inkscape:export-xdpi="4.6079998" inkscape:export-ydpi="4.6079998"/>
-    <path id="path8946-4" class="fil0 str0" d="M455.88 15.6c0,0 -31.59,30.18 2.11,71.59" sodipodi:nodetypes="cc"/>
-    <path id="path1806-3" class="fil0 str0" d="M895.27 103.58c-34.95,26.18 -69.9,52.38 -104.86,78.57" sodipodi:nodetypes="cc"/>
+ <g
+   id="Layer_x0020_1"
+   inkscape:label="Layer 1">
+  <metadata
+   id="CorelCorpID_0Corel-Layer" />
+  <sodipodi:namedview
+   id="namedview826"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   showguides="true"
+   inkscape:guide-bbox="true"
+   inkscape:snap-global="true"
+   inkscape:zoom="0.26124924"
+   inkscape:cx="-466.987"
+   inkscape:cy="493.78134"
+   inkscape:window-width="1538"
+   inkscape:window-height="877"
+   inkscape:window-x="1974"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_x0020_1"
+   inkscape:showpageshadow="2"
+   inkscape:deskcolor="#d1d1d1" />
+  
+  <g
+   id="layer1"
+   inkscape:groupmode="layer"
+   inkscape:label="Image 1">
+   <g
+   id="g3556">
+    <path
+   id="path5551"
+   class="fil0 str0"
+   d="M899.48 396.67l-376.49 282.12 -5.7 4.4c5.76,-79.21 29.77,-145.31 53.63,-169.57 -43.98,-67.41 10.25,-129.52 10.25,-129.52 -68.36,-24.11 -62.12,-53.27 -37.25,-54.4 18.11,-0.82 47.48,7.24 78.09,-4.56 38.67,-14.92 51.61,-71.03 69.12,-145.11l141.14 48.59c-42.03,91.62 -77.09,173.13 -106.64,258.35m-261.27 235.76l-82.06 61.49 -24.3 170.08 216.8 -166.34 14.95 -67.28 86.77 -66.99c-23.12,94.66 -41.68,201.51 -57.11,334.13 -32,-30.65 -55.22,-66.21 -71.45,-103.87"
+   sodipodi:nodetypes="ccccsscccccccccccc"
+   inkscape:export-filename="F:\Vicky\Desktop\Misc\toolkit suite\Finished\48\army48.png"
+   inkscape:export-xdpi="4.6079998"
+   inkscape:export-ydpi="4.6079998" />
+    <path
+   id="path8946"
+   class="fil0 str0"
+   d="M713.05 116.2c0,0 -31.81,30.4 2.12,72.1"
+   sodipodi:nodetypes="cc" />
+    <path
+   id="path5551-9"
+   class="fil0 str0"
+   d="M898.93 248.56l-60.85 45.6m-316.92 237.48l-127.19 95.31 -5.71 4.4c5.77,-79.21 29.77,-145.31 53.63,-169.57 -43.98,-67.4 10.26,-129.52 10.26,-129.52 -68.37,-24.11 -62.13,-53.28 -37.26,-54.4 18.11,-0.82 47.48,7.24 78.09,-4.57 38.67,-14.91 51.61,-71.02 69.12,-145.1l87.72 30.19m-313 511.39l-83.55 62.61 -24.3 170.08 153.33 -118.24"
+   sodipodi:nodetypes="ccccccssccccccc"
+   inkscape:export-filename="F:\Vicky\Desktop\Misc\toolkit suite\Finished\48\army48.png"
+   inkscape:export-xdpi="4.6079998"
+   inkscape:export-ydpi="4.6079998" />
+    <path
+   id="path8946-5"
+   class="fil0 str0"
+   d="M584.02 64.36c0,0 -31.81,30.4 2.13,72.1"
+   sodipodi:nodetypes="cc" />
+    <path
+   id="path5551-5"
+   class="fil0 str0"
+   d="M391.58 480.31l-126.07 94.47 -5.71 4.4c5.77,-79.21 29.77,-145.31 53.64,-169.57 -43.99,-67.41 10.25,-129.52 10.25,-129.52 -68.37,-24.12 -62.13,-53.28 -37.26,-54.4 18.11,-0.82 47.49,7.24 78.1,-4.57 38.66,-14.91 51.6,-71.03 69.11,-145.1l88.95 30.62m-313.41 510.35l-84.37 63.22 -24.29 170.07 152.75 -117.9"
+   sodipodi:nodetypes="ccccssccccccc"
+   inkscape:export-filename="F:\Vicky\Desktop\Misc\toolkit suite\Finished\48\army48.png"
+   inkscape:export-xdpi="4.6079998"
+   inkscape:export-ydpi="4.6079998" />
+    <path
+   id="path8946-4"
+   class="fil0 str0"
+   d="M455.57 12.19c0,0 -31.81,30.39 2.12,72.1"
+   sodipodi:nodetypes="cc" />
+    <path
+   id="path1806-3"
+   class="fil0 str0"
+   d="M898.06 100.79c-35.2,26.37 -70.4,52.75 -105.6,79.12"
+   sodipodi:nodetypes="cc" />
    </g>
   </g>
-  <g id="layer2" inkscape:groupmode="layer" inkscape:label="Image 2">
-  </g>
+  
  </g>
 </svg>

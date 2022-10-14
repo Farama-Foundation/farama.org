@@ -22,11 +22,7 @@ title: The Farama Foundation
 tagline: A Nonprofit Organization Dedicated To Managing The World's Reinforcement Learning Libraries
 email: contact@farama.org
 description: >-
-  The Farama Foundation is a non-profit organization which promotes reinforcement
-  learning through the maintenance of open source libraries such as Gym, the standard
-  reinforcement learning API,
-  Pettingzoo, a multiagent reinforcement learning library, and Supersuit, a collection
-  of popular Gym wrappers, as well as a number of other open source projects.
+  A Nonprofit Organization Dedicated To Managing The World's Reinforcement Learning Libraries
 
 
 github: https://github.com/Farama-Foundation
@@ -35,7 +31,7 @@ reddit: https://www.reddit.com/r/farama/
 discord: https://discord.gg/PfR7a79FpQ
 
 logo: assets/images/farama_solid_white.svg
-favicon: assets/images/farama_solid_white.svg
+favicon: assets/images/farama-logo-favicon.png
 
 # Build settings
 theme: minima
