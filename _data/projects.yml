@@ -54,7 +54,7 @@
   type: mature
   popular: false
 
-- name: JumPy
+- name: Jumpy
   github: https://github.com/Farama-Foundation/Jumpy
   website:
   desc: On-the-fly conversions between Jax and NumPy tensors
@@ -108,3 +108,4 @@
   github: https://github.com/Farama-Foundation/miniwob-plusplus
   desc: MiniWoB++ is a collection of reinforcement learning environments for simple web interaction tasks
   type: incubating
+
