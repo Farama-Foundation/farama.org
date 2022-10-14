@@ -6,31 +6,27 @@
 {% include head.html %}
 
 <body>
-    <link rel="stylesheet" href="{{ "assets/css/code.css" | relative_url}}">
+    <link rel="stylesheet" href="{{ "/assets/css/code.css" | relative_url}}">
 
     {% include nav.html %}
-    <div class="farama-gradient-container">
-        <div class="pt-5 py-3 farama-gradient-bg">
-            <div class="jumbotron mb-4 pt-5">
-                <div class="container-fluid">
-                    <div style="max-width: 900px; text-align: left;
-                            margin: auto; color: white;">
-                        <h1>
-                            {{page.title}}
-                        </h1>
-                        <div style="display: flex">
-                            <span style="font-size: 1.25rem;">{{page.date | date: "%-d %B %Y" }}</span>
-                            <span style="font-size: 1.25rem; margin-left: 24px">
-                                {% assign words = page.content | number_of_words %}
-                                {% if words < 360 %}
-                                    1 min
-                                {% else %}
-                                    {{ words | divided_by:180 }} mins
-                                {% endif %}
-                                    read
-                            </span>
-                        </div>
-                    </div>
+
+    <style>
+        #nav {
+            background-color: #111!important;
+        }
+    </style>
+    <div style="margin-top: 56px">
+        <img class="w-100 mb-4" src="{{ page.thumbnail }}">
+        <div class="container">
+            <div style="max-width: 900px;">
+                <h1>
+                    {{page.title}}
+                </h1>
+                <div style="display: flex">
+                    <span style="font-size: 1.25rem;">{{page.date | date: "%-d %B %Y" }}</span>
+                    <span style="font-size: 1.25rem; margin-left: 24px">
+                        {% assign words = page.content | number_of_words %}
+                        {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read </span>
                 </div>
             </div>
         </div>
