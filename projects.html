@@ -101,7 +101,7 @@ title: Projects
                     <a href="{{project.github}}">
                         {% endif %}
                         <img src="{% if project.image %}assets/images/{{project.image}}{% else %} assets/images/farama_black.svg {% endif %}"
-                            class="card-img-top" alt="{{project.name}}">
+                            class="card-img-top" style="{% if project.name == 'Miniworld' %}margin-left: 10px{% endif %}" alt="{{project.name}}">
                     </a>
                     <div class="card-body">
                         {% if project.website %}
