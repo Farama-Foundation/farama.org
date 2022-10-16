@@ -26,7 +26,7 @@ title: Projects
 <div class="container mt-5">
 
     <h2 class="text-primary">Mature</h2>
-    <h5 class="text-muted mb-3">Maintained projects that comply with our <a href="project_standards.html">standards</a></h5>
+    <h5 class="text-muted mb-3 fw-normal">Maintained projects that comply with our <a href="project_standards.html">standards</a></h5>
 
     <div class="row mb-5 " style="display: flex; flex-wrap:wrap">
         {% for project in site.data.projects %}
@@ -88,7 +88,7 @@ title: Projects
     </div>
 
     <h2 class="text-primary">Incubating</h2>
-    <h5 class="text-muted mb-3">Projects we're still actively working to bring up to out standards, debug, and/or create</h5>
+    <h5 class="text-muted mb-3 fw-normal">Projects we're still actively working to bring up to out standards, debug, and/or create</h5>
 
     <div class="row mb-5 ">
         {% for project in site.data.projects %}
@@ -101,7 +101,7 @@ title: Projects
                     <a href="{{project.github}}">
                         {% endif %}
                         <img src="{% if project.image %}assets/images/{{project.image}}{% else %} assets/images/farama_black.svg {% endif %}"
-                            class="card-img-top" alt="{{project.name}}">
+                            class="card-img-top" style="{% if project.name == 'Miniworld' %}margin-left: 10px{% endif %}" alt="{{project.name}}">
                     </a>
                     <div class="card-body">
                         {% if project.website %}

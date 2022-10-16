@@ -2,30 +2,31 @@
 title: Blog
 ---
 
-<div class="container mb-5 mt-3 mt-md-3">
-    <div class="row gx-3 gy-3">
+<div class="container mb-5 mt-3 mt-md-5">
+    <div class="row">
         {% for post in site.posts %}
-        <div class="col-12 col-md-6 p-3 px-md-3 py-md-3 d-flex justify-content-center">
-            <div class="card bg-primary text-white w-100 farama-post-card" style="max-width:325px">
-                <img class="card-img"
-                    src="{% if project.image %}assets/images/{{post.image}}{% else %} assets/images/farama_solid_white.svg {% endif %}"
-                    alt="{{ post.title }}">
-                <a href="{{post.url | relative_url}}" class="text-white" style="text-decoration: none;">
-                    <div class="card-img-overlay" style="top: unset;padding-top: 25%">
-                        <h5 class="card-title">{{post.title}}</h5>
-                        <p class="card-text mb-0">{{post.date | date: "%-d %B %Y" }}</p>
-                        <p class="card-text"><small>
-                                {% assign words = post.content | number_of_words %}
-                                {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read
-                                    </small>
-                        </p>
+        <a href="{{post.url | relative_url}}" style="text-decoration: none;color:black">
+            <div class="row">
+                <div class="col-md-7 col-12" style="border-right: 1px solid #00788A">
+                        <h3>{{post.title}}</h3>
+                        <span class="text-muted">{{post.date | date: "%-d %B %Y" }}</span>
+                        <span class="text-muted ps-2">
+                            {% assign words = post.content | number_of_words %}
+                            {% if words < 360 %}
+                                1 min
+                            {% else %}
+                                {{ words | divided_by:180 }} mins
+                            {% endif %}
+                                read
+                        </span>
+                </div>
+                <div class="col-md-5 col-12">
+                    {{ post.excerpt | strip_html }}
+                </div>
 
-                    </div>
-                </a>
             </div>
-
-        </div>
-            {% endfor %}
+        </a>
+        {% endfor %}
 
 
     </div>
