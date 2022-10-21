@@ -1,15 +1,15 @@
 - name: Jordan Terry
-  role: CEO, Chair of Board
+  role: CEO
   affiliation: University of Maryland, Swarm Labs
   image: jordan.jpg
   site: https://github.com/jkterry1
 - name: Mark Towers
-  role: Board member, Gymnasium maintainer and project manager
+  role: Gymnasium maintainer and project manager
   affiliation: University of Southampton
   image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
 - name: Ariel Kwiatkowski
-  role: Board member, Gymnasium maintainer
+  role: Gymnasium maintainer
   affiliation: École Polytechnique
   image: ariel.jpg
   site: https://github.com/RedTachyon
@@ -43,7 +43,7 @@
   affiliation: Técnico Lisboa
   image: manuel.jpg
   site: https://github.com/mgoulao
-- name: Eric
+- name: Eric Laukien
   role: Procgen2 and TinyScaler maintainer
   affiliation: Ogma Corp
   image: eric.jpg

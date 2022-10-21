@@ -1,17 +1,21 @@
-- tier: Diamond - $150k+
-
-- tier: Platinum - $50k+
-      
-- tier: Gold - $25k+
-  donors:
-    - name: Google
-      image: google.svg
-      site: https://about.google/
-      color: "ffffff"
-      
-- tier: Silver - $10k+
+- tier: Silver
+  price: $10k+
   donors:
     - name: Hugging Face
       image: huggingface.svg
       site: https://huggingface.co/
       color: "ffffff"
+
+- tier: Gold
+  price: $25k+
+  donors:
+    - name: Google
+      image: google.svg
+      site: https://about.google/
+      color: "ffffff"
+
+- tier: Platinum
+  price: $50k+
+
+- tier: Diamond
+  price: $150k+

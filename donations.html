@@ -66,7 +66,7 @@ title: Donations
                         {% for tier in site.data.donate_tiers %}
                         <div class=" col-lg-3 col-sm-6 col-12 mb-4">
                             <div class="card farama-perks-card text-center" style="height: 100%; margin:0 auto;">
-                                <h5 class="card-title pt-3 mx-5">{{tier.name}}</h5>
+                                <h5 class="card-title pt-3 mx-5">{{tier.name}} <br>{{tier.price}}</h5>
                                 <ul>
                                     <div class="farama-perks-card__separator" style="width: 70px; margin-top: 0px">
                                     </div>
@@ -74,7 +74,6 @@ title: Donations
                                     <li class="mx-3 text-muted"  style="line-height: 1.2rem;">
                                         <small>
                                             {{item.benefit}}
-
                                         </small>
                                     </li>
                                     {% if forloop.last %}{% else %}
@@ -97,18 +96,23 @@ title: Donations
 
 <div class="container mb-5">
     <div class="row pt-3 text-center w-100">
-        <h2 class="mb-2">Donors</h2>
+        <h2 class="text-primary mb-2">Donors</h2>
+        <div class="row">
         {% for item in site.data.donors %}
-            <h3 class="text-primary my-3">{{item.tier}}</h3>
-            {% for org in item.donors %}
-            <div class="mb-5">
-                <a href="{{org.site}}">
-                    <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
-                        style="background-color: #{{org.color}}; height: 110px;" alt="">
-                </a>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <h3 class="text-primary mt-3 mb-0">{{item.tier}}</h3>
+                <h5 class="mt-0">{{item.price}}</h5>
+                {% for org in item.donors %}
+                <div class="mb-5">
+                    <a href="{{org.site}}">
+                        <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
+                            style="background-color: #{{org.color}}; height: 110px;" alt="">
+                    </a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         {% endfor %}
+    </div>
     </div>
 </div>
 
