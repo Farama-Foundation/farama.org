@@ -1,6 +1,6 @@
 - type: Good Science
   standards:
-    - name: <b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced.
+    - name: <b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced. (ignoring potential issues due to floating point arithmetic errors)
     - name: <b>Include explicit versioning</b> in environment or wrapper names in a format like "Pong-v5", to make it more explicit to researchers when results are from differently configured environments.
 
 - type: Release Details
