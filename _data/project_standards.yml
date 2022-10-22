@@ -21,7 +21,7 @@
 
 - type: Development Workflow
   standards:
-    - name: <b>Have continuous integration testing</b> that includes API compliance testing and determinism testing, tests on both macOS and Linux, and tests with Pyright. This way we can make sure all libraries we maintain correctly comply with our API standards, run correctly given new changes to the code or new versions of dependencies, support both our supported operating systems, comply with our determinism standards, and that the code works as the required type hinting would indicate that it should.
+    - name: <b>Have continuous integration testing</b> that includes API compliance testing and determinism testing, tests on both macOS and Linux, and tests with Pyright. This way we can make sure all libraries we maintain are well-tested and robust.
     - name: <b>Include a git pre-commit</b> with black, flake8 and isort. Including these in pre-commit reduces headaches for us and developers in trying to get pull requests finished and merged by making it clear to contributors that their PR needs changes to comply with their style guide before they open a pull request and the automated tests are run.
 
 - type: Code Standardization
