@@ -310,10 +310,6 @@ footer {
     flex-wrap: wrap;
 }
 
-.farama-copyright::after {
-    content: '-';
-    margin: 0 6px;
-}
 
 @media (max-width: 992px) {
     #navbarNav {
@@ -334,9 +330,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .farama-copyright::after {
-        content: '';
-    }
     .farama-card img {
         width: 40%;
         margin: 16px auto 0px;
