@@ -1,23 +1,23 @@
 - type: Good Science
   standards:
     - name: <b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced (ignoring potential issues due to floating point arithmetic errors).
-    - name: <b>Include explicit versioning<b> in environment and wrapper names in a format like "Pong-v5" to make it clear to researchers when results are from differently configured environments.
+    - name: <b>Include explicit versioning</b> in environment and wrapper names in a format like "Pong-v5" to make it clear to researchers when results are from differently configured environments.
 
 - type: Release Details
   standards:
     - name: <b>Be released on PyPI</b>, so that users can easily install libraries via `pip` without having to clone Git repositories.
     - name: <b>Include a full package description</b> for the PyPI page (generally by repurposing the readme file), so that users can quickly see what a package is when searching on PyPI.
-    - name: <b>Deploy packages to PyPI via GitHub Actions<b> that run when a Release is published on GitHub. This ensures that releases are fully automated to remove human error, and allows anyone to easily take over a project if needed.
+    - name: <b>Deploy packages to PyPI via GitHub Actions</b> that run when a Release is published on GitHub. This ensures that releases are fully automated to remove human error, and allows anyone to easily take over a project if needed.
 
 - type: Binaries
   standards:
     - name: <b>Be deterministically compiled</b> if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of reproducibility issues.
     - name: <b>Ship any binaries for both x86_64 and Arm architectures and both Linux and macOS operating systems.</b>
-    - name: <b>All supported operating systems should have wheels provided.<b> (Note: we're temporarily handling Arm-based macOS wheels by having them compile on installation due to an issue with Github Actions support.)
+    - name: <b>All supported operating systems should have wheels provided.</b> (Note: we're temporarily handling Arm-based macOS wheels by having them compile on installation due to an issue with Github Actions support.)
 
 - type: Quality of Life
   standards:
-    - name: <b>Include a thorough documentation website<b> in the same format as the other mature projects if the library is large enough to warrant one. We want both experienced researchers and newcomers alike to be able to quickly see what a library is and reference functionality as needed without having to refer to source.
+    - name: <b>Include a thorough documentation website</b> in the same format as the other mature projects if the library is large enough to warrant one. We want both experienced researchers and newcomers alike to be able to quickly see what a library is and reference functionality as needed without having to refer to source.
     - name: <b>Run on both Linux and macOS.</b> The vast majority of the software in this field is run on Linux servers, and a huge number of researchers and students develop and test on macOS.
 
 - type: Code Standardization
