@@ -32,7 +32,7 @@
 
 - name: Gymnasium-Robotics
   github: https://github.com/Farama-Foundation/gym-robotics
-  website:
+  website: https://robotics.farama.org
   desc: A collection of robotics simulation environments for reinforcement learning
   image: gymnasium-robotics.svg
   type: mature
