@@ -156,10 +156,6 @@ a:hover {
     background-color: #001633;
 }
 
-.farama-donation-card {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 .farama-gradient-bg {
     background:
         radial-gradient(farthest-side at bottom left,
@@ -183,6 +179,10 @@ a:hover {
 
 .farama-gradient-bg .farama-perks-card a {
     color: var(--bs-primary-light)
+}
+
+.farama-donation-card {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .farama-donation-card img {
@@ -250,10 +250,6 @@ a:hover {
     margin: 12px auto
 }
 
-footer {
-    margin-top: auto
-}
-
 img.light-shadow {
     filter: drop-shadow(4px 4px 3px rgba(70, 65, 68, 0.8));
 }
@@ -276,11 +272,6 @@ img.light-shadow {
 .blog-container h4,
 .blog-container h5 {
     padding-top: 1rem;
-}
-
-.farama-social-container {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .farama-highlight {
@@ -308,7 +299,15 @@ img.light-shadow {
 .farama-post-card:hover .card-img {
     filter: blur(10px);
     transform: scale(1.15);
+}
 
+footer {
+    margin-top: auto
+}
+
+.farama-social-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .farama-copyright::after {
