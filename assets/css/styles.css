@@ -274,6 +274,14 @@ img.light-shadow {
     padding-top: 1rem;
 }
 
+.blog-container img {
+    max-width: 100%;
+}
+
+.blog-container center {
+    margin-bottom: 1rem;
+}
+
 .farama-highlight {
     background-color: #eaeef1;
     color: white;
