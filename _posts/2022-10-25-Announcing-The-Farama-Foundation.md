@@ -2,8 +2,9 @@
 layout: blog
 title: "Announcing The Farama Foundation"
 date: "2022-10-25"
-excerpt: "Today we’re announcing the Farama Foundation – a new nonprofit organization designed in part to house major existing open source reinforcement learning (“RL”) libraries in a neutral nonprofit body."
-thumbnail: assets/images/farama_placeholder.png
+excerpt: "Today we're announcing the Farama Foundation – a new nonprofit organization designed in part to house major existing open source reinforcement learning (“RL”) libraries in a neutral nonprofit body."
+thumbnail: assets/posts/2022-10-25-Announcing-The-Farama-Foundation/banner-gradient-proto-lines3.png
+image: assets/posts/2022-10-25-Announcing-The-Farama-Foundation/banner-gradient-proto-lines3.png
 ---
 
 ## Introduction
@@ -96,18 +97,20 @@ These are the projects we plan to work on in the pursuit of making RL require le
 4. Create a learning library that would hopefully be the first widely used library that “just works,” even in complex and real world applications, including support for distributed computing. This is _by far_ the most ambitious task on this list and deserves its own blog post.
 
 
+## Contributing
+
+If you are interested in contributing your time to working on projects with the Farama Foundation, we would love to have you. The general process is to join our [discord server](https://discord.gg/PfR7a79FpQ) where we coordinate all development, post a message with your experience and what you're looking to do, and our project managers will work with you to get you started.
+
+
 ## Donations
 
 Farama has accomplished everything we’ve described above with entirely volunteer contributions. We’re looking for donations to allow our key developers to become full time employees, especially our team members managing other contributors.
 
 Full time staff would make the development and maintenance of our projects more sustainable, let us bring environments to a mature state faster, and give us the capacity to manage many more environments. It would also let us release important new features faster, like making all of the environments in Gymnasium hardware accelerated by default, and give us the manpower to pursue the majority of our future project goals, like a GPT-for-RL enabling dataset.
 
-We’re a 501c3 nonprofit in the United States, so donations to us are tax deductible. We have various [perks](https://farama.org/donations) for individuals or companies who donate larger sums. Our work has the capability to make engineers and researchers in industry and academia alike substantially more productive and make entirely new things feasible to accomplish, as well as dramatically lowering the barrier for new students entering the field.  If you want to see our vision come to light, please [donate](https://farama.org/donations) to the future of AI.
+We’re a 501c3 nonprofit in the United States, so donations to us are tax deductible. We have various perks for individuals or companies who donate larger sums.
 
-
-## Contributing
-
-If you are interested in contributing your time to working on projects with the Farama Foundation, we would love to have you. The general process is to join our [discord server](https://discord.gg/PfR7a79FpQ) where we coordinate all development, post a message with your experience and what you’re looking to do, and our project managers will work with you to get you started.
+Our work will allow engineers and researchers in both industry and academia to be substantially more productive, make novel forms of automation feasible, and will dramatically lower the barrier to entry for students. If you want to see our vision realized, please donate to the future of AI.
 
 
 ## Final Notes
