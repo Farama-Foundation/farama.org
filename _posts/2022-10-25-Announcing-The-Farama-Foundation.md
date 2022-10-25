@@ -5,6 +5,7 @@ date: "2022-10-25"
 excerpt: "Today we're announcing the Farama Foundation – a new nonprofit organization designed in part to house major existing open source reinforcement learning (“RL”) libraries in a neutral nonprofit body."
 thumbnail: assets/posts/2022-10-25-Announcing-The-Farama-Foundation/banner-gradient-proto-lines3.png
 image: assets/posts/2022-10-25-Announcing-The-Farama-Foundation/banner-gradient-proto-lines3.png
+read_time: 12
 ---
 
 ## Introduction

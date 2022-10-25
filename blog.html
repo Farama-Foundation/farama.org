@@ -11,12 +11,17 @@ title: Blog
                         <h3>{{post.title}}</h3>
                         <span class="text-muted">{{post.date | date: "%-d %B %Y" }}</span>
                         <span class="text-muted ps-2">
-                            {% assign words = post.content | number_of_words %}
-                            {% if words < 360 %}
-                                1 min
+                            {% if post.read_time != ""  %}
+                                {{post.read_time}} min
                             {% else %}
-                                {{ words | divided_by:180 }} mins
+                                {% assign words = post.content | number_of_words %}
+                                {% if words < 360 %}
+                                    1 min
+                                {% else %}
+                                    {{ words | divided_by:180 }} mins
+                                {% endif %}
                             {% endif %}
+
                                 read
                         </span>
                 </div>
