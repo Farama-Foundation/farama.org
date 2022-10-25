@@ -1,7 +1,7 @@
 - name: Github Sponsors
   image: github.png
   site: https://github.com/sponsors/Farama-Foundation
-  fees: No fees for user accounts, 10% fee for organization accounts
+  fees: No fees for user accounts, 10% fee for organization accounts. Includes a few unique low-dollar-amount tiers.
 - name: LiberaPay
   image: liberapay.svg
   site: https://en.liberapay.com/Farama-Foundation/

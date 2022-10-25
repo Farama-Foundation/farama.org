@@ -3,7 +3,7 @@
     --bs-primary-background: #011433;
     --bs-primary: #0f4a65;
     --bs-primary-rgb: 15, 74, 101;
-    --bs-primary-light: #2a7fa6;
+    --bs-primary-light: #29789d;
     --bs-secondary: #6d5842;
     --bs-secondary-rgb: 109, 88, 66;
     --bs-secondary-light: #bd8a42;
@@ -272,6 +272,20 @@ img.light-shadow {
 .blog-container h4,
 .blog-container h5 {
     padding-top: 1rem;
+}
+
+.blog-container img {
+    max-width: 100%;
+}
+
+.blog-container center {
+    margin-bottom: 1rem;
+}
+
+.farama-blog-post__excerpt {
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+    text-align: justify;
 }
 
 .farama-highlight {
