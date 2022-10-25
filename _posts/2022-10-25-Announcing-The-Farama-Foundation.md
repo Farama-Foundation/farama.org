@@ -30,9 +30,48 @@ In supervised learning, the basic software stack typically only has three compon
 
 Depending on how the reinforcement learning algorithm interacts with the environment, preprocessing wrappers are then applied (e.g. to make image observations greyscale). Only after all of this is done can a reinforcement learning algorithm be applied, which are typically implemented using deep learning tools (e.g. PyTorch, TensorFlow, Jax). A comparison of both software stacks is shown in the simplest form below:
 
-<center>
-<img src="/assets/posts/2022-10-25-Announcing-The-Farama-Foundation/image2.png" alt="Software Stacks" width="400" />
-</center>
+
+<div class="row text-white text-center p-3" style="background: linear-gradient(#765e3e, #054f5b)">
+    <div class="col-6" style="border-right: 1px solid white">
+        <h5 class="mb-3">Supervised Learning Stack</h5>
+        <div class="mb-3" style="height: 2px; width: 100%; background: var(--bs-secondary-light)"></div>
+        <p class="mb-0">Deep Learning Library</p>
+        <p class="mb-2" style="color:#f7dab1"><small>(e.g. PyTorch or TensorFlow)</small></p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-2">Preprocessing</p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-0">Dataset</p>
+        <p class="mb-2" style="color:#f7dab1"><small>(e.g. labeled images)</small></p>
+    </div>
+    <div class="col-6">
+        <h5 class="mb-3">Reinforcement Learning Stack</h5>
+        <div class="mb-3" style="height: 2px; width: 100%; background: var(--bs-secondary-light)"></div>
+        <p class="mb-0">Deep Learning Library</p>
+        <p class="mb-2" style="color:#f7dab1"><small>(e.g. PyTorch or TensorFlow)</small></p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-2">RL Algorithm</p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-2">Preprocessing Wrappers</p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-0">Environemnt Wrapper</p>
+        <p class="mb-2" style="color:#f7dab1"><small>(Standard Interface)</small></p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-0">Environment</p>
+        <p style="color:#f7dab1"><small>(e.g. Robotics Simulation, Video Game, etc.)</small></p>
+    </div>
+</div>
 
 ## The Environment Problem for Researchers
 
@@ -108,9 +147,9 @@ Farama has accomplished everything we’ve described above with entirely volunte
 
 Full time staff would make the development and maintenance of our projects more sustainable, let us bring environments to a mature state faster, and give us the capacity to manage many more environments. It would also let us release important new features faster, like making all of the environments in Gymnasium hardware accelerated by default, and give us the manpower to pursue the majority of our future project goals, like a GPT-for-RL enabling dataset.
 
-We’re a 501c3 nonprofit in the United States, so donations to us are tax deductible. We have various perks for individuals or companies who donate larger sums.
+We’re a 501c3 nonprofit in the United States, so donations to us are tax deductible. We have various <a href="/donations#donors-perks">perks</a> for individuals or companies who donate larger sums.
 
-Our work will allow engineers and researchers in both industry and academia to be substantially more productive, make novel forms of automation feasible, and will dramatically lower the barrier to entry for students. If you want to see our vision realized, please donate to the future of AI.
+Our work will allow engineers and researchers in both industry and academia to be substantially more productive, make novel forms of automation feasible, and will dramatically lower the barrier to entry for students. If you want to see our vision realized, please <a href="/donations">donate</a> to the future of AI.
 
 
 ## Final Notes
