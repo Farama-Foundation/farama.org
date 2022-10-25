@@ -147,9 +147,9 @@ Farama has accomplished everything we’ve described above with entirely volunte
 
 Full time staff would make the development and maintenance of our projects more sustainable, let us bring environments to a mature state faster, and give us the capacity to manage many more environments. It would also let us release important new features faster, like making all of the environments in Gymnasium hardware accelerated by default, and give us the manpower to pursue the majority of our future project goals, like a GPT-for-RL enabling dataset.
 
-We’re a 501c3 nonprofit in the United States, so donations to us are tax deductible. We have various perks for individuals or companies who donate larger sums.
+We’re a 501c3 nonprofit in the United States, so donations to us are tax deductible. We have various <a href="/donations#donors-perks">perks</a> for individuals or companies who donate larger sums.
 
-Our work will allow engineers and researchers in both industry and academia to be substantially more productive, make novel forms of automation feasible, and will dramatically lower the barrier to entry for students. If you want to see our vision realized, please donate to the future of AI.
+Our work will allow engineers and researchers in both industry and academia to be substantially more productive, make novel forms of automation feasible, and will dramatically lower the barrier to entry for students. If you want to see our vision realized, please <a href="/donations">donate</a> to the future of AI.
 
 
 ## Final Notes
