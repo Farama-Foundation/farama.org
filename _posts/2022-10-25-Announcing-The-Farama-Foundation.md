@@ -31,7 +31,7 @@ In supervised learning, the basic software stack typically only has three compon
 Depending on how the reinforcement learning algorithm interacts with the environment, preprocessing wrappers are then applied (e.g. to make image observations greyscale). Only after all of this is done can a reinforcement learning algorithm be applied, which are typically implemented using deep learning tools (e.g. PyTorch, TensorFlow, Jax). A comparison of both software stacks is shown in the simplest form below:
 
 
-<div class="row text-white text-center p-3" style="background: linear-gradient(#765e3e, #054f5b)">
+<div class="row text-white text-center p-3" style="background: linear-gradient(to right top, #765e3e, #054f5b); border-radius: 26px">
     <div class="col-6" style="border-right: 1px solid white">
         <h5 class="mb-3">Supervised Learning Stack</h5>
         <div class="mb-3" style="height: 2px; width: 100%; background: var(--bs-secondary-light)"></div>
@@ -63,7 +63,7 @@ Depending on how the reinforcement learning algorithm interacts with the environ
         <p class="mb-2">
             <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
         </p>
-        <p class="mb-0">Environemnt Wrapper</p>
+        <p class="mb-0">Environment Wrapper</p>
         <p class="mb-2" style="color:#f7dab1"><small>(Standard Interface)</small></p>
         <p class="mb-2">
             <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
