@@ -20,13 +20,28 @@
         <div class="container" style="max-width: 700px;">
             <div>
                 <h1>
-                    {{page.title}}
+                    {% if page.short_title != "" %}
+                        {{page.short_title}}
+                    {% else %}
+                        {{page.title}}
+                    {% endif %}
                 </h1>
+                <h4 class="text-muted">
+                    {% if page.subtitle != "" %}
+                        {{page.subtitle}}
+                    {% endif %}
+                </h4>
                 <div style="display: flex">
                     <span style="font-size: 1.25rem;">{{page.date | date: "%-d %B %Y" }}</span>
                     <span style="font-size: 1.25rem; margin-left: 24px">
-                        {% assign words = page.content | number_of_words %}
-                        {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read </span>
+                        {% if page.read_time != ""  %}
+                            {{page.read_time}} min
+                        {% else %}
+                            {% assign words = page.content | number_of_words %}
+                            {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %}
+                        {% endif %}
+                        read
+                    </span>
                 </div>
             </div>
         </div>
