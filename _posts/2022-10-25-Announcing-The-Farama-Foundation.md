@@ -30,9 +30,48 @@ In supervised learning, the basic software stack typically only has three compon
 
 Depending on how the reinforcement learning algorithm interacts with the environment, preprocessing wrappers are then applied (e.g. to make image observations greyscale). Only after all of this is done can a reinforcement learning algorithm be applied, which are typically implemented using deep learning tools (e.g. PyTorch, TensorFlow, Jax). A comparison of both software stacks is shown in the simplest form below:
 
-<center>
-<img src="/assets/posts/2022-10-25-Announcing-The-Farama-Foundation/image2.png" alt="Software Stacks" width="400" />
-</center>
+
+<div class="row text-white text-center p-3" style="background: linear-gradient(#765e3e, #054f5b)">
+    <div class="col-6" style="border-right: 1px solid white">
+        <h5 class="mb-3">Supervised Learning Stack</h5>
+        <div class="mb-3" style="height: 2px; width: 100%; background: var(--bs-secondary-light)"></div>
+        <p class="mb-0">Deep Learning Library</p>
+        <p class="mb-2" style="color:#f7dab1"><small>(e.g. PyTorch or TensorFlow)</small></p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-2">Preprocessing</p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-0">Dataset</p>
+        <p class="mb-2" style="color:#f7dab1"><small>(e.g. labeled images)</small></p>
+    </div>
+    <div class="col-6">
+        <h5 class="mb-3">Reinforcement Learning Stack</h5>
+        <div class="mb-3" style="height: 2px; width: 100%; background: var(--bs-secondary-light)"></div>
+        <p class="mb-0">Deep Learning Library</p>
+        <p class="mb-2" style="color:#f7dab1"><small>(e.g. PyTorch or TensorFlow)</small></p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-2">RL Algorithm</p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-2">Preprocessing Wrappers</p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-0">Environemnt Wrapper</p>
+        <p class="mb-2" style="color:#f7dab1"><small>(Standard Interface)</small></p>
+        <p class="mb-2">
+            <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"><path style="transform: translateX(2px);stroke-width: 2px; stroke: white;" d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </p>
+        <p class="mb-0">Environment</p>
+        <p style="color:#f7dab1"><small>(e.g. Robotics Simulation, Video Game, etc.)</small></p>
+    </div>
+</div>
 
 ## The Environment Problem for Researchers
 
