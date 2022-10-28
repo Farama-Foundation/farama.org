@@ -12,7 +12,7 @@ subtitle: For a project under Farama to be listed as mature, it must comply with
                 <div class="card-body bg-white" style="border-radius: var(--bs-card-inner-border-radius)">
                     <ul>
                         {% for standard in item.standards %}
-                        <li style="text-align: justify;">{{ standard.name }}</li>
+                        <li style="text-align: left;">{{ standard.name }}</li>
                         {% if forloop.last %}{% else %}
                         <div class="farama-standards-card__separator"></div>
                         {% endif %}
