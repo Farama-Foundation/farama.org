@@ -3,3 +3,7 @@
   affiliation: Google
   image: psc.png
   site: https://github.com/psc-g
+- name: Nathan Lambert
+  role:
+  affiliation: HuggingFace
+  image: nathan.jpg
