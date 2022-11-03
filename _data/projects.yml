@@ -109,3 +109,7 @@
   desc: A collection of reinforcement learning environments for simple web interaction tasks
   type: incubating
 
+- name: ViZDoom
+  github: https://github.com/Farama-Foundation/ViZDoom
+  desc: Doom-based AI Research Platform for Reinforcement Learning from Raw Visual Information
+  type: incubating
