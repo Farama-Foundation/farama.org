@@ -4,6 +4,6 @@
   image: psc.png
   site: https://github.com/psc-g
 - name: Nathan Lambert
-  role:
+  role: Machine learning scientist
   affiliation: HuggingFace
   image: nathan.jpg
