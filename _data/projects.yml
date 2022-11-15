@@ -97,11 +97,11 @@
   image: d4rl.svg
   type: incubating
 
-- name: Kabuki
-  github: https://github.com/Farama-Foundation/Kabuki
+- name: Minari
+  github: https://github.com/Farama-Foundation/Minari
   website:
   desc: Gymnasium Based Offline RL Tooling
-  image: kabuki.svg
+  image: minari.svg
   type: incubating
 
 - name: MiniWoB++
@@ -112,4 +112,9 @@
 - name: ViZDoom
   github: https://github.com/Farama-Foundation/ViZDoom
   desc: Doom-based AI Research Platform for Reinforcement Learning from Raw Visual Information
+  type: incubating
+
+- name: Shimmy
+  github: https://github.com/Farama-Foundation/Shimmy
+  desc: An API conversion tool for popular external reinforcement learning environments
   type: incubating

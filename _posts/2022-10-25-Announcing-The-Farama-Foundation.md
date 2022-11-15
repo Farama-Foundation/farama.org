@@ -134,7 +134,7 @@ We believe it is critical for the field that the tools researchers use function 
 These are the projects we plan to work on in the pursuit of making RL require less developer labor to deploy into real world applications:
 
 1. Work with video game developers to compile gameplay from real users into the largest offline RL dataset ever created, and publicly release it so that GPT-for-RL styled projects can be attempted. (If you’re a video game developer and are interested in working with us on this – [jkterry@farama.org](mailto:jkterry@farama.org)).
-2. Create a standard offline RL dataset format and repository. Development on this has begun – see [Kabuki](https://github.com/Farama-Foundation/Kabuki) – and it will be integrated into all environments we manage.
+2. Create a standard offline RL dataset format and repository. Development on this has begun – see [Minari](https://github.com/Farama-Foundation/Minari) – and it will be integrated into all environments we manage.
 3. Create good C APIs and tools, so that RL can be more easily deployed in applications like embedded systems or robots.
 4. Create a learning library that would hopefully be the first widely used library that “just works,” even in complex and real world applications, including support for distributed computing. This is _by far_ the most ambitious task on this list and deserves its own blog post.
 
