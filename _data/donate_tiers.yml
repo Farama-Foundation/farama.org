@@ -2,11 +2,11 @@
   price: $10k+
   benefits:
     - benefit: Recognition on our <a href="donations">donors page</a> and as a sponsor on talks that we host
+    - benefit: Thank you on Twitter
 - name: Gold
   price: $25k+
   benefits:
     - benefit: Access to developer meet and greet chat room
-    - benefit: Thank you on Twitter
 - name: Platinum
   price: $50k+
   benefits:
