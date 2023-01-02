@@ -63,10 +63,10 @@
 
 - name: MAgent2
   github: https://github.com/Farama-Foundation/MAgent2
-  website:
+  website: https://magent2.farama.org/
   desc: An engine for high performance multi-agent environments with very large numbers of agents, along with a set of reference environments
   image: MAgent2.svg
-  type: incubating
+  type: mature
 
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
