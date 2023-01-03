@@ -117,4 +117,5 @@
 - name: Shimmy
   github: https://github.com/Farama-Foundation/Shimmy
   desc: An API conversion tool for popular external reinforcement learning environments
+  image: shimmy.svg
   type: incubating
