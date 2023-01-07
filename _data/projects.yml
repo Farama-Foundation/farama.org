@@ -119,3 +119,8 @@
   desc: PettingZoo and Gymnasium bindings for popular reinforcement learning environments outside of Farama
   image: shimmy.svg
   type: incubating
+
+- name: Metaworld
+  github: https://github.com/Farama-Foundation/Metaworld
+  desc: Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning learning
+  type: incubating
