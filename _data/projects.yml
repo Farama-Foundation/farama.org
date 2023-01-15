@@ -112,6 +112,7 @@
 - name: ViZDoom
   github: https://github.com/Farama-Foundation/ViZDoom
   desc: Reinforcement Learning environments based on the 1993 game Doom
+  image: vizdoom.svg
   type: incubating
 
 - name: Shimmy
