@@ -117,6 +117,7 @@
 
 - name: Shimmy
   github: https://github.com/Farama-Foundation/Shimmy
+  website: https://shimmy.farama.org/
   desc: PettingZoo and Gymnasium bindings for popular reinforcement learning environments outside of Farama
   image: shimmy.svg
   type: incubating
