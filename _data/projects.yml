@@ -126,3 +126,8 @@
   github: https://github.com/Farama-Foundation/Metaworld
   desc: Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning
   type: incubating
+
+- name: MO-Gymnasium
+  github: https://github.com/Farama-Foundation/MO-Gymnasium
+  desc: Multi-objective Gymnasium environments for reinforcement learning
+  type: incubating
