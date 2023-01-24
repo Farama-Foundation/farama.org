@@ -1,6 +1,6 @@
 - name: Jordan Terry
   role: CEO
-  affiliation: University of Maryland, Swarm Labs
+  affiliation: Farama
   image: jordan.jpg
   site: https://github.com/jkterry1
 - name: Mark Towers
@@ -30,7 +30,7 @@
   site: https://github.com/jjshoots
 - name: Rodrigo de Lazcano Perez-Vicente
   role: Gymnasium-Robotics and Minigrid maintainer
-  affiliation: NIST
+  affiliation: Farama
   image: rodrigo.jpg
   site: https://github.com/rodrigodelazcano
 - name: William Dudley
