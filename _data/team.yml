@@ -40,7 +40,7 @@
   site: https://github.com/WillDudley
 - name: Manuel Goulão
   role: Web developer
-  affiliation: Técnico Lisboa
+  affiliation: INESC-ID
   image: manuel.jpg
   site: https://github.com/mgoulao
 - name: Eric Laukien
@@ -83,3 +83,18 @@
   affiliation: Brown University
   image: andrea.jpg
   site: https://github.com/kir0ul
+- name: Panupong 'Ice' Pasupat
+  role: MiniWoB++
+  affiliation: Google Brain
+  image: ice.jpg
+  site: https://ppasupat.github.io
+- name: Reginald McLean
+  role: Metaworld
+  affiliation: Toronto Metropolitan University
+  image: reginald.jpg
+  site:
+- name: Florian Felten
+  role: MO-Gymnasium
+  affiliation: SnT, University of Luxembourg
+  image: florian.png
+  site: https://github.com/ffelten
