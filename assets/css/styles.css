@@ -323,6 +323,15 @@ footer {
     flex-wrap: wrap;
 }
 
+.farama-discord-btn {
+    padding: 12px 24px;
+    background-color: rgb(120 120 120 / 50%);
+    color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    width: 220px;
+}
+
 
 @media (max-width: 992px) {
     #navbarNav {

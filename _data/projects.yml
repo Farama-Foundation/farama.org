@@ -122,11 +122,6 @@
   desc: A collection of reinforcement learning environments for simple web interaction tasks
   type: incubating
 
-- name: MiniWoB++
-  github: https://github.com/Farama-Foundation/miniwob-plusplus
-  desc: A collection of reinforcement learning environments for simple web interaction tasks
-  type: incubating
-
 - name: Metaworld
   github: https://github.com/Farama-Foundation/Metaworld
   desc: Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning
