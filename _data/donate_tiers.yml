@@ -1,19 +1,20 @@
 - name: Silver
   price: $10k+
   benefits:
-    - benefit: Recognition on our donors page and as a sponsor on talks that we host
-    - benefit: Thank you on Twitter
+    - benefit: Recognition as a donor in all future talks, videos, as well as on this page
+    - benefit: Access to a private chatroom with all of the core Farama developers
 - name: Gold
   price: $25k+
   benefits:
-    - benefit: Access to developer meet and greet chat room
+    - benefit: Link to commercial tools that use our libraries on the corresponding libraries GitHub page and documentation websites
+    - benefit: Post ads to our discord server (with thousands of users) every quarter
 - name: Platinum
   price: $50k+
   benefits:
-    - benefit: Ability to post recruitment ads etc. in a channel on our discord server
-    - benefit: Invitation to future in-person events
+    - benefit: Priority support on bugs (contact us directly when needed)
+    - benefit: Private annual seminar for your organizations engineers about our ecosystem of tools and how to better integrate them into your projects
 - name: Diamond
   price: $150k+
   benefits:
-    - benefit: Have an employe's title named after you (non-profit equivalent of endowed university professorships, e.g., "Google Director of AI Design"). This tier can be repeated if desired.
-    - benefit: Priority support on bugs if you email us
+    - benefit: Ability to list commercial products using our libraries as "Farama Certified" after review by us
+    - benefit: Include your organization name in an employee's title (e.g. "Google Maintainer of Gymnasium")

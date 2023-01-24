@@ -186,11 +186,10 @@ a:hover {
 }
 
 .farama-donation-card img {
-    width: 42px;
 }
 
 .farama-donation-card i {
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 
 .farama-donation-card .card-body {

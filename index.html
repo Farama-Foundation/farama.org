@@ -1,16 +1,16 @@
 ---
 title: The Farama Foundation
-subtitle: A nonprofit organization developing and maintaining open source reinforcement learning tools.
+subtitle: Maintaining the World's Open Source Reinforcement Learning Tools
 index: true
 ---
 
 <div class="container my-5">
     <div class="row mb-3">
-        <h2 class="text-primary">Popular Projects</h2>
+        <h2 class="text-primary">Core Tools</h2>
     </div>
     <div class="row">
         {% for project in site.data.projects %}
-            {% if project.popular == true %}
+            {% if project.type == "core" %}
             <div class="col-12 col-sm-6 col-md-4 my-2">
                 <div class="card farama-card me-1 ms-1" style="height:100%">
                     {% if project.website %}

@@ -2,25 +2,24 @@
   github: https://github.com/Farama-Foundation/Gymnasium
   website: https://gymnasium.farama.org/
   image: gymnasium_black.svg
-  desc: A standard API for reinforcement learning and a diverse set of reference environments (formerly Gym)
-  type: mature
+  desc: A standard API for single-agent reinforcement learning environments, with popular reference environments and related utilities (formerly Gym)
+  type: core
   popular: true
 
 - name: PettingZoo
   github: https://github.com/Farama-Foundation/PettingZoo
   website: https://pettingzoo.farama.org
   image: pettingzoo.svg
-  desc: Gymnasium for multi-agent environments
-  type: mature
+  desc: A standard API for multi-agent reinforcement learning environments, with popular reference environments and related utilities
+  type: core
   popular: true
 
-- name: SuperSuit
-  github: https://github.com/Farama-Foundation/SuperSuit
-  website:
-  image: supersuit.svg
-  desc: A collection of wrappers for Gymnasium and PettingZoo environments
-  type: mature
-  popular: false
+- name: Minari
+  github: https://github.com/Farama-Foundation/Minari
+  website: https://minari.farama.org/
+  desc: A standard format for offline reinforcement learning datasets, with popular reference datasets and related utilities
+  image: minari.svg
+  type: core
 
 - name: Minigrid
   github: https://github.com/Farama-Foundation/MiniGrid
@@ -29,6 +28,14 @@
   image: minigrid.svg
   type: mature
   popular: true
+
+- name: SuperSuit
+  github: https://github.com/Farama-Foundation/SuperSuit
+  website:
+  image: supersuit.svg
+  desc: A collection of wrappers for Gymnasium and PettingZoo environments (being merged into gymnasium.wrappers and pettingzoo.wrappers)
+  type: mature
+  popular: false
 
 - name: Gymnasium-Robotics
   github: https://github.com/Farama-Foundation/gym-robotics
@@ -97,13 +104,6 @@
   image: d4rl.svg
   type: incubating
 
-- name: Minari
-  github: https://github.com/Farama-Foundation/Minari
-  website: https://minari.farama.org/
-  desc: Gymnasium Based Offline RL Tooling
-  image: minari.svg
-  type: incubating
-
 - name: MiniWoB++
   github: https://github.com/Farama-Foundation/miniwob-plusplus
   desc: A collection of reinforcement learning environments for simple web interaction tasks
@@ -120,6 +120,11 @@
   website: https://shimmy.farama.org/
   desc: PettingZoo and Gymnasium bindings for popular reinforcement learning environments outside of Farama
   image: shimmy.svg
+  type: incubating
+
+- name: MiniWoB++
+  github: https://github.com/Farama-Foundation/miniwob-plusplus
+  desc: A collection of reinforcement learning environments for simple web interaction tasks
   type: incubating
 
 - name: Metaworld
