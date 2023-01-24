@@ -2,23 +2,14 @@
   image: github.png
   site: https://github.com/sponsors/Farama-Foundation
   fees: No fees for user accounts, 10% fee for organization accounts. Includes a few unique low-dollar-amount tiers.
-- name: LiberaPay
-  image: liberapay.svg
-  site: https://en.liberapay.com/Farama-Foundation/
-  fees: No fees
+
 - name: Paypal
   image: paypal.png
   site: https://www.paypal.com/donate/?hosted_button_id=L8FW3MK66B5X6
   fees: Fees are 1.99% + .49 cents
-- name: every.org
-  image: every.svg
-  site: https://www.every.org/farama-inc#donate
-  fees: Variable fees based on payment method, accepts cryptocurrencies
-- name: Benevity
-  image: benevity.png
-  site: https://causes.benevity.org/causes/840-873090474
-  fees: Our listing on a commonly used platform for corporate donations (no donation portal for individuals available). Variable fees.
+
 - name: Contact Us Directly
   image: <i class="fa-solid fa-envelope fa-10x"></i>
   site: mailto:contact@farama.org
-  fees: No fees (contact@farama.org)
+  info: contact@farama.org
+  fees:

@@ -1,21 +1,14 @@
-- tier: Silver
-  price: $10k+
-  donors:
-    - name: Hugging Face
-      image: huggingface.svg
-      site: https://huggingface.co/
-      color: "ffffff"
+- name: Hugging Face
+  image: huggingface.svg
+  site: https://huggingface.co/
+  color: "ffffff"
 
-- tier: Gold
-  price: $25k+
-  donors:
-    - name: Google
-      image: google.svg
-      site: https://about.google/
-      color: "ffffff"
+- name: Google
+  image: google.svg
+  site: https://about.google/
+  color: "ffffff"
 
-- tier: Platinum
-  price: $50k+
+- name: Comet
+  image: comet.svg
+  site: https://www.comet.com/site/
 
-- tier: Diamond
-  price: $150k+

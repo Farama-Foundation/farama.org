@@ -13,10 +13,7 @@ title: Donations
                     <h1>
                         {{page.title}}
                     </h1>
-
-                    <h4 class="mb-5 mt-4">We accept donations through a number of payment services shown below. We are a
-                        registered 501c3
-                        nonprofit in the US, meaning that donations are tax deductible.</h4>
+                    <h4 class="mb-3 mt-4 text-center">Donations are used to pay our developers maintain our libraries and develop new ones</h4>
                     <div class="row pt-3 gx-2 farama-donation-cards-container"
                         style="display: flex; flex-wrap:wrap; justify-content: center;">
                         {% for org in site.data.donate %}
@@ -30,11 +27,11 @@ title: Donations
                                     {% else %}
                                     <a href="{{org.site}}">
                                         {% endif %}
-                                        <div class="card farama-donation-card  p-3 mx-1"
+                                        <div class="card farama-donation-card  p-3 mx-1 justify-content-center"
                                             style="max-width: 540px;height: 100%;"
                                             id="{% if org.name == 'every.org' %}edo-donate-btn{% endif %}">
                                             <div class="row g-0">
-                                                <div class="col-md-2" style="padding-right: 8px;">
+                                                <div class="col-3 align-self-center" style="padding:4px 16px 4px 0;">
 
                                                     {% if org.name == "Contact Us Directly" %}
                                                     {{org.image}}
@@ -43,25 +40,27 @@ title: Donations
                                                         class="img-fluid rounded-start" alt="{{org.name}}">
                                                     {% endif %}
                                                 </div>
-                                                <div class="col-md-8">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">{{org.name}}</h5>
-                                                        <p class="card-text"><small
-                                                                class="text-muted">{{org.fees}}</small></p>
-                                                    </div>
+                                                <div class="col-9 card-body d-flex flex-column justify-content-center">
+                                                    <h5 class="card-title mb-0">{{org.name}}</h5>
+                                                    {% if org.info %}
+                                                    <p class="card-text mt-2"><small
+                                                            class="text-muted">{{org.info}}</small></p>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                         </div>
                         {% endfor %}
+                        <h4 class="mb-3 mt-4 text-center">We are a 501c3 nonprofit, meaning that donations are
+                            deductible on your taxes. You will automatically recieve a form from us with the
+                            information to claim this deduction, please
+                            <a style="color:#c7deff; text-decoration: underline;" href="mailto:{{site.email}}">contact us</a> if you did not</h4>
                     </div>
                 </div>
                 <div id="donors-perks" class="farama-perks-cards-container px-4 mt-3 mb-4">
 
                     <h2 class="mt-3 text-white">Donor Benefits</h2>
-                    <span class="text-white text-center" style="font-size: 18px;">Please <a style="color:#c7deff"
-                            href="mailto:{{site.email}}">contact us directly</a> to get the corresponding benefits.</span>
                     <div class="row mt-4" style="display: flex; flex-wrap:wrap; justify-content: center;">
                         {% for tier in site.data.donate_tiers %}
                         <div class=" col-lg-3 col-sm-6 col-12 mb-4">
@@ -71,7 +70,7 @@ title: Donations
                                     <div class="farama-perks-card__separator" style="width: 70px; margin-top: 0px">
                                     </div>
                                     {% for item in tier.benefits %}
-                                    <li class="mx-3 text-muted"  style="line-height: 1.2rem;">
+                                    <li class="mx-3 text-muted" style="line-height: 1.2rem;">
                                         <small>
                                             {{item.benefit}}
                                         </small>
@@ -84,7 +83,7 @@ title: Donations
                             </div>
                         </div>
                         {% endfor %}
-                        <i class="text-white">* Note that donation tiers are annual.</i>
+                        <i class="text-white">* Donation tiers are annual and include the bennifits of all previous tiers.</i>
                     </div>
                 </div>
             </div>
@@ -96,48 +95,19 @@ title: Donations
 
 <div class="container mb-5">
     <div class="row pt-3 text-center w-100">
-        <h2 class="text-primary mb-2">Donors</h2>
+        <h2 class="text-primary mb-2">Major Donors</h2>
         <div class="row">
-        {% for item in site.data.donors %}
+            {% for org in site.data.donors %}
             <div class="col-12 col-sm-6 col-lg-3">
-                <h3 class="text-primary mt-3 mb-0">{{item.tier}}</h3>
-                <h5 class="mt-0">{{item.price}}</h5>
-                {% for org in item.donors %}
                 <div class="mb-5">
-                    <a href="{{org.site}}">
+                    <a href="{{org.site}}" class="text-decoration-none">
                         <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3"
                             style="background-color: #{{org.color}}; height: 110px;" alt="">
+                        <h5>{{ org.name }}</h5>
                     </a>
                 </div>
-                {% endfor %}
             </div>
-        {% endfor %}
-    </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
-
-<!-- for every dot org -->
-<script async defer src="https://assets.every.org/dist/donate-button/0.3/index.js" class="edo-donate-btn-js"></script>
-<script>
-    function createWidget() {
-        everyDotOrgDonateButton.createWidget({
-            selector: "#edo-donate-btn", options: {
-                nonprofitSlug: "farama-inc",
-                showInitialMessage: false,
-                defaultFrequency: "monthly",
-                infoPages: [{
-                    key: "faq",
-                    name: "FAQ",
-                    source: `## How does this donate button work?This button is powered by Every.org, a tax-exempt US 501(c)(3) nonprofit building accessible giving infrastructure to help every person and organization do more good.You will be directed to www.every.org to securely complete your donation. You can donate cash via Bank, Card, Google Pay, Apple Pay, or PayPal. You can also elect to donate Crypto, Stock, or via a DAF.## Is my donation tax-deductible?Yes, your donation will be made to Every.org, a US 501(c)(3) tax-exempt organization with EIN 61-1913297, and you will instantly get a receipt emailed to you.We do not provide legal or tax advise to individuals, but generally speaking in the US if you itemize your tax return, then tax deductible donations can reduce taxable income.## How long does it take for my donation to arrive?Your donation information will be sent instantly and funds are disbursed weekly.`,
-                },],
-                currencies: [{ countryCodes: ["US"], name: "USD", symbol: "$", minimumAmount: 10, },],
-            },
-        });
-    }
-
-    if (window.everyDotOrgDonateButton) {
-        createWidget();
-    } else {
-        document.querySelector(".edo-donate-btn-js").addEventListener("load", createWidget);
-    }
-</script>

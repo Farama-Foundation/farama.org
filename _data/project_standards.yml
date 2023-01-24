@@ -36,6 +36,7 @@
     - name: <b>Have a logo in the same style as the other projects.</b> A nice logo is a small feature that makes projects more memorable and makes the whole space a little more inviting to interested new students. Since we list all the logos together, we try to make sure they match.
     - name: <b>Have the documentation website be at <project>.farama.org.</b> Having everything under a single domain name makes things simple and consistent for users (and makes things a bit easier for us to manage).
     - name: <b>Include the standard Farama code of conduct.</b> We believe that all members of our community should be respected. Additionally, listing a code of conduct under our projects is a requirement for some open source donations.
+    - name: <b>Use Farama Notifcations</b>. So that we can add warnings after releases about issues that users of old versions need to be aware of.
 
 - type: Standardization
   standards:
@@ -52,3 +53,4 @@
     - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
     - name: <b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field.
     - name: <b>Use pyproject.toml </b> for defining installation, instead of setup.py or other similar things. pyproject.toml is the new standard being promoted for all python projects
+    - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
