@@ -16,7 +16,7 @@
 
 - name: Minari
   github: https://github.com/Farama-Foundation/Minari
-  website:
+  website: https://minari.farama.org/
   desc: A standard format for offline reinforcement learning datasets, with popular reference datasets and related utilities
   image: minari.svg
   type: core
@@ -92,7 +92,7 @@
 
 - name: Miniworld
   github: https://github.com/Farama-Foundation/MiniWorld
-  website:
+  website: https://miniworld.farama.org/
   desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
   image: miniworld.svg
   type: incubating
@@ -104,18 +104,35 @@
   image: d4rl.svg
   type: incubating
 
+- name: MiniWoB++
+  github: https://github.com/Farama-Foundation/miniwob-plusplus
+  desc: A collection of reinforcement learning environments for simple web interaction tasks
+  type: incubating
+
 - name: ViZDoom
   github: https://github.com/Farama-Foundation/ViZDoom
-  desc: Doom-based AI Research Platform for Reinforcement Learning from Raw Visual Information
+  desc: Reinforcement Learning environments based on the 1993 game Doom
+  image: vizdoom.svg
   type: incubating
 
 - name: Shimmy
   github: https://github.com/Farama-Foundation/Shimmy
-  desc: An API conversion tool for popular external reinforcement learning environments
+  website: https://shimmy.farama.org/
+  desc: PettingZoo and Gymnasium bindings for popular reinforcement learning environments outside of Farama
   image: shimmy.svg
   type: incubating
 
 - name: MiniWoB++
   github: https://github.com/Farama-Foundation/miniwob-plusplus
   desc: A collection of reinforcement learning environments for simple web interaction tasks
+  type: incubating
+
+- name: Metaworld
+  github: https://github.com/Farama-Foundation/Metaworld
+  desc: Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning
+  type: incubating
+
+- name: MO-Gymnasium
+  github: https://github.com/Farama-Foundation/MO-Gymnasium
+  desc: Multi-objective Gymnasium environments for reinforcement learning
   type: incubating
