@@ -8,6 +8,7 @@
     --bs-secondary-rgb: 109, 88, 66;
     --bs-secondary-light: #bd8a42;
     --bs-secondary-light-hover: #d9b481;
+    --footer-background-color: #061e2c;
 }
 
 body {
@@ -325,13 +326,18 @@ footer {
 
 .farama-discord-btn {
     padding: 12px 24px;
-    background-color: rgb(120 120 120 / 50%);
+    background-color: var(--bs-primary);
     color: #fff;
     border: none;
     border-radius: 1.5rem;
-    width: 220px;
 }
 
+.farama-footer {
+    background-color: var(--footer-background-color);
+    color: white;
+    bottom: 0;
+    text-align: left;
+}
 
 @media (max-width: 992px) {
     #navbarNav {
@@ -355,6 +361,12 @@ footer {
     .farama-card img {
         width: 40%;
         margin: 16px auto 0px;
+    }
+    .farama-discord-text {
+        font-size: 1.3rem;
+    }
+    .farama-discord-btn {
+        padding: 6px 18px;
     }
 }
 
