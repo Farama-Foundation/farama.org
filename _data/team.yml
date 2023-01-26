@@ -113,17 +113,17 @@
 - name: Florian Felten
   role: MO-Gymnasium
   affiliation: SnT, University of Luxembourg
-  image: florian.png
+  image: florian.jpg
   site: https://github.com/ffelten
 
 - name: Bolun Dai
   role: Miniworld
   affiliation: New York University
-  image: bolun.png
+  image: bolun.jpg
   site: https://github.com/BolunDai0216
 
 - name: Marek Wydmuch
   role: ViZDoom
   affiliation: Poznan University of Technology
-  image: marek.png
+  image: marek.jpg
   site: https://github.com/mwydmuch
