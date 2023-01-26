@@ -1,12 +1,12 @@
-- name: Github Sponsors
-  image: github.png
-  site: https://github.com/sponsors/Farama-Foundation
-  fees: No fees for user accounts, 10% fee for organization accounts. Includes a few unique low-dollar-amount tiers.
-
 - name: Paypal
   image: paypal.png
   site: https://www.paypal.com/donate/?hosted_button_id=L8FW3MK66B5X6
   fees: Fees are 1.99% + .49 cents
+
+- name: Github Sponsors
+  image: github.png
+  site: https://github.com/sponsors/Farama-Foundation
+  fees: No fees for user accounts, 10% fee for organization accounts. Includes a few unique low-dollar-amount tiers.
 
 - name: Contact Us Directly
   image: <i class="fa-solid fa-envelope fa-10x"></i>

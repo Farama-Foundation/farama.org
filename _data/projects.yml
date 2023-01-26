@@ -75,11 +75,11 @@
   image: jumpy.svg
   type: mature
 
-- name: Procgen2
-  github: https://github.com/Farama-Foundation/procgen2
+- name: D4RL
+  github: https://github.com/Farama-Foundation/D4RL
   website:
-  desc: Fast and procedurally generated side-scroller-game-like graphical environments (formerly Procgen)
-  image: procgen2.svg
+  desc: A collection of reference environments for offline reinforcement learning
+  image: d4rl.svg
   type: incubating
 
 - name: MicroRTS
@@ -97,22 +97,11 @@
   image: miniworld.svg
   type: incubating
 
-- name: D4RL
-  github: https://github.com/Farama-Foundation/D4RL
+- name: Procgen2
+  github: https://github.com/Farama-Foundation/procgen2
   website:
-  desc: A collection of reference environments for offline reinforcement learning
-  image: d4rl.svg
-  type: incubating
-
-- name: MiniWoB++
-  github: https://github.com/Farama-Foundation/miniwob-plusplus
-  desc: A collection of reinforcement learning environments for simple web interaction tasks
-  type: incubating
-
-- name: ViZDoom
-  github: https://github.com/Farama-Foundation/ViZDoom
-  desc: Reinforcement Learning environments based on the 1993 game Doom
-  image: vizdoom.svg
+  desc: Fast and procedurally generated side-scroller-game-like graphical environments (formerly Procgen)
+  image: procgen2.svg
   type: incubating
 
 - name: Shimmy
@@ -120,6 +109,12 @@
   website: https://shimmy.farama.org/
   desc: PettingZoo and Gymnasium bindings for popular reinforcement learning environments outside of Farama
   image: shimmy.svg
+  type: incubating
+
+- name: ViZDoom
+  github: https://github.com/Farama-Foundation/ViZDoom
+  desc: Reinforcement Learning environments based on the 1993 game Doom
+  image: vizdoom.svg
   type: incubating
 
 - name: MiniWoB++

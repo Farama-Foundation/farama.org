@@ -12,3 +12,7 @@
   image: comet.svg
   site: https://www.comet.com/site/
 
+- name: John Carmack
+  image: carmack.jpg
+  site:
+
