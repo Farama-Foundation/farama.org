@@ -2,8 +2,14 @@
   role: Machine learning scientist
   affiliation: HuggingFace
   image: nathan.jpg
+
 - name: Pablo Castro
   role: Staff Research Software Developer
   affiliation: Google
   image: psc.png
   site: https://github.com/psc-g
+
+- name: Dinesh Manocha
+  role:
+  affiliation: University of Maryland
+  image: manocha.jpg
