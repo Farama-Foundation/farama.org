@@ -52,5 +52,4 @@
   standards:
     - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
     - name: <b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field.
-    - name: <b>Use pyproject.toml </b> for defining all installation properties that it can instead of setup.py, to comply with new recommended standards for python projects and to make the data more readable.
     - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
