@@ -53,3 +53,4 @@
     - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
     - name: <b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field.
     - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
+    - name: <b>Pull documentation website information from environments directly</b> instead of mannually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future.
