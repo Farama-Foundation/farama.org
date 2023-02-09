@@ -1,0 +1,37 @@
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+
+jobs:
+  scrape_stats_schedule:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Installed package list
+        run: apt list --installed
+      - name: Remove Chrome
+        run: sudo apt purge google-chrome-stable
+      - name: Remove default Chromium
+        run: sudo apt purge chromium-browser
+      - name: Install a new Chromium
+        run: sudo apt install -y chromium-browser
+      - name: Install all necessary packages
+        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium
+      - name: Run the scraping script
+        run: python scraper.py
+
+      - name: Install dependencies
+        run: pip install selenium pyyaml beautifulsoup4
+
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add _data/scraped_stats.yml
+          git commit -m "Scrape Stats Job: Update stats"
+          git push
