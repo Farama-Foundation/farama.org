@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '22 * * * *'
+    - cron: '3 * * * *'
 
 jobs:
   scrape_stats_schedule:
@@ -23,11 +23,12 @@ jobs:
         run: sudo apt install -y chromium-browser
       - name: Install all necessary packages
         run: pip install requests beautifulsoup4 pandas webdriver-manager selenium
-      - name: Run the scraping script
-        run: python scraper.py
 
       - name: Install dependencies
         run: pip install selenium pyyaml beautifulsoup4
+        
+      - name: Run the scraping script
+        run: python scripts/scrape_stats.py
 
       - run: |
           git config user.name github-actions
