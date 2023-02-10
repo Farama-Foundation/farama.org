@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '0 0 * * 1'
+    - cron: '22 * * * *'
 
 jobs:
   scrape_stats_schedule:
