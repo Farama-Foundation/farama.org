@@ -6,8 +6,8 @@ index: true
 ---
 
 <div class="farama-gradient-container">
-    <div class="pt-5 py-3 farama-gradient-bg" style="min-height: 100vh">
-        <div class="jumbotron">
+    <div class="pt-5 py-3 farama-gradient-bg" style="min-height: 100vh; display:flex; flex-direction: column;">
+        <div class="jumbotron mb-0">
             <div class="container-fluid" style="color: white;">
 
                 <div class="mb-5">
@@ -43,26 +43,24 @@ index: true
                         </div>
                     </div>
                 </div>
-                <div class="container mt-3 mb-5">
-                    <div class="mt-5 mb-3">
-                        <div class="row farama-discord">
-                            <div class="col-12 col-sm-8 d-flex">
-                                <h3 class="text-white text-end d-flex align-items-center farama-discord-text">If
-                                    you'd like to join or meet our community, please join our discord server</h3>
-                                <div class="ms-3 ms-md-5" style="height: 100%; width: 2px; background-color: white;">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4 mt-4 mt-sm-0 d-flex justify-content-center align-items-center">
-                                <a href="{{site.discord}}" aria-label="Donate" class="text-decoration-none">
-                                    <button
-                                        class="farama-discord__btn d-flex align-items-center justify-content-center ">
-                                        <i class="fa-brands fa-discord fa-lg fa-fw" style="color: white;"></i>
-                                        <span class="ps-3" style="font-size: 1.1rem;">Join Discord server</span>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
+            </div>
+        </div>
+        <div class="container farama-discord-container">
+            <div class="row farama-discord">
+                <div class="col-12 col-sm-8 d-flex">
+                    <h3 class="text-white text-end d-flex align-items-center farama-discord-text">If
+                        you'd like to join or meet our community, please join our discord server</h3>
+                    <div class="ms-3 ms-md-5" style="height: 100%; width: 2px; background-color: white;">
                     </div>
+                </div>
+                <div class="col-12 col-sm-4 mt-4 mt-sm-0 d-flex justify-content-center align-items-center">
+                    <a href="{{site.discord}}" aria-label="Donate" class="text-decoration-none">
+                        <button
+                            class="farama-discord__btn d-flex align-items-center justify-content-center ">
+                            <i class="fa-brands fa-discord fa-lg fa-fw" style="color: white;"></i>
+                            <span class="ps-3" style="font-size: 1.1rem;">Join Discord server</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

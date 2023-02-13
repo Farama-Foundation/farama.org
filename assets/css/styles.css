@@ -143,8 +143,16 @@ a:hover {
     font-size: 1.0rem;
 }
 
+.farama-discord-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .farama-discord {
-    margin-top: 11rem;
+    min-height: 100px;
 }
 
 .farama-discord__btn {
