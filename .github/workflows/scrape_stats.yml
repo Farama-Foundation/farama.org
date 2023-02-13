@@ -14,7 +14,7 @@ jobs:
           python-version: '3.9'
 
       - name: Install dependencies
-        run: pip install selenium pyyaml beautifulsoup4
+        run: pip install requests pyyaml beautifulsoup4
 
       - name: Run the scraping script
         run: python scripts/scrape_stats.py
