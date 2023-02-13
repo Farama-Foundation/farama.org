@@ -28,6 +28,9 @@ jobs:
         run: pip install selenium pyyaml beautifulsoup4
 
       - name: Run the scraping script
+        run: python scripts/scrape_stats.py
+
+      - name: Run the scraping script
         run: python script/scrape_stats.yml
 
       - run: |
