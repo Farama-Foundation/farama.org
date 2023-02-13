@@ -7,7 +7,7 @@ from yaml.loader import SafeLoader
 
 DOWNLOADS_URL = "https://api.pepy.tech/api/v2/projects/gym"
 COLABTORATORS_URLS = "https://api.github.com/repos/Farama-Foundation/{repo}/contributors"
-REPOS_USE_URL = "https://github.com/Farama-Foundation/Gymnasium/network/dependents"
+REPOS_USE_URLS = "https://github.com/Farama-Foundation/{repo}/network/dependents"
 
 
 def scrape_downloads():
@@ -23,16 +23,9 @@ def scrape_downloads():
     return val
 
 
-def scrape_colaborators():
+def scrape_colaborators(projects):
     MAX_PER_PAGE = 100
-    val = None
     usernames = []
-
-    projects = []
-    projects_yaml = os.path.join(os.path.dirname(__file__), "..", "_data", "projects.yml")
-    with open(projects_yaml) as fp:
-        projects = yaml.load(fp, SafeLoader)
-        projects = list(map(lambda x: x["github"].split("/")[-1].rstrip("/"), projects))
 
     for project in projects:
         lastPage = False
@@ -52,18 +45,22 @@ def scrape_colaborators():
     return len(usernames)
 
 
-def scrape_repos_use():
-    try:
-        res = requests.get(REPOS_USE_URL)
-        soup = BeautifulSoup(res.content, 'html.parser')
-        val = soup.select('#dependents > div.Box > div.Box-header.clearfix > div > div.table-list-header-toggle.states.flex-auto.pl-0 > a.btn-link.selected')[0].text.strip().rstrip("Repositories\n")
-        val = int(val)
-    except Exception as e:
-        print(f"Unable to retrieve the number of dependent repositories at {REPOS_USE_URL}. \
-               This might mean that something has changed in the page we are trying to scrape. \
-               Make sure you update the query accordingly.")
-        print("Error message:")
-        print(e)
+def scrape_repos_use(projects):
+    val = 0
+    for project in projects:
+        try:
+            res = requests.get(REPOS_USE_URLS.format(repo=project))
+            soup = BeautifulSoup(res.content, 'html.parser')
+            elem_selection = soup.select('#dependents > div.Box > div.Box-header.clearfix > div > div.table-list-header-toggle.states.flex-auto.pl-0 > a.btn-link.selected')
+            if len(elem_selection) > 0:
+                tmp_val = elem_selection[0].text.strip().rstrip("Repositories\n")
+                val += int(tmp_val)
+        except Exception as e:
+            print(f"Unable to retrieve the number of dependent repositories at {REPOS_USE_URLS.format(repo=project)}. \
+                This might mean that something has changed in the page we are trying to scrape. \
+                Make sure you update the query accordingly.")
+            print("Error message:")
+            print(e)
     return val
 
 
@@ -73,15 +70,21 @@ def scrape_stats():
     with open(stats_yaml) as fp:
         stats = yaml.load(fp, SafeLoader)
 
+    projects = []
+    projects_yaml = os.path.join(os.path.dirname(__file__), "..", "_data", "projects.yml")
+    with open(projects_yaml) as fp:
+        projects = yaml.load(fp, SafeLoader)
+        projects = list(map(lambda x: x["github"].split("/")[-1].rstrip("/"), projects))
+
     for key, val in stats.items():
         if key == "downloads":
             scraped_val = scrape_downloads()
             stats[key] = scraped_val or val
         elif key == "colaborators":
-            scraped_val = scrape_colaborators()
+            scraped_val = scrape_colaborators(projects)
             stats[key] = scraped_val or val
         elif key == "repos_use":
-            scraped_val = scrape_repos_use()
+            scraped_val = scrape_repos_use(projects)
             stats[key] = scraped_val or val
         else:
             print("Invalid stat key")
