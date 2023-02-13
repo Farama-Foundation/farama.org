@@ -9,6 +9,7 @@
     --bs-secondary-light: #bd8a42;
     --bs-secondary-light-hover: #d9b481;
     --footer-background-color: #061e2c;
+    --footer-height: 100px;
 }
 
 body {
@@ -147,7 +148,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex:1;
+    flex: 1;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -358,10 +359,6 @@ img.light-shadow {
     transform: scale(1.15);
 }
 
-footer {
-    margin-top: auto
-}
-
 .farama-social-container {
     display: flex;
     flex-wrap: wrap;
@@ -372,6 +369,7 @@ footer {
     color: white;
     bottom: 0;
     text-align: left;
+    height: var(--footer-height)
 }
 
 @media (max-width: 992px) {
