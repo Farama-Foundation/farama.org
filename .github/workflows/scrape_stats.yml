@@ -1,0 +1,30 @@
+on:
+  schedule:
+    - cron: '0 1 * * *'
+
+jobs:
+  scrape_stats_schedule:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install selenium pyyaml beautifulsoup4
+
+      - name: Run the scraping script
+        run: python scripts/scrape_stats.py
+
+      - name: Run the scraping script
+        run: python script/scrape_stats.yml
+
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add _data/scraped_stats.yml
+          git commit -m "Scrape Stats Job: Update stats"
+          git push

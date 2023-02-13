@@ -9,23 +9,10 @@
     {% include nav.html %}
     <div class="farama-gradient-container">
         <div class="pt-5 py-3 farama-gradient-bg">
-            <div class="jumbotron mb-4 pt-5">
+            <div class="jumbotron mb-1 pt-5">
                 <div class="container-fluid" style="color: white;">
                     {% if page.title == site.title or page.type == "The Farama Foundation" %}
 
-                    <div class="mb-4">
-                        {% if page.title == site.title %}
-                        <img class="" src="assets/images/farama_solid_white.svg" width="125" height="135" alt="Farama Foundation"/>
-                        {% endif %}
-                        <h1>
-                            {{page.title}}
-                        </h1>
-                        <hr class="d-flex justify-content-center" style="max-width: 500px;">
-                        <h5 style="text-transform: capitalize;">
-                            {{page.subtitle}}
-
-                        </h5>
-                    </div>
 
                     {% else %}
                     <div style="max-width: 900px; text-align: left;

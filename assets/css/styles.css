@@ -65,6 +65,7 @@ a:hover {
 .jumbotron {
     text-align: center;
     font-family: "Source Sans Pro", sans-serif;
+    margin: 7rem 0;
 }
 
 .jumbotron hr {
@@ -119,6 +120,48 @@ a:hover {
 
 .farama-card .card-footer {
     /* background-color: var(--bs-primary-light); */
+}
+
+.farama-stats {
+    height: 100%;
+    background: rgb(255 255 255 / 10%);
+    padding: 10px 16px;
+    border-radius: 3rem;
+}
+
+.farama-stats div div:not(:last-child) {
+    border-right: 1px solid white;
+}
+
+.farama-stats__number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.farama-stats__desc {
+    font-size: 1.0rem;
+}
+
+.farama-discord-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.farama-discord {
+    min-height: 100px;
+}
+
+.farama-discord__btn {
+    padding: 12px 24px;
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 20px 0px rgb(255 255 255 / 10%);
 }
 
 .farama-profile-link {
@@ -324,14 +367,6 @@ footer {
     flex-wrap: wrap;
 }
 
-.farama-discord-btn {
-    padding: 12px 24px;
-    background-color: var(--bs-primary);
-    color: #fff;
-    border: none;
-    border-radius: 1.5rem;
-}
-
 .farama-footer {
     background-color: var(--footer-background-color);
     color: white;
@@ -371,5 +406,9 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .farama-stats div div {
+        border-right: none !important;
+    }
+
 }
 
