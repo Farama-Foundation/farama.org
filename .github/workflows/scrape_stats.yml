@@ -22,6 +22,6 @@ jobs:
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add _data/scraped_stats.yml
+          git add _data/stats.yml
           git commit -m "Scrape Stats Job: Update stats"
           git push
