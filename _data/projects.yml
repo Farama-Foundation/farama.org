@@ -129,5 +129,6 @@
 
 - name: MO-Gymnasium
   github: https://github.com/Farama-Foundation/MO-Gymnasium
+  website: https://mo-gymnasium.farama.org/
   desc: Multi-objective Gymnasium environments for reinforcement learning
   type: incubating

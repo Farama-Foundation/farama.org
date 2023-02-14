@@ -14,17 +14,14 @@ jobs:
           python-version: '3.9'
 
       - name: Install dependencies
-        run: pip install selenium pyyaml beautifulsoup4
+        run: pip install requests pyyaml beautifulsoup4
 
       - name: Run the scraping script
         run: python scripts/scrape_stats.py
 
-      - name: Run the scraping script
-        run: python script/scrape_stats.yml
-
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add _data/scraped_stats.yml
+          git add _data/stats.yml
           git commit -m "Scrape Stats Job: Update stats"
           git push

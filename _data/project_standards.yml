@@ -2,7 +2,8 @@
   standards:
     - name: <b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced (ignoring potential issues due to floating point arithmetic errors).
     - name: <b>Include explicit versioning</b> in environment and wrapper names in a format like "Pong-v5" to make it clear to researchers when results are from differently configured environments.
-
+    - name: <b>Use Farama Notifcations</b>. So that we can add warnings after releases about issues that users of old versions need to be aware of.
+    
 - type: Release Details
   standards:
     - name: <b>Be released on PyPI</b>, so that users can easily install libraries via `pip` without having to clone Git repositories.
@@ -36,7 +37,6 @@
     - name: <b>Have a logo in the same style as the other projects.</b> A nice logo is a small feature that makes projects more memorable and makes the whole space a little more inviting to interested new students. Since we list all the logos together, we try to make sure they match.
     - name: <b>Have the documentation website be at <project>.farama.org.</b> Having everything under a single domain name makes things simple and consistent for users (and makes things a bit easier for us to manage).
     - name: <b>Include the standard Farama code of conduct.</b> We believe that all members of our community should be respected. Additionally, listing a code of conduct under our projects is a requirement for some open source donations.
-    - name: <b>Use Farama Notifcations</b>. So that we can add warnings after releases about issues that users of old versions need to be aware of.
 
 - type: Standardization
   standards:
@@ -52,5 +52,5 @@
   standards:
     - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
     - name: <b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field.
-    - name: <b>Use pyproject.toml </b> for defining all installation properties that it can instead of setup.py, to comply with new recommended standards for python projects and to make the data more readable.
     - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
+    - name: <b>Pull documentation website information from environments directly</b> instead of mannually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future.
