@@ -77,6 +77,7 @@ a:hover {
 .container {
     width: 95%;
     max-width: 900px;
+    flex: 1;
     margin: 0 auto;
 }
 
@@ -201,6 +202,7 @@ a:hover {
 }
 
 .farama-gradient-bg {
+    position: relative;
     background:
         radial-gradient(farthest-side at bottom left,
             #7A603E,
@@ -361,6 +363,11 @@ img.light-shadow {
 .farama-social-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.farama-social-container a {
+    display: flex;
+    text-decoration: none;
 }
 
 .farama-footer {
