@@ -8,6 +8,7 @@ from yaml.loader import SafeLoader
 DOWNLOADS_URL = "https://api.pepy.tech/api/v2/projects/gym"
 COLABTORATORS_URLS = "https://api.github.com/repos/Farama-Foundation/{repo}/contributors"
 REPOS_USE_URLS = "https://github.com/Farama-Foundation/{repo}/network/dependents"
+GYM_REPOS_USE_URLS = "https://github.com/openai/gym/network/dependents"
 
 
 def scrape_downloads():
@@ -45,22 +46,39 @@ def scrape_colaborators(projects):
     return len(usernames)
 
 
+def retrieve_dependents_from_html(html):
+    val = 0
+    soup = BeautifulSoup(html, 'html.parser')
+    elem_selection = soup.select('#dependents > div.Box > div.Box-header.clearfix > div > div.table-list-header-toggle.states.flex-auto.pl-0 > a.btn-link.selected')
+    if len(elem_selection) > 0:
+        tmp_val = elem_selection[0].text.strip().replace("Repositories", "").replace(",", "").rstrip()
+        val = int(tmp_val)
+    return val
+
+
 def scrape_repos_use(projects):
     val = 0
     for project in projects:
         try:
             res = requests.get(REPOS_USE_URLS.format(repo=project))
-            soup = BeautifulSoup(res.content, 'html.parser')
-            elem_selection = soup.select('#dependents > div.Box > div.Box-header.clearfix > div > div.table-list-header-toggle.states.flex-auto.pl-0 > a.btn-link.selected')
-            if len(elem_selection) > 0:
-                tmp_val = elem_selection[0].text.strip().rstrip("Repositories\n")
-                val += int(tmp_val)
+            val += retrieve_dependents_from_html(res.content)
         except Exception as e:
             print(f"Unable to retrieve the number of dependent repositories at {REPOS_USE_URLS.format(repo=project)}. \
                 This might mean that something has changed in the page we are trying to scrape. \
                 Make sure you update the query accordingly.")
             print("Error message:")
             print(e)
+
+    try:
+        res = requests.get(GYM_REPOS_USE_URLS)
+        val += retrieve_dependents_from_html(res.content)
+    except Exception as e:
+        print(f"Unable to retrieve the number of dependent repositories at {GYM_REPOS_USE_URLS}. \
+            This might mean that something has changed in the page we are trying to scrape. \
+            Make sure you update the query accordingly.")
+        print("Error message:")
+        print(e)
+
     return val
 
 
