@@ -52,6 +52,13 @@
   image: MAgent2.svg
   type: mature
 
+- name: Miniworld
+  github: https://github.com/Farama-Foundation/MiniWorld
+  website: https://miniworld.farama.org/
+  desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
+  image: miniworld.svg
+  type: mature
+
 - name: Tinyscaler
   github: https://github.com/Farama-Foundation/tinyscaler
   website:
@@ -88,13 +95,6 @@
   website:
   desc: A simple and highly efficient RTS-game-inspired environment for reinforcement learning
   image: microrts.svg
-  type: incubating
-
-- name: Miniworld
-  github: https://github.com/Farama-Foundation/MiniWorld
-  website: https://miniworld.farama.org/
-  desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
-  image: miniworld.svg
   type: incubating
 
 - name: Procgen2
