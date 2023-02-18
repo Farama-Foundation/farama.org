@@ -132,3 +132,10 @@
   website: https://mo-gymnasium.farama.org/
   desc: Multi-objective Gymnasium environments for reinforcement learning
   type: incubating
+
+- name: CrowdPlay
+  github: https://github.com/Farama-Foundation/CrowdPlay
+  website: 
+  desc: CrowdPlay is a platform for crowdsourcing human demonstration trajectories in RL environments.
+  type: incubating 
+
