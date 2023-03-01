@@ -375,7 +375,7 @@ img.light-shadow {
     color: white;
     bottom: 0;
     text-align: left;
-    height: var(--footer-height)
+    min-height: var(--footer-height)
 }
 
 @media (max-width: 992px) {
