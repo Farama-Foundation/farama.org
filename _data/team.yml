@@ -22,12 +22,6 @@
   image: feng.jpg
   site: https://github.com/SiddarGu
 
-- name: Shengyi “Costa” Huang
-  role: Gymnasium contributor
-  affiliation: Drexel University
-  image: costa.jpg
-  site: https://github.com/vwxyzjn
-
 - name: Jet Tai
   role: PettingZoo maintainer
   affiliation: Coventry University
