@@ -1,0 +1,154 @@
+colaborators:
+  AutoROM:
+    '2023-03-02': 8
+  D4RL:
+    '2023-03-02': 21
+  Gymnasium:
+    '2023-03-02': 393
+  Jumpy:
+    '2023-03-02': 10
+  MAgent2:
+    '2023-03-02': 18
+  MO-Gymnasium:
+    '2023-03-02': 4
+  Metaworld:
+    '2023-03-02': 24
+  MicroRTS-Py:
+    '2023-03-02': 8
+  Minari:
+    '2023-03-02': 6
+  MiniGrid:
+    '2023-03-02': 59
+  MiniWorld:
+    '2023-03-02': 16
+  PettingZoo:
+    '2023-03-02': 71
+  Shimmy:
+    '2023-03-02': 6
+  SuperSuit:
+    '2023-03-02': 20
+  ViZDoom:
+    '2023-03-02': 44
+  gym-robotics:
+    '2023-03-02': 19
+  miniwob-plusplus:
+    '2023-03-02': 7
+  procgen2:
+    '2023-03-02': 4
+  tinyscaler:
+    '2023-03-02': 6
+downloads:
+  AutoROM:
+    '2023-03-02': 848221
+  D4RL:
+    '2023-03-02': 3359
+  Gymnasium:
+    '2023-03-02': 312592
+  Jumpy:
+    '2023-03-02': 27545
+  MAgent2:
+    '2023-03-02': 5582
+  MO-Gymnasium:
+    '2023-03-02': 1453
+  Metaworld:
+    '2023-03-02': 3352
+  Minari:
+    '2023-03-02': 1572
+  MiniGrid:
+    '2023-03-02': 26897
+  MiniWorld:
+    '2023-03-02': 1197
+  PettingZoo:
+    '2023-03-02': 987494
+  Shimmy:
+    '2023-03-02': 54759
+  SuperSuit:
+    '2023-03-02': 494228
+  ViZDoom:
+    '2023-03-02': 101109
+  gym:
+    '2023-03-02': 47607877
+  gym-robotics:
+    '2023-03-02': 7570
+  tinyscaler:
+    '2023-03-02': 42254
+repos_use:
+  AutoROM:
+    '2023-03-02': 572
+  D4RL:
+    '2023-03-02': 0
+  Gymnasium:
+    '2023-03-02': 463
+  Jumpy:
+    '2023-03-02': 178
+  MAgent2:
+    '2023-03-02': 0
+  MO-Gymnasium:
+    '2023-03-02': 4
+  Metaworld:
+    '2023-03-02': 13
+  MicroRTS-Py:
+    '2023-03-02': 0
+  Minari:
+    '2023-03-02': 0
+  MiniGrid:
+    '2023-03-02': 23
+  MiniWorld:
+    '2023-03-02': 0
+  PettingZoo:
+    '2023-03-02': 544
+  Shimmy:
+    '2023-03-02': 150
+  SuperSuit:
+    '2023-03-02': 263
+  ViZDoom:
+    '2023-03-02': 165
+  gym:
+    '2023-03-02': 37580
+  gym-robotics:
+    '2023-03-02': 3
+  miniwob-plusplus:
+    '2023-03-02': 0
+  procgen2:
+    '2023-03-02': 0
+  tinyscaler:
+    '2023-03-02': 25
+stars:
+  AutoROM:
+    '2023-03-02': 53
+  D4RL:
+    '2023-03-02': 833
+  Gymnasium:
+    '2023-03-02': 1619
+  Jumpy:
+    '2023-03-02': 16
+  MAgent2:
+    '2023-03-02': 87
+  MO-Gymnasium:
+    '2023-03-02': 86
+  Metaworld:
+    '2023-03-02': 864
+  MicroRTS-Py:
+    '2023-03-02': 132
+  Minari:
+    '2023-03-02': 73
+  MiniGrid:
+    '2023-03-02': 1714
+  MiniWorld:
+    '2023-03-02': 573
+  PettingZoo:
+    '2023-03-02': 1684
+  Shimmy:
+    '2023-03-02': 27
+  SuperSuit:
+    '2023-03-02': 366
+  ViZDoom:
+    '2023-03-02': 1485
+  gym-robotics:
+    '2023-03-02': 172
+  miniwob-plusplus:
+    '2023-03-02': 96
+  procgen2:
+    '2023-03-02': 13
+  tinyscaler:
+    '2023-03-02': 6
