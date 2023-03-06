@@ -4,6 +4,12 @@
   image: jordan.jpg
   site: https://github.com/jkterry1
 
+- name: Ellie Howard
+  role: COO
+  affiliation: Farama
+  image: ellie.jpg
+  site:
+
 - name: Mark Towers
   role: Gymnasium maintainer and project manager
   affiliation: University of Southampton
