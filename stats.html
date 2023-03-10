@@ -1,0 +1,358 @@
+---
+title: Project Stats
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.min.js"></script>
+<script>
+    const formatYAxisValue = (value, index, ticks) => {
+        if (index != 0 && index != ticks.length - 1) {
+            return "";
+        }
+        const formatter = Intl.NumberFormat('en', { notation: 'compact' });
+        // Remove decimal part, all numbers are integers and format large numbers
+        return formatter.format(value.toFixed(0));
+    }
+
+    const options = {
+        maintainAspectRatio: false,
+        interaction: { mode: null },
+        plugins: {
+            legend: { display: false }
+        },
+        elements: {
+            point: {
+                pointRadius: 0
+            }
+        },
+        animation: {
+            delay: 500,
+        },
+        scales: {
+            xAxis: {
+                display: false,
+                grid: {
+                    display: false,
+                    lineWidth: 0,
+                },
+                ticks: { display: false }
+            },
+            yAxis: {
+                grid: {
+                    display: false,
+                },
+                ticks: {
+                    major: { enabled: false },
+                    autoSkip: false,
+                    callback: formatYAxisValue
+                }
+            }
+        }
+    }
+</script>
+
+<div class="container mb-5 pt-5" id="farama-stats-container">
+    <!-- -->
+</div>
+
+<script>
+    const faramaProjects = {{ site.data.projects | jsonify }};
+
+    const getProjectStat = (data, project, stat) => {
+        const numberFormatter = new Intl.NumberFormat('en-US');
+        const valObject = data[project][stat];
+        if (valObject) {
+            const val = Number(Object.values(valObject).slice(-1));
+            return numberFormatter.format(val);
+        }
+        return "No data";
+    }
+
+    const calculateGlobalStat = (data, stat) => {
+        const numberFormatter = new Intl.NumberFormat('en-US');
+        return numberFormatter.format(data[stat]);
+    }
+
+    const computeChartData = (data, stat) => {
+        res_data = {}
+        for (const project of Object.keys(data)) {
+            const dataByDate = data[project][stat];
+            if (dataByDate) {
+                for (const [date, val] of Object.entries(dataByDate)) {
+                    if (!Object.keys(res_data).includes(date)) {
+                        res_data[date] = 0;
+                    }
+                    res_data[date] += Number(val);
+                }
+            }
+        }
+        return res_data;
+    }
+
+    const createChart = (chartCanvas, data) => {
+        const config = {
+            type: 'line',
+            data: data,
+        };
+
+        const ctx = chartCanvas.getContext("2d");
+        const gradient = ctx.createLinearGradient(0, 0, 0, chartCanvas.height);
+        gradient.addColorStop(0, "#bd8a42");
+        gradient.addColorStop(0.6, "#bd8a4200");
+
+        new Chart(
+            chartCanvas,
+            {
+                type: 'line',
+                options,
+                data: {
+                    labels: Object.keys(data).map(entry => new Date(entry).getTime()),
+                    datasets: [
+                        {
+                            data: Object.values(data),
+                            xAxisID: "xAxis",
+                            yAxisID: "yAxis",
+                            borderColor: "#bd8a42",
+                            borderWidth: 3,
+                            backgroundColor: gradient,
+                            fill: "start"
+                        }
+                    ]
+                }
+            }
+        );
+    }
+
+    const createStatCard = (data, summaryData, stat, projects, containerElem) => {
+        const STAT_TITLE = {
+            "colaborators": "Contributors",
+            "downloads": "Downloads",
+            "repos_use": "Dependent repos",
+            "stars": "Stars",
+        }
+        const cardElem = document.createElement("div");
+        cardElem.classList.add("card", "row", "mb-4");
+        containerElem.appendChild(cardElem);
+
+        // Card Header
+        const cardHeaderElem = document.createElement("div");
+        cardHeaderElem.classList.add("card-header", "d-flex");
+        cardElem.appendChild(cardHeaderElem);
+
+        const statTitleElem = document.createElement("h5");
+        statTitleElem.classList.add("card-title", "flex-grow-1", "mb-0");
+        statTitleElem.innerText = STAT_TITLE[stat];
+        cardHeaderElem.appendChild(statTitleElem);
+
+        const statExpandBtn = document.createElement("button");
+        statExpandBtn.classList.add("btn", "farama-stats__expand-btn");
+        cardHeaderElem.appendChild(statExpandBtn);
+        statExpandBtn.setAttribute("type", "button");
+        statExpandBtn.setAttribute("data-bs-toggle", "collapse");
+        statExpandBtn.setAttribute("data-bs-target", "#collapse_" + stat);
+        statExpandBtn.setAttribute("aria-expanded", "false");
+        statExpandBtn.setAttribute("aria-controls", "#collapse_" + stat);
+
+        const expandIcon = document.createElement("i");
+        expandIcon.classList.add("fa-solid", "fa-angle-down");
+        statExpandBtn.appendChild(expandIcon);
+
+        // Card Body
+        const cardBodyElem = document.createElement("div");
+        cardBodyElem.classList.add("card-body");
+        cardElem.appendChild(cardBodyElem);
+
+        // -- Global
+        const globalContainerElem = document.createElement("div");
+        globalContainerElem.classList.add("row");
+        cardBodyElem.appendChild(globalContainerElem);
+
+        const globalNumberContainerElem = document.createElement("div");
+        globalNumberContainerElem.classList.add("col-6");
+        globalContainerElem.appendChild(globalNumberContainerElem);
+
+        const globalNumberElem = document.createElement("span");
+        globalNumberElem.classList.add("farama-global-stats__number");
+        globalNumberElem.innerText = calculateGlobalStat(summaryData, stat);
+        globalNumberContainerElem.appendChild(globalNumberElem);
+
+        const globalChartContainerElem = document.createElement("div");
+        globalChartContainerElem.classList.add("col-6");
+        globalContainerElem.appendChild(globalChartContainerElem);
+
+        const globalChartElem = document.createElement("canvas");
+        globalChartElem.classList.add("farama-global-stats__chart")
+        globalChartElem.id = stat + "Chart";
+        globalChartContainerElem.appendChild(globalChartElem);
+
+        // createChart(globalChartElem, computeChartData(data, stat));
+
+        // -- Projects
+        const projectsContainerElem = document.createElement("div");
+        projectsContainerElem.classList.add("collapse", "farama-projects-stats__container");
+        projectsContainerElem.id = "collapse_" + stat;
+        cardBodyElem.appendChild(projectsContainerElem);
+
+        for (const project of projects) {
+            if (stat == "colaborators" && project == "gym") {
+                continue;
+            }
+            const projectElem = document.createElement("div");
+            projectElem.classList.add("d-flex", "farama-projects-stats__row");
+            projectsContainerElem.appendChild(projectElem);
+
+            const projectNameElem = document.createElement("span");
+            projectNameElem.classList.add("flex-grow-1")
+            projectNameElem.innerText = formatTitle(project);
+            if (stat == "colaborators" && project == "Gymnasium") {
+                projectNameElem.innerText += " (includes data from Gym)";
+            } else if (stat == "downloads" && project == "MiniGrid") {
+                projectNameElem.innerText += " (includes data from gym-minigrid and babyai)";
+            }
+            projectElem.appendChild(projectNameElem);
+
+            const projectNumberElem = document.createElement("span");
+            projectNumberElem.innerText = getProjectStat(data, project, stat);
+            projectElem.appendChild(projectNumberElem);
+
+        }
+    }
+
+    const formatTitle = (name) => {
+        if (name == "gym")
+            return "Gym";
+        for (const project of faramaProjects) {
+            if (project.github.split("/").slice(-1)[0] == name)
+                return project.name
+        }
+    }
+
+    const projectSort = (faramaProjects, a, b) => {
+        // We use the github name from the URL
+        const allProjects = ["gym"].concat(faramaProjects.map(entry => entry.github.split("/").slice(-1)[0]));
+        return allProjects.indexOf(a) - allProjects.indexOf(b);
+    }
+
+    (async () => {
+        const containerElem = document.getElementById("farama-stats-container");
+        const completeData = {{ site.data.complete_stats | jsonify }};
+        const summaryData = {{ site.data.stats | jsonify }};
+        const sortedProjects = Object.keys(completeData).sort((a, b) => projectSort(faramaProjects, a, b));
+        const stats = Object.keys(completeData[faramaProjects[0].name])
+
+        for (const stat of stats) {
+            createStatCard(completeData, summaryData, stat, sortedProjects, containerElem)
+        }
+    })();
+
+</script>
+
+<!--
+<script>
+    const createProjectElem = (project, projectTitle, data, parentElem) => {
+        /*
+            div.farama-stats__project
+                - h5
+                - card-body
+                    - chart
+                    - chart
+                    - ...
+        */
+
+        const projectElem = document.createElement("div");
+        projectElem.classList.add(...["farama-stats__project", "card", "mb-4"]);
+        projectElem.id = project;
+        parentElem.appendChild(projectElem);
+
+        const titleElem = document.createElement("h5");
+        titleElem.classList.add("card-title")
+        titleElem.innerText = projectTitle;
+        projectElem.appendChild(titleElem);
+
+        const projectBodyElem = document.createElement("div");
+        projectBodyElem.classList.add(...["card-body", "row", "g-2"]);
+        projectElem.appendChild(projectBodyElem);
+
+        for (const [stat, values] of Object.entries(data)) {
+            createChart(values, stat, projectBodyElem);
+        }
+    }
+
+    const createChart = (data, stat, parentElem) => {
+        const CHART_TITLE = {
+            "colaborators": "Contributors",
+            "downloads": "Downloads",
+            "repos_use": "Dependent repos",
+            "stars": "Stars",
+        }
+        const chartElem = document.createElement("div");
+        chartElem.classList.add(...["farama-stats__chart", "col-3"]);
+        parentElem.appendChild(chartElem);
+        const statTitleElem = document.createElement("h6");
+        statTitleElem.innerText = CHART_TITLE[stat];
+        chartElem.appendChild(statTitleElem);
+        const chartCanvas = document.createElement("canvas");
+        chartElem.appendChild(chartCanvas);
+
+        const config = {
+            type: 'line',
+            data: data,
+        };
+
+        const ctx = chartCanvas.getContext("2d");
+        const gradient = ctx.createLinearGradient(0, 0, 0, chartCanvas.height);
+        gradient.addColorStop(0, "#bd8a42");
+        gradient.addColorStop(0.6, "#bd8a4200");
+
+        new Chart(
+            chartCanvas,
+            {
+                type: 'line',
+                options,
+                data: {
+                    labels: Object.keys(data).map(entry => new Date(entry).getTime()),
+                    datasets: [
+                        {
+                            data: Object.values(data),
+                            xAxisID: "xAxis",
+                            yAxisID: "yAxis",
+                            borderColor: "#bd8a42",
+                            borderWidth: 3,
+                            backgroundColor: gradient,
+                            fill: "start"
+                        }
+                    ]
+                }
+            }
+        );
+    }
+
+    (async () => {
+        const faramaProjects = {{ site.data.projects | jsonify
+    }};
+
+    const formatTitle = (name) => {
+        if (name == "gym")
+            return "Gym";
+        for (const project of faramaProjects) {
+            if (project.github.split("/").slice(-1)[0] == name)
+                return project.name
+        }
+    }
+
+    const projectSort = (a, b) => {
+        // We use the github name from the URL
+        const allProjects = ["gym"].concat(faramaProjects.map(entry => entry.github.split("/").slice(-1)[0]));
+        return allProjects.indexOf(a) - allProjects.indexOf(b);
+    }
+
+    const containerElem = document.getElementById("farama-stats-container");
+    const complete_data = {{ site.data.complete_stats | jsonify }};
+    const sortedProjects = Object.keys(complete_data).sort(projectSort);
+
+    for (const project of sortedProjects) {
+        const projectStats = complete_data[project];
+        const projectTitle = formatTitle(project);
+        createProjectElem(project, projectTitle, projectStats, containerElem);
+    }
+    }) ();
+</script> -->

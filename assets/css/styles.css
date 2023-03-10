@@ -128,6 +128,12 @@ a:hover {
     background: rgb(255 255 255 / 10%);
     padding: 10px 16px;
     border-radius: 3rem;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+.farama-stats:hover {
+    background-color: rgb(255 255 255 / 14%);
 }
 
 .farama-stats div div:not(:last-child) {
@@ -378,6 +384,35 @@ img.light-shadow {
     min-height: var(--footer-height)
 }
 
+#farama-stats-container .card .card-title {
+    color: var(--bs-primary);
+    align-self: center;
+}
+
+.farama-projects-stats__container {
+    margin: 0 16px
+}
+
+.farama-projects-stats__row {
+    padding: 8px;
+}
+.farama-projects-stats__row:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.farama-global-stats__number {
+    margin-left: 24px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.farama-global-stats__chart {
+    height: 85px;
+    width: 300px;
+}
+
+
 @media (max-width: 992px) {
     #navbarNav {
         margin-top: 16px;
@@ -412,6 +447,11 @@ img.light-shadow {
 @media (max-width: 576px) {
     .farama-stats div div {
         border-right: none !important;
+    }
+
+    .farama-global-stats__number {
+        margin-left: 0;
+        font-size: 2rem;
     }
 
 }

@@ -6,8 +6,9 @@ index: true
 ---
 
 <div class="farama-gradient-container">
-    <div class="pt-5 py-3 farama-gradient-bg" style="min-height: max(calc(100vh - var(--footer-height)), 800px); display:flex; flex-direction: column;">
-        <div class="jumbotron mb-0"  style="margin: 7rem 0;">
+    <div class="pt-5 py-3 farama-gradient-bg"
+        style="min-height: max(calc(100vh - var(--footer-height)), 800px); display:flex; flex-direction: column;">
+        <div class="jumbotron mb-0" style="margin: 7rem 0;">
             <div class="container-fluid" style="color: white;">
 
                 <div class="mb-5">
@@ -25,23 +26,28 @@ index: true
                     </h5>
                 </div>
                 <div style="max-width: 900px; width: 100%; margin: 0 auto;">
-                    <div class="farama-stats me-1 ms-1 text-white"
-                        style="height:100%; border: 1px solid rgb(255 255 255 / 25%)">
-                        <div class="row">
-                            <div class="col-12 col-sm-4 text-center">
-                                <span class="farama-stats__number" id="farama-installations-counter">{{ site.data.stats.downloads }}</span>
-                                <span class="farama-stats__desc">installations</span>
-                            </div>
-                            <div class="col-12 col-sm-4 text-center">
-                                <span class="farama-stats__number" id="farama-contributers-counter">{{ site.data.stats.colaborators }}</span>
-                                <span class="farama-stats__desc">GitHub contributors</span>
-                            </div>
-                            <div class="col-12 col-sm-4 text-center">
-                                <span class="farama-stats__number" id="farama-repos-use-counter">{{ site.data.stats.repos_use }}</span>
-                                <span class="farama-stats__desc">repositories use our tools</span>
+                    <a href="stats.html" style="text-decoration: none; color: inherit">
+                        <div class="farama-stats me-1 ms-1 text-white"
+                            style="height:100%; border: 1px solid rgb(255 255 255 / 25%)">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 text-center">
+                                    <span class="farama-stats__number" id="farama-installations-counter">{{
+                                        site.data.stats.downloads }}</span>
+                                    <span class="farama-stats__desc">installations</span>
+                                </div>
+                                <div class="col-12 col-sm-4 text-center">
+                                    <span class="farama-stats__number" id="farama-contributers-counter">{{
+                                        site.data.stats.colaborators }}</span>
+                                    <span class="farama-stats__desc">GitHub contributors</span>
+                                </div>
+                                <div class="col-12 col-sm-4 text-center">
+                                    <span class="farama-stats__number" id="farama-repos-use-counter">{{
+                                        site.data.stats.repos_use }}</span>
+                                    <span class="farama-stats__desc">repositories use our tools</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -55,8 +61,7 @@ index: true
                 </div>
                 <div class="col-12 col-sm-4 mt-4 mt-sm-0 d-flex justify-content-center align-items-center">
                     <a href="{{site.discord}}" aria-label="Donate" class="text-decoration-none">
-                        <button
-                            class="farama-discord__btn d-flex align-items-center justify-content-center ">
+                        <button class="farama-discord__btn d-flex align-items-center justify-content-center ">
                             <i class="fa-brands fa-discord fa-lg fa-fw" style="color: white;"></i>
                             <span class="ps-3" style="font-size: 1.1rem;">Join Discord server</span>
                         </button>
