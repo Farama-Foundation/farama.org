@@ -120,6 +120,7 @@
 - name: MiniWoB++
   github: https://github.com/Farama-Foundation/miniwob-plusplus
   desc: A collection of reinforcement learning environments for simple web interaction tasks
+  image: miniwobplusplus.svg
   type: incubating
 
 - name: Metaworld
@@ -135,7 +136,7 @@
 
 - name: CrowdPlay
   github: https://github.com/Farama-Foundation/CrowdPlay
-  website: 
+  website:
   desc: CrowdPlay is a platform for crowdsourcing human demonstration trajectories in RL environments.
-  type: incubating 
+  type: incubating
 
