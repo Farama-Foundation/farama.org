@@ -137,6 +137,6 @@
 - name: CrowdPlay
   github: https://github.com/Farama-Foundation/CrowdPlay
   website:
-  desc: CrowdPlay is a platform for crowdsourcing human demonstration trajectories in RL environments.
+  desc: A web based platform for collecting human actions in reinforcement learning environments
   type: incubating
 
