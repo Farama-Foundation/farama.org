@@ -137,7 +137,7 @@ title: Project Stats
     const createStatCard = (data, summaryData, stat, projects, containerElem) => {
         const STAT_TITLE = {
             "colaborators": "Contributors",
-            "downloads": "Downloads",
+            "downloads": "Installations",
             "repos_use": "Dependent repos",
             "stars": "Stars",
         }
@@ -290,7 +290,7 @@ title: Project Stats
 
                 const includesElem = document.createElement("span");
                 includesElem.classList.add("farama-projects-stats__include");
-                includesElem.innerText = "Deprecated Packages Subsumed:";
+                includesElem.innerText = "Deprecated Libraries Subsumed:";
                 collapseContainer.appendChild(includesElem);
                 for (const oldProject of oldProjects) {
                     // -- Row container
