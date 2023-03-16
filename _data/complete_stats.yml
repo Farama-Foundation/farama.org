@@ -2,52 +2,52 @@ AutoROM:
   colaborators:
     2023-03: 8
   downloads:
-    2023-03: 862839
+    2023-03: 874920
   repos_use:
-    2023-03: 579
+    2023-03: 586
   stars:
     2023-03: 53
 D4RL:
   colaborators:
     2023-03: 21
   downloads:
-    2023-03: 3749
+    2023-03: 4153
   repos_use:
     2023-03: 0
   stars:
-    2023-03: 836
+    2023-03: 841
 Gymnasium:
   colaborators:
-    2023-03: 396
+    2023-03: 398
   downloads:
-    2023-03: 371826
+    2023-03: 417328
   repos_use:
-    2023-03: 514
+    2023-03: 548
   stars:
-    2023-03: 1734
+    2023-03: 1822
 Jumpy:
   colaborators:
     2023-03: 10
   downloads:
-    2023-03: 27608
+    2023-03: 27660
   repos_use:
-    2023-03: 201
+    2023-03: 211
   stars:
-    2023-03: 16
+    2023-03: 17
 MAgent2:
   colaborators:
     2023-03: 18
   downloads:
-    2023-03: 5856
+    2023-03: 6053
   repos_use:
     2023-03: 0
   stars:
-    2023-03: 90
+    2023-03: 91
 MO-Gymnasium:
   colaborators:
     2023-03: 4
   downloads:
-    2023-03: 1639
+    2023-03: 1917
   repos_use:
     2023-03: 4
   stars:
@@ -56,11 +56,11 @@ Metaworld:
   colaborators:
     2023-03: 24
   downloads:
-    2023-03: 3367
+    2023-03: 3378
   repos_use:
     2023-03: 13
   stars:
-    2023-03: 872
+    2023-03: 874
 MicroRTS-Py:
   colaborators:
     2023-03: 8
@@ -69,84 +69,93 @@ MicroRTS-Py:
   repos_use:
     2023-03: 0
   stars:
-    2023-03: 134
+    2023-03: 137
 Minari:
   colaborators:
     2023-03: 6
   downloads:
-    2023-03: 1629
+    2023-03: 1686
   repos_use:
     2023-03: 0
   stars:
-    2023-03: 75
+    2023-03: 78
 MiniGrid:
   colaborators:
-    2023-03: 60
+    2023-03: 61
   downloads:
-    2023-03: 886165
+    2023-03: 32901
   repos_use:
-    2023-03: 26
+    2023-03: 27
   stars:
-    2023-03: 1719
+    2023-03: 1720
 MiniWorld:
   colaborators:
     2023-03: 16
   downloads:
-    2023-03: 1276
+    2023-03: 1325
   repos_use:
     2023-03: 0
   stars:
-    2023-03: 576
+    2023-03: 578
 PettingZoo:
   colaborators:
-    2023-03: 74
+    2023-03: 76
   downloads:
-    2023-03: 1000540
+    2023-03: 1008875
   repos_use:
-    2023-03: 551
+    2023-03: 558
   stars:
-    2023-03: 1702
+    2023-03: 1715
 Shimmy:
   colaborators:
     2023-03: 6
   downloads:
-    2023-03: 62503
+    2023-03: 68722
   repos_use:
-    2023-03: 152
+    2023-03: 156
   stars:
     2023-03: 30
 SuperSuit:
   colaborators:
     2023-03: 21
   downloads:
-    2023-03: 497382
+    2023-03: 500450
   repos_use:
-    2023-03: 264
+    2023-03: 266
   stars:
-    2023-03: 368
+    2023-03: 370
 ViZDoom:
   colaborators:
     2023-03: 44
   downloads:
-    2023-03: 101715
+    2023-03: 102299
   repos_use:
-    2023-03: 166
+    2023-03: 167
   stars:
-    2023-03: 1498
+    2023-03: 1504
+babyai:
+  downloads:
+    2023-03: 0
 gym:
   downloads:
-    2023-03: 47782285
+    2023-03: 47925912
   repos_use:
-    2023-03: 37781
+    2023-03: 37959
+gym-minigrid:
+  downloads:
+    2023-03: 857971
 gym-robotics:
   colaborators:
     2023-03: 19
   downloads:
-    2023-03: 7654
+    2023-03: 7725
   repos_use:
     2023-03: 3
   stars:
-    2023-03: 179
+    2023-03: 185
+magent:
+  downloads:
+    2023-03: 89101
 miniwob-plusplus:
   colaborators:
     2023-03: 7
@@ -169,8 +178,8 @@ tinyscaler:
   colaborators:
     2023-03: 6
   downloads:
-    2023-03: 44878
+    2023-03: 47284
   repos_use:
     2023-03: 26
   stars:
-    2023-03: 8
+    2023-03: 9

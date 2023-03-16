@@ -400,6 +400,36 @@ img.light-shadow {
     border-bottom: 1px solid #ddd;
 }
 
+.farama-projects-stats__include {
+    display: flex;
+    margin: 4px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.farama-projects-stats__title {
+    padding: 4px 6px;
+}
+
+.farama-old-projects-stats__container {
+    margin-left: 24px;
+}
+
+.farama-old-projects-stats__row {
+}
+
+.farama-old-projects-stats__expand-btn {
+    display: flex;
+    padding: 4px 6px;
+}
+
+.farama-old-projects-stats__expand-btn i {
+    align-self: center;
+    margin-top: 4px;
+    margin-left: 6px;
+}
+
 .farama-global-stats__number {
     margin-left: 24px;
     font-size: 3rem;
@@ -449,6 +479,9 @@ img.light-shadow {
         border-right: none !important;
     }
 
+    .farama-projects-stats__container {
+        margin: 0
+    }
     .farama-global-stats__number {
         margin-left: 0;
         font-size: 2rem;

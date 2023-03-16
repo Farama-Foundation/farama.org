@@ -31,19 +31,15 @@ def scrape_downloads(projects):
     total = 0
     res_dict = {}
 
-    project_downloads = scrape_project_downloads("gym")
-    total += project_downloads
-    res_dict["gym"] = project_downloads
+    for project in ["gym", "babyai", "gym-minigrid", "magent"]:
+        project_downloads = scrape_project_downloads(project)
+        total += project_downloads
+        res_dict[project] = project_downloads
 
     for project in projects:
         project_downloads = scrape_project_downloads(project)
         total += project_downloads
         res_dict[project] = project_downloads
-        if project == "MiniGrid":
-            minigrid_extra_downloads = scrape_project_downloads("babyai") + \
-                                       scrape_project_downloads("gym-minigrid")
-            total += minigrid_extra_downloads
-            res_dict[project] += minigrid_extra_downloads
 
     print(f"Downloads: {res_dict}")
     return res_dict, total
