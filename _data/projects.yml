@@ -140,3 +140,9 @@
   desc: A web based platform for collecting human actions in reinforcement learning environments
   type: incubating
 
+- name: HighwayEnv
+  github: https://github.com/Farama-Foundation/HighwayEnv
+  website:
+  desc: A collection of environments for autonomous driving and tactical decision-making tasks
+  type: incubating
+
