@@ -119,6 +119,7 @@
 
 - name: MiniWoB++
   github: https://github.com/Farama-Foundation/miniwob-plusplus
+  website: https://miniwob.farama.org/
   desc: A collection of reinforcement learning environments for simple web interaction tasks
   image: miniwobplusplus.svg
   type: incubating
