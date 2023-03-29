@@ -11,125 +11,121 @@
   site:
 
 - name: Mark Towers
-  role: Gymnasium maintainer and project manager
+  role: Gymnasium and Jumpy Project Manager
   affiliation: University of Southampton
   image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
 
 - name: Ariel Kwiatkowski
-  role: Gymnasium maintainer
+  role: Gymnasium Technical Lead
   affiliation: École Polytechnique
   image: ariel.jpg
   site: https://github.com/RedTachyon
 
 - name: Feng Gu
-  role: Web developer
+  role: Web Developer
   affiliation: University of Maryland
   image: feng.jpg
   site: https://github.com/SiddarGu
 
 - name: Jet Tai
-  role: PettingZoo maintainer
+  role: Project Manager
   affiliation: Coventry University
   image: jet.jpg
   site: https://github.com/jjshoots
 
 - name: Rodrigo de Lazcano Perez-Vicente
-  role: Gymnasium-Robotics and Minigrid maintainer
+  role: Gymnasium-Robotics and Minari Project Manager
   affiliation: Farama
   image: rodrigo.jpg
   site: https://github.com/rodrigodelazcano
 
-- name: William Dudley
-  role: PettingZoo maintainer
-  affiliation: Imperial College London
-  image: will.jpg
-  site: https://github.com/WillDudley
-
 - name: Manuel Goulão
-  role: Web developer
+  role: Web Developer
   affiliation: INESC-ID
   image: manuel.jpg
   site: https://github.com/mgoulao
 
 - name: Eric Laukien
-  role: Procgen2 and TinyScaler maintainer
+  role: Procgen2 Project Manager
   affiliation: Ogma Corp
   image: eric.jpg
   site: https://github.com/222464
-- name: Daniel Scott
-  role: MAgent2 maintainer and assorted projects contributor
-  affiliation: Georgia Institute of Technology
-  image: daniel.jpg
-  site: https://github.com/dsctt
 
 - name: Markus Krimmel
-  role: Gymnasium and assorted projects contributor
+  role: General Contributor
   affiliation: ETH Zürich
   image: markus.jpg
   site: https://github.com/Markus28
 
 - name: Arjun KG
-  role: Gymnasium and assorted projects contributor
+  role: General Contributor
   affiliation: Connectome.Design
   image: arjun.jpg
   site: https://github.com/arjun-kg
 
 - name: Omar G. Younis
-  role: Gymnasium and assorted projects contributor
+  role: General Contributor
   affiliation: ETH Zürich
   image: omar.jpg
   site: https://github.com/younik
 
 - name: John U. Balis
-  role: Gymnasium contributor
+  role: General Contributor
   affiliation: University of Wisconsin-Madison
   image: john.png
   site: https://github.com/balisujohn
 
 - name: Gianluca De Cola
-  role: Gymnasium contributor
+  role: Gymnasium Contributor
   affiliation: Prima
   image: gianluca.png
   site: https://github.com/gianlucadecola
 
 - name: Andrea Pierré
-  role: Assorted projects contributor
+  role: General Contributor
   affiliation: Brown University
   image: andrea.jpg
   site: https://github.com/kir0ul
 
 - name: Panupong 'Ice' Pasupat
-  role: MiniWoB++
+  role: MiniWoB++ Project Manager
   affiliation: Google Brain
   image: ice.jpg
   site: https://ppasupat.github.io
+
 - name: Reginald McLean
-  role: Metaworld
+  role: Metaworld Project Manager
   affiliation: Toronto Metropolitan University
   image: reginald.jpg
   site:
 
 - name: Florian Felten
-  role: MO-Gymnasium
+  role: MO-Gymnasium Project Manager
   affiliation: SnT, University of Luxembourg
   image: florian.jpg
   site: https://github.com/ffelten
 
 - name: Bolun Dai
-  role: Miniworld
+  role: Miniworld and Minigrid Project Manager
   affiliation: New York University
   image: bolun.jpg
   site: https://github.com/BolunDai0216
 
 - name: Marek Wydmuch
-  role: ViZDoom
+  role: ViZDoom Project Manager
   affiliation: Poznan University of Technology
   image: marek.jpg
   site: https://github.com/mwydmuch
 
 - name: Lucas N. Alegre
-  role: MO-Gymnasium
+  role: MO-Gymnasium Project Manager
   affiliation: Universidade Federal do Rio Grande do Sul (UFRGS)
   image: lucas.jpg
   site: https://github.com/LucasAlegre
+
+- name: Elliot Tower
+  role: PettingZoo Project Manager
+  affiliation:
+  image: elliot.jpg
+  site: https://github.com/elliottower
