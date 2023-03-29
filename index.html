@@ -26,28 +26,35 @@ index: true
                     </h5>
                 </div>
                 <div style="max-width: 900px; width: 100%; margin: 0 auto;">
-                    <a href="stats.html" style="text-decoration: none; color: inherit">
-                        <div class="farama-stats me-1 ms-1 text-white"
-                            style="height:100%; border: 1px solid rgb(255 255 255 / 25%)">
-                            <div class="row">
-                                <div class="col-12 col-sm-4 text-center">
-                                    <span class="farama-stats__number" id="farama-installations-counter">{{
-                                        site.data.stats.downloads }}</span>
-                                    <span class="farama-stats__desc">installations</span>
-                                </div>
-                                <div class="col-12 col-sm-4 text-center">
-                                    <span class="farama-stats__number" id="farama-contributers-counter">{{
-                                        site.data.stats.colaborators }}</span>
-                                    <span class="farama-stats__desc">GitHub contributors</span>
-                                </div>
-                                <div class="col-12 col-sm-4 text-center">
-                                    <span class="farama-stats__number" id="farama-repos-use-counter">{{
-                                        site.data.stats.repos_use }}</span>
-                                    <span class="farama-stats__desc">repositories use our tools</span>
-                                </div>
-                            </div>
+                    <div class="row farama-stats me-1 ms-1 text-white"
+                        style="height:100%; border: 1px solid rgb(255 255 255 / 25%)">
+                        <div class="col-12 col-sm-4 text-center">
+                            <a href="stats/installations" style="text-decoration: none; color: inherit">
+                                <span class="farama-stats__number" id="farama-installations-counter">
+                                    {{ site.data.stats.downloads }}
+                                </span>
+                                <span class="farama-stats__desc">installations</span>
+                            </a>
                         </div>
-                    </a>
+                        <div class="col-12 col-sm-4 text-center">
+                            <a href="stats/contributers" style="text-decoration: none; color: inherit">
+
+                                <span class="farama-stats__number" id="farama-contributers-counter">
+                                    {{ site.data.stats.colaborators }}
+                                </span>
+                                <span class="farama-stats__desc">GitHub contributors</span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-4 text-center">
+                            <a href="stats/dependents" style="text-decoration: none; color: inherit">
+
+                                <span class="farama-stats__number" id="farama-repos-use-counter">
+                                    {{ site.data.stats.repos_use }}
+                                </span>
+                                <span class="farama-stats__desc">repositories use our tools</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

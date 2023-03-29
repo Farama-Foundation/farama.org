@@ -126,17 +126,27 @@ a:hover {
 .farama-stats {
     height: 100%;
     background: rgb(255 255 255 / 10%);
-    padding: 10px 16px;
     border-radius: 3rem;
+    overflow: hidden;
+}
+
+.farama-stats div {
     transition: background-color 0.1s ease;
     cursor: pointer;
 }
 
-.farama-stats:hover {
-    background-color: rgb(255 255 255 / 14%);
+.farama-stats div:hover {
+    background-color: rgb(255 255 255 / 5%);
 }
 
-.farama-stats div div:not(:last-child) {
+.farama-stats div a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: inherit"
+}
+
+.farama-stats div:not(:last-child) {
     border-right: 1px solid white;
 }
 
