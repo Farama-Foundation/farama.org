@@ -307,7 +307,7 @@ a:hover {
 .farama-standards-card__separator {
     height: 2px;
     background-color: var(--bs-secondary);
-    width: 10px;
+    width: 50px;
     margin: 12px auto
 }
 

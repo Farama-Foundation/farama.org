@@ -1,56 +1,64 @@
-- type: Good Science
-  standards:
-    - name: <b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced (ignoring potential issues due to floating point arithmetic errors).
-    - name: <b>Include explicit versioning</b> in environment and wrapper names in a format like "Pong-v5" to make it clear to researchers when results are from differently configured environments.
-    - name: <b>Use Farama Notifcations</b>. So that we can add warnings after releases about issues that users of old versions need to be aware of.
-    
-- type: Release Details
-  standards:
-    - name: <b>Be released on PyPI</b>, so that users can easily install libraries via `pip` without having to clone Git repositories.
-    - name: <b>Include a full package description</b> for the PyPI page (generally by repurposing the readme file), so that users can quickly see what a package is when searching on PyPI.
-    - name: <b>Deploy packages to PyPI via GitHub Actions</b> that run when a Release is published on GitHub. This ensures that releases are fully automated to remove human error, and allows anyone to easily take over a project if needed.
 
-- type: Binaries
-  standards:
-    - name: <b>Be deterministically compiled</b> if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of reproducibility issues.
-    - name: <b>Ship any binaries for both x86_64 and Arm architectures and both Linux and macOS operating systems.</b>
-    - name: "<b>All supported operating systems should have wheels provided.</b> (Note: we're temporarily handling Arm-based macOS wheels by having them compile on installation due to an issue with Github Actions support.)"
 
-- type: Quality of Life
-  standards:
-    - name: <b>Include a thorough documentation website</b> in the same format as the other mature projects if the library is large enough to warrant one. We want both experienced researchers and newcomers alike to be able to quickly see what a library is and reference functionality as needed without having to refer to source.
-    - name: <b>Run on both Linux and macOS.</b> The vast majority of the software in this field is run on Linux servers, and a huge number of researchers and students develop and test on macOS.
 
-- type: Code Standardization
-  standards:
-    - name: <b>Have Python code comply with the black, flake8, and isort linting/formatting tools.</b> This keeps the code formatting consistent across different projects.
-    - name: <b>Add type hinting where reasonable</b>, at least in the most publicly facing portions of a repository. Adding type hinting to functions can help new users get accustomed to code easier and can sometimes help prevent or catch obscure bugs.
-    - name: <b>Include docstrings for all substantial functions</b> so that new users can easily understand what they do. Use the pydocstyle and Google styles so that they have a standard formatting.
+- type_name: Environments
+  type_standards:
+    - title: Standardization
+      standards:
+        - name: <b>Support the Gymnasium and/or PettingZoo API</b> at the newest version (supporting other APIs in addition to these are fine), so that users can drop in and try out different environments as easily as possible, and code can be more modular and interchangeable.
+        - name: <b>Support all current versions of Python</b> (currently 3.7-3.11). Different users may need to use different versions of Python, often as specified by outside forces like company policy or their package manager, and we want to comprehensively support this.
+    - title: Quality of Life
+      standards:
+        - name: <b>Include a thorough documentation website</b> in the same format as the other mature projects if the library is large enough to warrant one. We want both experienced researchers and newcomers alike to be able to quickly see what a library is and reference functionality as needed without having to refer to source.
+        - name: <b>Run on both Linux and macOS.</b> The vast majority of the software in this field is run on Linux servers, and a huge number of researchers and students develop and test on macOS.
+    - title: Binaries
+      standards:
+        - name: <b>Be deterministically compiled</b> if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of reproducibility issues.
+        - name: <b>Ship any binaries for both x86_64 and Arm architectures and both Linux and macOS operating systems.</b>
+        - name: "<b>All supported operating systems should have wheels provided.</b> (Note: we're temporarily handling Arm-based macOS wheels by having them compile on installation due to an issue with Github Actions support.)"
+    - title: Good Science
+      standards:
+        - name: <b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced (ignoring potential issues due to floating point arithmetic errors).
+        - name: <b>Include explicit versioning</b> in environment and wrapper names in a format like "Pong-v5" to make it clear to researchers when results are from differently configured environments.
 
-- type: Development Workflow
-  standards:
-    - name: <b>Have continuous integration testing</b> for API compliance, determinism, and type checking with Pyright. All tests must pass on both Linux and macOS. This way, we can ensure that all libraries remain well-tested and robust.
-    - name: <b>Include a git pre-commit</b> with black, flake8 and isort. Including these checks in pre-commit reduces headaches in getting PRs merged by making it clear to contributors early on when their code will need changes to comply with the style guide.
+- type_name: Development
+  type_standards:
+    - title: Release Details
+      standards:
+        - name: <b>Be released on PyPI</b>, so that users can easily install libraries via `pip` without having to clone Git repositories.
+        - name: <b>Include a full package description</b> for the PyPI page (generally by repurposing the readme file), so that users can quickly see what a package is when searching on PyPI.
+        - name: <b>Deploy packages to PyPI via GitHub Actions</b> that run when a Release is published on GitHub. This ensures that releases are fully automated to remove human error, and allows anyone to easily take over a project if needed.
+    - title: Code Standardization
+      standards:
+        - name: <b>Have Python code comply with the black, flake8, and isort linting/formatting tools.</b> This keeps the code formatting consistent across different projects.
+        - name: <b>Add title hinting where reasonable</b>, at least in the most publicly facing portions of a repository. Adding title hinting to functions can help new users get accustomed to code easier and can sometimes help prevent or catch obscure bugs.
+        - name: <b>Include docstrings for all substantial functions</b> so that new users can easily understand what they do. Use the pydocstyle and Google styles so that they have a standard formatting.
+    - title: Development Workflow
+      standards:
+        - name: <b>Have continuous integration testing</b> for API compliance, determinism, and title checking with Pyright. All tests must pass on both Linux and macOS. This way, we can ensure that all libraries remain well-tested and robust.
+        - name: <b>Include a git pre-commit</b> with black, flake8 and isort. Including these checks in pre-commit reduces headaches in getting PRs merged by making it clear to contributors early on when their code will need changes to comply with the style guide.
+    - title: Other
+      standards:
+        - name: <b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field.
+        - name: <b>Pull documentation website information from environments directly</b> instead of mannually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future.
 
-- type: Farama Branding
-  standards:
-    - name: <b>Have a logo in the same style as the other projects.</b> A nice logo is a small feature that makes projects more memorable and makes the whole space a little more inviting to interested new students. Since we list all the logos together, we try to make sure they match.
-    - name: <b>Have the documentation website be at <project>.farama.org.</b> Having everything under a single domain name makes things simple and consistent for users (and makes things a bit easier for us to manage).
-    - name: <b>Include the standard Farama code of conduct.</b> We believe that all members of our community should be respected. Additionally, listing a code of conduct under our projects is a requirement for some open source donations.
 
-- type: Standardization
-  standards:
-    - name: <b>Support the Gymnasium and/or PettingZoo API</b> at the newest version (supporting other APIs in addition to these are fine), so that users can drop in and try out different environments as easily as possible, and code can be more modular and interchangeable.
-    - name: <b>Support all current versions of Python</b> (currently 3.7-3.11). Different users may need to use different versions of Python, often as specified by outside forces like company policy or their package manager, and we want to comprehensively support this.
+- type_name: Farama Projects
+  type_standards:
+    - title: Farama Branding
+      standards:
+        - name: <b>Have a logo in the same style as the other projects.</b> A nice logo is a small feature that makes projects more memorable and makes the whole space a little more inviting to interested new students. Since we list all the logos together, we try to make sure they match.
+        - name: <b>Have the documentation website be at <project>.farama.org.</b> Having everything under a single domain name makes things simple and consistent for users (and makes things a bit easier for us to manage).
+        - name: <b>Include the standard Farama code of conduct.</b> We believe that all members of our community should be respected. Additionally, listing a code of conduct under our projects is a requirement for some open source donations.
+    - title: Good Science
+      standards:
+        - name: <b>Use Farama Notifcations</b>. So that we can add warnings after releases about issues that users of old versions need to be aware of.
+    - title: Security
+      standards:
+        - name: <b>List Jordan Terry and Mark Towers as owners on PyPI</b>, to make sure that we don't lose control of a package in the case that a primary maintainer becomes unavailable due to unexpected circumstances.
+        - name: <b>Have maintainers with GitHub or PyPI permissions use TOTP based 2FA or better</b> (and secure passwords, emails addresses, etc.), to reduce the likelihood of supply chain security attacks involving any of our projects.
+    - title: Other
+      standards:
+        - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
+        - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
 
-- type: Security
-  standards:
-    - name: <b>List Jordan Terry and Mark Towers as owners on PyPI</b>, to make sure that we don't lose control of a package in the case that a primary maintainer becomes unavailable due to unexpected circumstances.
-    - name: <b>Have maintainers with GitHub or PyPI permissions use TOTP based 2FA or better</b> (and secure passwords, emails addresses, etc.), to reduce the likelihood of supply chain security attacks involving any of our projects.
-
-- type: Other
-  standards:
-    - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
-    - name: <b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field.
-    - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
-    - name: <b>Pull documentation website information from environments directly</b> instead of mannually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future.

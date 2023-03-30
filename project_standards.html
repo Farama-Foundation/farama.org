@@ -6,21 +6,24 @@ subtitle: For a project under Farama to be listed as mature, it must comply with
 <div class="container my-5">
     <div class="row">
         {% for item in site.data.project_standards %}
-        <div class="col-12 col-lg-4 col-md-6 col-sm-12 mb-4" style="display: flex; flex-wrap:wrap">
-            <div class="card farama-standards-card text-dark bg-light" style="height: 100%;">
-                <div class="card-header fw-bold text-center">{{ item.type }}</div>
-                <div class="card-body bg-white" style="border-radius: var(--bs-card-inner-border-radius)">
-                    <ul>
-                        {% for standard in item.standards %}
-                        <li style="text-align: left;">{{ standard.name }}</li>
-                        {% if forloop.last %}{% else %}
-                        <div class="farama-standards-card__separator"></div>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
+        <h3 class="text-primary mb-4 mt-2">{{item.type_name}}</h3>
+        <div class="mb-4" style="display: flex; flex-wrap:wrap">
+            <div class="card farama-standards-card text-dark bg-light" style="height: 100%; overflow: hidden;">
+            {% for standards_topic in item.type_standards %}
+                    <div class="card-header fw-bold text-center">{{ standards_topic.title }}</div>
+                    <div class="card-body bg-white">
+                        <ul>
+                            {% for standard in standards_topic.standards %}
+                            <li style="text-align: left; font-size: 105%">{{ standard.name }}</li>
+                            {% if forloop.last %}{% else %}
+                            <div class="farama-standards-card__separator"></div>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </div>
