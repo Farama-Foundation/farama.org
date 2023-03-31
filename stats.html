@@ -1,0 +1,349 @@
+---
+title: Project Stats
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.min.js"></script>
+<script>
+    const formatYAxisValue = (value, index, ticks) => {
+        if (index != 0 && index != ticks.length - 1) {
+            return "";
+        }
+        const formatter = Intl.NumberFormat('en', { notation: 'compact' });
+        // Remove decimal part, all numbers are integers and format large numbers
+        return formatter.format(value.toFixed(0));
+    }
+
+    const options = {
+        maintainAspectRatio: false,
+        interaction: { mode: null },
+        plugins: {
+            legend: { display: false }
+        },
+        elements: {
+            point: {
+                pointRadius: 0
+            }
+        },
+        animation: {
+            delay: 500,
+        },
+        scales: {
+            xAxis: {
+                display: false,
+                grid: {
+                    display: false,
+                    lineWidth: 0,
+                },
+                ticks: { display: false }
+            },
+            yAxis: {
+                grid: {
+                    display: false,
+                },
+                ticks: {
+                    major: { enabled: false },
+                    autoSkip: false,
+                    callback: formatYAxisValue
+                }
+            }
+        }
+    }
+</script>
+
+<div class="container mb-5 pt-5" id="farama-stats-container">
+    <!-- -->
+</div>
+
+<script>
+    const faramaProjects = {{ site.data.projects | jsonify }};
+    // D4RL is deprecated
+    const faramaProjectNames = faramaProjects.map((a) => a.name.toLowerCase()).filter((a) => a !== "d4rl");
+
+    const getProjectStatNumber = (data, project, stat) => {
+        const projObject = data[project];
+        if (projObject !== undefined) {
+            const valObject = projObject[stat];
+            if (valObject) {
+                return Number(Object.values(valObject).slice(-1));
+            }
+        }
+        return null;
+    }
+
+    const getProjectStatFormatted = (data, project, stat) => {
+        const numberFormatter = new Intl.NumberFormat('en-US');
+        if (typeof data == "number") {
+            return numberFormatter.format(data);
+        }
+        const val = getProjectStatNumber(data, project, stat);
+        return val !== null ? numberFormatter.format(val) : "No data";
+    }
+
+    const calculateGlobalStat = (data, stat) => {
+        const numberFormatter = new Intl.NumberFormat('en-US');
+        return numberFormatter.format(data[stat]);
+    }
+
+    const computeChartData = (data, stat) => {
+        res_data = {}
+        for (const project of Object.keys(data)) {
+            const dataByDate = data[project][stat];
+            if (dataByDate) {
+                for (const [date, val] of Object.entries(dataByDate)) {
+                    if (!Object.keys(res_data).includes(date)) {
+                        res_data[date] = 0;
+                    }
+                    res_data[date] += Number(val);
+                }
+            }
+        }
+        return res_data;
+    }
+
+    const createChart = (chartCanvas, data) => {
+        const config = {
+            type: 'line',
+            data: data,
+        };
+
+        const ctx = chartCanvas.getContext("2d");
+        const gradient = ctx.createLinearGradient(0, 0, 0, chartCanvas.height);
+        gradient.addColorStop(0, "#bd8a42");
+        gradient.addColorStop(0.6, "#bd8a4200");
+
+        new Chart(
+            chartCanvas,
+            {
+                type: 'line',
+                options,
+                data: {
+                    labels: Object.keys(data).map(entry => new Date(entry).getTime()),
+                    datasets: [
+                        {
+                            data: Object.values(data),
+                            xAxisID: "xAxis",
+                            yAxisID: "yAxis",
+                            borderColor: "#bd8a42",
+                            borderWidth: 3,
+                            backgroundColor: gradient,
+                            fill: "start"
+                        }
+                    ]
+                }
+            }
+        );
+    }
+
+    const createStatCard = (data, summaryData, stat, projects, containerElem) => {
+        const STAT_TITLE = {
+            "colaborators": "Contributors",
+            "downloads": "Installations",
+            "repos_use": "Dependent repos",
+            "stars": "Stars",
+        }
+        const cardElem = document.createElement("div");
+        cardElem.classList.add("card", "row", "mb-4");
+        containerElem.appendChild(cardElem);
+
+        // Card Header
+        const cardHeaderElem = document.createElement("div");
+        cardHeaderElem.classList.add("card-header", "d-flex");
+        cardElem.appendChild(cardHeaderElem);
+
+        const statTitleElem = document.createElement("h5");
+        statTitleElem.classList.add("card-title", "flex-grow-1", "mb-0");
+        statTitleElem.innerText = STAT_TITLE[stat];
+        cardHeaderElem.appendChild(statTitleElem);
+
+        const statExpandBtn = document.createElement("button");
+        statExpandBtn.classList.add("btn", "farama-stats__expand-btn");
+        cardHeaderElem.appendChild(statExpandBtn);
+        statExpandBtn.setAttribute("type", "button");
+        statExpandBtn.setAttribute("data-bs-toggle", "collapse");
+        statExpandBtn.setAttribute("data-bs-target", "#collapse_" + stat);
+        statExpandBtn.setAttribute("aria-expanded", "false");
+        statExpandBtn.setAttribute("aria-controls", "#collapse_" + stat);
+
+        const expandIcon = document.createElement("i");
+        expandIcon.classList.add("fa-solid", "fa-angle-down");
+        statExpandBtn.appendChild(expandIcon);
+
+        // Card Body
+        const cardBodyElem = document.createElement("div");
+        cardBodyElem.classList.add("card-body");
+        cardElem.appendChild(cardBodyElem);
+
+        // -- Global
+        const globalContainerElem = document.createElement("div");
+        globalContainerElem.classList.add("row");
+        cardBodyElem.appendChild(globalContainerElem);
+
+        const globalNumberContainerElem = document.createElement("div");
+        globalNumberContainerElem.classList.add("col-6");
+        globalContainerElem.appendChild(globalNumberContainerElem);
+
+        const globalNumberElem = document.createElement("span");
+        globalNumberElem.classList.add("farama-global-stats__number");
+        globalNumberElem.innerText = calculateGlobalStat(summaryData, stat);
+        globalNumberContainerElem.appendChild(globalNumberElem);
+
+        const globalChartContainerElem = document.createElement("div");
+        globalChartContainerElem.classList.add("col-6");
+        globalContainerElem.appendChild(globalChartContainerElem);
+
+        const globalChartElem = document.createElement("canvas");
+        globalChartElem.classList.add("farama-global-stats__chart")
+        globalChartElem.id = stat + "Chart";
+        globalChartContainerElem.appendChild(globalChartElem);
+
+        // createChart(globalChartElem, computeChartData(data, stat));
+
+        // -- Projects
+        const projectsContainerElem = document.createElement("div");
+        projectsContainerElem.classList.add("collapse", "farama-projects-stats__container");
+        projectsContainerElem.id = "collapse_" + stat;
+        cardBodyElem.appendChild(projectsContainerElem);
+
+        for (const project of projects) {
+            // Projects with deprecated projects should sum the stats from those projects
+            // Old Projects
+            let oldProjects = [];
+            if (project == "Gymnasium" && (stat == "downloads" || stat == "repos_use")) {
+                oldProjects = ["gym"];
+            } else if (project == "MiniGrid" && stat == "downloads") {
+                oldProjects = ["gym-minigrid", "babyai"];
+            } else if (project == "MAgent2" && stat == "downloads") {
+                oldProjects = ["magent"];
+            } else if (project == "Minari") {
+                oldProjects = ["D4RL"];
+            }
+
+            // Column container
+            const projectColElem = document.createElement("div");
+            projectColElem.classList.add("farama-projects-stats__row");
+            projectsContainerElem.appendChild(projectColElem)
+
+            // - Row container
+            const projectElem = document.createElement("div");
+            projectElem.classList.add("d-flex");
+            projectColElem.appendChild(projectElem);
+
+            // A dropdown then reveals the stats of each project deprecated project
+            if (oldProjects.length) {
+                const oldProjectsExpandBtn = document.createElement("button");
+                oldProjectsExpandBtn.classList.add("btn", "farama-old-projects-stats__expand-btn");
+                projectElem.appendChild(oldProjectsExpandBtn);
+                oldProjectsExpandBtn.setAttribute("type", "button");
+                oldProjectsExpandBtn.setAttribute("data-bs-toggle", "collapse");
+                oldProjectsExpandBtn.setAttribute("data-bs-target", "#collapse_" + stat + "_" + project);
+                oldProjectsExpandBtn.setAttribute("aria-expanded", "false");
+                oldProjectsExpandBtn.setAttribute("aria-controls", "#collapse_" + stat + "_" + project);
+
+                oldProjectsExpandBtn.innerText = formatTitle(project);
+
+                const expandIcon = document.createElement("i");
+                expandIcon.classList.add("fa-solid", "fa-angle-down");
+                oldProjectsExpandBtn.appendChild(expandIcon);
+
+                // Empty spacer
+                const projectNameElem = document.createElement("span");
+                projectNameElem.classList.add("flex-grow-1");
+                projectElem.appendChild(projectNameElem);
+            } else {
+                // -- Project Title
+                const projectNameElem = document.createElement("span");
+                projectNameElem.classList.add("flex-grow-1", "farama-projects-stats__title");
+                projectNameElem.innerText = formatTitle(project);
+                projectElem.appendChild(projectNameElem);
+            }
+
+
+            // -- Project stat
+            const projectNumberElem = document.createElement("span");
+            projectNumberElem.innerText = getProjectStatFormatted(data, project, stat);
+            projectElem.appendChild(projectNumberElem);
+
+
+            if (oldProjects.length) {
+                let total = getProjectStatNumber(data, project, stat);
+
+                const collapseContainer = document.createElement("div");
+                collapseContainer.classList.add("collapse", "farama-old-projects-stats__container");
+                collapseContainer.id = "collapse_" + stat + "_" + project;
+                projectColElem.appendChild(collapseContainer);
+
+                // - Row container
+                const newProjectElem = document.createElement("div");
+                newProjectElem.classList.add("d-flex");
+                collapseContainer.appendChild(newProjectElem);
+
+                // -- Project Title
+                const newProjectNameElem = document.createElement("span");
+                newProjectNameElem.classList.add("flex-grow-1")
+                newProjectNameElem.innerText = formatTitle(project);
+                newProjectElem.appendChild(newProjectNameElem);
+
+                // -- Project stat
+                const newProjectNumberElem = document.createElement("span");
+                newProjectNumberElem.innerText = getProjectStatFormatted(data, project, stat);
+                newProjectElem.appendChild(newProjectNumberElem);
+
+                const includesElem = document.createElement("span");
+                includesElem.classList.add("farama-projects-stats__include");
+                includesElem.innerText = "Deprecated Libraries Subsumed:";
+                collapseContainer.appendChild(includesElem);
+                for (const oldProject of oldProjects) {
+                    // -- Row container
+                    const oldProjectElem = document.createElement("div");
+                    oldProjectElem.classList.add("d-flex", "farama-old-projects-stats__row");
+                    collapseContainer.appendChild(oldProjectElem);
+
+                    // --- Old Project title
+                    const projectNameElem = document.createElement("span");
+                    projectNameElem.classList.add("flex-grow-1")
+                    projectNameElem.innerText = formatTitle(oldProject);
+                    oldProjectElem.appendChild(projectNameElem);
+
+                    // --- Old Project stat
+                    const projectNumberElem = document.createElement("span");
+                    projectNumberElem.innerText = getProjectStatFormatted(data, oldProject, stat);
+                    oldProjectElem.appendChild(projectNumberElem);
+
+                    total += getProjectStatNumber(data, oldProject, stat);
+                }
+                // Override projectNumberElem
+                projectNumberElem.innerText = getProjectStatFormatted(total, null, null);
+            }
+        }
+    }
+
+    const formatTitle = (name) => {
+        if (!faramaProjectNames.includes(name.toLowerCase()))
+            return name;
+        for (const project of faramaProjects) {
+            if (project.github.split("/").slice(-1)[0] == name)
+                return project.name
+        }
+    }
+
+    const projectSort = (faramaProjects, a, b) => {
+        // We use the github name from the URL
+        const allProjects = ["gym"].concat(faramaProjects.map(entry => entry.github.split("/").slice(-1)[0]));
+        return allProjects.indexOf(a) - allProjects.indexOf(b);
+    }
+
+    (async () => {
+        const containerElem = document.getElementById("farama-stats-container");
+        const completeData = {{ site.data.complete_stats | jsonify }};
+        const summaryData = {{ site.data.stats | jsonify }};
+        const sortedProjects = Object.keys(completeData)
+                                .filter((a) => faramaProjectNames.includes(a.toLowerCase()))
+                                .sort((a, b) => projectSort(faramaProjects, a, b));
+        const stats = Object.keys(completeData[faramaProjects[0].name])
+
+        for (const stat of stats) {
+            createStatCard(completeData, summaryData, stat, sortedProjects, containerElem)
+        }
+    })();
+
+</script>

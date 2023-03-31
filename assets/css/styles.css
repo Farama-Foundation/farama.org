@@ -126,11 +126,27 @@ a:hover {
 .farama-stats {
     height: 100%;
     background: rgb(255 255 255 / 10%);
-    padding: 10px 16px;
     border-radius: 3rem;
+    overflow: hidden;
 }
 
-.farama-stats div div:not(:last-child) {
+.farama-stats div {
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+.farama-stats div:hover {
+    background-color: rgb(255 255 255 / 5%);
+}
+
+.farama-stats div a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: inherit"
+}
+
+.farama-stats div:not(:last-child) {
     border-right: 1px solid white;
 }
 
@@ -378,6 +394,65 @@ img.light-shadow {
     min-height: var(--footer-height)
 }
 
+#farama-stats-container .card .card-title {
+    color: var(--bs-primary);
+    align-self: center;
+}
+
+.farama-projects-stats__container {
+    margin: 0 16px
+}
+
+.farama-projects-stats__row {
+    padding: 8px;
+}
+.farama-projects-stats__row:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.farama-projects-stats__include {
+    display: flex;
+    margin: 4px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.farama-projects-stats__title {
+    padding: 4px 6px;
+}
+
+.farama-old-projects-stats__container {
+    margin-left: 24px;
+}
+
+.farama-old-projects-stats__row {
+}
+
+.farama-old-projects-stats__expand-btn {
+    display: flex;
+    padding: 4px 6px;
+}
+
+.farama-old-projects-stats__expand-btn i {
+    align-self: center;
+    margin-top: 4px;
+    margin-left: 6px;
+}
+
+.farama-global-stats__number {
+    margin-left: 24px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.farama-global-stats__chart {
+    height: 85px;
+    width: 300px;
+}
+
+
 @media (max-width: 992px) {
     #navbarNav {
         margin-top: 16px;
@@ -412,6 +487,14 @@ img.light-shadow {
 @media (max-width: 576px) {
     .farama-stats div div {
         border-right: none !important;
+    }
+
+    .farama-projects-stats__container {
+        margin: 0
+    }
+    .farama-global-stats__number {
+        margin-left: 0;
+        font-size: 2rem;
     }
 
 }

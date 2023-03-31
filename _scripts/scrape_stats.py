@@ -6,7 +6,6 @@ import yaml
 from yaml.loader import SafeLoader
 
 
-GYM_DOWNLOADS_URL = "https://api.pepy.tech/api/v2/projects/gym"
 DOWNLOADS_URL = "https://api.pepy.tech/api/v2/projects/{pip_project}"
 COLABTORATORS_URLS = "https://api.github.com/repos/Farama-Foundation/{repo}/contributors"
 REPOS_URLS = "https://api.github.com/repos/Farama-Foundation/{repo}"
@@ -14,31 +13,33 @@ REPOS_USE_URLS = "https://github.com/Farama-Foundation/{repo}/network/dependents
 GYM_REPOS_USE_URLS = "https://github.com/openai/gym/network/dependents"
 
 
-def scrape_downloads(projects):
-    total = 0
-    res_dict = {}
+def scrape_project_downloads(project):
+    project_downloads = 0
     try:
-        res_json = requests.get(GYM_DOWNLOADS_URL).json()
-        total = int(res_json["total_downloads"])
-        res_dict["gym"] = total
+        res_json = requests.get(DOWNLOADS_URL.format(pip_project=project)).json()
+        if "total_downloads" in res_json.keys():
+            project_downloads = int(res_json["total_downloads"])
     except Exception as e:
-        print(f"Error while requesting data from: {GYM_DOWNLOADS_URL}. This might mean" + \
+        print(f"Error while requesting data from: {DOWNLOADS_URL.format(pip_project=project)}. This might mean" + \
                 "that something changed in the API or the API is not public anymore.")
         print("Error message:")
         print(e)
+    return project_downloads
+
+
+def scrape_downloads(projects):
+    total = 0
+    res_dict = {}
+
+    for project in ["gym", "babyai", "gym-minigrid", "magent"]:
+        project_downloads = scrape_project_downloads(project)
+        total += project_downloads
+        res_dict[project] = project_downloads
 
     for project in projects:
-        try:
-            res_json = requests.get(DOWNLOADS_URL.format(pip_project=project)).json()
-            if "total_downloads" in res_json.keys():
-                project_downloads = int(res_json["total_downloads"])
-                total += project_downloads
-                res_dict[project] = project_downloads
-        except Exception as e:
-            print(f"Error while requesting data from: {DOWNLOADS_URL.format(pip_project=project)}. This might mean" + \
-                    "that something changed in the API or the API is not public anymore.")
-            print("Error message:")
-            print(e)
+        project_downloads = scrape_project_downloads(project)
+        total += project_downloads
+        res_dict[project] = project_downloads
 
     print(f"Downloads: {res_dict}")
     return res_dict, total
@@ -131,8 +132,7 @@ def scrape_repos_use(projects):
 
 
 def scrape_stats():
-
-    current_date = str(datetime.date.today())
+    current_date = str(datetime.date.today().strftime("%Y-%m"))
     stats = {}
     complete_stats = {}
     stats_yaml = os.path.join(os.path.dirname(__file__), "..", "_data", "stats.yml")
@@ -151,6 +151,8 @@ def scrape_stats():
         projects = list(map(lambda x: x["github"].split("/")[-1].rstrip("/"), projects))
 
     for key in ["downloads", "colaborators", "repos_use", "stars"]:
+        scraped_val = None
+        projects_val_dict = {}
         try:
             if key == "downloads":
                 projects_val_dict, scraped_val = scrape_downloads(projects)
@@ -169,17 +171,15 @@ def scrape_stats():
 
         stats[key] = scraped_val or stats[key]
 
-        # stars -> project -> date -> val
-        if key not in complete_stats.keys():
-            complete_stats[key] = {}
-
+        # project -> stats -> date -> val
         for project in projects_val_dict.keys():
-            if project not in complete_stats[key].keys():
-                complete_stats[key][project] = {}
+            if project not in complete_stats.keys():
+                complete_stats[project] = {}
 
-            complete_stats[key][project][current_date] = projects_val_dict[project]
+            if key not in complete_stats[project].keys():
+                complete_stats[project][key] = {}
 
-    print(complete_stats)
+            complete_stats[project][key][current_date] = projects_val_dict[project]
 
     with open(stats_yaml, "w") as fp:
         yaml.dump(stats, fp)
