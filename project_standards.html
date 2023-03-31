@@ -1,29 +1,32 @@
 ---
 title: Project Standards
-subtitle: For a project under Farama to be listed as mature, it must comply with the following standards. We work to maintain these standards for our existing projects, and update new projects to meet them. These standards may evolve over time, and we'll publicly announce any major changes to them.
+subtitle: For a project under Farama to be listed as mature, it must comply with the following standards. We work to
+maintain these standards for our existing projects, and update new projects to meet them. These standards may evolve
+over time, and we'll publicly announce any major changes to them.
 ---
 
 <div class="container my-5">
     <div class="row">
         {% for item in site.data.project_standards %}
-        <h3 class="text-primary mb-4 mt-2">{{item.type_name}}</h3>
-        <div class="mb-4" style="display: flex; flex-wrap:wrap">
+        <h3 class="text-primary mb-1 mt-2">{{item.type_name}}</h3>
+        <h5 class="text-primary mb-4 mt-1">{{item.type_description}}</h5>
+        {% for standards_topic in item.type_standards %}
+        <div class="col-12 col-md-6 mb-4" style="display: flex; flex-wrap:wrap">
             <div class="card farama-standards-card text-dark bg-light" style="height: 100%; overflow: hidden;">
-            {% for standards_topic in item.type_standards %}
-                    <div class="card-header fw-bold text-center">{{ standards_topic.title }}</div>
-                    <div class="card-body bg-white">
-                        <ul>
-                            {% for standard in standards_topic.standards %}
-                            <li style="text-align: left; font-size: 105%">{{ standard.name }}</li>
-                            {% if forloop.last %}{% else %}
-                            <div class="farama-standards-card__separator"></div>
-                            {% endif %}
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endfor %}
+                <div class="card-header fw-bold text-center">{{ standards_topic.title }}</div>
+                <div class="card-body bg-white">
+                    <ul>
+                        {% for standard in standards_topic.standards %}
+                        <li style="text-align: left; font-size: 105%">{{ standard.name }}</li>
+                        {% if forloop.last %}{% else %}
+                        <div class="farama-standards-card__separator"></div>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
+        </div>
+        {% endfor %}
         {% endfor %}
     </div>
 </div>
