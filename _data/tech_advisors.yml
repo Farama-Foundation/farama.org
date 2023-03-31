@@ -1,10 +1,10 @@
 - name: Nathan Lambert
-  role: Machine learning scientist
+  role: RLHF Team Lead
   affiliation: HuggingFace
   image: nathan.jpg
 
 - name: Pablo Castro
-  role: Staff Research Software Developer
+  role: Head of RL at Google Brain Montreal
   affiliation: Google
   image: psc.png
   site: https://github.com/psc-g
