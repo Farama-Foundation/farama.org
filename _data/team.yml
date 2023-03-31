@@ -22,12 +22,6 @@
   image: ariel.jpg
   site: https://github.com/RedTachyon
 
-- name: Feng Gu
-  role: Web Developer
-  affiliation: University of Maryland
-  image: feng.jpg
-  site: https://github.com/SiddarGu
-
 - name: Jet Tai
   role: Project Manager
   affiliation: Coventry University
@@ -40,66 +34,24 @@
   image: rodrigo.jpg
   site: https://github.com/rodrigodelazcano
 
-- name: Manuel Goulão
-  role: Web Developer
-  affiliation: INESC-ID
-  image: manuel.jpg
-  site: https://github.com/mgoulao
-
 - name: Eric Laukien
   role: Procgen2 Project Manager
   affiliation: Ogma Corp
   image: eric.jpg
   site: https://github.com/222464
-
-- name: Markus Krimmel
-  role: General Contributor
-  affiliation: ETH Zürich
-  image: markus.jpg
-  site: https://github.com/Markus28
-
-- name: Arjun KG
-  role: General Contributor
-  affiliation: Connectome.Design
-  image: arjun.jpg
-  site: https://github.com/arjun-kg
-
-- name: Omar G. Younis
-  role: General Contributor
-  affiliation: ETH Zürich
-  image: omar.jpg
-  site: https://github.com/younik
-
-- name: John U. Balis
-  role: General Contributor
-  affiliation: University of Wisconsin-Madison
-  image: john.png
-  site: https://github.com/balisujohn
-
-- name: Gianluca De Cola
-  role: Gymnasium Contributor
-  affiliation: Prima
-  image: gianluca.png
-  site: https://github.com/gianlucadecola
-
-- name: Andrea Pierré
-  role: General Contributor
-  affiliation: Brown University
-  image: andrea.jpg
-  site: https://github.com/kir0ul
-
+  
 - name: Panupong 'Ice' Pasupat
   role: MiniWoB++ Project Manager
   affiliation: Google Brain
   image: ice.jpg
   site: https://ppasupat.github.io
-
+  
 - name: Reginald McLean
   role: Metaworld Project Manager
   affiliation: Toronto Metropolitan University
   image: reginald.jpg
   site:
-
+  
 - name: Florian Felten
   role: MO-Gymnasium Project Manager
   affiliation: SnT, University of Luxembourg
@@ -129,3 +81,51 @@
   affiliation:
   image: elliot.jpg
   site: https://github.com/elliottower
+  
+- name: Gianluca De Cola
+  role: Gymnasium Contributor
+  affiliation: Prima
+  image: gianluca.png
+  site: https://github.com/gianlucadecola
+
+- name: Markus Krimmel
+  role: General Contributor
+  affiliation: ETH Zürich
+  image: markus.jpg
+  site: https://github.com/Markus28
+
+- name: Arjun KG
+  role: General Contributor
+  affiliation: Connectome.Design
+  image: arjun.jpg
+  site: https://github.com/arjun-kg
+
+- name: Omar G. Younis
+  role: General Contributor
+  affiliation: ETH Zürich
+  image: omar.jpg
+  site: https://github.com/younik
+
+- name: John U. Balis
+  role: General Contributor
+  affiliation: University of Wisconsin-Madison
+  image: john.png
+  site: https://github.com/balisujohn
+
+- name: Andrea Pierré
+  role: General Contributor
+  affiliation: Brown University
+  image: andrea.jpg
+  site: https://github.com/kir0ul
+
+- name: Feng Gu
+  role: Web Developer
+  affiliation: University of Maryland
+  image: feng.jpg
+  site: https://github.com/SiddarGu
+
+- name: Manuel Goulão
+  role: Web Developer
+  affiliation: INESC-ID
+  image: manuel.jpg
+  site: https://github.com/mgoulao
