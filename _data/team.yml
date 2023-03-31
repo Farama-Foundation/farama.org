@@ -78,7 +78,7 @@
 
 - name: Elliot Tower
   role: PettingZoo Project Manager
-  affiliation:
+  affiliation: Farama
   image: elliot.jpg
   site: https://github.com/elliottower
   
