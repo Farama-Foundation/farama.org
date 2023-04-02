@@ -1,185 +1,266 @@
 AutoROM:
   colaborators:
     2023-03: 8
+    2023-04: 8
   downloads:
     2023-03: 874920
+    2023-04: 912453
   repos_use:
     2023-03: 586
+    2023-04: 605
   stars:
     2023-03: 53
+    2023-04: 56
 D4RL:
   colaborators:
     2023-03: 21
+    2023-04: 21
   downloads:
     2023-03: 4153
+    2023-04: 5191
   repos_use:
     2023-03: 0
+    2023-04: 0
   stars:
     2023-03: 841
+    2023-04: 854
 Gymnasium:
   colaborators:
     2023-03: 398
+    2023-04: 401
   downloads:
     2023-03: 417328
+    2023-04: 560634
   repos_use:
     2023-03: 548
+    2023-04: 652
   stars:
     2023-03: 1822
+    2023-04: 2096
 Jumpy:
   colaborators:
     2023-03: 10
+    2023-04: 10
   downloads:
     2023-03: 27660
+    2023-04: 27830
   repos_use:
     2023-03: 211
+    2023-04: 247
   stars:
     2023-03: 17
+    2023-04: 26
 MAgent2:
   colaborators:
     2023-03: 18
+    2023-04: 18
   downloads:
     2023-03: 6053
+    2023-04: 6761
   repos_use:
     2023-03: 0
+    2023-04: 0
   stars:
     2023-03: 91
+    2023-04: 96
 MO-Gymnasium:
   colaborators:
     2023-03: 4
+    2023-04: 5
   downloads:
     2023-03: 1917
+    2023-04: 2486
   repos_use:
     2023-03: 4
+    2023-04: 5
   stars:
     2023-03: 90
+    2023-04: 96
 Metaworld:
   colaborators:
     2023-03: 24
+    2023-04: 24
   downloads:
     2023-03: 3378
+    2023-04: 3435
   repos_use:
     2023-03: 13
+    2023-04: 15
   stars:
     2023-03: 874
+    2023-04: 887
 MicroRTS-Py:
   colaborators:
     2023-03: 8
+    2023-04: 8
   downloads:
     2023-03: 0
+    2023-04: 0
   repos_use:
     2023-03: 0
+    2023-04: 0
   stars:
     2023-03: 137
+    2023-04: 143
 Minari:
   colaborators:
     2023-03: 6
+    2023-04: 6
   downloads:
     2023-03: 1686
+    2023-04: 1868
   repos_use:
     2023-03: 0
+    2023-04: 0
   stars:
     2023-03: 78
+    2023-04: 80
 MiniGrid:
   colaborators:
     2023-03: 61
+    2023-04: 63
   downloads:
     2023-03: 32901
+    2023-04: 41102
   repos_use:
     2023-03: 27
+    2023-04: 29
   stars:
     2023-03: 1720
+    2023-04: 1750
 MiniWorld:
   colaborators:
     2023-03: 16
+    2023-04: 16
   downloads:
     2023-03: 1325
+    2023-04: 1471
   repos_use:
     2023-03: 0
+    2023-04: 0
   stars:
     2023-03: 578
+    2023-04: 587
 PettingZoo:
   colaborators:
     2023-03: 76
+    2023-04: 77
   downloads:
     2023-03: 1008875
+    2023-04: 1038062
   repos_use:
     2023-03: 558
+    2023-04: 579
   stars:
     2023-03: 1715
+    2023-04: 1742
 Shimmy:
   colaborators:
     2023-03: 6
+    2023-04: 7
   downloads:
     2023-03: 68722
+    2023-04: 84405
   repos_use:
     2023-03: 156
+    2023-04: 161
   stars:
     2023-03: 30
+    2023-04: 43
 SuperSuit:
   colaborators:
     2023-03: 21
+    2023-04: 22
   downloads:
     2023-03: 500450
+    2023-04: 509889
   repos_use:
     2023-03: 266
+    2023-04: 274
   stars:
     2023-03: 370
+    2023-04: 375
 ViZDoom:
   colaborators:
     2023-03: 44
+    2023-04: 44
   downloads:
     2023-03: 102299
+    2023-04: 103887
   repos_use:
     2023-03: 167
+    2023-04: 169
   stars:
     2023-03: 1504
+    2023-04: 1515
 babyai:
   downloads:
     2023-03: 0
+    2023-04: 0
 gym:
   downloads:
     2023-03: 47925912
+    2023-04: 48291304
   repos_use:
     2023-03: 37959
+    2023-04: 38504
 gym-minigrid:
   downloads:
     2023-03: 857971
+    2023-04: 863430
 gym-robotics:
   colaborators:
     2023-03: 19
+    2023-04: 20
   downloads:
     2023-03: 7725
+    2023-04: 7942
   repos_use:
     2023-03: 3
+    2023-04: 4
   stars:
     2023-03: 185
+    2023-04: 190
 magent:
   downloads:
     2023-03: 89101
+    2023-04: 90833
 miniwob-plusplus:
   colaborators:
     2023-03: 7
+    2023-04: 7
   downloads:
     2023-03: 0
+    2023-04: 0
   repos_use:
     2023-03: 0
+    2023-04: 0
   stars:
     2023-03: 97
+    2023-04: 103
 procgen2:
   colaborators:
     2023-03: 4
+    2023-04: 5
   downloads:
     2023-03: 0
+    2023-04: 0
   repos_use:
     2023-03: 0
+    2023-04: 0
   stars:
     2023-03: 13
+    2023-04: 13
 tinyscaler:
   colaborators:
     2023-03: 6
+    2023-04: 6
   downloads:
     2023-03: 47284
+    2023-04: 55074
   repos_use:
     2023-03: 26
+    2023-04: 30
   stars:
     2023-03: 9
+    2023-04: 10

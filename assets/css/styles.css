@@ -147,7 +147,7 @@ a:hover {
 }
 
 .farama-stats div:not(:last-child) {
-    border-right: 1px solid white;
+    border-right: 1px solid rgb(255 255 255 / 60%);
 }
 
 .farama-stats__number {
@@ -166,6 +166,8 @@ a:hover {
     justify-content: center;
     flex: 1;
     font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
 }
 
 .farama-discord {
@@ -497,5 +499,8 @@ img.light-shadow {
         font-size: 2rem;
     }
 
+    .farama-stats div:not(:last-child) {
+        border-right: none;
+    }
 }
 
