@@ -1,10 +1,5 @@
-
-
-
 - type_name: General Standards
   type_description: Standards we strongly encourage any reinforcement learning environment to comply with
-  type_standards:
-
   type_standards:
     - title: Release Details
       standards:
@@ -37,12 +32,11 @@
       standards:
         - name: <b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced (ignoring potential issues due to floating point arithmetic errors).
         - name: <b>Include explicit versioning</b> in environment and wrapper names in a format like "Pong-v5" to make it clear to researchers when results are from differently configured environments.
+        - name: <b>Support either Pickling or EZ Pickling for all environments</b>. So that environments can be saved for experiment reproduction and for environment vectorization
     - title: Other
       standards:
         - name: <b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field.
         - name: <b>Pull documentation website information from environments directly</b> instead of mannually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future.
-
-
 
 - type_name: Farama Standards
   type_description: Specific standards we specifically have for projects inside Farama that generally don't apply to other projects
@@ -61,4 +55,3 @@
         - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
         - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
         - name: <b>Use Farama Notifcations</b>. So that we can add warnings after releases about issues that users of old versions need to be aware of.
-
