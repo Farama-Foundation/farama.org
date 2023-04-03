@@ -51,7 +51,8 @@ def scrape_stars(projects):
 
     for project in projects:
         res = requests.get(REPOS_URLS.format(repo=project))
-        project_stars = res.json()["stargazers_count"]
+        res_json = res.json()
+        project_stars = res_json["stargazers_count"] if "stargazers_count" not in res_json.keys() else 0
         total += project_stars
         res_dict[project] = project_stars
     print(f"Stars: {res_dict}")

@@ -119,12 +119,15 @@
 
 - name: MiniWoB++
   github: https://github.com/Farama-Foundation/miniwob-plusplus
+  website: https://miniwob.farama.org/
   desc: A collection of reinforcement learning environments for simple web interaction tasks
+  image: miniwobplusplus.svg
   type: incubating
 
 - name: Metaworld
   github: https://github.com/Farama-Foundation/Metaworld
   desc: Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning
+  image: metaworld.svg
   type: incubating
 
 - name: MO-Gymnasium
@@ -132,3 +135,16 @@
   website: https://mo-gymnasium.farama.org/
   desc: Multi-objective Gymnasium environments for reinforcement learning
   type: incubating
+
+- name: CrowdPlay
+  github: https://github.com/Farama-Foundation/CrowdPlay
+  website:
+  desc: A web based platform for collecting human actions in reinforcement learning environments
+  type: incubating
+
+- name: HighwayEnv
+  github: https://github.com/Farama-Foundation/HighwayEnv
+  website:
+  desc: A collection of environments for autonomous driving and tactical decision-making tasks
+  type: incubating
+
