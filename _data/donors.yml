@@ -12,6 +12,10 @@
   image: comet.svg
   site: https://www.comet.com/site/
 
+- name: WandB
+  image: wandb.svg
+  site: https://wandb.ai/site
+
 - name: John Carmack
   image: carmack.jpg
   site:
