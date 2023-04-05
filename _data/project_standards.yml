@@ -40,13 +40,13 @@
         - name: <b>Warning and errors should be descriptive and helpful.</b> When something goes wrong, it should be as easy as possible to identify the problem. Python f-Strings and assert statements are encouraged to catch common errors. 
     - title: Organization
       standards:
-        - name: <b>Projects should serve a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more managable and simplifies user experience.
-        - name: <b>Included environments should have scientific value and be commonly used.</b> Toy environments which do not have scientific value should be clearly specified as such.
+        - name: <b>Limit projects to a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more managable and simplifies user experience.
         - name: <b>External dependencies should be limited, and include only well-maintained projects.</b> If an external dependency stops being maintained, benchmarks can no longer be maintained long term.
     - title: Other
       standards:
         - name: <b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field.
         - name: <b>Pull documentation website information from environments directly</b> instead of mannually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future.
+        - name: <b>Include high-quality environments with scientific value.</b> Toy environments which do not have scientific value should be clearly specified as such.
 
 - type_name: Farama Standards
   type_description: Specific standards we enforce for projects inside Farama that generally don't apply to other projects
@@ -67,6 +67,6 @@
         - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
     - title: Development Practices
       standards:
-        - name: <b>Commits and PR's should serve a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase.         
-        - name: <b>Local development should be done in feature branches and reviewed in PR's.</b> This mitigates merge conflicts and allows multiple users to develop simultaneously without issues. Small bugfixes can be committed directly to main/master as an exception, but it is encouraged to use separate branches or patches instead.
-        - name: <b>Git commits should be verified and signed with GPG keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity.      
+        - name: <b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase.         
+        - name: <b>Develop locally in feature branches and use PR's for review.</b> This mitigates merge conflicts and allows multiple users to develop simultaneously without issues. Small bugfixes can be committed directly to main/master as an exception, but it is encouraged to use separate branches or patches instead.
+        - name: <b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity.      
