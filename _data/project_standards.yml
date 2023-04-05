@@ -65,4 +65,8 @@
         - name: <b>Use Farama Notifcations</b>. This allows us to add warnings after releases about issues that users of old versions need to be aware of.
         - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
         - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
-    
+    - title: Development Practices
+      standards:
+        - name: <b>Commits and PR's should serve a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase.         
+        - name: <b>Local development should be done in feature branches and reviewed in PR's.</b> This mitigates merge conflicts and allows multiple users to develop simultaneously without issues. Small bugfixes can be committed directly to main/master as an exception, but it is encouraged to use separate branches or patches instead.
+        - name: <b>Git commits should be verified and signed with GPG keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity.      
