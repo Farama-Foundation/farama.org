@@ -40,7 +40,7 @@
     - title: Organization
       standards:
         - name: <b>Limit projects to a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more manageable and simplifies user experience.
-        - name: <b>External dependencies should be limited, and include only well-maintained projects.</b> If an external dependency stops being maintained, benchmarks can no longer be maintained long term.
+        - name: <b>External dependencies should be limited, and include only well-maintained projects.</b> If an external dependency stops being maintained, benchmarks can no longer be maintained long term. For example, PyBullet is no longer maintained, and MuJoCo-py bindings should be updated to DeepMind's MuJoCo bindings.
         - name: <b>Include high-quality environments with scientific value.</b> Toy environments which do not have scientific value should be clearly specified as such.
     - title: Other
       standards:
