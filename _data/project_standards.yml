@@ -3,7 +3,7 @@
   type_standards:
     - title: Release Details
       standards:
-        - name: <b>Be released on PyPI</b>, so that users can easily install libraries via `pip` without having to clone Git repositories.
+        - name: <b>Be released on PyPI</b>, so that users can easily install libraries via `pip` without having to clone Git repositories or run shell scripts.
         - name: <b>Include a full package description</b> for the PyPI page (generally by repurposing the readme file), so that users can quickly see what a package is when searching on PyPI.
         - name: <b>Deploy packages to PyPI via GitHub Actions</b> that run when a Release is published on GitHub. This ensures that releases are fully automated to remove human error, and allows anyone to easily take over a project if needed.
     - title: Standardization
@@ -27,7 +27,7 @@
       standards:
         - name: <b>Be deterministically compiled</b> if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of reproducibility issues.
         - name: <b>Ship any binaries for both x86_64 and Arm architectures and both Linux and macOS operating systems.</b>
-        - name: "<b>All supported operating systems should have wheels provided.</b> (Note: we're temporarily handling Arm-based macOS wheels by having them compile on installation due to an issue with Github Actions support.)"
+        - name: <b>All supported operating systems should have wheels provided.</b> (Note: we're temporarily handling Arm-based macOS wheels by having them compile on installation due to an issue with Github Actions support.)"
     - title: Good Science
       standards:
         - name: <b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced (ignoring potential issues due to floating point arithmetic errors).
@@ -35,12 +35,11 @@
         - name: <b>Support serialization for all environments via Pickle or EzPickle</b>. This allows environments to be saved for experiment reproduction and for environment vectorization.
     - title: User Experience
       standards:
-        - name: <b>Include rendering for all environments</b>. Pygame is preferable whenever possible. 
-        - name: <b>APIs should be user-friendly and enforce correct usage.</b> New users should be able to easily use APIs correctly without needing to dig through source code.
-        - name: <b>Warning and errors should be descriptive and helpful.</b> When something goes wrong, it should be as easy as possible to identify the problem. Python f-Strings and assert statements are encouraged to catch common errors. 
+        - name: <b>Include polished rendering for all environments</b>. Rendering should be inviting and appealing, especially for newcomers to reinforcement learning. 
+        - name: Include descriptive warning and error messages </b> When something goes wrong, it should be as easy as possible to identify the problem. Python f-Strings and assert statements are encouraged to catch common errors. 
     - title: Organization
       standards:
-        - name: <b>Limit projects to a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more managable and simplifies user experience.
+        - name: <b>Limit projects to a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more manageable and simplifies user experience.
         - name: <b>External dependencies should be limited, and include only well-maintained projects.</b> If an external dependency stops being maintained, benchmarks can no longer be maintained long term.
         - name: <b>Include high-quality environments with scientific value.</b> Toy environments which do not have scientific value should be clearly specified as such.
     - title: Other
@@ -56,6 +55,11 @@
         - name: <b>Have a logo in the same style as the other projects.</b> A nice logo is a small feature that makes projects more memorable and makes the whole space a little more inviting to interested new users. Since we list all the logos together, we try to make sure they match.
         - name: <b>Have a documentation website at [project].farama.org.</b> Having everything under a single domain name makes things simple and consistent for users (and makes things a bit easier for us to manage).
         - name: <b>Include the standard Farama code of conduct.</b> We believe that all members of our community should be respected. Additionally, listing a code of conduct under our projects is a requirement for some open source donations.
+    - title: Development Practices
+      standards:
+        - name: <b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase.         
+        - name: <b>Avoid committing to master.</b> Instead, develop locally in feature branches and use PR's for review. This mitigates merge conflicts and allows multiple developers to work simultaneously without issues. Exceptions can be made for small bugfixes, but it is best to use separate branches or patches.
+        - name: <b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity.      
     - title: Security
       standards:
         - name: <b>List Jordan Terry and Mark Towers as owners on PyPI</b>, to make sure that we don't lose control of a package in the case that a primary maintainer becomes unavailable due to unexpected circumstances.
@@ -65,8 +69,3 @@
         - name: <b>Use Farama Notifcations</b>. This allows us to add warnings after releases about issues that users of old versions need to be aware of.
         - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
         - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
-    - title: Development Practices
-      standards:
-        - name: <b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase.         
-        - name: <b>Develop locally in feature branches and use PR's for review.</b> This mitigates merge conflicts and allows multiple users to develop simultaneously without issues. Small bugfixes can be committed directly to main/master as an exception, but it is encouraged to use separate branches or patches instead.
-        - name: <b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity.      
