@@ -68,4 +68,4 @@
       standards:
         - name: <b>Use Farama Notifcations</b>. This allows us to add warnings after releases about issues that users of old versions need to be aware of.
         - name: <b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites.
-        - name: <b>Link Farama donations page</b> from the repository README and the documentation website sidebar.
+        - name: <b>Include a "Sponsor this project" button on the GitHub repostiory.</b> To do this, add a FUNDING.yml file in /.github/ directory, with the following line: `github: Farama-Foundation`.
