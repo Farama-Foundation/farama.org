@@ -38,7 +38,7 @@
   popular: false
 
 - name: Gymnasium-Robotics
-  github: https://github.com/Farama-Foundation/gym-robotics
+  github: https://github.com/Farama-Foundation/Gymnasium-Robotics
   website: https://robotics.farama.org
   desc: A collection of robotics simulation environments for reinforcement learning
   image: gymnasium-robotics.svg
