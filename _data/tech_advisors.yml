@@ -8,3 +8,9 @@
   affiliation: Google
   image: psc.png
   site: https://github.com/psc-g
+
+- name: John Langford
+  role: Partner Researcher Manager
+  affiliation: Microsoft
+  image: langford.png
+  site: https://www.microsoft.com/en-us/research/people/jcl/
