@@ -16,7 +16,7 @@ This results in a fractured ecosystem, creating single-problem solutions that ca
 [//]: # (Have you ever wanted to use [dm-control]&#40;https://github.com/deepmind/dm_control&#41; with [stable-baselines-3]&#40;https://github.com/DLR-RM/stable-baselines3&#41;, or train other non-gymnasium based environments with standard learning libraries?)
 
 To address this issue, we are excited to announce [Shimmy](https://shimmy.farama.org/), an API compatibility tool for converting external RL environments to the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) APIs.
-This allows users to conduct experiments across a wide range of single and multi-agent environments, all under a single standard API. 
+This allows users to access a wide range of single and multi-agent environments, all under a single standard API. 
 
 
 <center>
@@ -25,7 +25,7 @@ This allows users to conduct experiments across a wide range of single and multi
     </a>
 </center>
 
-As detailed in the [Announcing The Farama Foundation](https://farama.org/Announcing-The-Farama-Foundation) blog post, our greater goal at Farama is to create a unified and user-friendly ecosystem for open-source reinforcement learning software--for use both in research and in industry. Shimmy plays an important role in this plan, by integrating external RL environments inside of the Farama ecosystem.
+As detailed in the [Announcing The Farama Foundation](https://farama.org/Announcing-The-Farama-Foundation) blog post, our greater goal at Farama is to create a unified and user-friendly ecosystem for open-source reinforcement learning software--for use both in research and in industry. Shimmy plays an important role in this plan, by integrating external RL environments inside the Farama ecosystem.
 
 Shimmy will continue to be maintained as a longer-term compatibility tool, ensuring that popular RL environments are compatible with up-to-date APIs. We plan to add other external environments as we see fit, and welcome new contributions or suggestions.
 
