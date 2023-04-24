@@ -1,8 +1,8 @@
 ---
 layout: blog
-short_title: "Announcing Shimmy 1.0.0"
+short_title: "Announcing Shimmy"
 subtitle: "An API Conversion Tool for Reinforcement Learning Environments"
-title: "Announcing Shimmy 1.0.0 - an API Conversion Tool For Reinforcement Learning Environments"
+title: "Announcing Shimmy - an API Conversion Tool For Reinforcement Learning Environments"
 date: "2023-04-25"
 excerpt: "We are excited to announce Shimmy, an API compatibility tool for converting a wide range of single and multi-agent environments to the Gymnasium and PettingZoo APIs"
 thumbnail: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
@@ -18,7 +18,7 @@ Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control)
 We are excited to announce Shimmy, an API compatibility tool for converting a wide range of single and multi-agent environments to the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) APIs.
 This allows users to conduct experiments across many external environments, all under a single standard API. 
 
-[video]
+(video)
 
 As detailed in our [Announcing The Farama Foundation](https://farama.org/Announcing-The-Farama-Foundation) blog post, our greater goal at Farama is to create a unified and user-friendly ecosystem for open-source reinforcement learning software, for use both in research and in industry. Shimmy plays an important role in this plan, by integrating external RL environments inside of the Farama ecosystem.
 Shimmy will continue to be maintained as a longer-term compatibility tool, ensuring that popular RL environments are compatible with up-to-date APIs. We plan to add other external environments as we see fit, and welcome new contributions or suggestions.
