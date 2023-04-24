@@ -11,6 +11,7 @@ read_time: 3
 ---
 
 ## Announcing Shimmy 1.0.0
+Lack of compatibility between environments, training libraries and API's is a major problem in reinforcement learning
 A major problem in reinforcement learning research is a lack of compatibility between environments, training libraries and API’s. 
 This results in a fractured ecosystem, and many single-problem solutions that cannot be easily adapted to new domains. 
 Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control) with [stable-baselines-3](https://github.com/DLR-RM/stable-baselines3), or train other non-gymnasium based environments with standard learning libraries? 
