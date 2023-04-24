@@ -1,8 +1,8 @@
 ---
 layout: blog
 short_title: "Announcing Shimmy 1.0.0"
-subtitle: "An API Conversion Tool for Reinforcement Learning Environments"
-title: "Announcing Shimmy 1.0.0 - an API Conversion Tool For Reinforcement Learning Environments"
+subtitle: "API Conversion for External Reinforcement Learning Environments"
+title: "Announcing Shimmy 1.0.0 - an API Conversion Tool For External Reinforcement Learning Environments"
 date: "2023-04-24"
 excerpt: "We are excited to announce Shimmy 1.0.0, an API compatibility tool for converting a wide range of single and multi-agent environments to the Gymnasium and PettingZoo APIs"
 thumbnail: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
@@ -31,7 +31,7 @@ Shimmy will continue to be maintained as a long-term utility, ensuring that popu
 
 ### Environments
 
-Shimmy includes API compatibility for the following environments: 
+[//]: # (Shimmy includes API compatibility for the following environments: )
 
 **Single-agent (Gymnasium wrappers):**
 - [DeepMind Control](https://github.com/deepmind/dm_control)
