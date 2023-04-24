@@ -31,15 +31,15 @@ Shimmy will continue to be maintained as a long-term utility, ensuring that popu
 
 ### Environments
 
-[//]: # (Shimmy includes API compatibility for the following environments: )
+Shimmy includes API compatibility wrappers for the following environments: 
 
 **Single-agent (Gymnasium wrappers):**
-- [DeepMind Control](https://github.com/deepmind/dm_control)
 - [DeepMind Lab](https://github.com/deepmind/lab)
+- [DeepMind Control](https://github.com/deepmind/dm_control)
+- [Arcade Learning Environment](https://github.com/mgbellemare/Arcade-Learning-Environment)
 - [DeepMind Behavior Suite](https://github.com/deepmind/bsuite)
 - [OpenAI Gym](https://github.com/openai/gym) - [V21](https://github.com/openai/gym/releases/tag/v0.21.0) (before breaking API changes)
 - [OpenAI Gym](https://github.com/openai/gym) - [V26](https://github.com/openai/gym/releases/tag/0.26.0) (after breaking API changes, final release)
-- [Arcade Learning Environments ](https://github.com/mgbellemare/Arcade-Learning-Environment)
 
 **Multi-agent (PettingZoo wrappers):**
 - [DeepMind OpenSpiel](https://github.com/deepmind/open_spiel)
