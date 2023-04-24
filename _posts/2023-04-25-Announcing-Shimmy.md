@@ -28,29 +28,28 @@ As detailed in our [Announcing The Farama Foundation](https://farama.org/Announc
 
 Shimmy will continue to be maintained as a longer-term compatibility tool, ensuring that popular RL environments are compatible with up-to-date APIs. We plan to add other external environments as we see fit, and welcome new contributions or suggestions.
 
-## Overview
-
 Shimmy includes API compatibility for the following environments: 
+
 ### Single-agent (Gymnasium wrappers):
-- Arcade Learning Environments 
-- DeepMind Control
-- DeepMind Lab
-- DeepMind Behavior Suite
-- OpenAI Gym - V21 (before breaking API changes)
-- OpenAI Gym - V26 (after breaking API changes, final release)
+- [DeepMind Control](https://github.com/deepmind/dm_control)
+- [DeepMind Lab](https://github.com/deepmind/lab)
+- [DeepMind Behavior Suite](https://github.com/deepmind/bsuite)
+- [OpenAI Gym](https://github.com/openai/gym) - [V21](https://github.com/openai/gym/releases/tag/v0.21.0) (before breaking API changes)
+- [OpenAI Gym](https://github.com/openai/gym) - [V26](https://github.com/openai/gym/releases/tag/0.26.0) (after breaking API changes, final release)
+- [Arcade Learning Environments ](https://github.com/mgbellemare/Arcade-Learning-Environment)
 
 ### Multi-agent (PettingZoo wrappers):
-- DeepMind OpenSpiel
-- DeepMind Control: Soccer
-- DeepMind Melting Pot
+- [DeepMind OpenSpiel](https://github.com/deepmind/open_spiel)
+- [DeepMind Control: Soccer](https://github.com/deepmind/dm_control/blob/main/dm_control/locomotion/soccer/README.md)
+- [DeepMind Melting Pot](https://github.com/deepmind/meltingpot)
 
 ## Key Features
-Shimmy’s documentation contains an overview of each environment, as well as full usage scripts and installation instructions--allowing users to easily load and interact with environments without digging through source code. 
+Shimmy’s [documentation](https://shimmy.farama.org/) contains an overview of each environment, as well as full usage scripts and installation instructions--allowing users to easily load and interact with environments without digging through source code. 
 
-We additionally include automated testing for each environment, ensuring their converted environments are fully functional and held to the same standards as native Gymnasium or PettingZoo environments. 
-This includes API tests, random seeding tests (for deterministic environments), rendering tests, and tests ensuring each environment can be serialized/deserialized via pickle. 
+We additionally include automated testing for each environment, ensuring their converted environments are fully functional and held to the same standards as native [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) environments. 
+This includes API tests, random seeding tests (for deterministic environments), rendering tests, and tests ensuring each environment can be serialized/deserialized via [pickle](https://docs.python.org/3/library/pickle.html). 
 
-Shimmy also provides full installation scripts for external environments which are not available in distributed releases (via PyPi or elsewhere), and Dockerfiles which can be used to install on any platform (e.g., DeepMind Lab does not support macOS or Windows). 
+Shimmy also provides full installation scripts for external environments which are not available in distributed releases (via [PyPi](https://pypi.org/) or elsewhere), and [Dockerfiles](https://shimmy.farama.org/content/getting_started/#docker) which can be used to install on any platform (e.g., [DeepMind Lab](https://github.com/deepmind/lab) does not support Windows or macOS). 
 
 For more information, see Shimmy 1.0.0 release notes. 
 
