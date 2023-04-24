@@ -10,7 +10,7 @@ image: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
 read_time: 3
 ---
 
-## Announcing Shimmy 1.0.0
+## Announcing Shimmy
 Lack of compatibility between environments, training libraries and API's is a major problem in reinforcement learning
 A major problem in reinforcement learning research is a lack of compatibility between environments, training libraries and API’s. 
 This results in a fractured ecosystem, and many single-problem solutions that cannot be easily adapted to new domains. 
