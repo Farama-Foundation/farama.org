@@ -1,16 +1,15 @@
 ---
 layout: blog
-short_title: "Announcing Shimmy"
+short_title: "Announcing Shimmy 1.0.0"
 subtitle: "An API Conversion Tool for Reinforcement Learning Environments"
-title: "Announcing Shimmy- an API Conversion Tool For Reinforcement Learning Environments"
+title: "Announcing Shimmy 1.0.0 - an API Conversion Tool For Reinforcement Learning Environments"
 date: "2023-04-24"
-excerpt: "We are excited to announce Shimmy, an API compatibility tool for converting a wide range of single and multi-agent environments to the Gymnasium and PettingZoo APIs"
-thumbnail: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-proto-lines3.png
-image: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-proto-lines3.png
+excerpt: "We are excited to announce Shimmy 1.0.0, an API compatibility tool for converting a wide range of single and multi-agent environments to the Gymnasium and PettingZoo APIs"
+thumbnail: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
+image: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
 read_time: 3
 ---
 
-## Announcing Shimmy 1.0.0
 Lack of compatibility between environments, training libraries and API's is a major problem in reinforcement learning.
 This results in a fractured ecosystem, and many single-problem solutions that cannot be easily adapted to new domains. 
 Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control) with [stable-baselines-3](https://github.com/DLR-RM/stable-baselines3), or train other non-gymnasium based environments with standard learning libraries? 
