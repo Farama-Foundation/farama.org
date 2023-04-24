@@ -11,8 +11,7 @@ read_time: 3
 ---
 
 ## Announcing Shimmy
-Lack of compatibility between environments, training libraries and API's is a major problem in reinforcement learning
-A major problem in reinforcement learning research is a lack of compatibility between environments, training libraries and API’s. 
+Lack of compatibility between environments, training libraries and API's is a major problem in reinforcement learning.
 This results in a fractured ecosystem, and many single-problem solutions that cannot be easily adapted to new domains. 
 Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control) with [stable-baselines-3](https://github.com/DLR-RM/stable-baselines3), or train other non-gymnasium based environments with standard learning libraries? 
 
@@ -22,6 +21,7 @@ This allows users to conduct experiments across many external environments, all 
 video
 
 As detailed in our [Announcing The Farama Foundation](https://farama.org/Announcing-The-Farama-Foundation) blog post, our greater goal at Farama is to create a unified and user-friendly ecosystem for open-source reinforcement learning software, for use both in research and in industry. Shimmy plays an important role in this plan, by integrating external RL environments inside of the Farama ecosystem.
+
 Shimmy will continue to be maintained as a longer-term compatibility tool, ensuring that popular RL environments are compatible with up-to-date APIs. We plan to add other external environments as we see fit, and welcome new contributions or suggestions.
 
 ## Overview
