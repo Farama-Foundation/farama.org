@@ -10,11 +10,11 @@ image: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
 read_time: 3
 ---
 
-Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control) with [stable-baselines-3](https://github.com/DLR-RM/stable-baselines3), or train other non-gymnasium based environments with standard learning libraries?
 Lack of compatibility between environments, training libraries and API's is a major problem in reinforcement learning.
 This results in a fractured ecosystem, and many single-problem solutions that cannot be easily adapted to new domains. 
+Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control) with [stable-baselines-3](https://github.com/DLR-RM/stable-baselines3), or train other non-gymnasium based environments with standard learning libraries?
 
-We are excited to announce [Shimmy](https://shimmy.farama.org/), an API compatibility tool for converting a wide range of single and multi-agent environments to the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) APIs.
+In order to address this issue, we are excited to announce [Shimmy](https://shimmy.farama.org/), an API compatibility tool for converting a wide range of single and multi-agent environments to the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) APIs.
 This allows users to conduct experiments across many external environments, all under a single standard API. 
 
 
@@ -28,9 +28,11 @@ As detailed in the [Announcing The Farama Foundation](https://farama.org/Announc
 
 Shimmy will continue to be maintained as a longer-term compatibility tool, ensuring that popular RL environments are compatible with up-to-date APIs. We plan to add other external environments as we see fit, and welcome new contributions or suggestions.
 
+### Environments
+
 Shimmy includes API compatibility for the following environments: 
 
-### Single-agent (Gymnasium wrappers):
+#### Single-agent (Gymnasium wrappers):
 - [DeepMind Control](https://github.com/deepmind/dm_control)
 - [DeepMind Lab](https://github.com/deepmind/lab)
 - [DeepMind Behavior Suite](https://github.com/deepmind/bsuite)
@@ -38,7 +40,7 @@ Shimmy includes API compatibility for the following environments:
 - [OpenAI Gym](https://github.com/openai/gym) - [V26](https://github.com/openai/gym/releases/tag/0.26.0) (after breaking API changes, final release)
 - [Arcade Learning Environments ](https://github.com/mgbellemare/Arcade-Learning-Environment)
 
-### Multi-agent (PettingZoo wrappers):
+#### Multi-agent (PettingZoo wrappers):
 - [DeepMind OpenSpiel](https://github.com/deepmind/open_spiel)
 - [DeepMind Control: Soccer](https://github.com/deepmind/dm_control/blob/main/dm_control/locomotion/soccer/README.md)
 - [DeepMind Melting Pot](https://github.com/deepmind/meltingpot)
