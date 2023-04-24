@@ -56,9 +56,10 @@
         - name: "<b>APIs should be user-friendly and prevent incorrect usage.</b> New users should be able to easily use APIs correctly without needing to dig through source code."
         - name: "<b>Use deprecation warnings whenever possible.</b> This gives users time to adapt their code and mitigates the severity of breaking changes. Releasing breaking changes without warning is strongly discouraged. When breaking changes are made, they should include detailed error messages to inform the user how to fix the problem."
     - title: Quality
+      standards:
         - name: "<b>Include only environments which are scientifically important or commonly used.</b> We value quality over quantity for environments. Environments which are not commonly used and have limited scientific value should be removed, or included only in tutorials. Toy environments should be specified as such, and included only if they are widely used."
         - name: "<b>Projects should be highly polished and look professional.</b> For example, projects should have a comprehensive README and documentation site, with straightforward wording that makes sense to new users. Avoid excessive technical jargon in favor of intuitive explanations, examples and images."
-        - name: "<b>Rendering should be high-quality and consistent between environments.</b> We usually use Pygame for all 2D Python graphics, and create pixel art when native rendering does not exist.
+        - name: "<b>Rendering should be high-quality and consistent between environments.</b> We usually use Pygame for all 2D Python graphics, and create pixel art when native rendering does not exist."
     - title: Organization
       standards:
         - name: "<b>Limit projects to a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more manageable and results in a simpler user experience."
