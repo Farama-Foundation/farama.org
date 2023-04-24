@@ -18,7 +18,7 @@
     - title: Development Workflow
       standards:
         - name: "<b>Have continuous integration testing</b> for API compliance, determinism, and title checking with Pyright. All tests must pass on both Linux and macOS. This way, we can ensure that all libraries remain well-tested and robust."
-        - name: "<b>Include a git pre-commit</b> with black, flake8 and isort. Including these checks in pre-commit reduces headaches in getting PRs merged by making it clear to contributors early on when their code will need changes to comply with the style guide."
+        - name: "<b>Include git pre-commit hooks.</b> Including linting checks in pre-commit hooks ensures that all committed code follows a consistent style, and allows new contributors to adapt their code automatically."
     - title: Quality of Life
       standards:
         - name: "<b>Include a thorough documentation website</b> in the same format as the other mature projects if the library is large enough to warrant one. We want both experienced researchers and newcomers alike to be able to quickly see what a library is and reference functionality as needed without having to refer to source."
@@ -69,7 +69,7 @@
       standards:
         - name: "<b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase."        
         - name: "<b>Avoid committing to master.</b> Instead, develop locally in feature branches and use PR's for review. This mitigates merge conflicts and allows multiple developers to work simultaneously without issues. Exceptions can be made for small bugfixes, but it is best to use separate branches or patches."
-        - name: "<b>Communicate clearly with the community about upcoming changes.</> Future development plans should be communicated through release notes, social media announcements, and public roadmaps. In the case of breaking changes, specific instructions must be provided to inform users how to update their code."
+        - name: "<b>Communicate clearly with the community about upcoming changes.</b> Future development plans should be communicated through release notes, social media announcements, and public roadmaps. In the case of breaking changes, specific instructions must be provided to inform users how to update their code."
     - title: Security
       standards:
         - name: "<b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity."    
@@ -77,6 +77,6 @@
         - name: "<b>Have maintainers with GitHub or PyPI permissions use TOTP based 2FA or better</b> (and secure passwords, emails addresses, etc.), to reduce the likelihood of supply chain security attacks involving any of our projects."
     - title: Other
       standards:
-        - name: "<b>Use Farama Notifcations</b>. This allows us to add warnings after releases about issues that users of old versions need to be aware of."
+        - name: "<b>Use Farama Notifications</b>. This allows us to add warnings after releases about issues that users of old versions need to be aware of."
         - name: "<b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites."
-        - name: '<b>Include a "Sponsor this project" button on the GitHub repostiory.</b> To do this, add a FUNDING.yml file in /.github/ directory, with the following line: `github: Farama-Foundation`.'
+        - name: '<b>Include a "Sponsor this project" button on the GitHub repository.</b> To do this, add a FUNDING.yml file in /.github/ directory, with the following line: `github: Farama-Foundation`.'
