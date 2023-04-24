@@ -20,8 +20,8 @@ This allows users to conduct experiments across many external environments, all 
 
 
 <center>
-    <a href="/assets/posts/2023-04-25-Announcing-Shimmy/shimmy-demo.mp4">
-        <video title="Shimmy demo" autoplay loop muted width="450" src="/assets/posts/2023-04-25-Announcing-Shimmy/shimmy-demo.mp4" type="video/mp4"></video>
+    <a href="assets/posts/2023-04-25-Announcing-Shimmy/shimmy-demo.mp4">
+        <video title="Shimmy demo" autoplay loop muted width="450" src="assets/posts/2023-04-25-Announcing-Shimmy/shimmy-demo.mp4" type="video/mp4"></video>
     </a>
 </center>
 
