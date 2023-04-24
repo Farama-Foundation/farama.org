@@ -3,7 +3,7 @@ layout: blog
 short_title: "Announcing Shimmy"
 subtitle: "An API Conversion Tool for Reinforcement Learning Environments"
 title: "Announcing Shimmy - an API Conversion Tool For Reinforcement Learning Environments"
-date: "2023-04-25"
+date: "2023-04-24"
 excerpt: "We are excited to announce Shimmy, an API compatibility tool for converting a wide range of single and multi-agent environments to the Gymnasium and PettingZoo APIs"
 thumbnail: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
 image: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
