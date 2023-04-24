@@ -10,8 +10,8 @@ image: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
 read_time: 3
 ---
 
-Reinforcement learning (RL) environments and benchmarks use a range of APIs and frameworks, often lacking compatibility with standard training libraries. 
-This results in a fractured ecosystem, and many single-problem solutions that cannot be easily adapted to new domains. 
+Reinforcement learning (RL) environments and benchmarks use a range of different APIs, and often lack compatibility with standard training libraries. 
+This results in a fractured ecosystem, creating single-problem solutions that cannot be easily adapted to new domains. 
 
 [//]: # (Have you ever wanted to use [dm-control]&#40;https://github.com/deepmind/dm_control&#41; with [stable-baselines-3]&#40;https://github.com/DLR-RM/stable-baselines3&#41;, or train other non-gymnasium based environments with standard learning libraries?)
 
