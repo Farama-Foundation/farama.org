@@ -10,10 +10,10 @@ image: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
 read_time: 3
 ---
 
-Many popular reinforcement learning environments use proprietary APIs and lack compatibility with training libraries. 
-Lack of compatibility between environments, training libraries and APIs is a major problem in reinforcement learning.
+Reinforcement learning (RL) environments and benchmarks use a range of frameworks and APIs, and often lack compatibility with standard training libraries. 
 This results in a fractured ecosystem, and many single-problem solutions that cannot be easily adapted to new domains. 
-Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control) with [stable-baselines-3](https://github.com/DLR-RM/stable-baselines3), or train other non-gymnasium based environments with standard learning libraries?
+
+[//]: # (Have you ever wanted to use [dm-control]&#40;https://github.com/deepmind/dm_control&#41; with [stable-baselines-3]&#40;https://github.com/DLR-RM/stable-baselines3&#41;, or train other non-gymnasium based environments with standard learning libraries?)
 
 In order to address this issue, we are excited to announce [Shimmy](https://shimmy.farama.org/), an API compatibility tool for converting a wide range of single and multi-agent environments to the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) APIs.
 This allows users to conduct experiments across many external environments, all under a single standard API. 
