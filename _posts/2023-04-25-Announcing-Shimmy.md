@@ -15,8 +15,8 @@ This results in a fractured ecosystem, and many single-problem solutions that ca
 
 [//]: # (Have you ever wanted to use [dm-control]&#40;https://github.com/deepmind/dm_control&#41; with [stable-baselines-3]&#40;https://github.com/DLR-RM/stable-baselines3&#41;, or train other non-gymnasium based environments with standard learning libraries?)
 
-To address this issue, we are excited to announce [Shimmy](https://shimmy.farama.org/), an API compatibility tool for converting a wide range of single and multi-agent RL environments to the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) APIs.
-This allows users to conduct experiments across many external environments, all under a single standard API. 
+To address this issue, we are excited to announce [Shimmy](https://shimmy.farama.org/), an API compatibility tool for converting external RL environments to the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) APIs.
+This allows users to conduct experiments across a wide range of single and multi-agent environments, all under a single standard API. 
 
 
 <center>
