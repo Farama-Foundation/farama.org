@@ -37,10 +37,6 @@
       standards:
         - name: "<b>Include polished rendering for all environments</b>. Rendering should be inviting and appealing, especially for newcomers to reinforcement learning."
         - name: "<b>Include descriptive warning and error messages.</b> When something goes wrong, it should be as easy as possible to identify the problem. Python f-Strings and assert statements are encouraged to catch common errors."
-    - title: Organization
-      standards:
-        - name: "<b>Limit projects to a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more manageable and simplifies user experience."
-        - name: "<b>External dependencies should be limited, and include only well-maintained projects.</b> If an external dependency stops being maintained, benchmarks can no longer be maintained long term. For example, PyBullet is no longer maintained, and MuJoCo-py bindings should be updated to DeepMind's MuJoCo bindings."
     - title: Other
       standards:
         - name: "<b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field."
@@ -54,13 +50,28 @@
         - name: "<b>Have a logo in the same style as the other projects.</b> A nice logo is a small feature that makes projects more memorable and makes the whole space a little more inviting to interested new users. Since we list all the logos together, we try to make sure they match."
         - name: "<b>Have a documentation website at [project].farama.org.</b> Having everything under a single domain name makes things simple and consistent for users (and makes things a bit easier for us to manage)."
         - name: "<b>Include the standard Farama code of conduct.</b> We believe that all members of our community should be respected. Additionally, listing a code of conduct under our projects is a requirement for some open source donations."
+    - title: Design Philosophy
+      standards:
+        - name: "<b>Do it right the first time, and eliminate technical debt.</b> We strive to maintain flexible APIs which can be easily used for many years to come. Breaking changes may be required when bringing in outside projects, in order to align code with our standards and ensure it is maintainable in the future."
+        - name: "<b>APIs should be user-friendly and prevent incorrect usage.</b> New users should be able to easily use APIs correctly without needing to dig through source code."
+        - name: "<b>Use deprecation warnings whenever possible.</b> This gives users time to adapt their code and mitigates the severity of breaking changes. Releasing breaking changes without warning is strongly discouraged. When breaking changes are made, they should include detailed error messages to inform the user how to fix the problem."
+    - title: Quality
+        - name: "<b>Include only environments which are scientifically important or commonly used.</b> We value quality over quantity for environments. Environments which are not commonly used and have limited scientific value should be removed, or included only in tutorials. Toy environments should be specified as such, and included only if they are widely used."
+        - name: "<b>Projects should be highly polished and look professional.</b> For example, projects should have a comprehensive README and documentation site, with straightforward wording that makes sense to new users. Avoid excessive technical jargon in favor of intuitive explanations, examples and images."
+        - name: "<b>Rendering should be high-quality and consistent between environments.</b> We usually use Pygame for all 2D Python graphics, and create pixel art when native rendering does not exist.
+    - title: Organization
+      standards:
+        - name: "<b>Limit projects to a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more manageable and results in a simpler user experience."
+        - name: "<b>External dependencies should be limited, and include only well-maintained projects.</b> If an external dependency stops being maintained, benchmarks can no longer be maintained long term. For example, PyBullet is no longer maintained, and MuJoCo-py bindings should be updated to DeepMind's MuJoCo bindings."
+        - name: "<b>Use semantic versioning.</b> We limit minor releases and patches to `0.0.x` version bumps, with `0.x.0` for standard releases. We reserve `x.0.0` versions for initial maturity releases (1.0.0) and for major releases with significant API changes and/or major additional functionality."
     - title: Development Practices
       standards:
         - name: "<b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase."        
         - name: "<b>Avoid committing to master.</b> Instead, develop locally in feature branches and use PR's for review. This mitigates merge conflicts and allows multiple developers to work simultaneously without issues. Exceptions can be made for small bugfixes, but it is best to use separate branches or patches."
-        - name: "<b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity."    
+        - name: "<b>Communicate clearly with the community about upcoming changes.</> Future development plans should be communicated through release notes, social media announcements, and public roadmaps. In the case of breaking changes, specific instructions must be provided to inform users how to update their code."
     - title: Security
       standards:
+        - name: "<b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity."    
         - name: "<b>List Jordan Terry and Mark Towers as owners on PyPI</b>, to make sure that we don't lose control of a package in the case that a primary maintainer becomes unavailable due to unexpected circumstances."
         - name: "<b>Have maintainers with GitHub or PyPI permissions use TOTP based 2FA or better</b> (and secure passwords, emails addresses, etc.), to reduce the likelihood of supply chain security attacks involving any of our projects."
     - title: Other
