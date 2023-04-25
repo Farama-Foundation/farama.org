@@ -10,6 +10,7 @@ image: assets/posts/2023-04-25-Announcing-Shimmy/banner-gradient-line2.png
 read_time: 3
 ---
 
+Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control) with [stable-baselines3](https://github.com/DLR-RM/stable-baselines3)?
 Reinforcement learning (RL) environments and benchmarks use a range of different APIs, and often lack compatibility with standard training libraries. 
 This results in a fractured ecosystem, and creates single-problem solutions that cannot be easily adapted to new domains. 
 
