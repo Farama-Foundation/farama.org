@@ -23,8 +23,6 @@ This allows users to access a wide range of single and multi-agent environments,
     </a>
 </center>
 
-<iframe width="480" height="360" src="http://www.youtube.com/embed/WO82PoAczTc" frameborder="0"> </iframe>
-
 As detailed in the [Announcing The Farama Foundation](https://farama.org/Announcing-The-Farama-Foundation) blog post, our greater goal at Farama is to create a unified and user-friendly ecosystem for open-source reinforcement learning software, for use both in research and in industry. Shimmy plays an important role in this plan, by integrating external RL environments inside the Farama ecosystem.
 
 Shimmy will continue to be maintained as a long-term utility, ensuring that popular RL environments are compatible with up-to-date APIs. We plan to add additional environments as we see fit, and welcome new contributions or suggestions.
