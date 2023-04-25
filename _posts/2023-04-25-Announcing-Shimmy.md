@@ -45,7 +45,7 @@ Shimmy includes API compatibility wrappers for the following environments:
 - [Melting Pot](https://github.com/deepmind/meltingpot)
 
 ### Key Features
-Shimmy’s [documentation](https://shimmy.farama.org/) contains an overview of each environment, as well as full usage scripts and installation instructions--allowing users to easily load and interact with environments without digging through source code. 
+Shimmy’s [documentation](https://shimmy.farama.org/) contains an overview of each environment, as well as full usage scripts and installation instructions—allowing users to easily load and interact with environments without digging through source code. 
 
 We include automated testing for each environment, to ensure that converted environments are fully functional and are held to the same standards as native [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) environments.
 
