@@ -51,5 +51,5 @@ We include automated testing for each environment, to ensure that converted envi
 
 Furthermore, Shimmy provides full installation scripts for external environments which are not available in distributed releases (via [PyPi](https://pypi.org/) or elsewhere), along with [Dockerfiles](https://shimmy.farama.org/content/getting_started/#docker) which can be used to install on any platform (e.g., [DeepMind Lab](https://github.com/deepmind/lab) does not support Windows or macOS).
 
-For more information, see Shimmy 1.0.0 release notes. 
+For more information, see [Shimmy 1.0.0 release notes](https://github.com/Farama-Foundation/Shimmy/releases/tag/v1.0.0). 
 
