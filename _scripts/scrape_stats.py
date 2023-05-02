@@ -12,6 +12,8 @@ REPOS_URLS = "https://api.github.com/repos/Farama-Foundation/{repo}"
 REPOS_USE_URLS = "https://github.com/Farama-Foundation/{repo}/network/dependents"
 GYM_REPOS_USE_URLS = "https://github.com/openai/gym/network/dependents"
 
+SUBSUMED_PACKAGES = ["gym", "babyai", "gym-minigrid", "magent", "highway-env"]
+
 
 def scrape_project_downloads(project):
     project_downloads = 0
@@ -31,7 +33,7 @@ def scrape_downloads(projects):
     total = 0
     res_dict = {}
 
-    for project in ["gym", "babyai", "gym-minigrid", "magent"]:
+    for project in SUBSUMED_PACKAGES:
         project_downloads = scrape_project_downloads(project)
         total += project_downloads
         res_dict[project] = project_downloads
