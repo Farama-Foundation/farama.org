@@ -7,6 +7,10 @@ repos:
       - id: check-symlinks
       - id: destroyed-symlinks
       - id: trailing-whitespace
+        exclude: >
+                (?x)^(
+                    .*\.svg
+                )$
       - id: check-yaml
       - id: detect-private-key
   - repo: https://github.com/codespell-project/codespell
