@@ -71,18 +71,18 @@ def scrape_colaborators(projects):
 
         while not lastPage:
             res = requests.get(COLABTORATORS_URLS.format(repo=project) + f"?per_page={MAX_PER_PAGE}&page={page}")
-            contributers = res.json()
+            contributors = res.json()
 
-            if len(contributers) == 0:
+            if len(contributors) == 0:
                 break
 
-            if len(contributers) < MAX_PER_PAGE:
+            if len(contributors) < MAX_PER_PAGE:
                 lastPage = True
 
-            for contributer in contributers:
+            for contributor in contributors:
                 project_colaborators += 1
-                if contributer["login"] not in usernames:
-                    usernames.append(contributer["login"])
+                if contributor["login"] not in usernames:
+                    usernames.append(contributor["login"])
             page += 1
 
         res_dict[project] = project_colaborators

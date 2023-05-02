@@ -40,7 +40,7 @@
     - title: Other
       standards:
         - name: "<b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field."
-        - name: "<b>Pull documentation website information from environments directly</b> instead of mannually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future."
+        - name: "<b>Pull documentation website information from environments directly</b> instead of manually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future."
 
 - type_name: Farama Standards
   type_description: Specific standards we enforce for projects inside Farama that generally don't apply to other projects
@@ -67,12 +67,12 @@
         - name: "<b>Use semantic versioning.</b> We limit minor releases and patches to `0.0.x` version bumps, with `0.x.0` for standard releases. We reserve `x.0.0` versions for initial maturity releases (1.0.0) and for major releases with significant API changes and/or major additional functionality."
     - title: Development Practices
       standards:
-        - name: "<b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase."        
+        - name: "<b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase."
         - name: "<b>Avoid committing to master.</b> Instead, develop locally in feature branches and use PR's for review. This mitigates merge conflicts and allows multiple developers to work simultaneously without issues. Exceptions can be made for small bugfixes, but it is best to use separate branches or patches."
         - name: "<b>Communicate clearly with the community about upcoming changes.</b> Future development plans should be communicated through release notes, social media announcements, and public roadmaps. In the case of breaking changes, specific instructions must be provided to inform users how to update their code."
     - title: Security
       standards:
-        - name: "<b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity."    
+        - name: "<b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity."
         - name: "<b>List Jordan Terry and Mark Towers as owners on PyPI</b>, to make sure that we don't lose control of a package in the case that a primary maintainer becomes unavailable due to unexpected circumstances."
         - name: "<b>Have maintainers with GitHub or PyPI permissions use TOTP based 2FA or better</b> (and secure passwords, emails addresses, etc.), to reduce the likelihood of supply chain security attacks involving any of our projects."
     - title: Other

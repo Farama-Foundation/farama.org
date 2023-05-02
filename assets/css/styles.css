@@ -35,7 +35,7 @@ a:hover {
     z-index: 3;
 }
 
-/* Use :has for a better experiance */
+/* Use :has for a better experience */
 #nav:has(button[aria-expanded="false"]) {
     background-color: rgba(2, 13, 29, 0.30);
 }

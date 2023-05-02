@@ -13,7 +13,10 @@ repos:
     rev: v2.2.4
     hooks:
       - id: codespell
+        args:
+          - --ignore-words-list=magent,rouge,COO,nd
         exclude: >
                 (?x)^(
-                    .*\.svg
+                    .*\.svg|
+                    Gemfile.lock
                 )$
