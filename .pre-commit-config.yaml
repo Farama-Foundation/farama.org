@@ -18,7 +18,7 @@ repos:
     hooks:
       - id: codespell
         args:
-          - --ignore-words-list=magent,rouge,COO,nd
+          - --ignore-words-list=magent,rouge, COO,nd
         exclude: >
                 (?x)^(
                     .*\.svg|

@@ -11,10 +11,10 @@ read_time: 3
 ---
 
 Have you ever wanted to use [dm-control](https://github.com/deepmind/dm_control) with [stable-baselines3](https://github.com/DLR-RM/stable-baselines3)?
-Within Reinforcement learning (RL), a number of APIs are used to implement environments, with limited ability to convert between them. This makes training agents across different APIs highly difficult, and has resulted in a fractured ecosystem. 
+Within Reinforcement learning (RL), a number of APIs are used to implement environments, with limited ability to convert between them. This makes training agents across different APIs highly difficult, and has resulted in a fractured ecosystem.
 
 To address this issue, we are excited to announce [Shimmy](https://shimmy.farama.org/), an API compatibility tool for converting external RL environments to the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) APIs.
-This allows users to access a wide range of single and multi-agent environments, all under a single standard API. 
+This allows users to access a wide range of single and multi-agent environments, all under a single standard API.
 
 
 <center>
@@ -45,11 +45,11 @@ Shimmy includes API compatibility wrappers for the following environments.
 - [Melting Pot](https://github.com/deepmind/meltingpot)
 
 ### Key Features
-Shimmy’s [documentation](https://shimmy.farama.org/) contains an overview of each environment, as well as full usage scripts and installation instructions—allowing users to easily load and interact with environments without digging through source code. 
+Shimmy’s [documentation](https://shimmy.farama.org/) contains an overview of each environment, as well as full usage scripts and installation instructions—allowing users to easily load and interact with environments without digging through source code.
 
 We include automated testing for each environment, to ensure that converted environments are fully functional and are held to the same standards as native [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) environments.
 
 Furthermore, Shimmy provides full installation scripts for external environments which are not available in distributed releases (via [PyPi](https://pypi.org/) or elsewhere), along with [Dockerfiles](https://shimmy.farama.org/content/getting_started/#docker) which can be used to install on any platform (e.g., [DeepMind Lab](https://github.com/deepmind/lab) does not support Windows or macOS).
 
-For more information, see [Shimmy 1.0.0 release notes](https://github.com/Farama-Foundation/Shimmy/releases/tag/v1.0.0). 
+For more information, see [Shimmy 1.0.0 release notes](https://github.com/Farama-Foundation/Shimmy/releases/tag/v1.0.0).
 

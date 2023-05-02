@@ -39,19 +39,19 @@
   affiliation: Ogma Corp
   image: eric.jpg
   site: https://github.com/222464
-  
+
 - name: Panupong 'Ice' Pasupat
   role: MiniWoB++ Project Manager
   affiliation: Google Brain
   image: ice.jpg
   site: https://ppasupat.github.io
-  
+
 - name: Reginald McLean
   role: Metaworld Project Manager
   affiliation: Toronto Metropolitan University
   image: reginald.jpg
   site:
-  
+
 - name: Florian Felten
   role: MO-Gymnasium Project Manager
   affiliation: SnT, University of Luxembourg
@@ -81,7 +81,7 @@
   affiliation: Farama
   image: elliot.jpg
   site: https://github.com/elliottower
-  
+
 - name: Gianluca De Cola
   role: Gymnasium Contributor
   affiliation: Prima
