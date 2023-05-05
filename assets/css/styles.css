@@ -387,12 +387,6 @@ img.light-shadow {
     text-decoration: none;
 }
 
-.farama-home-footer-container {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
 .farama-footer {
     background-color: var(--footer-background-color);
     color: white;
@@ -401,7 +395,7 @@ img.light-shadow {
     min-height: var(--footer-height)
 }
 
-.farama-home-footer-container .farama-footer {
+.farama-gradient-container .farama-footer {
     background-color: rgba(2, 13, 29, 0.30);
 
 }
