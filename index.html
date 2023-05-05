@@ -1,5 +1,5 @@
 ---
-layout: no_jumbotron
+layout: home
 title: The Farama Foundation
 subtitle: Maintaining the World's Open Source Reinforcement Learning Tools
 index: true
@@ -7,7 +7,7 @@ index: true
 
 <div class="farama-gradient-container">
     <div class="pt-5 py-3 farama-gradient-bg"
-        style="min-height: max(calc(100vh - var(--footer-height)), 800px); display:flex; flex-direction: column;">
+        style="min-height: max(100vh, 800px); display:flex; flex-direction: column;">
         <div class="jumbotron mb-0" style="margin: 6.3rem 0;">
             <div class="container-fluid" style="color: white;">
 
@@ -76,6 +76,10 @@ index: true
                 </div>
             </div>
         </div>
+
+    </div>
+    <div class="farama-home-footer-container">
+        {% include footer.html %}
     </div>
 </div>
 
