@@ -143,7 +143,7 @@ a:hover {
     display: block;
     padding: 10px 16px;
     text-decoration: none;
-    color: inherit"
+    color: inherit";
 }
 
 .farama-stats div:not(:last-child) {
@@ -249,8 +249,7 @@ a:hover {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.farama-donation-card img {
-}
+.farama-donation-card img {}
 
 .farama-donation-card i {
     font-size: 2.8rem;
@@ -388,12 +387,23 @@ img.light-shadow {
     text-decoration: none;
 }
 
+.farama-home-footer-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
 .farama-footer {
     background-color: var(--footer-background-color);
     color: white;
     bottom: 0;
     text-align: left;
     min-height: var(--footer-height)
+}
+
+.farama-home-footer-container .farama-footer {
+    background-color: rgba(2, 13, 29, 0.30);
+
 }
 
 #farama-stats-container .card .card-title {
@@ -408,6 +418,7 @@ img.light-shadow {
 .farama-projects-stats__row {
     padding: 8px;
 }
+
 .farama-projects-stats__row:not(:last-child) {
     border-bottom: 1px solid #ddd;
 }
@@ -428,8 +439,7 @@ img.light-shadow {
     margin-left: 24px;
 }
 
-.farama-old-projects-stats__row {
-}
+.farama-old-projects-stats__row {}
 
 .farama-old-projects-stats__expand-btn {
     display: flex;
@@ -478,9 +488,11 @@ img.light-shadow {
         width: 40%;
         margin: 16px auto 0px;
     }
+
     .farama-discord-text {
         font-size: 1.3rem;
     }
+
     .farama-discord-btn {
         padding: 6px 18px;
     }
@@ -494,6 +506,7 @@ img.light-shadow {
     .farama-projects-stats__container {
         margin: 0
     }
+
     .farama-global-stats__number {
         margin-left: 0;
         font-size: 2rem;
@@ -503,4 +516,3 @@ img.light-shadow {
         border-right: none;
     }
 }
-
