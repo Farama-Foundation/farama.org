@@ -12,7 +12,7 @@ REPOS_URLS = "https://api.github.com/repos/Farama-Foundation/{repo}"
 REPOS_USE_URLS = "https://github.com/Farama-Foundation/{repo}/network/dependents"
 GYM_REPOS_USE_URLS = "https://github.com/openai/gym/network/dependents"
 
-SUBSUMED_PACKAGES = ["gym", "babyai", "gym-minigrid", "magent", "highway-env"]
+SUBSUMED_PACKAGES = ["gym", "babyai", "gym-minigrid", "magent", "highway-env", "mo-gym"]
 
 
 def scrape_project_downloads(project):
