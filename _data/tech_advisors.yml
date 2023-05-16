@@ -14,3 +14,9 @@
   affiliation: Microsoft Research
   image: langford.jpg
   site: https://www.microsoft.com/en-us/research/people/jcl/
+
+- name: Joel Lehman
+  role: Head of Open-ended RL
+  affiliation: Stability AI and CarperAI
+  image: joel.jpg
+  site: http://joellehman.com/
