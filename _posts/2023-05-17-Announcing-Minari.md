@@ -47,5 +47,6 @@ We envision a bright future for Offline RL with many new applications in differe
 A lot of work needs to be done and, and we’re continuing to develop Minari. If you want to be part of this journey we would love to hear from you and look forward to your contributions. If you have questions or want to be a part of this journey, the best way to get in touch with us is to [join our discord server](https://discord.gg/PfR7a79FpQ). We hope to see you there.
 
 [1] Levine, Sergey, et al. “Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems”. ArXiv [Cs.LG], 2020, http://arxiv.org/abs/2005.01643. arXiv.
+
 [2] R. F. Prudencio, M. R. O. A. Maximo and E. L. Colombini, "A Survey on Offline Reinforcement Learning: Taxonomy, Review, and Open Problems," in IEEE Transactions on Neural Networks and Learning Systems, doi: 10.1109/TNNLS.2023.3250269.
 
