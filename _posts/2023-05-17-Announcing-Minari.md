@@ -1,0 +1,52 @@
+---
+layout: blog
+short_title: "Announcing Minari"
+subtitle: "A dataset API for Offline Reinforcement Learning"
+title: "Announcing Minari - a dataset API for Offline RL"
+date: "2023-05-17"
+excerpt: "Minari provides the capability to create your own environment-based datasets, to download open-source datasets and to upload your own datasets for others to use."
+thumbnail: assets/posts/2023-05-17-Announcing-Minari/banner.png
+image: assets/posts/2023-05-17-Announcing-Minari/banner.png
+read_time: 7
+---
+
+Since the introduction of Gym (now Gymnasium) in 2016 and PettingZoo in 2020, these libraries have helped to provide a common API for training libraries and environments to build upon. In line with Farama’s long term goal, described in our [Announcing The Farama Foundation](https://farama.org/Announcing-The-Farama-Foundation) blog post, we propose Minari, a dataset API for Offline Reinforcement Learning (Offline RL). Minari provides the capability to create your own environment-based datasets, to download open-source datasets and to upload your own datasets for others to use. This blog post is dedicated to outlining what Offline Reinforcement Learning is, the design philosophy of Minari, and our plan going forward.
+
+You can start playing around with Minari today, see our website, minari.farama.org for example implementations and tutorials.
+
+## Why is Offline Reinforcement Learning important?
+
+The majority of previous Reinforcement Learning research has focused on online learning where an agent/policy actively interacts with an existing environment to update and improve over time. This is commonly achieved through simulations, where the environment is a videogame or physics engine, i.e. Atari games or MuJoCo. However, when deploying online Reinforcement Learning to the real-world such as robotics, autonomous driving, energy management or healthcare, this becomes more challenging, due to the need for trial and in particular error for an agent to learn. For example, training a self-driving car to navigate through a city with online reinforcement learning would require the agent learning from scratch which with pedestrians and other drivers is an unacceptable safety hazard.
+
+An alternative method is to train the agent through the use of a large dataset of human driving experience such that the agent can learn safe driving with real data before ever being deployed to the real world. This approach is the foundation of offline reinforcement learning, which has seen an explosion in use and research in the past few years [1]. In comparison to online RL where agents learn directly interacting with the environment, agents learn in Offline RL through updating the policy from samples of a static dataset of previously collected data.
+
+The collected dataset can be generated from humans, a suboptimal policy, or any sort of control system that gives actions for the agent. This approach has already shown promising results for [robotics](https://ai.googleblog.com/2022/12/rt-1-robotics-transformer-for-real.html),[ video games](https://www.deepmind.com/publications/starcraft-ii-unplugged-large-scale-offline-reinforcement-learning), [disease mitigation](https://openreview.net/forum?id=Abuzft2FfH), [autonomous driving](https://nips.cc/virtual/2022/65875), [generalist agents](https://www.deepmind.com/blog/a-generalist-agent) as well as other industry applications like the [recommendation system](https://nips.cc/virtual/2022/65884) of Spotify and Amazon’s research on [order fraud evaluation for e-commerce](https://openreview.net/forum?id=plpbiLbnG7).
+
+Within Offline RL there already exists a number of open-source datasets. However none of these use the same API for users to interact with; for example [Bridge](https://sites.google.com/view/bridgedata), [RoboNet](https://www.robonet.wiki/), and  [VAL](https://sites.google.com/view/val-rl) for real visual control learning robotics, [D4RL](https://sites.google.com/view/d4rl/home) and [RL Unplugged](https://github.com/deepmind/deepmind-research/tree/master/rl_unplugged#atari-dataset) which contain benchmark datasets of different simulated environments, and [Crowdplay](https://farama-foundation.github.io/CrowdPlay/) which provides a human-interaction interface to collect datasets from RL environments.
+
+## Minari
+
+Today, the Farama Foundation is introducing [Minari](https://github.com/Farama-Foundation/Minari) as one of its core API packages alongside Gymnasium and PettingZoo, to serve as an open-source standard API and reference collection of Offline RL datasets. We believe that by open-sourcing a big collection of standard datasets, researchers can forward the field more efficiently, effectively, and collaboratively.
+We aim for Minari to become the de facto API for open-source offline RL datasets that will support the development of new algorithms and provide researchers a common benchmark to compare results. We’re uniquely poised to do this given that we’re a neutral nonprofit with a diverse board of directors that maintain a number of open source RL environments, i.e., minigrid, miniworld and gymnasium-robotics. This release serves as our first push into the offline RL space, a space that we want to begin supporting at a comparable level to online RL going forward.  We plan to integrate Minari into all of the environments that Farama maintains, as well as work with third party libraries to use it, similar to what we do for Gymnasium and PettingZoo.
+
+Furthermore, several major open source RL projects have agreed to switch to using Minari as their standard, and we hope to see many releases along these lines in the future. As a result, we’re planning to deprecate D4RL in favor of Minari but already include several [D4RL](https://sites.google.com/view/d4rl/home) datasets (Adroit Hand, Point Maze and Kitchen) in Minari, and are actively working on adding the rest.
+
+When designing Minari, we have worked to incorporate several key ideas:
+* **Interoperability** - Our biggest goal for Minari is to enable datasets and tooling to be easily shared among different projects in the field without the need for conversion or reimplementation. We designed the datasets format to be general and extensible to this end, and this initial release has a set of datasets presented in a common standard format so that different learning libraries can integrate them effectively in their framework. Our [documentation](https://minari.farama.org/main/content/dataset_standards/) covers the API in more detail.
+* **Reproducibility** - Beyond the reproducibility improvements from not requiring reimplementation or conversion, Minari still has dedicated tooling (e.g storing episode seeds and recovering the original environment) so that any user can completely replicate experiments, which is the key to scientific method and has been historically difficult in RL.
+* **Accessibility** - Our datasets, and Minari as a whole, is built to be easily accessible and well-documented. Minari provides a public Farama GCP bucket where users will be able to share and download benchmark datasets, as well as a [CLI](https://minari.farama.org/main/content/minari_cli/) tool to download and list existing datasets. Accessibility allows researchers to share their work with others, making it easier for the community to build on each other's work.
+* **Meaningful Datasets** - One of the challenges for Offline RL is datasets that contain meaningful data. Researchers have recognised that to promote progress in this field datasets need specific design properties such as  sparse rewards, suboptimal data, multitask environments and more, see [2, (section VI, A, 1)] for more information. We intend to follow these recommended design factors for each dataset.
+
+## Our Plans Going Forward
+
+We envision a bright future for Offline RL with many new applications in different disciplines, and hope that Minari will be an integral part of this process. To further this goal, we have the following high level roadmap:
+* **Grow the list of built in datasets** - Currently, we only provide a skeleton number of datasets, with a focus on porting over all D4RL datasets and soon the CrowdPlay datasets. In the future we anticipate  generating more datasets for other Farama environments, and otherwise accepting more novel datasets (including multiagent ones, as well as vision or language-based datasets).
+* **Make Minari faster and more efficient** - A big priority of ours is to make Minari more efficient. Initial work for this has begun by creating an efficient built-in [replay buffer](https://github.com/Farama-Foundation/Minari/pull/55) to use with our datasets. For future upgrades we’re exploring supporting vectorized environment collection, distributed computing tasks, integrating more efficient dataset formats than HDF5, and integrating compression and data streaming features.
+* **Improve the reproducibility workflow** - Datasets can be useful for reproducing and comparing different algorithms. However, it is also practical to understand the generation process of those datasets. We currently provide metadata in each dataset to recreate or generate more data such as episode seeds or [retrieval of the original Gymnasium environment](https://minari.farama.org/main/api/minari_dataset/minari_dataset/#minari.MinariDataset.recover_environment). We would like to keep adding more reproducibility features such as access to stored models of behavior policies if possible. We hope this will strengthen the reliability of the dataset standards by elaborating well defined testing procedures. We want to make sure that the datasets created and shared with Minari follow the standards so that other projects can trust their usage.
+
+A lot of work needs to be done and, and we’re continuing to develop Minari. If you want to be part of this journey we would love to hear from you and look forward to your contributions. If you have questions or want to be a part of this journey, the best way to get in touch with us is to [join our discord server](https://discord.gg/PfR7a79FpQ). We hope to see you there.
+
+[1] Levine, Sergey, et al. “Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems”. ArXiv [Cs.LG], 2020, http://arxiv.org/abs/2005.01643. arXiv.
+
+[2] R. F. Prudencio, M. R. O. A. Maximo and E. L. Colombini, "A Survey on Offline Reinforcement Learning: Taxonomy, Review, and Open Problems," in IEEE Transactions on Neural Networks and Learning Systems, doi: 10.1109/TNNLS.2023.3250269.
+
