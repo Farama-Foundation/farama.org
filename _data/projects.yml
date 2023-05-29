@@ -134,7 +134,7 @@
   github: https://github.com/Farama-Foundation/MO-Gymnasium
   website: https://mo-gymnasium.farama.org/
   desc: Multi-objective Gymnasium environments for reinforcement learning
-  image: mo-gymnasium.svg
+  image: MO-Gymnasium.svg
   type: mature
 
 - name: CrowdPlay
