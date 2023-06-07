@@ -9,7 +9,7 @@
     - title: Standardization
       standards:
         - name: "<b>Support the Gymnasium and/or PettingZoo API</b> at the newest version (supporting other APIs in addition to these are fine), so that users can drop in and try out different environments as easily as possible, and code can be more modular and interchangeable."
-        - name: "<b>Support all current versions of Python</b> (currently 3.7-3.11). Different users may need to use different versions of Python, often as specified by outside forces like company policy or their package manager, and we want to comprehensively support this."
+        - name: "<b>Support all current versions of Python</b> (currently 3.8-3.11). Different users may need to use different versions of Python, often as specified by outside forces like company policy or their package manager, and we want to comprehensively support this."
     - title: Code Standardization
       standards:
         - name: "<b>Have Python code comply with the black, flake8, and isort linting/formatting tools.</b> This keeps the code formatting consistent across different projects."

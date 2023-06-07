@@ -16,6 +16,10 @@
   image: wandb.svg
   site: https://wandb.ai/site
 
+- name: Amazon Web Services
+  image: aws.png
+  site: https://aws.amazon.com/
+
 - name: John Carmack
   image: carmack.png
   site:
