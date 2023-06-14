@@ -12,7 +12,7 @@
   image: comet.svg
   site: https://www.comet.com/site/
 
-- name: WandB
+- name: Weights & Biases
   image: wandb.svg
   site: https://wandb.ai/site
 
