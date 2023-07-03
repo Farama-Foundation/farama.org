@@ -126,6 +126,6 @@
 
 - name: Manuel Goulão
   role: Web Developer
-affiliation: NeuralShift
+  affiliation: NeuralShift
   image: manuel.jpg
   site: https://github.com/mgoulao
