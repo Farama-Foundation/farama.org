@@ -126,6 +126,6 @@
 
 - name: Manuel Goulão
   role: Web Developer
-  affiliation: INESC-ID
+affiliation: NeuralShift
   image: manuel.jpg
   site: https://github.com/mgoulao
