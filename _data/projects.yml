@@ -149,3 +149,9 @@
   desc: A collection of environments for autonomous driving and tactical decision-making tasks
   type: incubating
 
+- name: Stable-Retro
+  github: https://github.com/Farama-Foundation/stable-retro
+  website:
+  desc: A fork of gym-retro with additional games, emulators and supported platforms.
+  type: incubating
+
