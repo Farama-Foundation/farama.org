@@ -20,6 +20,14 @@
   image: aws.png
   site: https://aws.amazon.com/
 
+- name: Amazon Web Services
+  image: aws.png
+  site: https://aws.amazon.com/
+
+- name: GitHub
+  image: gihub.eps
+  site: https://github.com/
+
 - name: John Carmack
   image: carmack.png
   site:
