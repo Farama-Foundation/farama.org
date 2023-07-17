@@ -21,7 +21,7 @@
   site: https://aws.amazon.com/
 
 - name: GitHub
-  image: github.png
+  image: github.svg
   site: https://github.com/
 
 - name: John Carmack
