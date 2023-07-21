@@ -88,6 +88,12 @@
   image: gianluca.png
   site: https://github.com/gianlucadecola
 
+- name: Edouard Leurent
+  role: HighwayEnv maintainer 
+  affiliation: Google DeepMind
+  image: leurent.jpg
+  site: https://github.com/eleurent
+
 - name: Markus Krimmel
   role: General Contributor
   affiliation: ETH Zürich
