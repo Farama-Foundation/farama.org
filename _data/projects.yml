@@ -82,6 +82,12 @@
   image: jumpy.svg
   type: mature
 
+- name: Arcade Learning Environment
+  github: https://github.com/Farama-Foundation/Arcade-Learning-Environment
+  website: 
+  desc: A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games
+  type: incubating
+
 - name: D4RL
   github: https://github.com/Farama-Foundation/D4RL
   website:
