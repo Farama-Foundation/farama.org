@@ -84,7 +84,7 @@
 
 - name: Arcade Learning Environment
   github: https://github.com/Farama-Foundation/Arcade-Learning-Environment
-  website: 
+  website:
   desc: A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games
   type: incubating
 
@@ -119,6 +119,7 @@
 
 - name: ViZDoom
   github: https://github.com/Farama-Foundation/ViZDoom
+  website: https://vizdoom.farama.org/
   desc: Reinforcement Learning environments based on the 1993 game Doom
   image: vizdoom.svg
   type: incubating
