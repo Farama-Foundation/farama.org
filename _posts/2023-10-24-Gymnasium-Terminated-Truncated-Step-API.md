@@ -23,7 +23,7 @@ In Gym v26 and all Gymnasium versions, the step API returns 5 elements:
 >>> done = terminated or truncated
 ```
 
-Support for the (old) done step API is provided through Gymnasium's [`EnvCompatibility`](https://gymnasium.farama.org/api/wrappers/misc_wrappers/#gymnasium.wrappers.EnvCompatibility) wrapper, accessible through `gym.make(..., apply_api_compatibility=True)`.
+Support for the deprecated `done` step API is provided through Gymnasium's [`EnvCompatibility`](https://gymnasium.farama.org/api/wrappers/misc_wrappers/#gymnasium.wrappers.EnvCompatibility) wrapper, accessible through `gym.make(..., apply_api_compatibility=True)`.
 
 For more information, see Gymnasium's [Compatibility With Gym](https://gymnasium.farama.org/content/gym_compatibility/) documentation.
 
