@@ -1,6 +1,6 @@
 ---
 layout: blog
-short_title: "Announcing Minari"
+short_title: "Gymnasium Terminated / Truncated API"
 subtitle: "A dataset API for Offline Reinforcement Learning"
 title: "Announcing Minari - a dataset API for Offline RL"
 date: "2023-05-18"
@@ -9,6 +9,15 @@ thumbnail: assets/posts/2023-05-17-Announcing-Minari/banner.png
 image: assets/posts/2023-05-17-Announcing-Minari/banner.png
 read_time: 7
 ---
+
+short_title: "Gymnasium Terminated / Truncated API"
+subtitle: "In-depth explanation of the "terminated" and "truncated" values in Gymnasium's Env.step API, and their context in RL theory"
+title: "Gymnasium Terminated / Truncated Step API"
+date: "2023-10-23"
+excerpt: "In this post, we explain the motivation for the `terminated` / `truncated` step API, why alternative implementations were not selected, and the relation to RL theory."
+thumbnail: assets/posts/2023-10-24-Gymnasium-Terminated-Truncated-Step-API/banner-gradient-line2.png
+image: assets/posts/2023-10-24-Gymnasium-Terminated-Truncated-Step-API/banner-gradient-line2.png
+read_time: 6
 
 ## Summary
 The `Env.step` API was changed in Gym v26 to use `terminated` and `truncated` instead of a single `done` value.
