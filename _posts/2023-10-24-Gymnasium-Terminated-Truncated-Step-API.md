@@ -14,19 +14,17 @@ read_time: 6
 The `Env.step` API was changed in Gym v26 to use `terminated` and `truncated` instead of a single `done` value.
 
 In Gym versions prior to v25, the step API returned 4 elements:
-```python
->>> obs, reward, done, info = env.step(action)
-```
+
+    >>> obs, reward, done, info = env.step(action)
+
 In Gym v26, the step API returns 5 elements:
-```python
->>> obs, reward, terminated, truncated, info = env.step(action)
->>> done = terminated or truncated
-```
+
+    >>> obs, reward, terminated, truncated, info = env.step(action)
+    >>> done = terminated or truncated
 
 In all Gymnasium versions, [`Env.step`](https://gymnasium.farama.org/api/env/#gymnasium.Env.step) returns 5 elements:
-```python
->>> obs, reward, terminated, truncated, info = env.step(action)
-```
+
+    >>> obs, reward, terminated, truncated, info = env.step(action)
 
 Support for the (old) done step API is provided through Gymnasium's [`EnvCompatibility`](https://gymnasium.farama.org/api/wrappers/misc_wrappers/#gymnasium.wrappers.EnvCompatibility) wrapper, accessible through `gym.make(..., apply_api_compatibility=True)`.
 
@@ -46,15 +44,15 @@ To prevent an agent from wandering in circles forever, not doing anything, and f
 The problem is that **most users of Gym have treated termination and truncation as identical**. Gym's step API `done` signal only referred to the fact that the environment needed resetting with `info`, `“TimeLimit.truncation”=True or False` specifying if the cause is `truncation` or `termination`.
 
 This matters for most Reinforcement Learning algorithms [[1]](https://arxiv.org/pdf/1712.00378.pdf) that perform bootstrapping to update the Value function or related estimates (i.e. Q-value), used by DQN, A2C, etc. In the following example for updating the Q-value, the next Q-value depends on if the environment has terminated.
-```
-If terminated:  # case 1
-    Next q-value = reward
-Else:  # case 2
-    Next q-value = reward + discount factor * max action of the Q (next state, action)
+
+    If terminated:  # case 1
+        Next q-value = reward
+    Else:  # case 2
+        Next q-value = reward + discount factor * max action of the Q (next state, action)
 
 # This can more efficiently be written
 Next q-value = reward + (not terminated) * discount factor * max action of the Q(next state, action)
-```
+
 This can be seen in Algorithm 1 (Page 5) of the original [DQN paper](https://arxiv.org/abs/1312.5602), however, we noted that this case is often ignored when writing the pseudocode for Reinforcement Learning algorithms.
 
 Therefore, if the environment has truncated and not terminated, case 2 of the bootstrapping should be computed, however, if the case is determined by `done`, this can result in the wrong implementation. **This was the main motivation for changing the step API to encourage accurate implementations, a critical factor for academia when replicating work.**
