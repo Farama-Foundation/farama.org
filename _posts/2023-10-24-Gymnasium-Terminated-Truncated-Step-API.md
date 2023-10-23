@@ -1,8 +1,8 @@
 ---
 layout: blog
-short_title: "Gymnasium Terminated / Truncated API"
-subtitle: "A dataset API for Offline Reinforcement Learning"
-title: "Announcing Minari - a dataset API for Offline RL"
+short_title: "Terminated / Truncated Step API"
+subtitle: "In-depth explanation of the "terminated" and "truncated" values in Gymnasium's Env.step API"
+title: "Gymnasium Terminated / Truncated Step API"
 date: "2023-05-18"
 excerpt: "Minari provides the capability to create your own environment-based datasets, to download open-source datasets and to upload your own datasets for others to use."
 thumbnail: assets/posts/2023-05-17-Announcing-Minari/banner.png
@@ -11,7 +11,7 @@ read_time: 7
 ---
 
 short_title: "Gymnasium Terminated / Truncated API"
-subtitle: "In-depth explanation of the "terminated" and "truncated" values in Gymnasium's Env.step API, and their context in RL theory"
+subtitle: "In-depth explanation of the "terminated" and "truncated" values in Gymnasium's Env.step API"
 title: "Gymnasium Terminated / Truncated Step API"
 date: "2023-10-23"
 excerpt: "In this post, we explain the motivation for the `terminated` / `truncated` step API, why alternative implementations were not selected, and the relation to RL theory."
