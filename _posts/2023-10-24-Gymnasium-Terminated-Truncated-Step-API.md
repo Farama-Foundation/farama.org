@@ -1,7 +1,7 @@
 ---
 layout: blog
 short_title: "Deep Dive: Gymnasium Step API"
-subtitle: "In-depth explanation of the terminated and truncated values"
+subtitle: "In-depth explanation of the terminated and truncated values in Gymnasium's Env.step API"
 title: "Deep Dive: Gymnasium Terminated - Truncated Step API"
 date: "2023-10-23"
 excerpt: "In this post, we explain the motivation for the terminated / truncated step API, why alternative implementations were not selected, and the relation to RL theory."
@@ -11,21 +11,16 @@ read_time: 6
 ---
 
 ## Summary
-The `Env.step` API was changed in Gym v26 to use `terminated` and `truncated` instead of a single `done` value.
+The `Env.step` API's `done` value was deprecated in Gym v26 in favor of `terminated` and `truncated`. 
 
 In Gym versions prior to v25, the step API returned 4 elements:
 ```python
 >>> obs, reward, done, info = env.step(action)
 ```
-In Gym v26, the step API returns 5 elements:
+In Gym v26 and all Gymnasium versions, the step API returns 5 elements:
 ```python
 >>> obs, reward, terminated, truncated, info = env.step(action)
 >>> done = terminated or truncated
-```
-
-In all Gymnasium versions, [`Env.step`](https://gymnasium.farama.org/api/env/#gymnasium.Env.step) returns 5 elements:
-```python
->>> obs, reward, terminated, truncated, info = env.step(action)
 ```
 
 Support for the (old) done step API is provided through Gymnasium's [`EnvCompatibility`](https://gymnasium.farama.org/api/wrappers/misc_wrappers/#gymnasium.wrappers.EnvCompatibility) wrapper, accessible through `gym.make(..., apply_api_compatibility=True)`.
