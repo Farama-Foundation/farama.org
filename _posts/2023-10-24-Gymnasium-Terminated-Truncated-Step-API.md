@@ -4,7 +4,7 @@ short_title: "Gymnasium Terminated / Truncated API"
 subtitle: 'In-depth explanation of the "terminated" and "truncated" values in Gymnasium's Env.step API, and their context in RL theory'
 title: "Gymnasium Terminated / Truncated Step API"
 date: "2023-10-24"
-excerpt: "In this post, we explain the motivation for the `terminated` / `truncated` step API, why alternative implementations were not selected, and the relation to RL theory."
+excerpt: "In this post, we explain the motivation for the terminated / truncated` step API, why alternative implementations were not selected, and the relation to RL theory."
 thumbnail: assets/posts/2023-10-24-Gymnasium-Terminated-Truncated-Step-API/banner-gradient-line2.png
 image: assets/posts/2023-10-24-Gymnasium-Terminated-Truncated-Step-API/banner-gradient-line2.png
 read_time: 6
