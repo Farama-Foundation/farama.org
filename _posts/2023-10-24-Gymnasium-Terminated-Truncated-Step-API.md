@@ -1,7 +1,7 @@
 ---
 layout: blog
 short_title: "Terminated / Truncated Step API"
-subtitle: 'In-depth explanation the terminated and truncated values in Gymnasium's Env.step API'
+subtitle: "In-depth explanation the terminated and truncated values in Gymnasium's Env.step API"
 title: "Gymnasium Terminated / Truncated Step API"
 date: "2023-05-18"
 excerpt: "Minari provides the capability to create your own environment-based datasets, to download open-source datasets and to upload your own datasets for others to use."
