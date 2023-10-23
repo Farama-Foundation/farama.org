@@ -1,10 +1,10 @@
 ---
 layout: blog
 short_title: "Deep Dive: Gymnasium Step API"
-subtitle: "In-depth explanation of the terminated and truncated values in Gymnasium's Env.step API"
+subtitle: "In-depth explanation of the terminated and truncated values"
 title: "Deep Dive: Gymnasium Terminated - Truncated Step API"
 date: "2023-10-23"
-excerpt: "In this post, we explain the motivation for the `terminated` / `truncated` step API, why alternative implementations were not selected, and the relation to RL theory."
+excerpt: "In this post, we explain the motivation for the terminated / truncated step API, why alternative implementations were not selected, and the relation to RL theory."
 thumbnail: assets/posts/2023-10-24-Gymnasium-Terminated-Truncated-Step-API/banner-gradient-line2.png
 image: assets/posts/2023-10-24-Gymnasium-Terminated-Truncated-Step-API/banner-gradient-line2.png
 read_time: 6
@@ -35,7 +35,7 @@ For more information, see Gymnasium's [Compatibility With Gym](https://gymnasium
 For a detailed explanation of the changes, reasoning behind them, and context in RL theory, read the rest of this post.
 
 # Terminated / Truncated Step API
-In this post, we explain the motivation for the `terminated` / `truncated` API change, why alternative implementations were not selected, and the relation to RL theory.
+In this post, we explain the motivation for the `terminated` / `truncated` step API, why alternative implementations were not selected, and the relation to RL theory.
 
 Note: this post was originally drafted for Gym v26, all usages of `Gym` can be interchanged with `Gymnasium`.
 
