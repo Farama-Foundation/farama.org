@@ -159,6 +159,12 @@
 - name: Stable-Retro
   github: https://github.com/Farama-Foundation/stable-retro
   website:
-  desc: A fork of gym-retro with additional games, emulators and supported platforms.
+  desc: A fork of gym-retro with additional games, emulators and supported platforms
+  type: incubating
+
+- name: ChatArena
+  github: https://github.com/Farama-Foundation/chatarena
+  website:
+  desc: A multi-agent language game environments for LLMs
   type: incubating
 
