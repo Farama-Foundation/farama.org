@@ -59,6 +59,13 @@
   image: miniworld.svg
   type: mature
 
+- name: MiniWoB++
+  github: https://github.com/Farama-Foundation/miniwob-plusplus
+  website: https://miniwob.farama.org/
+  desc: A collection of reinforcement learning environments for simple web interaction tasks
+  image: miniwobplusplus.svg
+  type: mature
+
 - name: Tinyscaler
   github: https://github.com/Farama-Foundation/tinyscaler
   website:
@@ -122,13 +129,6 @@
   website: https://vizdoom.farama.org/
   desc: Reinforcement Learning environments based on the 1993 game Doom
   image: vizdoom.svg
-  type: incubating
-
-- name: MiniWoB++
-  github: https://github.com/Farama-Foundation/miniwob-plusplus
-  website: https://miniwob.farama.org/
-  desc: A collection of reinforcement learning environments for simple web interaction tasks
-  image: miniwobplusplus.svg
   type: incubating
 
 - name: Metaworld
