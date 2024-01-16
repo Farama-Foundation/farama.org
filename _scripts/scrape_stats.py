@@ -6,8 +6,10 @@ import yaml
 from yaml.loader import SafeLoader
 
 
-DOWNLOADS_URL = "https://api.pepy.tech/api/v2/projects/{pip_project}"
-COLABTORATORS_URLS = "https://api.github.com/repos/Farama-Foundation/{repo}/contributors"
+DOWNLOADS_URL = "https://www.pepy.tech/projects/{pip_project}"
+COLABTORATORS_URLS = (
+    "https://api.github.com/repos/Farama-Foundation/{repo}/contributors"
+)
 REPOS_URLS = "https://api.github.com/repos/Farama-Foundation/{repo}"
 REPOS_USE_URLS = "https://github.com/Farama-Foundation/{repo}/network/dependents"
 GYM_REPOS_USE_URLS = "https://github.com/openai/gym/network/dependents"
@@ -18,12 +20,19 @@ SUBSUMED_PACKAGES = ["gym", "babyai", "gym-minigrid", "magent", "highway-env", "
 def scrape_project_downloads(project):
     project_downloads = 0
     try:
-        res_json = requests.get(DOWNLOADS_URL.format(pip_project=project)).json()
-        if "total_downloads" in res_json.keys():
-            project_downloads = int(res_json["total_downloads"])
+        soup = BeautifulSoup(
+            requests.get(DOWNLOADS_URL.format(pip_project=project)).text, "html.parser"
+        )
+        elements = soup.select("div[data-cy=summary] .MuiCardContent-root .MuiGrid-root.MuiGrid-item")
+        for element in elements:
+            if element.text.lower() == "total downloads":
+                project_downloads = int(element.find_next_sibling().text.replace(",", ""))
     except Exception as e:
-        print(f"Error while requesting data from: {DOWNLOADS_URL.format(pip_project=project)}. This might mean" + \
-                "that something changed in the API or the API is not public anymore.")
+        print(
+            "Error while requesting data from: "
+            f"{DOWNLOADS_URL.format(pip_project=project)}. This might mean"
+            "that something changed in the API or the API is not public anymore."
+        )
         print("Error message:")
         print(e)
     return project_downloads
@@ -54,7 +63,11 @@ def scrape_stars(projects):
     for project in projects:
         res = requests.get(REPOS_URLS.format(repo=project))
         res_json = res.json()
-        project_stars = res_json["stargazers_count"] if "stargazers_count" not in res_json.keys() else 0
+        project_stars = (
+            res_json["stargazers_count"]
+            if "stargazers_count" not in res_json.keys()
+            else 0
+        )
         total += project_stars
         res_dict[project] = project_stars
     print(f"Stars: {res_dict}")
@@ -72,7 +85,10 @@ def scrape_colaborators(projects):
         project_colaborators = 0
 
         while not lastPage:
-            res = requests.get(COLABTORATORS_URLS.format(repo=project) + f"?per_page={MAX_PER_PAGE}&page={page}")
+            res = requests.get(
+                COLABTORATORS_URLS.format(repo=project)
+                + f"?per_page={MAX_PER_PAGE}&page={page}"
+            )
             contributors = res.json()
 
             if len(contributors) == 0:
@@ -95,10 +111,18 @@ def scrape_colaborators(projects):
 
 def retrieve_dependents_from_html(html):
     val = 0
-    soup = BeautifulSoup(html, 'html.parser')
-    elem_selection = soup.select('#dependents > div.Box > div.Box-header.clearfix > div > div.table-list-header-toggle.states.flex-auto.pl-0 > a.btn-link.selected')
+    soup = BeautifulSoup(html, "html.parser")
+    elem_selection = soup.select(
+        "#dependents > div.Box > div.Box-header.clearfix > div > div.table-list-header-toggle.states.flex-auto.pl-0 > a.btn-link.selected"
+    )
     if len(elem_selection) > 0:
-        tmp_val = elem_selection[0].text.strip().replace("Repositories", "").replace(",", "").rstrip()
+        tmp_val = (
+            elem_selection[0]
+            .text.strip()
+            .replace("Repositories", "")
+            .replace(",", "")
+            .rstrip()
+        )
         val = int(tmp_val)
     return val
 
@@ -113,9 +137,11 @@ def scrape_repos_use(projects):
             total += project_repos_use
             res_dict[project] = project_repos_use
         except Exception as e:
-            print(f"Unable to retrieve the number of dependent repositories at {REPOS_USE_URLS.format(repo=project)}. \
+            print(
+                f"Unable to retrieve the number of dependent repositories at {REPOS_USE_URLS.format(repo=project)}. \
                 This might mean that something has changed in the page we are trying to scrape. \
-                Make sure you update the query accordingly.")
+                Make sure you update the query accordingly."
+            )
             print("Error message:")
             print(e)
 
@@ -125,9 +151,11 @@ def scrape_repos_use(projects):
         total += project_repos_use
         res_dict["gym"] = project_repos_use
     except Exception as e:
-        print(f"Unable to retrieve the number of dependent repositories at {GYM_REPOS_USE_URLS}. \
+        print(
+            f"Unable to retrieve the number of dependent repositories at {GYM_REPOS_USE_URLS}. \
             This might mean that something has changed in the page we are trying to scrape. \
-            Make sure you update the query accordingly.")
+            Make sure you update the query accordingly."
+        )
         print("Error message:")
         print(e)
     print(f"Dependent Repos: {res_dict}")
@@ -139,7 +167,9 @@ def scrape_stats():
     stats = {}
     complete_stats = {}
     stats_yaml = os.path.join(os.path.dirname(__file__), "..", "_data", "stats.yml")
-    complete_stats_yaml = os.path.join(os.path.dirname(__file__), "..", "_data", "complete_stats.yml")
+    complete_stats_yaml = os.path.join(
+        os.path.dirname(__file__), "..", "_data", "complete_stats.yml"
+    )
 
     with open(stats_yaml) as fp:
         stats = yaml.load(fp, SafeLoader) or {}
@@ -148,7 +178,9 @@ def scrape_stats():
         complete_stats = yaml.load(fp, SafeLoader) or {}
 
     projects = []
-    projects_yaml = os.path.join(os.path.dirname(__file__), "..", "_data", "projects.yml")
+    projects_yaml = os.path.join(
+        os.path.dirname(__file__), "..", "_data", "projects.yml"
+    )
     with open(projects_yaml) as fp:
         projects = yaml.load(fp, SafeLoader)
         projects = list(map(lambda x: x["github"].split("/")[-1].rstrip("/"), projects))
