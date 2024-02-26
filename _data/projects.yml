@@ -168,3 +168,8 @@
   desc: A multi-agent language game environments for LLMs
   type: incubating
 
+- name: MOMAland
+  github: https://github.com/Farama-Foundation/momaland
+  website: https://momaland.farama.org/
+  desc: Multi-objective multi-agent API and environments.
+  type: incubating
