@@ -59,6 +59,13 @@
   image: miniworld.svg
   type: mature
 
+- name: MiniWoB++
+  github: https://github.com/Farama-Foundation/miniwob-plusplus
+  website: https://miniwob.farama.org/
+  desc: A collection of reinforcement learning environments for simple web interaction tasks
+  image: miniwobplusplus.svg
+  type: mature
+
 - name: Tinyscaler
   github: https://github.com/Farama-Foundation/tinyscaler
   website:
@@ -81,6 +88,12 @@
   desc: On-the-fly conversions between Jax and NumPy tensors
   image: jumpy.svg
   type: mature
+
+- name: Arcade Learning Environment
+  github: https://github.com/Farama-Foundation/Arcade-Learning-Environment
+  website:
+  desc: A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games
+  type: incubating
 
 - name: D4RL
   github: https://github.com/Farama-Foundation/D4RL
@@ -113,15 +126,9 @@
 
 - name: ViZDoom
   github: https://github.com/Farama-Foundation/ViZDoom
+  website: https://vizdoom.farama.org/
   desc: Reinforcement Learning environments based on the 1993 game Doom
   image: vizdoom.svg
-  type: incubating
-
-- name: MiniWoB++
-  github: https://github.com/Farama-Foundation/miniwob-plusplus
-  website: https://miniwob.farama.org/
-  desc: A collection of reinforcement learning environments for simple web interaction tasks
-  image: miniwobplusplus.svg
   type: incubating
 
 - name: Metaworld
@@ -147,6 +154,18 @@
   github: https://github.com/Farama-Foundation/HighwayEnv
   website: https://highway-env.farama.org/
   desc: A collection of environments for autonomous driving and tactical decision-making tasks
+  type: incubating
+
+- name: Stable-Retro
+  github: https://github.com/Farama-Foundation/stable-retro
+  website:
+  desc: A fork of gym-retro with additional games, emulators and supported platforms
+  type: incubating
+
+- name: ChatArena
+  github: https://github.com/Farama-Foundation/chatarena
+  website:
+  desc: A multi-agent language game environments for LLMs
   type: incubating
 
 - name: MOMAland

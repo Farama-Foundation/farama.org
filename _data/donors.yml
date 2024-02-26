@@ -12,9 +12,17 @@
   image: comet.svg
   site: https://www.comet.com/site/
 
-- name: WandB
+- name: Weights & Biases
   image: wandb.svg
   site: https://wandb.ai/site
+
+- name: Amazon Web Services
+  image: aws.png
+  site: https://aws.amazon.com/
+
+- name: GitHub
+  image: github.svg
+  site: https://github.com/
 
 - name: John Carmack
   image: carmack.png
