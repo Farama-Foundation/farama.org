@@ -149,3 +149,8 @@
   desc: A collection of environments for autonomous driving and tactical decision-making tasks
   type: incubating
 
+- name: MOMAland
+  github: https://github.com/Farama-Foundation/momaland
+  website: https://momaland.farama.org/
+  desc: Multi-objective multi-agent API and environments.
+  type: incubating
