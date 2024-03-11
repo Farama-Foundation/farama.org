@@ -133,6 +133,7 @@
 
 - name: Metaworld
   github: https://github.com/Farama-Foundation/Metaworld
+  website: https://metaworld.farama.org/
   desc: Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning
   image: metaworld.svg
   type: incubating
