@@ -173,4 +173,5 @@
   github: https://github.com/Farama-Foundation/momaland
   website: https://momaland.farama.org/
   desc: Multi-objective multi-agent API and environments.
+  image: momaland.svg
   type: incubating
