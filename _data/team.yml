@@ -34,6 +34,12 @@
   image: rodrigo.jpg
   site: https://github.com/rodrigodelazcano
 
+- name: Kallinteris Andreas
+  role: Project-Manager of Gymnasium Robotics and Gymnasium Maintainer
+  affiliation: Technical University of Crete
+  image: andreas.jpg
+  site: https://github.com/Kallinteris-Andreas
+
 - name: Eric Laukien
   role: Procgen2 Project Manager
   affiliation: Ogma Corp
