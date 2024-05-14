@@ -74,14 +74,6 @@
   type: mature
   popular: false
 
-- name: AutoROM
-  github: https://github.com/Farama-Foundation/AutoROM
-  website:
-  desc: A tool to automate installing Atari ROMs for the Arcade Learning Environment
-  image: autorom.svg
-  type: mature
-  popular: false
-
 - name: Jumpy
   github: https://github.com/Farama-Foundation/Jumpy
   website:
