@@ -130,12 +130,6 @@
   image: andrea.jpg
   site: https://github.com/kir0ul
 
-- name: Feng Gu
-  role: Web Developer
-  affiliation: University of Maryland
-  image: feng.jpg
-  site: https://github.com/SiddarGu
-
 - name: Manuel Goulão
   role: Web Developer
   affiliation: NeuralShift
