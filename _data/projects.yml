@@ -159,6 +159,7 @@
   github: https://github.com/Farama-Foundation/chatarena
   website:
   desc: A multi-agent language game environments for LLMs
+  image: chatarena.svg
   type: incubating
 
 - name: MOMAland
@@ -166,4 +167,11 @@
   website: https://momaland.farama.org/
   desc: Multi-objective multi-agent API and environments.
   image: momaland.svg
+  type: incubating
+
+- name: A2Perf
+  github: https://github.com/Farama-Foundation/A2Perf
+  website: A benchmark for evaluating agents on sequential decision problems that are relevant to the real-world
+  desc: Multi-objective multi-agent API and environments.
+  image:
   type: incubating
