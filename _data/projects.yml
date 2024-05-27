@@ -171,7 +171,6 @@
 
 - name: A2Perf
   github: https://github.com/Farama-Foundation/A2Perf
-  website: A benchmark for evaluating agents on sequential decision problems that are relevant to the real-world
-  desc: Multi-objective multi-agent API and environments.
-  image:
+  website:
+  desc: A benchmark for evaluating agents on sequential decision problems that are relevant to the real-world
   type: incubating
