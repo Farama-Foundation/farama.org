@@ -2,13 +2,7 @@
   role: CEO
   affiliation: Farama
   image: jordan.jpg
-  site: https://jkterry.ai
-
-- name: Ellie Howard
-  role: COO
-  affiliation: Farama
-  image: ellie.png
-  site:
+  site: https://jkterry.a
 
 - name: Mark Towers
   role: Gymnasium and Jumpy Project Manager
