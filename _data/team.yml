@@ -76,12 +76,6 @@
   image: lucas.jpg
   site: https://github.com/LucasAlegre
 
-- name: Elliot Tower
-  role: PettingZoo Project Manager
-  affiliation: Farama
-  image: elliot.jpg
-  site: https://github.com/elliottower
-
 - name: Gianluca De Cola
   role: Gymnasium Contributor
   affiliation: Prima
