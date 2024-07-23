@@ -2,13 +2,7 @@
   role: CEO
   affiliation: Farama
   image: jordan.jpg
-  site: https://jkterry.ai
-
-- name: Ellie Howard
-  role: COO
-  affiliation: Farama
-  image: ellie.png
-  site:
+  site: https://jkterry.a
 
 - name: Mark Towers
   role: Gymnasium and Jumpy Project Manager
@@ -34,6 +28,12 @@
   image: rodrigo.jpg
   site: https://github.com/rodrigodelazcano
 
+- name: Kallinteris Andreas
+  role: Project-Manager of Gymnasium Robotics and Gymnasium Maintainer
+  affiliation: Technical University of Crete
+  image: andreas.jpg
+  site: https://github.com/Kallinteris-Andreas
+
 - name: Eric Laukien
   role: Procgen2 Project Manager
   affiliation: Ogma Corp
@@ -53,7 +53,7 @@
   site:
 
 - name: Florian Felten
-  role: MO-Gymnasium Project Manager
+  role: MO-Gymnasium and MOMAland Project Manager
   affiliation: SnT, University of Luxembourg
   image: florian.jpg
   site: https://github.com/ffelten
@@ -75,12 +75,6 @@
   affiliation: Universidade Federal do Rio Grande do Sul (UFRGS)
   image: lucas.jpg
   site: https://github.com/LucasAlegre
-
-- name: Elliot Tower
-  role: PettingZoo Project Manager
-  affiliation: Farama
-  image: elliot.jpg
-  site: https://github.com/elliottower
 
 - name: Gianluca De Cola
   role: Gymnasium Contributor
@@ -123,12 +117,6 @@
   affiliation: Brown University
   image: andrea.jpg
   site: https://github.com/kir0ul
-
-- name: Feng Gu
-  role: Web Developer
-  affiliation: University of Maryland
-  image: feng.jpg
-  site: https://github.com/SiddarGu
 
 - name: Manuel Goulão
   role: Web Developer

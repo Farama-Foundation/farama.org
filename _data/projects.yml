@@ -74,14 +74,6 @@
   type: mature
   popular: false
 
-- name: AutoROM
-  github: https://github.com/Farama-Foundation/AutoROM
-  website:
-  desc: A tool to automate installing Atari ROMs for the Arcade Learning Environment
-  image: autorom.svg
-  type: mature
-  popular: false
-
 - name: Jumpy
   github: https://github.com/Farama-Foundation/Jumpy
   website:
@@ -133,6 +125,7 @@
 
 - name: Metaworld
   github: https://github.com/Farama-Foundation/Metaworld
+  website: https://metaworld.farama.org/
   desc: Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning
   image: metaworld.svg
   type: incubating
@@ -166,5 +159,18 @@
   github: https://github.com/Farama-Foundation/chatarena
   website:
   desc: A multi-agent language game environments for LLMs
+  image: chatarena.svg
   type: incubating
 
+- name: MOMAland
+  github: https://github.com/Farama-Foundation/momaland
+  website: https://momaland.farama.org/
+  desc: Multi-objective multi-agent API and environments.
+  image: momaland.svg
+  type: incubating
+
+- name: A2Perf
+  github: https://github.com/Farama-Foundation/A2Perf
+  website:
+  desc: A benchmark for evaluating agents on sequential decision problems that are relevant to the real-world
+  type: incubating
