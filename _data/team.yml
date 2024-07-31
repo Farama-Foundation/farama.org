@@ -22,12 +22,6 @@
   image: jet.jpg
   site: https://github.com/jjshoots
 
-- name: Rodrigo de Lazcano Perez-Vicente
-  role: Gymnasium-Robotics and Minari Project Manager
-  affiliation: Farama
-  image: rodrigo.jpg
-  site: https://github.com/rodrigodelazcano
-
 - name: Kallinteris Andreas
   role: Project-Manager of Gymnasium Robotics and Gymnasium Maintainer
   affiliation: Technical University of Crete
@@ -101,7 +95,7 @@
   site: https://github.com/arjun-kg
 
 - name: Omar G. Younis
-  role: General Contributor
+  role: Minari Project Manager
   affiliation: ETH Zürich
   image: omar.jpg
   site: https://github.com/younik

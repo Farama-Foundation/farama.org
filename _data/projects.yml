@@ -66,14 +66,6 @@
   image: miniwobplusplus.svg
   type: mature
 
-- name: Tinyscaler
-  github: https://github.com/Farama-Foundation/tinyscaler
-  website:
-  image: tinyscaler.svg
-  desc: A small and fast image rescaling library with SIMD support
-  type: mature
-  popular: false
-
 - name: Jumpy
   github: https://github.com/Farama-Foundation/Jumpy
   website:
