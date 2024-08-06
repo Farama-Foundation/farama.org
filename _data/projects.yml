@@ -86,14 +86,6 @@
   image: d4rl.svg
   type: incubating
 
-- name: MicroRTS
-  github: https://github.com/Farama-Foundation/MicroRTS-Py
-  core_github: https://github.com/Farama-Foundation/MicroRTS
-  website:
-  desc: A simple and highly efficient RTS-game-inspired environment for reinforcement learning
-  image: microrts.svg
-  type: incubating
-
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
   website:
@@ -165,4 +157,5 @@
   github: https://github.com/Farama-Foundation/A2Perf
   website:
   desc: A benchmark for evaluating agents on sequential decision problems that are relevant to the real-world
+  image: A2Perf.svg
   type: incubating
