@@ -155,7 +155,7 @@
 
 - name: A2Perf
   github: https://github.com/Farama-Foundation/A2Perf
-  website:
+  website: https://a2perf.farama.org/
   desc: A benchmark for evaluating agents on sequential decision problems that are relevant to the real-world
   image: A2Perf.svg
   type: incubating
