@@ -75,7 +75,7 @@
 
 - name: Arcade Learning Environment
   github: https://github.com/Farama-Foundation/Arcade-Learning-Environment
-  website:
+  website: https://ale.farama.org/
   desc: A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games
   type: incubating
 
