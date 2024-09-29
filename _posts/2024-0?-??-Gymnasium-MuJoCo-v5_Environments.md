@@ -78,7 +78,7 @@ env = gymnasium.make('Ant-v5', xml_file='./mujoco_menagerie/anybotics_anymal_b/s
 ```
 
 Here all we have to do is change the `xml_file` argument, and set the `healthy_z_range`, because the robot has a different height than the default `Ant` robot.  In general, we will have to change the `healthy_z_range` to fit the robot.
-![](./media/anymal_b_small.gif)
+![](./media/anymalb_small.gif)
 
  ### Example [Unitree Go1](https://github.com/deepmind/mujoco_menagerie/blob/main/unitree_go1/README.md)
 ```py
@@ -91,7 +91,7 @@ env = gymnasium.make('Ant-v5', xml_file='./mujoco_menagerie/unitree_go1/scene.xm
 ```py
 env = gymnasium.make('Humanoid-v5', xml_file='~/mujoco_menagerie/robotis_op3/scene.xml', healthy_z_range=(0.275, 0.5), include_cinert_in_observation=False, include_cvel_in_observation=False, include_qfrc_actuator_in_observation=False, include_cfrc_ext_in_observation=False, ctrl_cost_weight=0, contact_cost_weight=0)
 ```
-![](./media/robotisop3.gif)
+![](./media/robotisop3_small.gif)
 
 For a more detailed tutorial, see [loading quadruped models](https://gymnasium.farama.org/main/tutorials/gymnasium_basics/load_quadruped_model/).
 
