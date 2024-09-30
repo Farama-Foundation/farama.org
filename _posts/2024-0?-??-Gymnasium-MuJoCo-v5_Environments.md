@@ -3,7 +3,7 @@ layout: blog
 short_title: "Gymnasium/MuJoCo-v5 Environments"
 subtitle: "New Features of Gymnasium/MuJoCo-v5 Environments and How to Load Third-Party Models"
 title: "Release Gymnasium/MuJoCo-v5 Environments"
-date: "2024-0?-??"
+date: "2024-10-04"
 excerpt: ""
 Author: Kallinteris Andreas
 thumbnail:
