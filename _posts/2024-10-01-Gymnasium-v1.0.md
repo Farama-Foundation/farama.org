@@ -13,10 +13,12 @@ read_time: 5 minutes
 
 **Gymnasium v1.0: A Comprehensive Update**
 
-After years of hard work, Gymnasium v1.0 has officially arrived! This release marks a major milestone for the Gymnasium project, refining the core API, addressing bugs, and enhancing features. Over 200 pull requests have been merged since version 0.29.1, culminating in Gymnasium v1.0, a stable release focused on improving the API (`Env`, `Space`, and `VectorEnv`). Let’s dive into some of the key changes!
+After years of hard work, Gymnasium v1.0 has officially arrived! This release marks a major milestone for the Gymnasium project, refining the core API, addressing bugs, and enhancing features. Over 200 pull requests have been merged since version 0.29.1, culminating in Gymnasium v1.0, a stable release focused on improving the API (`Env`, `Space`, and `VectorEnv`).
 
 # v1.0 Summary
-For a more detailed summary, see our [release notes](https://github.com/Farama-Foundation/Gymnasium/releases/tag/v1.0.0).
+For a more detailed summary, see our [release notes](https://github.com/Farama-Foundation/Gymnasium/releases/tag/v1.0.0). We have also published a white paper on Gymnasium you can check out [here](https://arxiv.org/abs/2407.17032) and cite if using in academic work.
+
+Let’s dive into some of the key changes!
 
 ## 1. **Removing the Plugin System**
 One of the biggest changes in v1.0.0 is the removal of an undocumented plugin system that allowed for registering external environments behind the scenes. In previous versions, users could create environments like Atari or Minigrid without explicitly importing the relevant modules. Now, users will need to import these external libraries directly to register environments.
@@ -66,11 +68,9 @@ To briefly elaborate on why we chose to fully move all the environments from Gym
 
 1) Keep only the original Gym Atari environments in Gymnasium (which would mean ignoring environments included in the famous Atari 56 environments used by DeepMind)
 2) Include all the ALE environments in Gymnasium (there's currently well over 100 and support for more games is being added regularly, and in general we try to be incredibly restrictive about environments being added to Gymnasium)
-3) Add some subset of Atari environments to Gymnasium (which there's no clear bar for because the environments used at different points have been so incredibly varied, and would create issues with many community members not knowing which environments existed in the ALE and which didn't).
+3) Move all Atari environments from Gymnasium to ale-py, separating the projects clearly with minimal overlap.
 
-Because of this, in order to have the clearest and least error inducing messaging to the community, we chose to move all Atari environments from Gymnasium to [ale-py](https://github.com/Farama-Foundation/Arcade-Learning-Environment). The document forwards to ale's website, and the pip install method still works for backwards compatibility though we recommend installing `ale-py` separately.
+As a result, Atari documentation has been moved to [ale.farama.org](ale.farama.org) with the Gymnasium links redirecting users. We are maintaining `pip install "gymnasium[atari]"` (though removing `accept-rom-license` as this is unnecessary now) for backward compatibility. Most importantly, the plugin system described at the start of the blog will mean that users need to `import ale_py` in order to register environments.
 
 # Looking Ahead
-Gymnasium v1.0 brings a refined, clearer, and more efficient framework for creating and interacting with reinforcement learning environments. With a focus on long-term stability, this release sets the foundation for future growth in the reinforcement learning community.
-
-For more details and to cite Gymnasium in your research, check out our paper [here](https://arxiv.org/abs/2407.17032).
+Gymnasium v1.0 brings a refined, clearer, and more efficient framework for creating and interacting with reinforcement learning environments. With a focus on long-term stability, we hope this release sets the foundation for future growth in the reinforcement learning community.
