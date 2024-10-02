@@ -5,7 +5,7 @@ subtitle: "Gymansium v1.0: A Comprehensive Update, Summarising the Changes"
 title: "Gymnasium v1.0: A Comprehensive Update"
 date: "2024-10-01"
 excerpt: ""
-Author: Mark Towers and Jordan Terry and Ariel Kwiatkowski
+Author: Mark Towers, Jordan Terry, and Ariel Kwiatkowski
 thumbnail:
 image:
 read_time: 5 minutes
@@ -69,14 +69,7 @@ The interface reinforcement learning researchers use for Atari environments is b
 
 This problem of having Gymnasium depend on a fork of a fork of the ALE meant that any changes (such as new environments) or bug fixes that occurred in the ALE were not available in Atari-Py, which included the benchmark for 56 Atari environments that DeepMind first used in their work showing human level performance in the environments. This was made worse by the fact that DeepMind had made their own major modifications and upgrades to the ALE in this time period (some were published publicly in [Xitari](https://github.com/google-deepmind/xitari), some were not). This created well founded scientific reproducibility concerns from the original ALE authors, which led to agreements between the original ALE authors, DeepMind and OpenAI to upstream python bindings from Atari-Py and ALE. Then, Gym would depend directly on the ALE, and DeepMind would contribute all their code to ALE so that the public could use it in a centralized and reproducible way. With the release of Gymnasium 1.0, we're finally completing this process of upstreaming all Atari environments from Gymnasium to ALE.
 
-To briefly elaborate on why we chose to fully move all the environments from Gymnasium to the ALE, it's because keeping the environments in Gymnasium left us with a few bad options:
-As to why we decided to fully move all the environment out of Gymnasium -- in the current situation, we were left with several less-than-ideal choices:
-
-1) Keep only the original Gym Atari environments in Gymnasium (which would mean ignoring environments included in the famous Atari 56 environments used by DeepMind)
-2) Include all the ALE environments in Gymnasium (there's over 100 of them now, and we try to keep core Gymnasium relatively lightweight)
-3) Move all Atari environments from Gymnasium to ale-py, separating the projects clearly with minimal overlap, but causing some backwards compatibility issues.
-
-As a result, Atari documentation has been moved to [ale.farama.org](ale.farama.org) with the Gymnasium links redirecting users. We are maintaining `pip install "gymnasium[atari]"` (though removing `accept-rom-license` as it's unnecessary now) for backward compatibility. Most importantly, the plugin system described at the start of the blog will mean that users need to `import ale_py` in order to create environments.
+As a result, Atari documentation has been moved to [ale.farama.org](ale.farama.org) with the Gymnasium links redirecting users. We are maintaining `pip install "gymnasium[atari]"` (though removing `accept-rom-license` as it's unnecessary now) for backward compatibility. Most importantly, the plugin system described previously means that users need to `import ale_py` in order to register environments.
 
 # Looking Ahead
 Gymnasium 1.0 brings a refined, clearer, and more efficient framework for creating and interacting with reinforcement learning environments. With a focus on long-term stability, we intend this to be the final breaking change for the foreseeable future. We hope that this release sets the foundation for future growth in the reinforcement learning community.
