@@ -3,8 +3,8 @@ layout: blog
 short_title: "Gymnasium v1.0"
 subtitle: "Gymansium v1.0: A Comprehensive Update, Summarising the Changes"
 title: "Gymnasium v1.0: A Comprehensive Update"
-date: "2024-10-01"
-excerpt: ""
+date: "2024-10-08"
+excerpt: "After years of hard work, Gymnasium v1.0 has officially arrived! This release marks a major milestone for the Gymnasium project, refining the core API, addressing bugs, and enhancing features. Over 200 pull requests have been merged since version 0.29.1, culminating in Gymnasium v1.0, a stable release focused on improving the API (`Env`, `Space`, and `VectorEnv`). This post summarizes these changes."
 Author: Mark Towers, Jordan Terry, and Ariel Kwiatkowski
 thumbnail:
 image:
@@ -32,7 +32,7 @@ envs = gym.make_vec("CartPole-v1", num_envs=3, vectorization_mode="vector_entry_
 
 With this, we also support custom vectorization, defined for each environment separately, which allows for significantly more efficient implementations in certain cases.
 
-We also changed the autoreset behavior of vectorized environments. In the past, when an episode terminated (or was truncated), it would immediately reset, with the final observation being passed in the `info` dict. This was less than ideal, as `info` was primarily intended for auxiliary information, not the main observations. Now, the observation returned alongside `terminated | truncated == True` is the final observation of the episode that just finished. The action following that will be ignored and treated as a reset signal, after which the new episode will begin. We will further elaborate on this in a future blog post.
+We also changed the auto-reset behavior of vectorized environments. In the past, when an episode terminated (or was truncated), it would immediately reset, with the final observation being passed in the `info` dict. This was less than ideal, as `info` was primarily intended for auxiliary information, not the main observations. Now, the observation returned alongside `terminated | truncated == True` is the final observation of the episode that just finished. The action following that will be ignored and treated as a reset signal, after which the new episode will begin. We will further elaborate on this in a future blog post.
 
 ## 2. **Improved Wrappers**
 With the separation of `Env` and `VectorEnv`, wrappers have also undergone changes. Wrappers that previously worked for both environments now have distinct variants for each. Standard environment wrappers are housed in `gymnasium.wrappers`, while vector-specific wrappers are found in `gymnasium.wrappers.vector`.
@@ -41,7 +41,7 @@ Several wrappers have been renamed or removed for clarity, such as: `AutoResetWr
 New wrappers have also been introduced, such as `DelayObservation` and `MaxAndSkipObservation`, to extend functionality.
 
 ### 3. **Functional Environments**
-To enable a different coding paradigm and allow for easier integration into planning algorithms, Gymnasium introduces `FuncEnv`, a functional version of `Env`. This new environment type exposes functions such as `reward`, `observation`, and `transition`, allowing for more flexible control over the environment's behavior. Furthermore, functional environments implemented in Jax can often be jitted and vmapped, leading to masive performance improvements and easy hardware acceleration.
+To enable a different coding paradigm and allow for easier integration into planning algorithms, Gymnasium introduces `FuncEnv`, a functional version of `Env`. This new environment type exposes functions such as `reward`, `observation`, and `transition`, allowing for more flexible control over the environment's behavior. Furthermore, functional environments implemented in JAX can often be jitted and vmapped, leading to massive performance improvements and easy hardware acceleration.
 
 ### 4. **Environment Version Changes**
 Several popular environments have seen updates:
