@@ -4,7 +4,7 @@ short_title: "Gymnasium/MuJoCo-v5 Environments"
 subtitle: "New Features of Gymnasium/MuJoCo-v5 Environments and How to Load Third-Party Models"
 title: "Release Gymnasium/MuJoCo-v5 Environments"
 date: "2024-10-04"
-excerpt: ""
+excerpt: "We are excited to introduce the version 5 of the MuJoCo Environments, bringing a wide variety of improvements, including the ability to load custom robot models."
 Author: Kallinteris Andreas
 thumbnail:
 image:
