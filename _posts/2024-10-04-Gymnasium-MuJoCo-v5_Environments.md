@@ -80,7 +80,7 @@ env = gymnasium.make('Ant-v5', xml_file='./mujoco_menagerie/anybotics_anymal_b/s
 Here all we have to do is change the `xml_file` argument, and set the `healthy_z_range`, because the robot has a different height than the default `Ant` robot.  In general, we will have to change the `healthy_z_range` to fit the robot.
 ![](./media/anymalb_small.gif)
 
- ### Example [Unitree Go1](https://github.com/deepmind/mujoco_menagerie/blob/main/unitree_go1/README.md)
+### Example [Unitree Go1](https://github.com/deepmind/mujoco_menagerie/blob/main/unitree_go1/README.md)
 ```py
 env = gymnasium.make('Ant-v5', xml_file='./mujoco_menagerie/unitree_go1/scene.xml', healthy_z_range=(0.195, 0.75), ctrl_cost_weight=0.05)
 ```
