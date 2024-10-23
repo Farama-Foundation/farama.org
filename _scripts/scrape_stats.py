@@ -48,9 +48,9 @@ def scrape_downloads(projects):
         res_dict[project] = project_downloads
 
     for project in projects:
-        project_downloads = scrape_project_downloads(project)
+        project_downloads = scrape_project_downloads(project["pip"])
         total += project_downloads
-        res_dict[project] = project_downloads
+        res_dict[project["repo"]] = project_downloads
 
     print(f"Downloads: {res_dict}")
     return res_dict, total
@@ -61,6 +61,7 @@ def scrape_stars(projects):
     total = 0
 
     for project in projects:
+        project = project["repo"]
         res = requests.get(REPOS_URLS.format(repo=project))
         res_json = res.json()
         project_stars = (
@@ -80,6 +81,7 @@ def scrape_colaborators(projects):
     usernames = []
 
     for project in projects:
+        project = project["repo"]
         lastPage = False
         page = 1
         project_colaborators = 0
@@ -131,6 +133,7 @@ def scrape_repos_use(projects):
     res_dict = {}
     total = 0
     for project in projects:
+        project = project["repo"]
         try:
             res = requests.get(REPOS_USE_URLS.format(repo=project))
             project_repos_use = retrieve_dependents_from_html(res.content)
@@ -162,6 +165,14 @@ def scrape_repos_use(projects):
     return res_dict, total
 
 
+def parse_project(project):
+    repo = project["github"].split("/")[-1]
+    return {
+        "repo": repo,
+        "pip": project["pip"] if "pip" in project.keys() else repo,
+    }
+
+
 def scrape_stats():
     current_date = str(datetime.date.today().strftime("%Y-%m"))
     stats = {}
@@ -183,7 +194,7 @@ def scrape_stats():
     )
     with open(projects_yaml) as fp:
         projects = yaml.load(fp, SafeLoader)
-        projects = list(map(lambda x: x["github"].split("/")[-1].rstrip("/"), projects))
+        projects = list(map(lambda x: parse_project(x), projects))
 
     for key in ["downloads", "colaborators", "repos_use", "stars"]:
         scraped_val = None

@@ -78,6 +78,7 @@
   website: https://ale.farama.org/
   desc: A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games
   type: incubating
+  pip: ale-py
 
 - name: D4RL
   github: https://github.com/Farama-Foundation/D4RL

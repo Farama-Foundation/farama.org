@@ -55,8 +55,7 @@
     const faramaProjects = {{ site.data.projects | jsonify }};
 
     // D4RL is deprecated
-    const faramaProjectNames = faramaProjects.map((a) => a.name.toLowerCase()).filter((a) => a !== "d4rl");
-
+    const faramaProjectNames = faramaProjects.map((a) => a.github.split("/").slice(-1)[0].toLowerCase()).filter((a) => a !== "d4rl");
     const getProjectStatNumber = (data, project, stat) => {
         const projObject = data[project];
         if (projObject !== undefined) {
@@ -328,7 +327,6 @@
         const sortedProjects = Object.keys(completeData)
                                 .filter((a) => faramaProjectNames.includes(a.toLowerCase()))
                                 .sort((a, b) => projectSort(faramaProjects, a, b));
-
         createStatCard(completeData, summaryData, STAT, sortedProjects, containerElem);
 
     })();
