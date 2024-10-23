@@ -169,7 +169,7 @@ def parse_project(project):
     repo = project["github"].split("/")[-1]
     return {
         "repo": repo,
-        "pip": project["pip"] if "pip" in project.keys() else repo,
+        "pip": project.get("pip", repo),
     }
 
 
