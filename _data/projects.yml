@@ -80,13 +80,6 @@
   type: incubating
   pip: ale-py
 
-- name: D4RL
-  github: https://github.com/Farama-Foundation/D4RL
-  website:
-  desc: A collection of reference environments for offline reinforcement learning
-  image: d4rl.svg
-  type: incubating
-
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
   website:
