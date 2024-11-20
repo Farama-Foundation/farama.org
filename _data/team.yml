@@ -70,12 +70,6 @@
   image: lucas.jpg
   site: https://github.com/LucasAlegre
 
-- name: Gianluca De Cola
-  role: Gymnasium Contributor
-  affiliation: Prima
-  image: gianluca.png
-  site: https://github.com/gianlucadecola
-
 - name: Edouard Leurent
   role: HighwayEnv maintainer
   affiliation: Google DeepMind
