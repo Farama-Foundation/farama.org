@@ -23,10 +23,8 @@ def scrape_project_downloads(project):
         soup = BeautifulSoup(
             requests.get(DOWNLOADS_URL.format(pip_project=project)).text, "html.parser"
         )
-        elements = soup.select("div[data-cy=summary] .MuiCardContent-root .MuiGrid-root.MuiGrid-item")
-        for element in elements:
-            if element.text.lower() == "total downloads":
-                project_downloads = int(element.find_next_sibling().text.replace(",", ""))
+        project_downloads = str(soup).split('\\"totalDownloads\\":')[1].split(',')[0]
+        project_downloads = int(project_downloads)
     except Exception as e:
         print(
             "Error while requesting data from: "
