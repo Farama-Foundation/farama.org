@@ -153,3 +153,10 @@
   desc: A benchmark for evaluating agents on sequential decision problems that are relevant to the real-world
   image: A2Perf.svg
   type: incubating
+
+- name: MPE2
+  github: https://github.com/Farama-Foundation/MPE2
+  website: https://a2perf.farama.org/
+  desc: A set of communication oriented environments
+  image:
+  type: incubating
