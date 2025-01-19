@@ -24,6 +24,10 @@
   image: github.svg
   site: https://github.com/
 
+- name: AILive
+  image: ailive.png
+  site: https://ailive.co/
+
 - name: John Carmack
   image: carmack.png
   site:

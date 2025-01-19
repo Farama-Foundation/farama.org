@@ -8,8 +8,8 @@ title: Donations
     <div class="pt-5 py-3 farama-gradient-bg">
         <div class="jumbotron mb-4 pt-5">
             <div class="container-fluid">
-                <div style="max-width: 900px; text-align: left;
-                        margin: auto; color: white;">
+                <div style="display: flex; flex-direction: column; max-width: 900px; text-align: left;
+                        margin: auto; color: white; align-items: center;">
                     <h1>
                         {{page.title}}
                     </h1>
@@ -51,8 +51,9 @@ title: Donations
                                             </div>
                                         </div>
                                     </a>
+                                </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                         <div class="mt-4" style="width: 150px; height: 2px; border: 1px solid"></div>
                         <h4 class="my-4 text-center">We are a 501c3 nonprofit, meaning that donations are deductible on
                             your taxes
