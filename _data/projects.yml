@@ -158,5 +158,5 @@
   github: https://github.com/Farama-Foundation/MPE2
   website: https://a2perf.farama.org/
   desc: A set of communication oriented environments
-  image:
+  image: MPE2.svg
   type: incubating
