@@ -21,7 +21,7 @@ Vector environments allow multiple sub-environments to run in parallel, improvin
 
 Gymnasium's built-in vector environment implementations, `SyncVectorEnv` and `AsyncVectorEnv` support all three modes using the `autoreset_mode` argument expecting a `gym.vector.AutoresetMode`, for example, `SyncVectorEnv(..., autoreset_mode=gym.vector.AutoresetMode.NEXT_STEP)`. Further, most of Gymnasium's vector wrappers support all modes, however, for external projects, there is no guarantee what autoreset mode will be supported by either the vector environments, wrapper implementations or training algorithms. To help users know what autoreset mode is being used, `VectorEnv.metadata["autoreset_mode"]` should be specified and that developers can specify in their documentation what autoreset modes are supported.
 
-![Flowchart diagram representing the different autoreset modes](media/autoreset-modes.svg)
+![Flowchart diagram representing the different autoreset modes](assets/images/blogs/autoreset-modes.svg)
 
 For Gymnasium, some of the vector wrappers only support particular autoreset modes.
 
