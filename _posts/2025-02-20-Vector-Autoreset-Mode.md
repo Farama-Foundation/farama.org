@@ -19,24 +19,24 @@ In Gymnasium v1.0, significant changes were made to improve the `VectorEnv` impl
 
 Vector environments allow multiple sub-environments to run in parallel, improving training efficiency in Reinforcement Learning through sampling multiple episodes at the same time. What should the vector environment do when one or multiple sub-environments reset as it will need to be reset before future actions can be taken? There are three options referred to as Next-Step, Same-Step and Disabled mode, visualised in the figure below.
 
-Gymnasium's built-in vector environment implementations, `SyncVectorEnv` and `AsyncVectorEnv` support all three modes using the `autoreset_mode` argument expecting a `gym.vector.AutoresetMode`, for example, `SyncVectorEnv(..., autoreset_mode=gym.vector.AutoresetMode.NEXT_STEP)`. Further, most of Gymnasium's vector wrappers support all modes, however, for external projects, there is no guarantee what autoreset mode will be supported by either the vector environment or wrapper implementations. To help users know what autoreset mode is being used, `VectorEnv.metadata["autoreset_mode"]` should be specified and that developers can specify in their documentation what autoreset mode are supported.
+Gymnasium's built-in vector environment implementations, `SyncVectorEnv` and `AsyncVectorEnv` support all three modes using the `autoreset_mode` argument expecting a `gym.vector.AutoresetMode`, for example, `SyncVectorEnv(..., autoreset_mode=gym.vector.AutoresetMode.NEXT_STEP)`. Further, most of Gymnasium's vector wrappers support all modes, however, for external projects, there is no guarantee what autoreset mode will be supported by either the vector environments, wrapper implementations or training algorithms. To help users know what autoreset mode is being used, `VectorEnv.metadata["autoreset_mode"]` should be specified and that developers can specify in their documentation what autoreset modes are supported.
 
 ![Flowchart diagram representing the different autoreset modes](media/autoreset-modes.svg)
 
-Some wrappers are limited in what autoreset modes are supported.
+For Gymnasium, some of the vector wrappers only support particular autoreset modes.
 
-| Wrapper name                   | Next step autoreset | Same Step autorest | Partial reset |
-|--------------------------------|---------------------|--------------------|---------------|
-| VectorObservationWrapper       | Yes                 | No                 | Yes           |
-| TransformObservation           | Yes                 | No                 | Yes           |
-| NormalizeObservation           | Yes                 | No                 | No            |
-| VectorizeTransformObservation* | Yes                 | Yes                | Yes           |
-| RecordEpisodeStatistics        | Yes                 | Yes                | Yes           |
+| Vector Wrapper name              | Next step | Same Step | Disabled |
+|----------------------------------|-----------|-----------|----------|
+| `VectorObservationWrapper`       | &#10004;  | &#10006;  | &#10004; |
+| `TransformObservation`           | &#10004;  | &#10006;  | &#10004; |
+| `NormalizeObservation`           | &#10004;  | &#10006;  | &#10006; |
+| `VectorizeTransformObservation`* | &#10004;  | &#10004;  | &#10004; |
+| `RecordEpisodeStatistics`        | &#10004;  | &#10004;  | &#10004; |
 
-\* all inherited wrappers from VectorizeTransformObservation are compatible (FilterObservation, FlattenObservation, GrayscaleObservation, ResizeObservation, ReshapeObservation, DtypeObservation).
+\* all inherited wrappers from `VectorizeTransformObservation` are compatible (`FilterObservation`, `FlattenObservation`, `GrayscaleObservation`, `ResizeObservation`, `ReshapeObservation`, `DtypeObservation`).
 
 ### Next-Step Mode
-If a sub-environments terminates, in the next step call, it is reset. Gymnasium's Async and Sync Vector environments default to this mode. Implementing training algorithms using Next-step mode, beware of episode boundaries in training, either through not adding the relevant data to the replay buffer or through masking out the relevant errors.
+If a sub-environments terminates, in the next step call, it is reset. Gymnasium's Async and Sync Vector environments default to this mode. Implementing training algorithms using Next-step mode, beware of episode boundaries in training, either through not adding the relevant data to the replay buffer or through masking out the relevant errors in rollout buffers.
 
 <details>
 <summary>Example training code</summary>
@@ -69,7 +69,7 @@ while True:   # Training loop
 </details>
 
 ### Same-Step Mode
-If a sub-environments terminated, in the same step call, it is reset, with the observation being the reset's observation and the terminated observation being stored in `info["final_obs"]`. Beware that some vector wrappers do not support this mode, however, this is simplistic approach for training algorithms if truncation is skipped. For algorithms to accurately implement [value errors with truncation](https://farama.org/Gymnasium-Terminated-Truncated-Step-API), having the correct next observation is critical using `info["final_obs"]`.
+If a sub-environments terminated, in the same step call, it is reset, beware that some vector wrappers do not support this mode and the step's observation can be the reset's observation with the terminated observation being stored in `info["final_obs"]`. This makes it is a simplistic approach for training algorithms if value errors with truncation are skipped. See [this](https://farama.org/Gymnasium-Terminated-Truncated-Step-API), for details.
 
 <details>
 <summary>Example training code</summary>
@@ -101,7 +101,7 @@ from collections import deque
 </details>
 
 ### Disabled Mode
-No automatic resetting occurs and users need to manually reset the sub-environment through a mask, `env.reset(mask=np.array([True, False, ...], dtype=bool))`. This makes training code closer to single vector training code.
+No automatic resetting occurs and users need to manually reset the sub-environment through a mask, `env.reset(mask=np.array([True, False, ...], dtype=bool))`. The easier way of generating this mask is `np.logical_or(terminations, truncations)`. This makes training code closer to single vector training code, however, can be slower is some cases due to running another function.
 
 <details>
 <summary>Example training code</summary>
@@ -134,4 +134,6 @@ while True:   # Training loop
 </details>
 
 ## Conclusion
-The autoreset mode has as significant impact on the implementation of RL training algorithms for sampling from environments. If there are missing details or questions please raise them on the [Farama Discord](https://discord.gg/bnJ6kubTg6) or [GitHub](https://github.com/farama-Foundation/gymnasium).
+The autoreset mode have a significant impact on the implementation of RL training algorithms for sampling from environments and its not possible to convert between different modes. Gymnasium v1.1 now supports all three autoreset implementations with most of the wrappers supporting all of them providing more options to developers and greater backward compatibility to Gymnasium v0 vectorised training algorithms.
+
+If there are missing details or questions please raise them on the [Farama Discord](https://discord.gg/bnJ6kubTg6) or [GitHub](https://github.com/farama-Foundation/gymnasium).
