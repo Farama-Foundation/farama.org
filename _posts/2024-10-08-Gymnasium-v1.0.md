@@ -11,15 +11,13 @@ image:
 read_time: 5 minutes
 ---
 
-**Gymnasium v1.0: A Comprehensive Update**
+# Gymnasium v1.0: A Comprehensive Update**
 
 After years of hard work, Gymnasium v1.0 has officially arrived! This release marks a major milestone for the Gymnasium project, refining the core API, addressing bugs, and enhancing features. Over 200 pull requests have been merged since version 0.29.1, culminating in Gymnasium v1.0, a stable release focused on improving the API (`Env`, `Space`, and `VectorEnv`).
 
-# v1.0 Summary
 For a more detailed summary, see our [release notes](https://github.com/Farama-Foundation/Gymnasium/releases/tag/v1.0.0). We have also published a white paper on Gymnasium you can check out [here](https://arxiv.org/abs/2407.17032) and cite if using in academic work.
 
 Let’s dive into some of the key changes!
-
 
 ## 1. **Vector Environments Overhaul**
 Vector environments have been significantly revamped. Previously, `VectorEnv` inherited from `Env`, which wasn't technically valid, and caused various issues with method signatures. In v1.0, `Env` and `VectorEnv` are now distinct and fully supported, leading to clearer code and more efficient implementations.
