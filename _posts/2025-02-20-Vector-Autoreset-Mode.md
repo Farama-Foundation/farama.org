@@ -72,7 +72,9 @@ If a sub-environments terminates, in the next step call, it is reset. Gymnasium'
 <details>
 <summary><b>Click for Example training code</b></summary>
 
-```python
+<div class="language-python highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>
 import gymnasium as gym
 from collections import deque
 
@@ -96,7 +98,9 @@ while True:   # Training loop
         replay_buffer.append((observations[i], actions[i], rewards[i], terminated[i], actual_next_obs))
 
     observations = next_observations  # Update observation
-```
+</code></pre>
+</div>
+</div>
 
 </details>
 
@@ -106,7 +110,9 @@ If a sub-environments terminated, in the same step call, it is reset, beware tha
 <details>
 <summary><b>Click for Example training code</b></summary>
 
-```python
+<div class="language-python highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>
 import gymnasium as gym
 import numpy as np
 from collections import deque
@@ -129,7 +135,9 @@ from collections import deque
      # update observation and if episode starts
      observations = next_observations
      episode_start = np.logical_or(terminations, truncations)
-```
+</code></pre>
+</div>
+</div>
 
 </details>
 
@@ -139,8 +147,9 @@ No automatic resetting occurs and users need to manually reset the sub-environme
 <details>
 <summary><b>Click for Example training code</b></summary>
 
-```python
-
+<div class="language-python highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>
 import gymnasium as gym
 import numpy as np
 from collections import deque
@@ -164,7 +173,9 @@ while True:   # Training loop
         observations = envs.reset(mask=autoreset)
     else:
         observations = next_observations
-```
+</code></pre>
+</div>
+</div>
 
 </details>
 
