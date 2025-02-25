@@ -8,7 +8,7 @@ excerpt: "We are excited to introduce the version 5 of the MuJoCo Environments, 
 Author: Kallinteris Andreas
 thumbnail:
 image:
-read_time: 4 minutes
+read_time: 4
 ---
 
 # Introduction

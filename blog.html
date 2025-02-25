@@ -18,16 +18,15 @@ title: Blog
                         <span class="text-muted">{{post.date | date: "%-d %B %Y" }}</span>
                         <span class="text-muted ps-2">
                             {% if post.read_time != ""  %}
-                                {{post.read_time}} min
+                                {{post.read_time}} minutes
                             {% else %}
                                 {% assign words = post.content | number_of_words %}
                                 {% if words < 360 %}
                                     1 min
                                 {% else %}
-                                    {{ words | divided_by:180 }} mins
+                                    {{ words | divided_by:180 }} minutes
                                 {% endif %}
                             {% endif %}
-
                                 read
                         </span>
                 </div>

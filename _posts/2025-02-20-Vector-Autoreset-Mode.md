@@ -2,13 +2,13 @@
 layout: blog
 short_title: "Deep Dive: VectorEnv Autoreset"
 subtitle: "In-depth explanation of autoreset Modes in Gymnasium Vector Environments"
-title: "Deep Dive: Autoreset Modes in Gymnasium Vector Environments"
+title: "Deep Dive: Autoreset Modes in Gymnasium v1.1 Vector Environments"
 date: "2025-02-20"
-excrept: "Autoreset control when vectorised environment reset sub-environments on terminations or truncations. Gymnasium offers three options, for which, we present descriptions and examples for each."
+excerpt: "Autoreset control when vectorised environment reset sub-environments on terminations or truncations. Gymnasium offers three options, for which, we present descriptions and examples for each."
 Author: "Mark Towers"
 thumbnail:
 image:
-read_time: 3 Minutes
+read_time: 3
 ---
 
 # Summary
@@ -25,13 +25,44 @@ Gymnasium's built-in vector environment implementations, `SyncVectorEnv` and `As
 
 For Gymnasium, some of the vector wrappers only support particular autoreset modes.
 
-| Vector Wrapper name              | Next step | Same Step | Disabled |
-|----------------------------------|-----------|-----------|----------|
-| `VectorObservationWrapper`       | &#10004;  | &#10006;  | &#10004; |
-| `TransformObservation`           | &#10004;  | &#10006;  | &#10004; |
-| `NormalizeObservation`           | &#10004;  | &#10006;  | &#10006; |
-| `VectorizeTransformObservation`* | &#10004;  | &#10004;  | &#10004; |
-| `RecordEpisodeStatistics`        | &#10004;  | &#10004;  | &#10004; |
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Vector Wrapper name</th>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Next step</th>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Same Step</th>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Disabled</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;"><code>VectorObservationWrapper</code></td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10006;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;"><code>TransformObservation</code></td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10006;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;"><code>NormalizeObservation</code></td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10006;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10006;</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;"><code>VectorizeTransformObservation</code>*</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;"><code>RecordEpisodeStatistics</code></td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">&#10004;</td>
+  </tr>
+</table>
 
 \* all inherited wrappers from `VectorizeTransformObservation` are compatible (`FilterObservation`, `FlattenObservation`, `GrayscaleObservation`, `ResizeObservation`, `ReshapeObservation`, `DtypeObservation`).
 
@@ -39,9 +70,10 @@ For Gymnasium, some of the vector wrappers only support particular autoreset mod
 If a sub-environments terminates, in the next step call, it is reset. Gymnasium's Async and Sync Vector environments default to this mode. Implementing training algorithms using Next-step mode, beware of episode boundaries in training, either through not adding the relevant data to the replay buffer or through masking out the relevant errors in rollout buffers.
 
 <details>
-<summary>Example training code</summary>
+<summary>**Click for Example training code**</summary>
 
 ```python
+
 import gymnasium as gym
 from collections import deque
 
@@ -72,9 +104,10 @@ while True:   # Training loop
 If a sub-environments terminated, in the same step call, it is reset, beware that some vector wrappers do not support this mode and the step's observation can be the reset's observation with the terminated observation being stored in `info["final_obs"]`. This makes it is a simplistic approach for training algorithms if value errors with truncation are skipped. See [this](https://farama.org/Gymnasium-Terminated-Truncated-Step-API), for details.
 
 <details>
-<summary>Example training code</summary>
+<summary>**Click for Example training code**</summary>
 
 ```python
+
 import gymnasium as gym
 import numpy as np
 from collections import deque
@@ -104,9 +137,10 @@ from collections import deque
 No automatic resetting occurs and users need to manually reset the sub-environment through a mask, `env.reset(mask=np.array([True, False, ...], dtype=bool))`. The easier way of generating this mask is `np.logical_or(terminations, truncations)`. This makes training code closer to single vector training code, however, can be slower is some cases due to running another function.
 
 <details>
-<summary>Example training code</summary>
+<summary>**Click for Example training code**</summary>
 
 ```python
+
 import gymnasium as gym
 import numpy as np
 from collections import deque

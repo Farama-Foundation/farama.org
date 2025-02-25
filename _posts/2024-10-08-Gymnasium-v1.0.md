@@ -8,7 +8,7 @@ excerpt: "After years of hard work, Gymnasium v1.0 has officially arrived! This 
 Author: Mark Towers, Jordan Terry, and Ariel Kwiatkowski
 thumbnail:
 image:
-read_time: 5 minutes
+read_time: 5
 ---
 
 # Gymnasium v1.0: A Comprehensive Update**
