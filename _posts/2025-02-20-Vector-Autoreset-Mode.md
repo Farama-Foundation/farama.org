@@ -70,10 +70,9 @@ For Gymnasium, some of the vector wrappers only support particular autoreset mod
 If a sub-environments terminates, in the next step call, it is reset. Gymnasium's Async and Sync Vector environments default to this mode. Implementing training algorithms using Next-step mode, beware of episode boundaries in training, either through not adding the relevant data to the replay buffer or through masking out the relevant errors in rollout buffers.
 
 <details>
-<summary>**Click for Example training code**</summary>
+<summary><b>Click for Example training code</b></summary>
 
 ```python
-
 import gymnasium as gym
 from collections import deque
 
@@ -98,16 +97,16 @@ while True:   # Training loop
 
     observations = next_observations  # Update observation
 ```
+
 </details>
 
 ### Same-Step Mode
 If a sub-environments terminated, in the same step call, it is reset, beware that some vector wrappers do not support this mode and the step's observation can be the reset's observation with the terminated observation being stored in `info["final_obs"]`. This makes it is a simplistic approach for training algorithms if value errors with truncation are skipped. See [this](https://farama.org/Gymnasium-Terminated-Truncated-Step-API), for details.
 
 <details>
-<summary>**Click for Example training code**</summary>
+<summary><b>Click for Example training code</b></summary>
 
 ```python
-
 import gymnasium as gym
 import numpy as np
 from collections import deque
@@ -131,13 +130,14 @@ from collections import deque
      observations = next_observations
      episode_start = np.logical_or(terminations, truncations)
 ```
+
 </details>
 
 ### Disabled Mode
 No automatic resetting occurs and users need to manually reset the sub-environment through a mask, `env.reset(mask=np.array([True, False, ...], dtype=bool))`. The easier way of generating this mask is `np.logical_or(terminations, truncations)`. This makes training code closer to single vector training code, however, can be slower is some cases due to running another function.
 
 <details>
-<summary>**Click for Example training code**</summary>
+<summary><b>Click for Example training code</b></summary>
 
 ```python
 
@@ -165,6 +165,7 @@ while True:   # Training loop
     else:
         observations = next_observations
 ```
+
 </details>
 
 ## Conclusion
