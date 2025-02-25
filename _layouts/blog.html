@@ -35,10 +35,10 @@
                     <span style="font-size: 1.25rem;">{{page.date | date: "%-d %B %Y" }}</span>
                     <span style="font-size: 1.25rem; margin-left: 24px">
                         {% if page.read_time != ""  %}
-                            {{page.read_time}} min
+                            {{page.read_time}} minutes
                         {% else %}
                             {% assign words = page.content | number_of_words %}
-                            {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %}
+                            {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} minutes {% endif %}
                         {% endif %}
                         read
                     </span>
