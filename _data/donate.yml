@@ -8,6 +8,12 @@
   site: https://github.com/sponsors/Farama-Foundation
   fees: No fees for user accounts, 10% fee for organization accounts. Includes a few unique low-dollar-amount tiers.
 
+- name: Every
+  image: every.svg
+  site: https://www.every.org/farama-foundation?method=crypto&utm_campaign=donate-link#/donate/crypto
+  fees: 0% fees for donors, 5% fees for organizations
+  note: Accepts cryptocurrency donations
+
 - name: Contact Us Directly
   image: <i class="fa-solid fa-envelope fa-10x"></i>
   site: mailto:contact@farama.org

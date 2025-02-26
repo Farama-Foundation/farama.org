@@ -9,7 +9,8 @@ title: Donations
         <div class="jumbotron mb-4 pt-5">
             <div class="container-fluid">
                 <div style="display: flex; flex-direction: column; max-width: 900px; text-align: left;
-                        margin: auto; color: white; align-items: center;">
+                        margin: auto; color: white; align-items:
+                         center;">
                     <h1>
                         {{page.title}}
                     </h1>
@@ -18,7 +19,7 @@ title: Donations
                     <div class="row pt-3 gx-2 farama-donation-cards-container"
                         style="display: flex; flex-wrap:wrap; justify-content: center;">
                         {% for org in site.data.donate %}
-                        <div class="col-12 col-xl-4 col-lg-4 col-sm-5 mt-2 mb-4">
+                        <div class="col-12 col-xl-6 col-lg-6 col-sm-5 mt-2 mb-4">
 
                             {% if org.name == "Paypal" %}
                             <a href="{{org.site}}"
