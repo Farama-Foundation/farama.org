@@ -76,10 +76,54 @@ If a sub-environments terminates, in the next step call, it is reset. Gymnasium'
 <div class="highlight">
 <pre class="highlight"><code>
 import gymnasium as gym
+import numpy as np
+from collections import deque
+
+# Initialize environment, buffer and episode_start
+envs = gym.vector.SyncVectorEnv(
+    [lambda: gym.make("CartPole-v1") for _ in range(2)],
+    autoreset_mode=gym.vector.AutoresetMode.NEXT_STEP
+)
+replay_buffer = deque(maxlen=100)
+episode_start = np.zeros(envs.num_envs, dtype=bool)
+
+observations, _ = envs.reset()
+while True:   # Training loop
+    actions = policy(observations)
+    next_observations, rewards, terminations, truncations, infos = envs.step(actions)
+
+    # Add to replay buffer
+    for i in range(envs.num_envs):
+        if not episode_start[i]:
+            replay_buffer.append((observations[i], actions[i], rewards[i], terminations[i], next_observations[i]))
+
+    # update observation and if episode starts
+    observations = next_observations
+    episode_start = np.logical_or(terminations, truncations)
+envs.close()
+</code></pre>
+</div>
+</div>
+
+</details>
+
+### Same-Step Mode
+If a sub-environments terminated, in the same step call, it is reset, beware that some vector wrappers do not support this mode and the step's observation can be the reset's observation with the terminated observation being stored in `info["final_obs"]`. This makes it is a simplistic approach for training algorithms if value errors with truncation are skipped. See [this](https://farama.org/Gymnasium-Terminated-Truncated-Step-API), for details.
+
+<details>
+<summary><b>Click for Example training code</b></summary>
+
+<div class="language-python highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>
+import gymnasium as gym
 from collections import deque
 
 # Initialize environment and buffer
-envs = gym.make_vec("CartPole-v1", num_envs=2, vector_kwargs={"autoreset_mode": gym.vector.AutoresetMode.SAME_STEP})
+envs = gym.vector.SyncVectorEnv(
+    [lambda: gym.make("CartPole-v1") for _ in range(2)],
+    autoreset_mode=gym.vector.AutoresetMode.SAME_STEP
+)
 replay_buffer = deque(maxlen=100)
 
 observations, _ = envs.reset()
@@ -98,43 +142,7 @@ while True:   # Training loop
         replay_buffer.append((observations[i], actions[i], rewards[i], terminated[i], actual_next_obs))
 
     observations = next_observations  # Update observation
-</code></pre>
-</div>
-</div>
-
-</details>
-
-### Same-Step Mode
-If a sub-environments terminated, in the same step call, it is reset, beware that some vector wrappers do not support this mode and the step's observation can be the reset's observation with the terminated observation being stored in `info["final_obs"]`. This makes it is a simplistic approach for training algorithms if value errors with truncation are skipped. See [this](https://farama.org/Gymnasium-Terminated-Truncated-Step-API), for details.
-
-<details>
-<summary><b>Click for Example training code</b></summary>
-
-<div class="language-python highlighter-rouge">
-<div class="highlight">
-<pre class="highlight"><code>
-import gymnasium as gym
-import numpy as np
-from collections import deque
-
-# Initialize environment, buffer and episode_start
- envs = gym.make_vec("CartPole-v1", num_envs=2, autoreset_mode=gym.vector.AutoresetMode.NEXT_STEP)
- replay_buffer = deque(maxlen=100)
- episode_start = np.zeros(envs.num_envs, dtype=bool)
-
- observations, _ = envs.reset()
- while True:   # Training loop
-     actions = policy(observations)
-     next_observations, rewards, terminations, truncations, infos = envs.step(actions)
-
-     # Add to replay buffer
-     for i in range(envs.num_envs):
-         if not episode_start[i]:
-             replay_buffer.append((observations[i], actions[i], rewards[i], terminations[i], next_observations[i]))
-
-     # update observation and if episode starts
-     observations = next_observations
-     episode_start = np.logical_or(terminations, truncations)
+envs.close()
 </code></pre>
 </div>
 </div>
@@ -155,7 +163,10 @@ import numpy as np
 from collections import deque
 
 # Initialize environment, buffer and episode_start
-envs = gym.make_vec("CartPole-v1", num_envs=2, autoreset_mode=gym.vector.AutoresetMode.DISABLED)
+envs = gym.vector.SyncVectorEnv(
+    [lambda: gym.make("CartPole-v1") for _ in range(2)],
+    autoreset_mode=gym.vector.AutoresetMode.DISABLED
+)
 replay_buffer = deque(maxlen=100)
 
 observations, _ = envs.reset()
@@ -170,9 +181,10 @@ while True:   # Training loop
     # update observation
     autoreset = np.logical_or(terminations, truncations)
     if np.any(autoreset):
-        observations = envs.reset(mask=autoreset)
+        observations = envs.reset(options={"mask": autoreset})
     else:
         observations = next_observations
+envs.close()
 </code></pre>
 </div>
 </div>
