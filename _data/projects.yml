@@ -156,7 +156,7 @@
 
 - name: MPE2
   github: https://github.com/Farama-Foundation/MPE2
-  website: http://mpe2.farama.org
+  website: https://mpe2.farama.org
   desc: A set of communication oriented environments
   image: MPE2.svg
   type: incubating
