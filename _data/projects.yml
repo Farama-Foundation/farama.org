@@ -145,7 +145,7 @@
   website: https://momaland.farama.org/
   desc: Multi-objective multi-agent API and environments.
   image: momaland.svg
-  type: incubating
+  type: mature
 
 - name: A2Perf
   github: https://github.com/Farama-Foundation/A2Perf
