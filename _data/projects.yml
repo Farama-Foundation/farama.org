@@ -145,7 +145,7 @@
   website: https://momaland.farama.org/
   desc: Multi-objective multi-agent API and environments.
   image: momaland.svg
-  type: incubating
+  type: mature
 
 - name: A2Perf
   github: https://github.com/Farama-Foundation/A2Perf
@@ -156,7 +156,7 @@
 
 - name: MPE2
   github: https://github.com/Farama-Foundation/MPE2
-  website: https://a2perf.farama.org/
+  website: https://mpe2.farama.org
   desc: A set of communication oriented environments
   image: MPE2.svg
   type: incubating
