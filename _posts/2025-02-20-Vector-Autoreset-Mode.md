@@ -150,7 +150,7 @@ envs.close()
 </details>
 
 ### Disabled Mode
-No automatic resetting occurs and users need to manually reset the sub-environment through a mask, `env.reset(mask=np.array([True, False, ...], dtype=bool))`. The easier way of generating this mask is `np.logical_or(terminations, truncations)`. This makes training code closer to single vector training code, however, can be slower is some cases due to running another function.
+No automatic resetting occurs and users need to manually reset the sub-environment through a mask, `env.reset(options={"reset_mask": np.array([True, False, ...], dtype=bool)})`. The easier way of generating this mask is `np.logical_or(terminations, truncations)`. This makes training code closer to single vector training code, however, can be slower is some cases due to running additional functions.
 
 <details>
 <summary><b>Click for Example training code</b></summary>
@@ -181,7 +181,7 @@ while True:   # Training loop
     # update observation
     autoreset = np.logical_or(terminations, truncations)
     if np.any(autoreset):
-        observations = envs.reset(options={"mask": autoreset})
+        observations = envs.reset(options={"reset_mask": autoreset})
     else:
         observations = next_observations
 envs.close()
