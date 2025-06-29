@@ -77,6 +77,7 @@
   github: https://github.com/Farama-Foundation/Arcade-Learning-Environment
   website: https://ale.farama.org/
   desc: A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games
+  image: ale.svg
   type: incubating
   pip: ale-py
 
