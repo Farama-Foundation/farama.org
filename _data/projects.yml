@@ -132,6 +132,7 @@
   github: https://github.com/Farama-Foundation/stable-retro
   website:
   desc: A fork of gym-retro with additional games, emulators and supported platforms
+  image: stableretro.svg
   type: incubating
 
 - name: ChatArena
