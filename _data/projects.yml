@@ -29,14 +29,6 @@
   type: mature
   popular: true
 
-- name: SuperSuit
-  github: https://github.com/Farama-Foundation/SuperSuit
-  website:
-  image: supersuit.svg
-  desc: A collection of wrappers for Gymnasium and PettingZoo environments (being merged into gymnasium.wrappers and pettingzoo.wrappers)
-  type: mature
-  popular: false
-
 - name: Gymnasium-Robotics
   github: https://github.com/Farama-Foundation/Gymnasium-Robotics
   website: https://robotics.farama.org
@@ -50,13 +42,6 @@
   website: https://magent2.farama.org/
   desc: An engine for high performance multi-agent environments with very large numbers of agents, along with a set of reference environments
   image: MAgent2.svg
-  type: mature
-
-- name: Miniworld
-  github: https://github.com/Farama-Foundation/MiniWorld
-  website: https://miniworld.farama.org/
-  desc: Simple and easily configurable 3D FPS-game-like environments for reinforcement learning
-  image: miniworld.svg
   type: mature
 
 - name: MiniWoB++
@@ -133,13 +118,6 @@
   website:
   desc: A fork of gym-retro with additional games, emulators and supported platforms
   image: stableretro.svg
-  type: incubating
-
-- name: ChatArena
-  github: https://github.com/Farama-Foundation/chatarena
-  website:
-  desc: A multi-agent language game environments for LLMs
-  image: chatarena.svg
   type: incubating
 
 - name: MOMAland
