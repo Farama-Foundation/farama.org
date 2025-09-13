@@ -102,12 +102,6 @@
   image: MO-Gymnasium.svg
   type: mature
 
-- name: CrowdPlay
-  github: https://github.com/Farama-Foundation/CrowdPlay
-  website:
-  desc: A web based platform for collecting human actions in reinforcement learning environments
-  type: incubating
-
 - name: HighwayEnv
   github: https://github.com/Farama-Foundation/HighwayEnv
   website: https://highway-env.farama.org/
