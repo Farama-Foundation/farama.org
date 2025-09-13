@@ -50,6 +50,7 @@
   desc: A collection of reinforcement learning environments for simple web interaction tasks
   image: miniwobplusplus.svg
   type: mature
+  pip: miniwob
 
 - name: Jumpy
   github: https://github.com/Farama-Foundation/Jumpy
