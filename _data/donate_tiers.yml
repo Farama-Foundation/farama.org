@@ -6,7 +6,7 @@
 - name: Gold
   price: $25k+
   benefits:
-    - benefit: Link to commercial tools that use our libraries on the corresponding libraries GitHub page and documentation websites
+    - benefit: Per repository sponsorships and links to commercial tools that use our libraries on the corresponding libraries GitHub page and documentation websites
     - benefit: Post ads to our discord server (with thousands of users) every quarter
 - name: Platinum
   price: $50k+
