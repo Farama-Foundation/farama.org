@@ -16,29 +16,11 @@
   image: ariel.jpg
   site: https://github.com/RedTachyon
 
-- name: Jet Tai
-  role: General Contributor
-  affiliation: Coventry University
-  image: jet.jpg
-  site: https://github.com/jjshoots
-
 - name: Kallinteris Andreas
   role: Project-Manager of Gymnasium Robotics and Gymnasium Maintainer
   affiliation: Technical University of Crete
   image: andreas.jpg
   site: https://github.com/Kallinteris-Andreas
-
-- name: Eric Laukien
-  role: Procgen2 Project Manager
-  affiliation: Ogma Corp
-  image: eric.jpg
-  site: https://github.com/222464
-
-- name: Panupong 'Ice' Pasupat
-  role: MiniWoB++ Project Manager
-  affiliation: Google Brain
-  image: ice.jpg
-  site: https://ppasupat.github.io
 
 - name: Reginald McLean
   role: Metaworld Project Manager
@@ -76,35 +58,11 @@
   image: leurent.jpg
   site: https://github.com/eleurent
 
-- name: Markus Krimmel
-  role: General Contributor
-  affiliation: ETH Zürich
-  image: markus.jpg
-  site: https://github.com/Markus28
-
-- name: Arjun KG
-  role: General Contributor
-  affiliation: Connectome.Design
-  image: arjun.jpg
-  site: https://github.com/arjun-kg
-
 - name: Omar G. Younis
   role: Minari Project Manager
   affiliation: ETH Zürich
   image: omar.jpg
   site: https://github.com/younik
-
-- name: John U. Balis
-  role: General Contributor
-  affiliation: University of Wisconsin-Madison
-  image: john.png
-  site: https://github.com/balisujohn
-
-- name: Andrea Pierré
-  role: General Contributor
-  affiliation: Brown University
-  image: andrea.jpg
-  site: https://github.com/kir0ul
 
 - name: Manuel Goulão
   role: Web Developer
