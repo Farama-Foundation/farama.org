@@ -12,7 +12,7 @@
 
 - name: Ariel Kwiatkowski
   role: Gymnasium Technical Lead
-  affiliation: École Polytechnique
+  affiliation: Meta
   image: ariel.jpg
   site: https://github.com/RedTachyon
 
@@ -35,14 +35,14 @@
   site: https://github.com/ffelten
 
 - name: Bolun Dai
-  role: Miniworld and Minigrid Project Manager and MPE2 Maintainer
-  affiliation: New York University
+  role: General Contributor
+  affiliation: Fauna Robotics
   image: bolun.jpg
   site: https://github.com/BolunDai0216
 
 - name: Marek Wydmuch
   role: ViZDoom Project Manager
-  affiliation: Poznan University of Technology
+  affiliation: Snowflake
   image: marek.jpg
   site: https://github.com/mwydmuch
 
@@ -60,9 +60,14 @@
 
 - name: Omar G. Younis
   role: Minari Project Manager
-  affiliation: ETH Zürich
+  affiliation: MILA
   image: omar.jpg
   site: https://github.com/younik
+
+- name: Travis Virgil
+  role: PettingZoo Maintainer
+  affiliation: New Jersey Institute of Technology
+  image: travis.jpg
 
 - name: Manuel Goulão
   role: Web Developer
