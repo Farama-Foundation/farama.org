@@ -107,6 +107,7 @@
   website: https://highway-env.farama.org/
   desc: A collection of environments for autonomous driving and tactical decision-making tasks
   type: incubating
+  pip: highway-env
 
 - name: MPE2
   github: https://github.com/Farama-Foundation/MPE2
