@@ -24,7 +24,7 @@
 
 - name: Reginald McLean
   role: Metaworld Project Manager
-  affiliation: Toronto Metropolitan University
+  affiliation: Alberta Machine Intelligence Institute
   image: reginald.jpg
   site:
 
@@ -65,7 +65,7 @@
   site: https://github.com/younik
 
 - name: Travis Virgil
-  role: PettingZoo Maintainer
+  role: PettingZoo and MAgent2 Maintainer
   affiliation: New Jersey Institute of Technology
   image: travis.jpg
 
