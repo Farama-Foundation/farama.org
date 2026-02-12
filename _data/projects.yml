@@ -128,4 +128,4 @@
   website: https://vizdoom.farama.org/
   desc: Reinforcement Learning environments based on the 1993 game Doom
   image: vizdoom.svg
-  type: incubating
+  type: mature
