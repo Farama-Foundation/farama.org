@@ -37,7 +37,7 @@ gem 'jekyll-sitemap'
 gem 'jekyll-redirect-from'
 
 # The csv, base64, and bigdecimal libraries are not part of the default gems starting from Ruby 3.4.0.
-# Adding them to the Gemfile supress warnings about missing gems when running Jekyll with Ruby 3.4.0 or later.
+# Adding them to the Gemfile suppress warnings about missing gems when running Jekyll with Ruby 3.4.0 or later.
 gem 'csv'
 
 gem 'base64'
