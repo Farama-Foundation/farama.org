@@ -111,7 +111,7 @@
 
 - name: Stable-Retro
   github: https://github.com/Farama-Foundation/stable-retro
-  website: stable-retro.farama.org/
+  website: https://stable-retro.farama.org/
   desc: A fork of gym-retro with additional games, emulators and supported platforms
   image: stableretro.svg
   type: mature
