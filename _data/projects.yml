@@ -92,6 +92,7 @@
   github: https://github.com/Farama-Foundation/HighwayEnv
   website: https://highway-env.farama.org/
   desc: A collection of environments for autonomous driving and tactical decision-making tasks
+  image: highway.svg
   type: incubating
   pip: highway-env
 
