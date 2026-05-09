@@ -33,7 +33,6 @@ logo: assets/images/farama_solid_white.svg
 favicon: assets/images/farama-gradient-favicon.svg
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

@@ -1,14 +1,30 @@
 Repo for the source code for farama.org
 
-## How to build
+## Setup
 
-1. [Install Jekyll](https://jekyllrb.com/docs/installation/)
-2. Serve
+Install [mise](https://mise.jdx.dev/), then from the repo root:
+
 ```
-bundle exec jekyll serve
+mise install
+bundle install
 ```
 
-## Built with:
+This installs Ruby, `just`, and `bundler` (via the `mise postinstall` hook), then the Jekyll gems.
+
+## Serving locally
+
+Serve on the local network (accessible from phone):
+```
+just serve
+```
+
+Find your IP:
+```
+just find-local-ip
+```
+Then open `http://<your-ip>:4000` on the other device.
+
+## Built with
 
 * Jekyll
 * Bootstrap 5

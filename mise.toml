@@ -1,0 +1,6 @@
+[tools]
+just = "1.46.0"
+ruby = "3.3.4"
+
+[hooks]
+postinstall = "gem install bundler"
