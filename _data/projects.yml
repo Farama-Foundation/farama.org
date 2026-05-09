@@ -29,13 +29,6 @@
   type: mature
   popular: false
 
-- name: Jumpy
-  github: https://github.com/Farama-Foundation/Jumpy
-  website:
-  desc: On-the-fly conversions between Jax and NumPy tensors
-  image: jumpy.svg
-  type: mature
-
 - name: MAgent2
   github: https://github.com/Farama-Foundation/MAgent2
   website: https://magent2.farama.org/
@@ -118,7 +111,7 @@
 
 - name: Stable-Retro
   github: https://github.com/Farama-Foundation/stable-retro
-  website:
+  website: stable-retro.farama.org/
   desc: A fork of gym-retro with additional games, emulators and supported platforms
   image: stableretro.svg
   type: incubating
