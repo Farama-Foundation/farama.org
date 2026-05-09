@@ -5,7 +5,7 @@
   site: https://jkterry.ai
 
 - name: Mark Towers
-  role: Gymnasium and Arcade Learning Environment Project Manager
+  role: Gymnasium and Arcade Learning Environment Maintainer
   affiliation: Anyscale
   image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
@@ -17,19 +17,19 @@
   site: https://github.com/RedTachyon
 
 - name: Andreas Kallinteris 
-  role: Project-Manager of Gymnasium Robotics and Gymnasium Maintainer
+  role: Gymnasium Robotics and Gymnasium Maintainer
   affiliation: Technical University of Crete
   image: andreas.jpg
   site: https://github.com/Kallinteris-Andreas
 
 - name: Reginald McLean
-  role: Metaworld Project Manager
+  role: Metaworld Maintainer
   affiliation: Alberta Machine Intelligence Institute
   image: reginald.jpg
   site: https://github.com/reginald-mclean
 
 - name: Florian Felten
-  role: MO-Gymnasium and MOMAland Project Manager
+  role: MO-Gymnasium and MOMAland Maintainer
   affiliation: SnT, University of Luxembourg
   image: florian.jpg
   site: https://github.com/ffelten
@@ -41,25 +41,25 @@
   site: https://github.com/BolunDai0216
 
 - name: Marek Wydmuch
-  role: ViZDoom Project Manager
+  role: ViZDoom and Minigrid Maintainer
   affiliation: Snowflake
   image: marek.jpg
   site: https://github.com/mwydmuch
 
 - name: Lucas N. Alegre
-  role: MO-Gymnasium Project Manager
+  role: MO-Gymnasium Maintainer
   affiliation: Universidade Federal do Rio Grande do Sul (UFRGS)
   image: lucas.jpg
   site: https://github.com/LucasAlegre
 
 - name: Edouard Leurent
-  role: HighwayEnv maintainer
+  role: HighwayEnv Maintainer
   affiliation: Google DeepMind
   image: leurent.jpg
   site: https://github.com/eleurent
 
 - name: Omar G. Younis
-  role: Minari Project Manager
+  role: Minari Maintainer
   affiliation: MILA
   image: omar.jpg
   site: https://github.com/younik
