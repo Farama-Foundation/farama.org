@@ -5,7 +5,7 @@
   site: https://jkterry.ai
 
 - name: Mark Towers
-  role: Gymnasium and Jumpy Project Manager
+  role: Gymnasium and Arcade Learning Environment Project Manager
   affiliation: Anyscale
   image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
@@ -26,7 +26,7 @@
   role: Metaworld Project Manager
   affiliation: Alberta Machine Intelligence Institute
   image: reginald.jpg
-  site:
+  site: https://github.com/reginald-mclean
 
 - name: Florian Felten
   role: MO-Gymnasium and MOMAland Project Manager
@@ -68,6 +68,7 @@
   role: PettingZoo and MAgent2 Maintainer
   affiliation: New Jersey Institute of Technology
   image: travis.jpg
+  site: https://github.com/virgilt
 
 - name: Manuel Goulão
   role: Web Developer
