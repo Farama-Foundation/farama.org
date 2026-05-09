@@ -100,7 +100,7 @@
   website: https://mpe2.farama.org
   desc: A set of communication oriented environments
   image: MPE2.svg
-  type: incubating
+  type: mature
 
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
@@ -114,7 +114,7 @@
   website: stable-retro.farama.org/
   desc: A fork of gym-retro with additional games, emulators and supported platforms
   image: stableretro.svg
-  type: incubating
+  type: mature
 
 - name: ViZDoom
   github: https://github.com/Farama-Foundation/ViZDoom
