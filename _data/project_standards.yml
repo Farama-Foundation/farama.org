@@ -27,7 +27,7 @@
       standards:
         - name: "<b>Be deterministically compiled</b> if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of reproducibility issues."
         - name: "<b>Ship any binaries for both x86_64 and Arm architectures and both Linux and macOS operating systems.</b>"
-        - name: "<b>All supported operating systems should have wheels provided.</b> (Note: we're temporarily handling Arm-based macOS wheels by having them compile on installation due to an issue with Github Actions support.)"
+        - name: "<b>All supported operating systems should have wheels provided.</b>"
     - title: Good Science
       standards:
         - name: "<b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced (ignoring potential issues due to floating point arithmetic errors)."
