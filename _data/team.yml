@@ -10,11 +10,11 @@
   image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
 
-- name: Ariel Kwiatkowski
-  role: Gymnasium Technical Lead
-  affiliation: Meta
-  image: ariel.jpg
-  site: https://github.com/RedTachyon
+- name: Marek Wydmuch
+  role: ViZDoom and Minigrid Maintainer
+  affiliation: Snowflake
+  image: marek.jpg
+  site: https://github.com/mwydmuch
 
 - name: Andreas Kallinteris
   role: Gymnasium Robotics and Gymnasium Maintainer
@@ -40,11 +40,11 @@
   image: bolun.jpg
   site: https://github.com/BolunDai0216
 
-- name: Marek Wydmuch
-  role: ViZDoom and Minigrid Maintainer
-  affiliation: Snowflake
-  image: marek.jpg
-  site: https://github.com/mwydmuch
+- name: Ariel Kwiatkowski
+  role: General Contributor
+  affiliation: Meta
+  image: ariel.jpg
+  site: https://github.com/RedTachyon
 
 - name: Lucas N. Alegre
   role: MO-Gymnasium Maintainer
