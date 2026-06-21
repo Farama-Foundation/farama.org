@@ -127,19 +127,48 @@ def retrieve_dependents_from_html(html):
     return val
 
 
+def find_package_id(html, pip_name):
+    """Return the GitHub dependents package_id whose dropdown label matches the
+    given PyPI package name, or None if there is no dropdown / no match.
+
+    GitHub's "Used by" page can track several packages per repo (the PyPI
+    package plus GitHub-repository packages, often inherited from a pre-fork
+    history). Without a package_id GitHub shows a default that is sometimes the
+    wrong one with 0 dependents. The PyPI package appears in the selector as a
+    bare name (e.g. "highway-env"), while repository packages are prefixed with
+    "github.com/", so matching the bare name against the pip name selects the
+    correct package.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    for item in soup.select("a.select-menu-item"):
+        text_el = item.select_one(".select-menu-item-text")
+        if text_el is None:
+            continue
+        if text_el.text.strip().lower() == pip_name.lower():
+            href = item.get("href", "")
+            if "package_id=" in href:
+                return href.split("package_id=")[1].split("&")[0]
+    return None
+
+
 def scrape_repos_use(projects):
     res_dict = {}
     total = 0
     for project in projects:
-        project = project["repo"]
+        repo = project["repo"]
+        pip = project["pip"]
         try:
-            res = requests.get(REPOS_USE_URLS.format(repo=project))
+            url = REPOS_USE_URLS.format(repo=repo)
+            res = requests.get(url)
+            package_id = find_package_id(res.content, pip)
+            if package_id:
+                res = requests.get(f"{url}?package_id={package_id}")
             project_repos_use = retrieve_dependents_from_html(res.content)
             total += project_repos_use
-            res_dict[project] = project_repos_use
+            res_dict[repo] = project_repos_use
         except Exception as e:
             print(
-                f"Unable to retrieve the number of dependent repositories at {REPOS_USE_URLS.format(repo=project)}. \
+                f"Unable to retrieve the number of dependent repositories at {REPOS_USE_URLS.format(repo=repo)}. \
                 This might mean that something has changed in the page we are trying to scrape. \
                 Make sure you update the query accordingly."
             )
@@ -148,6 +177,9 @@ def scrape_repos_use(projects):
 
     try:
         res = requests.get(GYM_REPOS_USE_URLS)
+        package_id = find_package_id(res.content, "gym")
+        if package_id:
+            res = requests.get(f"{GYM_REPOS_USE_URLS}?package_id={package_id}")
         project_repos_use = retrieve_dependents_from_html(res.content)
         total += project_repos_use
         res_dict["gym"] = project_repos_use
