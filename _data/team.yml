@@ -52,11 +52,11 @@
   image: lucas.jpg
   site: https://github.com/LucasAlegre
 
-- name: Edouard Leurent
+- name: Jin Cheng
   role: HighwayEnv Maintainer
-  affiliation: Google DeepMind
-  image: leurent.jpg
-  site: https://github.com/eleurent
+  affiliation: University of Edinburgh
+  image: jin.jpg
+  site: https://github.com/Trenza1ore
 
 - name: Omar G. Younis
   role: Minari Maintainer
