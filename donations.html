@@ -1,0 +1,114 @@
+---
+layout: no_jumbotron
+title: Donations
+---
+
+<!-- main page -->
+<div class="farama-gradient-container">
+    <div class="pt-5 py-3 farama-gradient-bg">
+        <div class="jumbotron mb-4 pt-5">
+            <div class="container-fluid">
+                <div style="display: flex; flex-direction: column; max-width: 900px; text-align: left;
+                        margin: auto; color: white; align-items:
+                         center;">
+                    <h1>
+                        {{page.title}}
+                    </h1>
+                    <h4 class="mb-1 mt-4 text-center">Donations are used to pay our developers, maintain our libraries, and develop new ones</h4>
+                    <div class="row pt-3 gx-2 farama-donation-cards-container"
+                        style="display: flex; flex-wrap:wrap; justify-content: center;">
+                        {% for org in site.data.donate %}
+                        <div class="col-12 col-xl-6 col-lg-6 col-sm-5 mt-2 mb-4">
+
+                            {% if org.name == "Paypal" %}
+                            <a href="{{org.site}}"
+                                onclick="window.open('{{org.site}}','popup','width=600,height=600'); return false;">
+                                {% elsif org.name == "Contact Us Directly" %}
+                                <a id="email" style="color: black; " href="{{org.site}}">
+                                    {% else %}
+                                    <a href="{{org.site}}">
+                                        {% endif %}
+                                        <div class="card farama-donation-card  p-3 mx-1 justify-content-center"
+                                            style="max-width: 540px;height: 100%;"
+                                            id="{% if org.name == 'every.org' %}edo-donate-btn{% endif %}">
+                                            <div class="row g-0">
+                                                <div class="col-3 align-self-center" style="padding:4px 16px 4px 0;">
+
+                                                    {% if org.name == "Contact Us Directly" %}
+                                                    {{org.image}}
+                                                    {% else %}
+                                                    <img src="assets/donate/{{org.image}}"
+                                                        class="img-fluid rounded-start" alt="{{org.name}}">
+                                                    {% endif %}
+                                                </div>
+                                                <div class="col-9 card-body d-flex flex-column justify-content-center">
+                                                    <h5 class="card-title mb-0">{{org.name}}</h5>
+                                                    {% if org.info %}
+                                                    <p class="card-text mt-2"><small
+                                                            class="text-muted">{{org.info}}</small></p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="mt-4" style="width: 150px; height: 2px; border: 1px solid"></div>
+                        <h4 class="my-4 text-center">We are a 501c3 nonprofit, meaning that donations are generally deductible on your taxes
+                        </h4>
+                        <div class="mb-4" style="width: 150px; height: 2px; border: 1px solid"></div>
+                    </div>
+                </div>
+                <div id="donors-perks" class="farama-perks-cards-container px-4 mb-4">
+
+                    <h2 class="mt-3 text-white">Donor Benefits</h2>
+                    <div class="row mt-4" style="display: flex; flex-wrap:wrap; justify-content: center;">
+                        {% for tier in site.data.donate_tiers %}
+                        <div class=" col-lg-3 col-sm-6 col-12 mb-4">
+                            <div class="card farama-perks-card text-center" style="height: 100%; margin:0 auto;">
+                                <h5 class="card-title pt-3 mx-5">{{tier.name}} <br>{{tier.price}}</h5>
+                                <ul>
+                                    <div class="farama-perks-card__separator" style="width: 70px; margin-top: 0px">
+                                    </div>
+                                    {% for item in tier.benefits %}
+                                    <li class="mx-3 text-muted" style="line-height: 1.2rem;">
+                                        <small>
+                                            {{item.benefit}}
+                                        </small>
+                                    </li>
+                                    {% if forloop.last %}{% else %}
+                                    <div class="farama-perks-card__separator"></div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <i class="text-white">* Donation tiers are annual and include the benefits of all previous
+                            tiers.</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4 mb-5 p-0">
+    <div class="container p-0 m-0 row text-center w-100">
+        <h2 class="text-primary mb-4">Major Donors</h2>
+        <div class="col">
+            <div class="row justify-content-center mb-4">
+                {% for org in site.data.donors %}
+                <div class="col-6 col-sm-3 mb-4 h-6">
+                    <a href="{{org.site}}" class="text-decoration-none d-flex flex-column h-100">
+                        <img src="assets/donors/{{org.image}}" class="mx-auto img-fluid px-3 mb-2 flex-fill"
+                        alt="{{ org.name }}" style="object-fit: contain; max-height: 90px;">
+                        <h5 class="text-primary" style="height: 48px">{{ org.name }}</h5>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

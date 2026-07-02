@@ -1,0 +1,39 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include nav.html %}
+    <div class="farama-gradient-container">
+        <div class="pt-5 py-3 farama-gradient-bg">
+            <div class="jumbotron mb-1 pt-5">
+                <div class="container-fluid" style="color: white;">
+                    {% if page.title == site.title or page.type == "The Farama Foundation" %}
+
+
+                    {% else %}
+                    <div style="max-width: 900px; text-align: left;
+                            margin: auto;">
+                        <h1>
+                            {{page.title}}
+                        </h1>
+                        <h5>
+                            {{page.subtitle}}
+                        </h5>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{content}}
+
+    {% include footer.html %}
+</body>
+
+
+
+</html>

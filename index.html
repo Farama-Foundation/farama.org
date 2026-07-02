@@ -1,0 +1,93 @@
+---
+layout: home
+title: The Farama Foundation
+subtitle: Maintaining the World's Open Source Reinforcement Learning Tools
+index: true
+---
+
+<div class="farama-gradient-container">
+    <div class="pt-5 farama-gradient-bg"
+        style="min-height: max(100vh, 800px); display:flex; flex-direction: column;">
+        <div class="jumbotron mb-0" style="margin: 6.3rem 0;">
+            <div class="container-fluid" style="color: white;">
+
+                <div class="mb-5">
+                    {% if page.title == site.title %}
+                    <img class="" src="assets/images/farama_solid_white.svg" width="125" height="135"
+                        alt="Farama Foundation" />
+                    {% endif %}
+                    <h1>
+                        {{page.title}}
+                    </h1>
+                    <hr class="d-flex justify-content-center" style="max-width: 500px;">
+                    <h5 style="text-transform: capitalize;">
+                        {{page.subtitle}}
+
+                    </h5>
+                </div>
+                <div style="max-width: 900px; width: 100%; margin: 0 auto;">
+                    <div class="row farama-stats me-1 ms-1 text-white"
+                        style="height:100%; border: 1px solid rgb(255 255 255 / 25%)">
+                        <div class="col-12 col-sm-4 text-center">
+                            <a href="stats/installations" style="text-decoration: none; color: inherit">
+                                <span class="farama-stats__number" id="farama-installations-counter">
+                                    {{ site.data.stats.downloads }}
+                                </span>
+                                <span class="farama-stats__desc">installations</span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-4 text-center">
+                            <a href="stats/contributors" style="text-decoration: none; color: inherit">
+
+                                <span class="farama-stats__number" id="farama-contributers-counter">
+                                    {{ site.data.stats.colaborators }}
+                                </span>
+                                <span class="farama-stats__desc">GitHub contributors</span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-4 text-center">
+                            <a href="stats/dependents" style="text-decoration: none; color: inherit">
+
+                                <span class="farama-stats__number" id="farama-repos-use-counter">
+                                    {{ site.data.stats.repos_use }}
+                                </span>
+                                <span class="farama-stats__desc">repositories use our tools</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container farama-discord-container">
+            <div class="row farama-discord">
+                <div class="col-12 col-sm-8 d-flex">
+                    <h3 class="text-white text-end d-flex align-items-center farama-discord-text">If
+                        you'd like to join or meet our community, please join our discord server</h3>
+                    <div class="ms-3 ms-md-5" style="height: 100%; width: 2px; background-color: white;">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 mt-4 mt-sm-0 d-flex justify-content-center align-items-center">
+                    <a href="{{site.discord}}" aria-label="Donate" class="text-decoration-none">
+                        <button class="farama-discord__btn d-flex align-items-center justify-content-center ">
+                            <i class="fa-brands fa-discord fa-lg fa-fw" style="color: white;"></i>
+                            <span class="ps-3" style="font-size: 1.1rem;">Join Discord server</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {% include footer.html %}
+    </div>
+</div>
+
+<script>
+    const installationsElem = document.getElementById("farama-installations-counter");
+    installationsElem.innerText = parseInt(installationsElem.innerText).toLocaleString('en-US');
+
+    const contributersElem = document.getElementById("farama-contributers-counter");
+    contributersElem.innerText = parseInt(contributersElem.innerText).toLocaleString('en-US');
+
+    const reposUseElem = document.getElementById("farama-repos-use-counter");
+    reposUseElem.innerText = parseInt(reposUseElem.innerText).toLocaleString('en-US');
+</script>

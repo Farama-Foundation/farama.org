@@ -1,0 +1,43 @@
+---
+title: Blog
+---
+
+<div class="container mb-5 mt-3 mt-md-5">
+    <div class="row">
+        {% for post in site.posts %}
+        <a href="{{post.url | relative_url}}" style="text-decoration: none;color:black">
+            <div class="row mb-4">
+                <div class="col-md-7 col-12" style="border-right: 1px solid #00788A">
+                        <h3>
+                            {% if post.short_title %}
+                            {{post.short_title}}
+                            {% else %}
+                            {{post.title}}
+                            {% endif %}
+                        </h3>
+                        <span class="text-muted">{{post.date | date: "%-d %B %Y" }}</span>
+                        <span class="text-muted ps-2">
+                            {% if post.read_time != ""  %}
+                                {{post.read_time}} minutes
+                            {% else %}
+                                {% assign words = post.content | number_of_words %}
+                                {% if words < 360 %}
+                                    1 min
+                                {% else %}
+                                    {{ words | divided_by:180 }} minutes
+                                {% endif %}
+                            {% endif %}
+                                read
+                        </span>
+                </div>
+                <div class="col-md-5 col-12 farama-blog-post__excerpt">
+                    {{ post.excerpt | strip_html }}
+                </div>
+
+            </div>
+        </a>
+        {% endfor %}
+
+
+    </div>
+</div>

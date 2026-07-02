@@ -1,0 +1,71 @@
+- name: Jordan Terry
+  role: CEO
+  affiliation: Farama
+  image: jordan.jpg
+  site: https://jkterry.ai
+
+- name: Mark Towers
+  role: Gymnasium, Arcade Learning Environment and Shimmy Maintainer
+  affiliation: Anyscale
+  image: mark.jpg
+  site: https://github.com/pseudo-rnd-thoughts
+
+- name: Marek Wydmuch
+  role: ViZDoom and Minigrid Maintainer
+  affiliation: Snowflake
+  image: marek.jpg
+  site: https://github.com/mwydmuch
+
+- name: Andreas Kallinteris
+  role: Gymnasium Robotics and Gymnasium Maintainer
+  affiliation: Technical University of Crete
+  image: andreas.jpg
+  site: https://github.com/Kallinteris-Andreas
+
+- name: Reginald McLean
+  role: Metaworld Maintainer
+  affiliation: Alberta Machine Intelligence Institute
+  image: reginald.jpg
+  site: https://github.com/reginald-mclean
+
+- name: Florian Felten
+  role: MO-Gymnasium and MOMAland Maintainer
+  affiliation: SnT, University of Luxembourg
+  image: florian.jpg
+  site: https://github.com/ffelten
+
+- name: Bolun Dai
+  role: General Contributor
+  affiliation: Fauna Robotics
+  image: bolun.jpg
+  site: https://github.com/BolunDai0216
+
+- name: Ariel Kwiatkowski
+  role: General Contributor
+  affiliation: Meta
+  image: ariel.jpg
+  site: https://github.com/RedTachyon
+
+- name: Lucas N. Alegre
+  role: MO-Gymnasium Maintainer
+  affiliation: Universidade Federal do Rio Grande do Sul (UFRGS)
+  image: lucas.jpg
+  site: https://github.com/LucasAlegre
+
+- name: Jin Huang
+  role: HighwayEnv Maintainer
+  affiliation: University of Edinburgh
+  image: jin.jpg
+  site: https://github.com/Trenza1ore
+
+- name: Omar G. Younis
+  role: Minari Maintainer
+  affiliation: MILA
+  image: omar.jpg
+  site: https://github.com/younik
+
+- name: Travis Virgil
+  role: PettingZoo and MAgent2 Maintainer
+  affiliation: New Jersey Institute of Technology
+  image: travis.jpg
+  site: https://github.com/virgilt

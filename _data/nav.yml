@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+- name: Projects
+  link: projects
+- name: Standards
+  link: project_standards
+- name: Team
+  link: team
+- name: Donations
+  link: donations
+- name: Blog
+  link: blog
+- name: About
+  link: about

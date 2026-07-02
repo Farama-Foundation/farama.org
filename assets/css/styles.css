@@ -1,0 +1,514 @@
+:root {
+    --bs-primary-background-dark: #03121e;
+    --bs-primary-background: #011433;
+    --bs-primary: #0f4a65;
+    --bs-primary-rgb: 15, 74, 101;
+    --bs-primary-light: #29789d;
+    --bs-secondary: #6d5842;
+    --bs-secondary-rgb: 109, 88, 66;
+    --bs-secondary-light: #bd8a42;
+    --bs-secondary-light-hover: #d9b481;
+    --footer-background-color: #061e2c;
+    --footer-height: 100px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+a {
+    color: var(--bs-primary-light)
+}
+
+a:hover {
+    color: var(--bs-primary)
+}
+
+#nav {
+    position: absolute;
+    width: 100%;
+    min-height: 56px;
+    background-color: rgba(2, 13, 29, 0.70);
+    transition: background-color 0.2s ease-in;
+    z-index: 3;
+}
+
+/* Use :has for a better experience */
+#nav:has(button[aria-expanded="false"]) {
+    background-color: rgba(2, 13, 29, 0.30);
+}
+
+#nav:has(button[aria-expanded="true"]) {
+    background-color: rgba(2, 13, 29, 1.0);
+}
+
+#nav a:hover {
+    color: var(--bs-secondary-light-hover) !important
+}
+
+.navbar-dark {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.farama-navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.farama-navbar-toggler .navbar-toggler-icon {
+    width: 36px;
+    height: 36px;
+}
+
+
+.jumbotron {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.jumbotron hr {
+    width: 100%;
+    max-width: 500px;
+    margin: 12px auto 24px;
+}
+
+.container {
+    width: 95%;
+    max-width: 900px;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.card {
+    --bs-card-border-radius: 1.5rem;
+    --bs-card-inner-border-radius: calc(var(--bs-card-border-radius) - 1px);
+}
+
+.farama-card {
+    text-align: center;
+    transition: border-color 0.05s ease-in;
+}
+
+.farama-card:hover {
+    border-color: var(--bs-primary);
+}
+
+.farama-card img {
+    width: 45%;
+    aspect-ratio: 1;
+    margin: 24px auto;
+    border-radius: 0;
+}
+
+.farama-card .card-title {
+    color: var(--bs-primary)
+}
+
+.farama-card .btn {}
+
+.farama-card .btn i {
+    margin-right: 7px;
+}
+
+.farama-card .btn svg {
+    width: 21px;
+    height: 21px;
+    margin-right: 7px;
+    margin-bottom: 2px;
+}
+
+.farama-card .card-footer {
+    /* background-color: var(--bs-primary-light); */
+}
+
+.farama-stats {
+    height: 100%;
+    background: rgb(255 255 255 / 10%);
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.farama-stats div {
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+.farama-stats div:hover {
+    background-color: rgb(255 255 255 / 5%);
+}
+
+.farama-stats div a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: inherit";
+}
+
+.farama-stats div:not(:last-child) {
+    border-right: 1px solid rgb(255 255 255 / 60%);
+}
+
+.farama-stats__number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.farama-stats__desc {
+    font-size: 1.0rem;
+}
+
+.farama-discord-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+
+.farama-discord {
+    min-height: 100px;
+}
+
+.farama-discord__btn {
+    padding: 12px 24px;
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 20px 0px rgb(255 255 255 / 10%);
+}
+
+.farama-profile-link {
+    text-decoration: none;
+    color: var(--bs-body-color)
+}
+
+.farama-profile-card {
+    text-align: center;
+}
+
+.farama-profile-card a:hover {
+    color: initial
+}
+
+.farama-profile-card img {
+    width: 45%;
+    aspect-ratio: 1;
+    margin: 24px auto 12px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.farama-profile-card .card-body {
+    padding: 12px 24px 24px
+}
+
+.farama-profile-card .card-title {
+    color: var(--bs-primary)
+}
+
+.farama-profile-card__separator {
+    width: 60px;
+    height: 2px;
+    margin: 12px auto;
+    background-color: #001633;
+}
+
+.farama-gradient-bg {
+    position: relative;
+    background:
+        radial-gradient(farthest-side at bottom left,
+            #7A603E,
+            transparent),
+        radial-gradient(farthest-corner at top right,
+            #005461,
+            transparent),
+        radial-gradient(farthest-corner at bottom right,
+            #5b4e2a,
+            transparent),
+        radial-gradient(closest-side at center,
+            #005562,
+            transparent);
+}
+
+.farama-gradient-bg .farama-donation-cards-container a {
+    text-decoration: none;
+    color: var(--bs-body-color)
+}
+
+.farama-gradient-bg .farama-perks-card a {
+    color: var(--bs-primary-light)
+}
+
+.farama-donation-card {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.farama-donation-card img {
+    max-height: 52px;
+}
+
+.farama-donation-card i {
+    font-size: 2.8rem;
+}
+
+.farama-donation-card .card-body {
+    padding: 0;
+}
+
+.farama-donation-card .card-text {
+    line-height: 12px;
+}
+
+.farama-perks-cards-container {
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 98%;
+    max-width: 950px;
+    margin: auto;
+}
+
+.farama-perks-card {
+    padding: 0;
+    font-family: var(--bs-font-sans-serif);
+}
+
+.farama-perks-card:hover {
+    border-color: var(--bs-primary);
+}
+
+.farama-perks-card .card-title {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.farama-perks-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.farama-perks-card__separator {
+    height: 2px;
+    background-color: var(--bs-secondary);
+    width: 10px;
+    margin: 12px auto
+}
+
+.farama-standards-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.farama-standards-card__separator {
+    height: 2px;
+    background-color: var(--bs-secondary);
+    width: 50px;
+    margin: 12px auto
+}
+
+img.light-shadow {
+    filter: drop-shadow(4px 4px 3px rgba(70, 65, 68, 0.8));
+}
+
+.donor {
+    color: #059d05;
+}
+
+.farama-gradient-container {
+    background-color: #001633;
+}
+
+.farama-gradient-container a {
+    color: #c7deff
+}
+
+.blog-container h1,
+.blog-container h2,
+.blog-container h3,
+.blog-container h4,
+.blog-container h5 {
+    padding-top: 1rem;
+}
+
+.blog-container img {
+    max-width: 100%;
+}
+
+.blog-container center {
+    margin-bottom: 1rem;
+}
+
+.farama-blog-post__excerpt {
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+    text-align: justify;
+}
+
+.farama-highlight {
+    background-color: #eaeef1;
+    color: white;
+}
+
+.farama-highlight h2 {
+    color: var(--bs-secondary-light)
+}
+
+.farama-post-card {
+    overflow: hidden;
+}
+
+.farama-post-card .card-img-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 90%);
+}
+
+
+.farama-post-card .card-img {
+    transition: filter 0.2s ease-in, transform 0.2s ease-in;
+}
+
+.farama-post-card:hover .card-img {
+    filter: blur(10px);
+    transform: scale(1.15);
+}
+
+.farama-social-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.farama-social-container a {
+    display: flex;
+    text-decoration: none;
+}
+
+.farama-footer {
+    background-color: var(--footer-background-color);
+    color: white;
+    bottom: 0;
+    text-align: left;
+    min-height: var(--footer-height)
+}
+
+.farama-gradient-container .farama-footer {
+    background-color: rgba(2, 13, 29, 0.30);
+
+}
+
+#farama-stats-container .card .card-title {
+    color: var(--bs-primary);
+    align-self: center;
+}
+
+.farama-projects-stats__container {
+    margin: 0 16px
+}
+
+.farama-projects-stats__row {
+    padding: 8px;
+}
+
+.farama-projects-stats__row:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.farama-projects-stats__include {
+    display: flex;
+    margin: 4px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.farama-projects-stats__title {
+    padding: 4px 6px;
+}
+
+.farama-old-projects-stats__container {
+    margin-left: 24px;
+}
+
+.farama-old-projects-stats__row {}
+
+.farama-old-projects-stats__expand-btn {
+    display: flex;
+    padding: 4px 6px;
+}
+
+.farama-old-projects-stats__expand-btn i {
+    align-self: center;
+    margin-top: 4px;
+    margin-left: 6px;
+}
+
+.farama-global-stats__number {
+    margin-left: 24px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.farama-global-stats__chart {
+    height: 85px;
+    width: 300px;
+}
+
+
+@media (max-width: 992px) {
+    #navbarNav {
+        margin-top: 16px;
+    }
+
+    .navbar-brand {
+        left: 12px !important
+    }
+
+    ul.navbar-nav {
+        height: 100vh;
+    }
+
+    body:has(.navbar-collapse.show, .navbar-collapse.collapsing) {
+        overflow-y: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .farama-card img {
+        width: 40%;
+        margin: 16px auto 0px;
+    }
+
+    .farama-discord-text {
+        font-size: 1.3rem;
+    }
+
+    .farama-discord-btn {
+        padding: 6px 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .farama-stats div div {
+        border-right: none !important;
+    }
+
+    .farama-projects-stats__container {
+        margin: 0
+    }
+
+    .farama-global-stats__number {
+        margin-left: 0;
+        font-size: 2rem;
+    }
+
+    .farama-stats div:not(:last-child) {
+        border-right: none;
+    }
+}

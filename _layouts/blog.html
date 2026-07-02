@@ -1,0 +1,57 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    <link rel="stylesheet" href="{{ "/assets/css/code.css" | relative_url}}">
+
+    {% include nav.html %}
+
+    <style>
+        #nav {
+            background-color: #111!important;
+        }
+    </style>
+    <div style="margin-top: 56px">
+        <img class="w-100 mb-4" src="{{ page.thumbnail }}">
+        <div class="container" style="max-width: 700px;">
+            <div>
+                <h1>
+                    {% if page.short_title != "" %}
+                        {{page.short_title}}
+                    {% else %}
+                        {{page.title}}
+                    {% endif %}
+                </h1>
+                <h4 class="text-muted mb-2">
+                    {% if page.subtitle != "" %}
+                        {{page.subtitle}}
+                    {% endif %}
+                </h4>
+                <div style="display: flex">
+                    <span style="font-size: 1.25rem;">{{page.date | date: "%-d %B %Y" }}</span>
+                    <span style="font-size: 1.25rem; margin-left: 24px">
+                        {% if page.read_time != ""  %}
+                            {{page.read_time}} minutes
+                        {% else %}
+                            {% assign words = page.content | number_of_words %}
+                            {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} minutes {% endif %}
+                        {% endif %}
+                        read
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container blog-container mt-3 mb-5" style="max-width: 700px;">
+        {{content}}
+    </div>
+
+    {% include footer.html %}
+</body>
+
+</html>

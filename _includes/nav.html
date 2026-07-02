@@ -1,0 +1,25 @@
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+    <div class="container-fuid d-flex w-100">
+        <a class="navbar-brand position-absolute" style="left: 24px; top: 4px" href="/">
+            <img src="{{'assets/images/farama_solid_white.svg' | relative_url }}" alt="Farama Foundation logo"
+                width="40" height="40">
+        </a>
+        <button class="navbar-toggler farama-navbar-toggler position-absolute" style="right: 16px; top:10px" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                {% for item in site.data.nav %}
+                <li class="nav-item ms-3 me-3">
+                    <a style="color: white;font-size:1.05rem;font-weight:normal;{% if item.name == page.title %} color:var(--bs-secondary-light) {% endif %}"
+                        class="nav-link " href="{{ item.link | relative_url }}">{{
+                            item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</nav>

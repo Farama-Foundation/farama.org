@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 370">
+    <!-- Styles -->
+    <defs>
+        <style>
+            .mode-text {
+                fill: #333;
+                font-weight: bold;
+                font-size: 18px;
+                text-anchor: end;
+            }
+
+            .label-text {
+                fill: #333;
+                font-size: 14px;
+                text-anchor: middle;
+            }
+
+            .code-text {
+                font-family: monospace;
+            }
+
+            .circle {
+                stroke: #333;
+                stroke-width: 1;
+            }
+
+            .terminated {
+                stroke-width: 3;
+            }
+
+            .next-step {
+                fill: #e1f3ff;
+            }
+
+            .same-step {
+                fill: #f1ffe1;
+            }
+
+            .disabled {
+                fill: #ffe1e1;
+            }
+
+            .reset {
+                fill: #fff;
+            }
+
+            .arrow {
+                stroke: #666;
+                stroke-width: 2;
+            }
+
+            .dashed {
+                stroke-dasharray: 4;
+            }
+        </style>
+
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+        </marker>
+    </defs>
+
+    <!-- Next-Step Mode -->
+    <g transform="translate(140, 0)">
+        <text x="0" y="45" class="mode-text">Next-Step Mode:</text>
+
+        <!-- Episode 1 -->
+        <circle cx="50" cy="40" r="20" class="circle next-step"/>
+        <circle cx="150" cy="40" r="20" class="circle next-step"/>
+        <circle cx="250" cy="40" r="20" class="circle next-step terminated"/>
+
+        <!-- Episode 2 -->
+        <circle cx="350" cy="40" r="20" class="circle reset"/>
+        <circle cx="450" cy="40" r="20" class="circle next-step"/>
+        <circle cx="550" cy="40" r="20" class="circle next-step"/>
+
+        <!-- Connecting lines -->
+        <line x1="70" y1="40" x2="128" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="93" y="25" class="label-text" font-size="10">step</text>
+        <line x1="170" y1="40" x2="227" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="193" y="25" class="label-text" font-size="10">step</text>
+        <line x1="273" y1="40" x2="328" y2="40" class="arrow dashed" marker-end="url(#arrowhead)"/>
+        <text x="293" y="25" class="label-text" font-size="10">step</text>
+        <line x1="370" y1="40" x2="428" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="393" y="25" class="label-text" font-size="10">step</text>
+        <line x1="470" y1="40" x2="528" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="493" y="25" class="label-text" font-size="10">step</text>
+
+        <!-- Labels -->
+        <text x="250" y="75" class="label-text">Terminated Obs</text>
+        <text x="350" y="75" class="label-text">Reset Obs</text>
+    </g>
+
+    <!-- Same-Step Mode -->
+    <g transform="translate(140, 120)">
+        <text x="0" y="45" class="mode-text">Same-Step Mode:</text>
+
+        <!-- Episode 1 -->
+        <circle cx="50" cy="40" r="20" class="circle same-step"/>
+        <circle cx="150" cy="40" r="20" class="circle same-step"/>
+
+        <!-- Terminated State -->
+        <g transform="translate(250, 40)">
+            <circle cx="0" cy="-30" r="20" class="circle reset"/>
+            <text x="85" y="65" class="label-text">Terminated Obs (in <tspan class="code-text">info["final_obs"]</tspan>)</text>
+            <circle cx="0" cy="30" r="20" class="circle same-step terminated"/>
+            <text x="0" y="3" class="label-text">Reset Obs</text>
+        </g>
+
+        <!-- Episode 2 -->
+        <circle cx="350" cy="10" r="20" class="circle same-step"/>
+        <circle cx="450" cy="10" r="20" class="circle same-step"/>
+
+        <!-- Connecting lines -->
+        <line x1="70" y1="40" x2="128" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="93" y="25" class="label-text" font-size="10">step</text>
+        <line x1="172" y1="38" x2="228" y2="10" class="arrow dashed" marker-end="url(#arrowhead)"/>
+        <text x="193" y="10" class="label-text" font-size="10">step</text>
+        <line x1="170" y1="40" x2="227" y2="70" class="arrow" marker-end="url(#arrowhead)"/>
+        <line x1="270" y1="10" x2="328" y2="10" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="293" y="0" class="label-text" font-size="10">step</text>
+        <line x1="370" y1="10" x2="428" y2="10" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="393" y="0" class="label-text" font-size="10">step</text>
+    </g>
+
+    <!-- Disabled Mode -->
+    <g transform="translate(140, 245)">
+        <text x="0" y="45" class="mode-text">Disabled Mode:</text>
+
+        <!-- Episode 1 -->
+        <circle cx="50" cy="40" r="20" class="circle disabled"/>
+        <circle cx="150" cy="40" r="20" class="circle disabled"/>
+        <circle cx="250" cy="40" r="20" class="circle disabled terminated"/>
+
+        <!-- Episode 2 -->
+        <circle cx="350" cy="40" r="20" class="circle reset"/>
+        <circle cx="450" cy="40" r="20" class="circle disabled"/>
+        <circle cx="550" cy="40" r="20" class="circle disabled"/>
+
+        <!-- Connecting lines -->
+        <line x1="70" y1="40" x2="128" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="93" y="22" class="label-text" font-size="10">step</text>
+        <line x1="170" y1="40" x2="227" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="193" y="22" class="label-text" font-size="10">step</text>
+        <line x1="273" y1="40" x2="328" y2="40" class="arrow dashed" marker-end="url(#arrowhead)"/>
+        <text x="300" y="22" class="label-text" font-size="10">reset(mask)</text>
+        <line x1="370" y1="40" x2="428" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="393" y="22" class="label-text" font-size="10">step</text>
+        <line x1="470" y1="40" x2="528" y2="40" class="arrow" marker-end="url(#arrowhead)"/>
+        <text x="493" y="22" class="label-text" font-size="10">step</text>
+
+        <!-- Labels -->
+        <text x="250" y="75" class="label-text">Terminated Obs</text>
+        <text x="350" y="75" class="label-text">Reset Obs</text>
+    </g>
+</svg>

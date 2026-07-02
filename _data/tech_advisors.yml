@@ -1,0 +1,11 @@
+- name: Pablo Castro
+  role: Google DeepMind
+  affiliation: Google
+  image: psc.png
+  site: https://github.com/psc-g
+
+- name: John Langford
+  role: Head of Real World RL
+  affiliation: Microsoft Research
+  image: langford.jpg
+  site: https://www.microsoft.com/en-us/research/people/jcl/

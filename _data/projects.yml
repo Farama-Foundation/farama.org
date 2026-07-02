@@ -1,0 +1,125 @@
+- name: Gymnasium
+  github: https://github.com/Farama-Foundation/Gymnasium
+  website: https://gymnasium.farama.org/
+  image: gymnasium_black.svg
+  desc: A standard API for single-agent reinforcement learning environments, with popular reference environments and related utilities (formerly Gym)
+  type: core
+  popular: true
+
+- name: PettingZoo
+  github: https://github.com/Farama-Foundation/PettingZoo
+  website: https://pettingzoo.farama.org
+  image: pettingzoo.svg
+  desc: A standard API for multi-agent reinforcement learning environments, with popular reference environments and related utilities
+  type: core
+  popular: true
+
+- name: Minari
+  github: https://github.com/Farama-Foundation/Minari
+  website: https://minari.farama.org/
+  desc: A standard format for offline reinforcement learning datasets, with popular reference datasets and related utilities
+  image: minari.svg
+  type: core
+
+- name: Gymnasium-Robotics
+  github: https://github.com/Farama-Foundation/Gymnasium-Robotics
+  website: https://robotics.farama.org
+  desc: A collection of robotics simulation environments for reinforcement learning
+  image: gymnasium-robotics.svg
+  type: mature
+  popular: false
+
+- name: MAgent2
+  github: https://github.com/Farama-Foundation/MAgent2
+  website: https://magent2.farama.org/
+  desc: An engine for high performance multi-agent environments with very large numbers of agents, along with a set of reference environments
+  image: MAgent2.svg
+  type: mature
+
+- name: Metaworld
+  github: https://github.com/Farama-Foundation/Metaworld
+  website: https://metaworld.farama.org/
+  desc: Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning
+  image: metaworld.svg
+  type: mature
+
+- name: Minigrid
+  github: https://github.com/Farama-Foundation/MiniGrid
+  website: https://minigrid.farama.org
+  desc: Simple and easily configurable grid world environments for reinforcement learning
+  image: minigrid.svg
+  type: mature
+  popular: true
+
+- name: MiniWoB++
+  github: https://github.com/Farama-Foundation/miniwob-plusplus
+  website: https://miniwob.farama.org/
+  desc: A collection of reinforcement learning environments for simple web interaction tasks
+  image: miniwobplusplus.svg
+  type: mature
+  pip: miniwob
+
+- name: MOMAland
+  github: https://github.com/Farama-Foundation/momaland
+  website: https://momaland.farama.org/
+  desc: Multi-objective multi-agent API and environments.
+  image: momaland.svg
+  type: mature
+
+- name: MO-Gymnasium
+  github: https://github.com/Farama-Foundation/MO-Gymnasium
+  website: https://mo-gymnasium.farama.org/
+  desc: Multi-objective Gymnasium environments for reinforcement learning
+  image: MO-Gymnasium.svg
+  type: mature
+
+- name: Shimmy
+  github: https://github.com/Farama-Foundation/Shimmy
+  website: https://shimmy.farama.org/
+  desc: PettingZoo and Gymnasium bindings for popular reinforcement learning environments outside of Farama
+  image: shimmy.svg
+  type: mature
+
+- name: Arcade Learning Environment
+  github: https://github.com/Farama-Foundation/Arcade-Learning-Environment
+  website: https://ale.farama.org/
+  desc: A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games
+  image: ale.svg
+  type: incubating
+  pip: ale-py
+
+- name: HighwayEnv
+  github: https://github.com/Farama-Foundation/HighwayEnv
+  website: https://highway-env.farama.org/
+  desc: A collection of environments for autonomous driving and tactical decision-making tasks
+  image: highway.svg
+  type: incubating
+  pip: highway-env
+
+- name: MPE2
+  github: https://github.com/Farama-Foundation/MPE2
+  website: https://mpe2.farama.org
+  desc: A set of communication oriented environments
+  image: MPE2.svg
+  type: mature
+
+- name: Procgen2
+  github: https://github.com/Farama-Foundation/procgen2
+  website:
+  desc: Fast and procedurally generated side-scroller-game-like graphical environments (formerly Procgen)
+  image: procgen2.svg
+  type: incubating
+
+- name: Stable-Retro
+  github: https://github.com/Farama-Foundation/stable-retro
+  website: https://stable-retro.farama.org/
+  desc: A fork of gym-retro with additional games, emulators and supported platforms
+  image: stableretro.svg
+  type: mature
+
+- name: ViZDoom
+  github: https://github.com/Farama-Foundation/ViZDoom
+  website: https://vizdoom.farama.org/
+  desc: Reinforcement Learning environments based on the 1993 game Doom
+  image: vizdoom.svg
+  type: mature

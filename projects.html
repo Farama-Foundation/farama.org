@@ -1,0 +1,81 @@
+---
+layout: no_jumbotron
+title: Projects
+---
+
+<div class="farama-gradient-container">
+    <div class="pt-5 py-3 farama-gradient-bg">
+        <div class="jumbotron mb-4 pt-5">
+            <div class="container-fluid">
+                <div style="max-width: 900px; text-align: left;
+                        margin: auto; color: white;">
+                    <h1>
+                        {{page.title}}
+                    </h1>
+                    <h5>
+                        If you're interested in submitting a project to us, you can read more <a
+                            href="submit_projects">here</a>. If you'd like to get involved in contributing, the best way
+                        is to join our <a href="https://discord.gg/PfR7a79FpQ">discord server</a>.
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+
+    <h2 class="text-primary">Core</h2>
+    <h5 class="text-muted mb-3 fw-normal">Libraries that provide standard APIs that are reused by other projects within Farama and the community</h5>
+
+    <div class="row mb-5 " style="display: flex; flex-wrap:wrap">
+        {% for project in site.data.projects %}
+        {% if project.type == "core" %}
+        {% include components/project_card.html
+            name = project.name
+            description = project.desc
+            website = project.website
+            github = project.github
+            image = project.image
+          %}
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2 class="text-primary">Mature</h2>
+    <h5 class="text-muted mb-3 fw-normal">Maintained projects that comply with our <a href="/project_standards">standards</a></h5>
+
+    <div class="row mb-5 " style="display: flex; flex-wrap:wrap">
+        {% for project in site.data.projects %}
+        {% if project.type == "mature" %}
+        {% include components/project_card.html
+            name = project.name
+            description = project.desc
+            website = project.website
+            github = project.github
+            image = project.image
+            core_github = project.core_github
+          %}
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2 class="text-primary">Incubating</h2>
+    <h5 class="text-muted mb-3 fw-normal">Projects we're still actively working to bring up to our standards, debug, and/or create</h5>
+
+    <div class="row mb-5 ">
+        {% for project in site.data.projects %}
+        {% if project.type == "incubating" %}
+        {% include components/project_card.html
+            name = project.name
+            description = project.desc
+            website = project.website
+            github = project.github
+            image = project.image
+            core_github = project.core_github
+          %}
+        {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
