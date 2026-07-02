@@ -73,7 +73,7 @@
     - title: Security
       standards:
         - name: "<b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity."
-        - name: "<b>List Jordan Terry and Mark Towers as owners on PyPI</b>, to make sure that we don't lose control of a package in the case that a primary maintainer becomes unavailable due to unexpected circumstances."
+        - name: "<b>List Jordan Terry, Mark Towers and Marek Wydmuch as owners on PyPI</b>, to make sure that we don't lose control of a package in the case that a primary maintainer becomes unavailable due to unexpected circumstances."
         - name: "<b>Have maintainers with GitHub or PyPI permissions use TOTP based 2FA or better</b> (and secure passwords, emails addresses, etc.), to reduce the likelihood of supply chain security attacks involving any of our projects."
     - title: Other
       standards:
