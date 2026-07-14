@@ -15,7 +15,7 @@ subtitle: For a project under Farama to be listed as mature, it must comply with
                 <div class="card-body bg-white">
                     <ul>
                         {% for standard in standards_topic.standards %}
-                        <li style="text-align: left; font-size: 105%">{{ standard.name }}</li>
+                        <li style="text-align: justify; font-size: 105%">{{ standard.name }}</li>
                         {% if forloop.last %}{% else %}
                         <div class="farama-standards-card__separator"></div>
                         {% endif %}
