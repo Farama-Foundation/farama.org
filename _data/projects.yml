@@ -51,14 +51,6 @@
   type: mature
   popular: true
 
-- name: MiniWoB++
-  github: https://github.com/Farama-Foundation/miniwob-plusplus
-  website: https://miniwob.farama.org/
-  desc: A collection of reinforcement learning environments for simple web interaction tasks
-  image: miniwobplusplus.svg
-  type: mature
-  pip: miniwob
-
 - name: MOMAland
   github: https://github.com/Farama-Foundation/momaland
   website: https://momaland.farama.org/
