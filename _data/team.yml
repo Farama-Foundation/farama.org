@@ -23,16 +23,10 @@
   site: https://github.com/Kallinteris-Andreas
 
 - name: Reginald McLean
-  role: Metaworld Maintainer
+  role: Metaworld and Procgen2 Maintainer
   affiliation: Alberta Machine Intelligence Institute
   image: reginald.jpg
   site: https://github.com/reginald-mclean
-
-- name: Florian Felten
-  role: MO-Gymnasium and MOMAland Maintainer
-  affiliation: SnT, University of Luxembourg
-  image: florian.jpg
-  site: https://github.com/ffelten
 
 - name: Bolun Dai
   role: General Contributor
