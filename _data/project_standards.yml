@@ -10,6 +10,7 @@
       standards:
         - name: "<b>Support the Gymnasium and/or PettingZoo API</b> at the newest version (supporting other APIs in addition to these are fine), so that users can drop in and try out different environments as easily as possible, and code can be more modular and interchangeable."
         - name: "<b>Support all actively developed versions of Python</b>. Different users may need to use different versions of Python, often as specified by outside forces like company policy or their package manager, and we want to comprehensively support this."
+        - name: "<b>Display the supported Python versions as a badge widget in the README.</b> Users shouldn't have to read through packaging metadata to find out whether a project runs on their interpreter. Use the same shields.io python-version badge as the other projects, pointed at the package on PyPI so that it stays correct as support changes rather than being updated by hand."
     - title: Code Standardization
       standards:
         - name: "<b>Have Python code comply with the black, flake8, and isort linting/formatting tools.</b> This keeps the code formatting consistent across different projects."
@@ -19,6 +20,7 @@
       standards:
         - name: "<b>Have continuous integration testing</b> for API compliance, determinism, and title checking with Pyright. All tests must pass on both Linux and macOS. This way, we can ensure that all libraries remain well-tested and robust."
         - name: "<b>Include git pre-commit hooks.</b> Including linting checks in pre-commit hooks ensures that all committed code follows a consistent style, and allows new contributors to adapt their code automatically."
+        - name: "<b>Automatically check the documentation website and README for broken links.</b> Links rot as pages are renamed and external projects move, and dead links in documentation are a common source of frustration for new users. Run a link checker over the built documentation and the README from a scheduled GitHub Actions workflow, so that breakages are reported to maintainers instead of being found by users."
     - title: Quality of Life
       standards:
         - name: "<b>Include a thorough documentation website</b> in the same format as the other mature projects if the library is large enough to warrant one. We want both experienced researchers and newcomers alike to be able to quickly see what a library is and reference functionality as needed without having to refer to source."
@@ -26,7 +28,7 @@
     - title: Binaries
       standards:
         - name: "<b>Be deterministically compiled</b> if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of reproducibility issues."
-        - name: "<b>Ship any binaries for both x86_64 and Arm architectures and both Linux and macOS operating systems.</b>"
+        - name: "<b>Ship any binaries for both x86_64 and Arm on Linux, and for Arm on macOS.</b> Apple Silicon has replaced Intel across the Macs our users develop on, so x86_64 macOS wheels are no longer needed."
         - name: "<b>All supported operating systems should have wheels provided.</b>"
     - title: Good Science
       standards:
@@ -50,6 +52,11 @@
         - name: "<b>Have a logo in the same style as the other projects.</b> A nice logo is a small feature that makes projects more memorable and makes the whole space a little more inviting to interested new users. Since we list all the logos together, we try to make sure they match."
         - name: "<b>Have a documentation website at [project].farama.org.</b> Having everything under a single domain name makes things simple and consistent for users (and makes things a bit easier for us to manage)."
         - name: "<b>Include the standard Farama code of conduct.</b> We believe that all members of our community should be respected. Additionally, listing a code of conduct under our projects is a requirement for some open source donations."
+    - title: Project Presentation
+      standards:
+        - name: "<b>Include a header image at the top of the README</b> in the same style as the other projects. The top of the README is the first thing a visitor sees, and a consistent header makes it immediately clear which project they are looking at and that it belongs to Farama."
+        - name: "<b>Set the GitHub social media preview image on the repository.</b> This is the image that appears whenever a repository link is shared on social media or in chat applications, and without one GitHub falls back to a generic placeholder. Upload the project's header image under Settings > General > Social preview so that shared links are recognizable."
+        - name: "<b>Use a consistent project tagline everywhere the project is described.</b> The tagline on the Farama projects page, the GitHub repository About section, the project's Discord channel description, and the documentation website subheader should all match. Users encounter projects through many different entry points, and describing a project the same way in each of them avoids confusion about what it actually does."
     - title: Design Philosophy
       standards:
         - name: "<b>Do it right the first time, and eliminate technical debt.</b> We strive to maintain flexible APIs which can be easily used for many years to come. Breaking changes may be required when bringing in outside projects, in order to align code with our standards and ensure it is maintainable in the future."
@@ -68,7 +75,8 @@
     - title: Development Practices
       standards:
         - name: "<b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase."
-        - name: "<b>Avoid committing to master.</b> Instead, develop locally in feature branches and use PR's for review. This mitigates merge conflicts and allows multiple developers to work simultaneously without issues. Exceptions can be made for small bugfixes, but it is best to use separate branches or patches."
+        - name: "<b>Use `main` as the default branch.</b> Projects which are still on `master` when they join Farama should be renamed under Settings > General > Default branch, which retargets any open pull requests automatically. This keeps branch naming consistent across all of our repositories, so that contributors working on several projects don't have to keep track of which convention each one uses."
+        - name: "<b>Block direct commits to the default branch in the repository settings.</b> Development should happen locally in feature branches which are merged through PR's, so that everything is reviewed, merge conflicts are mitigated, and multiple developers can work simultaneously without issues. This should be enforced by GitHub rather than left to maintainers to remember: add a ruleset under Settings > Rules targeting the default branch which requires a pull request before merging and blocks force pushes."
         - name: "<b>Communicate clearly with the community about upcoming changes.</b> Future development plans should be communicated through release notes, social media announcements, and public roadmaps. In the case of breaking changes, specific instructions must be provided to inform users how to update their code."
     - title: Security
       standards:
