@@ -307,11 +307,17 @@ a:hover {
     text-align: center;
 }
 
-.farama-standards-card__separator {
+.farama-standards-card li p {
+    margin-bottom: 0;
+}
+
+.farama-standards-card li + li::before {
+    content: "";
+    display: block;
     height: 2px;
     background-color: var(--bs-secondary);
     width: 50px;
-    margin: 12px auto
+    margin: 12px auto;
 }
 
 img.light-shadow {

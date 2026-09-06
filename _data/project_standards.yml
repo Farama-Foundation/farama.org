@@ -1,90 +1,142 @@
 - type_name: General Standards
-  type_description: Standards we strongly encourage any reinforcement learning environment to comply with
+  type_description: Standards we strongly encourage reinforcement learning environment projects to follow where applicable
   type_standards:
     - title: Release Details
       standards:
-        - name: "<b>Be released on PyPI</b>, so that users can easily install libraries via `pip` without having to clone Git repositories or run shell scripts."
-        - name: "<b>Include a full package description</b> for the PyPI page (generally by repurposing the readme file), so that users can quickly see what a package is when searching on PyPI."
-        - name: "<b>Deploy packages to PyPI via GitHub Actions</b> that run when a Release is published on GitHub. This ensures that releases are fully automated to remove human error, and allows anyone to easily take over a project if needed."
+        - requirement: Be released on PyPI.
+          rationale: Users should be able to install libraries with `pip` without cloning Git repositories or running shell scripts.
+        - requirement: Include a full package description on PyPI.
+          rationale: Generally, this can reuse the README so that users can quickly understand a package when they find it on PyPI.
+        - requirement: Publish packages automatically to PyPI using Trusted Publishing.
+          rationale: Use a GitHub Actions workflow triggered by a published GitHub Release, a protected publishing environment, narrowly scoped OpenID Connect permissions, and artifacts that were built and tested separately. This reduces manual error and avoids long-lived PyPI credentials.
     - title: Standardization
       standards:
-        - name: "<b>Support the Gymnasium and/or PettingZoo API</b> at the newest version (supporting other APIs in addition to these are fine), so that users can drop in and try out different environments as easily as possible, and code can be more modular and interchangeable."
-        - name: "<b>Support all actively developed versions of Python</b>. Different users may need to use different versions of Python, often as specified by outside forces like company policy or their package manager, and we want to comprehensively support this."
-        - name: "<b>Display the supported Python versions as a badge widget in the README.</b> Users shouldn't have to read through packaging metadata to find out whether a project runs on their interpreter. Use the same shields.io python-version badge as the other projects, pointed at the package on PyPI so that it stays correct as support changes rather than being updated by hand."
+        - requirement: Support the latest stable Gymnasium and/or PettingZoo API.
+          rationale: Supporting other APIs as well is fine. Using a current standard API makes environments easier to exchange and application code more modular.
+        - requirement: Declare and test a supported Python version range.
+          rationale: Projects should support all stable, non-EOL CPython versions when their dependencies permit it, and should document any exceptions or platform-specific constraints.
+        - requirement: Display the supported Python versions as a badge in the README.
+          rationale: Users should not have to read packaging metadata to learn whether a project supports their interpreter. Use the same shields.io Python-version badge as the other projects and point it at the package on PyPI so that it stays current as support changes.
     - title: Code Standardization
       standards:
-        - name: "<b>Have Python code comply with the black, flake8, and isort linting/formatting tools.</b> This keeps the code formatting consistent across different projects."
-        - name: "<b>Add type hinting where reasonable</b>, at least in the most publicly facing portions of a repository. Adding title hinting to functions can help new users get accustomed to code easier and can sometimes help prevent or catch obscure bugs."
-        - name: "<b>Include docstrings for all substantial functions</b> so that new users can easily understand what they do. Use the pydocstyle and Google styles so that they have a standard formatting."
+        - requirement: Apply consistent linting and formatting.
+          rationale: It makes easier to work with the project, we recommend making Python code to comply with Black, Flake8, and isort standards.
+        - requirement: Add type hints where reasonable.
+          rationale: Prioritize public-facing portions of the repository. Type hints can make code easier to understand and can help prevent or catch obscure bugs.
+        - requirement: Include docstrings for all substantial functions.
+          rationale: We recommend using the Google docstring convention and enforcing it with pydocstyle so that documentation is consistently formatted and easy to understand.
     - title: Development Workflow
       standards:
-        - name: "<b>Have continuous integration testing</b> for API compliance, determinism, and title checking with Pyright. All tests must pass on both Linux and macOS. This way, we can ensure that all libraries remain well-tested and robust."
-        - name: "<b>Include git pre-commit hooks.</b> Including linting checks in pre-commit hooks ensures that all committed code follows a consistent style, and allows new contributors to adapt their code automatically."
-        - name: "<b>Automatically check the documentation website and README for broken links.</b> Links rot as pages are renamed and external projects move, and dead links in documentation are a common source of frustration for new users. Run a link checker over the built documentation and the README from a scheduled GitHub Actions workflow, so that breakages are reported to maintainers instead of being found by users."
+        - requirement: Run continuous integration tests.
+          rationale: Test API compliance and determinism, and run type checking with Pyright. Tests must pass for all supported operating-system, architecture, and Python combinations.
+        - requirement: Test built distributions before release.
+          rationale: In continuous integration, build the source distribution and wheel, install them in clean environments, and run import and API-compliance tests. This catches missing package data, incorrect metadata, and build-isolation problems that tests against the source checkout may miss.
+        - requirement: Include pre-commit hooks.
+          rationale: Running linting checks through pre-commit helps contributors follow the project's style automatically. Run the same checks in continuous integration so they cannot be skipped inadvertently.
+        - requirement: Automatically check the documentation website and README for broken links.
+          rationale: Links rot as pages are renamed and external projects move, and dead links are a common source of frustration. Run a link checker over the built documentation and README from a scheduled GitHub Actions workflow so that maintainers discover breakages before users do.
     - title: Quality of Life
       standards:
-        - name: "<b>Include a thorough documentation website</b> in the same format as the other mature projects if the library is large enough to warrant one. We want both experienced researchers and newcomers alike to be able to quickly see what a library is and reference functionality as needed without having to refer to source."
-        - name: "<b>Run on both Linux and macOS.</b> The vast majority of the software in this field is run on Linux servers, and a huge number of researchers and students develop and test on macOS."
+        - requirement: Include a thorough documentation website when the project's user-facing scope warrants one.
+          rationale: Follow the format of other mature projects so that experienced researchers and newcomers can understand the library and find reference material without reading its source.
+        - requirement: Include an `AGENTS.md` file when the project may benefit from AI-assisted contributions.
+          rationale: Document project-specific setup, testing, style, and contribution guidance so that coding agents can work safely and consistently without duplicating general contributor documentation.
     - title: Binaries
       standards:
-        - name: "<b>Be deterministically compiled</b> if we're releasing it as a binary or if it compiles on installation, to reduce the likelihood of reproducibility issues."
-        - name: "<b>Ship any binaries for both x86_64 and Arm on Linux, and for Arm on macOS.</b> Apple Silicon has replaced Intel across the Macs our users develop on, so x86_64 macOS wheels are no longer needed."
-        - name: "<b>All supported operating systems should have wheels provided.</b>"
+        - requirement: Support x86_64 and Arm on Linux, and Apple silicon on macOS.
+          rationale: The vast majority of software in this field runs on Linux servers, while many researchers develop on macOS. Students also often use Windows, so support for Windows x86_64 and Arm is encouraged when the project can support and test them reliably.
+        - requirement: Provide wheels for supported platforms.
+          rationale: Projects with native extensions should publish wheels for every supported operating-system, architecture, and Python combination. Pure-Python projects should publish a universal wheel.
+        - requirement: Make native builds reproducible.
+          rationale: Projects that distribute native binaries or compile code during installation should document and test their build inputs to reduce irreproducible artifacts.
     - title: Good Science
       standards:
-        - name: "<b>Be fully deterministic</b> when given a specific random seed, so that any result can be exactly reproduced (ignoring potential issues due to floating point arithmetic errors)."
-        - name: "<b>Include explicit versioning</b> in environment and wrapper names in a format like 'Pong-v5' to make it clear to researchers when results are from differently configured environments."
-        - name: "<b>Support serialization for all environments via Pickle or EzPickle</b>. This allows environments to be saved for experiment reproduction and for environment vectorization."
+        - requirement: Document and test determinism guarantees.
+          rationale: Given the same seed, environment configuration, supported platform, and dependency versions, results should be reproducible within documented numerical tolerances. Any known nondeterministic backends or operations must be identified.
+        - requirement: Include explicit versioning in environment and wrapper names.
+          rationale: Use identifiers such as `Pong-v5` when configuration or behavior changes can affect scientific results, so that researchers can identify comparable environments.
+        - requirement: Make environments reconstructible for supported workflows.
+          rationale: Preserve the constructor arguments and state needed for experiment reproduction or process-based vectorization, using EzPickle or another documented mechanism where appropriate. Pickle data must be treated as trusted and compatibility boundaries must be documented.
     - title: User Experience
       standards:
-        - name: "<b>Include polished rendering for all environments</b>. Rendering should be inviting and appealing, especially for newcomers to reinforcement learning."
-        - name: "<b>Include descriptive warning and error messages.</b> When something goes wrong, it should be as easy as possible to identify the problem. Python f-Strings and assert statements are encouraged to catch common errors."
+        - requirement: Include polished rendering where visual rendering is meaningful.
+          rationale: Rendering should be inviting and informative, especially for newcomers to reinforcement learning. Headless or abstract environments may omit rendering when that limitation is documented.
+        - requirement: Include descriptive warnings and error messages.
+          rationale: Raise explicit exception types for invalid input and runtime conditions, and use warnings for recoverable or deprecated behavior. Reserve `assert` statements for internal invariants because optimized Python can disable them.
     - title: Other
       standards:
-        - name: "<b>Use an MIT or similarly styled open source license</b> (Apache 2.0 is fine). Listing an open source license is needed to properly distribute free and open source software. We prefer MIT styled licenses as they let users use the software in any way they'd like, and this style has become ubiquitous across projects in this field."
-        - name: "<b>Pull documentation website information from environments directly</b> instead of manually specifying it. This prevents human errors in transcribing information or forgetting to update it when it changes in the future."
+        - requirement: Use an MIT-style open source license.
+          rationale: Apache 2.0 and similarly permissive licenses are also acceptable. An explicit open source license is necessary to distribute free and open source software, and permissive licenses make broad reuse possible.
+        - requirement: Generate documentation website information from environments directly.
+          rationale: Avoid manually transcribing information that can be extracted from the source, which reduces errors and prevents documentation from becoming stale.
 
 - type_name: Farama Standards
-  type_description: Specific standards we enforce for projects inside Farama that generally don't apply to other projects
+  type_description: Specific standards we enforce for projects inside Farama that generally do not apply to other projects
   type_standards:
     - title: Farama Branding
       standards:
-        - name: "<b>Have a logo in the same style as the other projects.</b> A nice logo is a small feature that makes projects more memorable and makes the whole space a little more inviting to interested new users. Since we list all the logos together, we try to make sure they match."
-        - name: "<b>Have a documentation website at [project].farama.org.</b> Having everything under a single domain name makes things simple and consistent for users (and makes things a bit easier for us to manage)."
-        - name: "<b>Include the standard Farama code of conduct.</b> We believe that all members of our community should be respected. Additionally, listing a code of conduct under our projects is a requirement for some open source donations."
+        - requirement: Have a logo in the same style as the other projects.
+          rationale: A polished logo makes a project more memorable and helps it fit naturally alongside the other Farama projects.
+        - requirement: Have a documentation website at `[project].farama.org`.
+          rationale: Keeping project websites under one domain makes them consistent for users and easier for Farama to manage.
+        - requirement: Include the standard Farama code of conduct.
+          rationale: All members of our community should be respected. A published code of conduct is also required for some open source donations.
     - title: Project Presentation
       standards:
-        - name: "<b>Include a header image at the top of the README</b> in the same style as the other projects. The top of the README is the first thing a visitor sees, and a consistent header makes it immediately clear which project they are looking at and that it belongs to Farama."
-        - name: "<b>Set the GitHub social media preview image on the repository.</b> This is the image that appears whenever a repository link is shared on social media or in chat applications, and without one GitHub falls back to a generic placeholder. Upload the project's header image under Settings > General > Social preview so that shared links are recognizable."
-        - name: "<b>Use a consistent project tagline everywhere the project is described.</b> The tagline on the Farama projects page, the GitHub repository About section, the project's Discord channel description, and the documentation website subheader should all match. Users encounter projects through many different entry points, and describing a project the same way in each of them avoids confusion about what it actually does."
+        - requirement: Include a header image at the top of the README in the same style as the other projects.
+          rationale: The README header is often a visitor's first impression. A consistent image makes the project recognizable and clearly associates it with Farama.
+        - requirement: Set the GitHub social media preview image on the repository.
+          rationale: This image appears when a repository link is shared on social media or in chat applications. Upload the project's header image under Settings > General > Social preview so that shared links are recognizable instead of using a generic placeholder.
+        - requirement: Use a consistent project tagline everywhere the project is described.
+          rationale: Keep the tagline consistent across the Farama projects page, GitHub repository About section, project Discord channel description, and documentation website subheader so that users receive the same description at every entry point.
     - title: Design Philosophy
       standards:
-        - name: "<b>Do it right the first time, and eliminate technical debt.</b> We strive to maintain flexible APIs which can be easily used for many years to come. Breaking changes may be required when bringing in outside projects, in order to align code with our standards and ensure it is maintainable in the future."
-        - name: "<b>APIs should be user-friendly and prevent incorrect usage.</b> New users should be able to easily use APIs correctly without needing to dig through source code."
-        - name: "<b>Use deprecation warnings whenever possible.</b> This gives users time to adapt their code and mitigates the severity of breaking changes. Releasing breaking changes without warning is strongly discouraged. When breaking changes are made, they should include detailed error messages to inform the user how to fix the problem."
+        - requirement: Do it right the first time and eliminate technical debt.
+          rationale: Build flexible APIs that can be maintained for many years. Bringing an outside project into alignment with these standards may require carefully managed breaking changes.
+        - requirement: Make APIs user-friendly and resistant to incorrect usage.
+          rationale: New users should be able to use APIs correctly without needing to inspect the source code.
+        - requirement: Use deprecation warnings whenever possible.
+          rationale: Give users time to adapt before a breaking change. When advance deprecation is impossible, provide detailed errors and migration instructions.
     - title: Quality
       standards:
-        - name: "<b>Include only environments which are scientifically important or commonly used.</b> We value quality over quantity for environments. Environments which are not commonly used and have limited scientific value should be removed, or included only in tutorials. Toy environments should be specified as such, and included only if they are widely used."
-        - name: "<b>Projects should be highly polished and look professional.</b> For example, projects should have a comprehensive README and documentation site, with straightforward wording that makes sense to new users. Avoid excessive technical jargon in favor of intuitive explanations, examples and images."
-        - name: "<b>Rendering should be high-quality and consistent between environments.</b> We usually use Pygame for all 2D Python graphics, and create pixel art when native rendering does not exist."
+        - requirement: Include only environments that are scientifically important or commonly used.
+          rationale: Prefer quality over quantity. Remove environments with little scientific value, or limit them to tutorials. Identify toy environments clearly and include them only when they are widely used.
+        - requirement: Make projects polished and professional.
+          rationale: Provide a comprehensive README and documentation website with straightforward wording, intuitive explanations, examples, and images.
+        - requirement: Keep rendering high-quality and consistent between environments.
+          rationale: We generally use Pygame for 2D Python graphics and create pixel art when native rendering does not exist.
     - title: Organization
       standards:
-        - name: "<b>Limit projects to a single purpose.</b> Ideally, standard APIs, utilities, environments and datasets should be split into separate repositories. This makes maintenance more manageable and results in a simpler user experience."
-        - name: "<b>External dependencies should be limited, and include only well-maintained projects.</b> If an external dependency stops being maintained, benchmarks can no longer be maintained long term. For example, PyBullet is no longer maintained, and MuJoCo-py bindings should be updated to DeepMind's MuJoCo bindings."
-        - name: "<b>Use semantic versioning.</b> We limit minor releases and patches to `0.0.x` version bumps, with `0.x.0` for standard releases. We reserve `x.0.0` versions for initial maturity releases (1.0.0) and for major releases with significant API changes and/or major additional functionality."
+        - requirement: Limit each project to a single purpose.
+          rationale: Where practical, separate standard APIs, utilities, environments, and datasets into focused repositories to make maintenance and usage simpler.
+        - requirement: Limit external dependencies to well-maintained projects.
+          rationale: An abandoned dependency can prevent long-term benchmark maintenance. For example, replace unmaintained PyBullet or MuJoCo-py integrations with maintained alternatives where possible.
+        - requirement: Use semantic versioning.
+          rationale: Limit maintenance releases to `0.0.x` version bumps and use `0.x.0` for standard pre-1.0 releases. Reserve `1.0.0` for initial maturity and later `x.0.0` releases for significant API changes or major functionality.
     - title: Development Practices
       standards:
-        - name: "<b>Limit commits and PR's to a single purpose.</b> This makes the reviewing process significantly easier and prevents errors from slipping into the codebase."
-        - name: "<b>Use `main` as the default branch.</b> Projects which are still on `master` when they join Farama should be renamed under Settings > General > Default branch, which retargets any open pull requests automatically. This keeps branch naming consistent across all of our repositories, so that contributors working on several projects don't have to keep track of which convention each one uses."
-        - name: "<b>Block direct commits to the default branch in the repository settings.</b> Development should happen locally in feature branches which are merged through PR's, so that everything is reviewed, merge conflicts are mitigated, and multiple developers can work simultaneously without issues. This should be enforced by GitHub rather than left to maintainers to remember: add a ruleset under Settings > Rules targeting the default branch which requires a pull request before merging and blocks force pushes."
-        - name: "<b>Communicate clearly with the community about upcoming changes.</b> Future development plans should be communicated through release notes, social media announcements, and public roadmaps. In the case of breaking changes, specific instructions must be provided to inform users how to update their code."
+        - requirement: Limit commits and PRs to a single purpose.
+          rationale: Focused changes make reviews easier and reduce the chance of errors slipping into the codebase.
+        - requirement: Use `main` as the default branch.
+          rationale: Rename projects that still use `master` when they join Farama. Consistent branch naming means contributors working across projects do not have to track different conventions.
+        - requirement: Block direct commits to the default branch in the repository settings.
+          rationale: >-
+            Develop on feature branches and merge them through PRs so that changes are reviewed. Add a GitHub ruleset targeting the default branch that requires a pull request before merging and blocks force pushes.
+        - requirement: Communicate clearly with the community about upcoming changes.
+          rationale: Share future development plans through release notes, appropriate announcements, and public roadmaps. Provide specific migration instructions for breaking changes.
     - title: Security
       standards:
-        - name: "<b>Verify and sign commits with GPG or SSH keys.</b> This ensures commits are from trusted sources, and prevents potential attacks through spoofed identity."
-        - name: "<b>List Jordan Terry, Mark Towers and Marek Wydmuch as owners on PyPI</b>, to make sure that we don't lose control of a package in the case that a primary maintainer becomes unavailable due to unexpected circumstances."
-        - name: "<b>Have maintainers with GitHub or PyPI permissions use TOTP based 2FA or better</b> (and secure passwords, emails addresses, etc.), to reduce the likelihood of supply chain security attacks involving any of our projects."
+        - requirement: Verify and sign commits with GPG or SSH keys.
+          rationale: Signed commits help recipients verify that a commit was produced by someone who controls a recognized signing key.
+        - requirement: List Jordan Terry, Mark Towers, and Marek Wydmuch as owners on PyPI.
+          rationale: Multiple owners reduce the risk of losing control of a package if a primary maintainer becomes unexpectedly unavailable.
+        - requirement: Require maintainers with GitHub or PyPI permissions to use TOTP-based 2FA or better.
+          rationale: Strong authentication, secure passwords, and secure email addresses reduce the likelihood of supply-chain attacks against Farama projects.
     - title: Other
       standards:
-        - name: "<b>Use Farama Notifications</b>. This allows us to add warnings after releases about issues that users of old versions need to be aware of."
-        - name: "<b>Include Google analytics</b> in all documentation websites, so we can see how popular they are and what users are doing on the websites."
-        - name: '<b>Include a "Sponsor this project" button on the GitHub repository.</b> To do this, add a FUNDING.yml file in /.github/ directory, with the following line: `github: Farama-Foundation`.'
+        - requirement: Use Farama Notifications.
+          rationale: Notifications let us warn users of older releases about important issues discovered after publication.
+        - requirement: Include Google Analytics on all documentation websites.
+          rationale: Analytics help us understand project popularity and how users navigate the documentation.
+        - requirement: Include a Sponsor this project button on the GitHub repository.
+          rationale: 'Add `.github/FUNDING.yml` with `github: Farama-Foundation`.'
