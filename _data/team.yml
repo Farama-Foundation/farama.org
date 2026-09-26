@@ -69,3 +69,9 @@
   affiliation: Utrecht University
   image: roxana.jpg
   site: https://roxanaradulescu.com/
+
+- name: Mathieu Poliquin
+  role: Stable-Retro Maintainer
+  affiliation: Virtuos
+  image: mathieu.jpg
+  site: https://github.com/MatPoliquin
