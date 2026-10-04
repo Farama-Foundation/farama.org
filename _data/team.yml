@@ -5,7 +5,7 @@
   site: https://jkterry.ai
 
 - name: Mark Towers
-  role: Gymnasium, Arcade Learning Environment and Shimmy Maintainer
+  role: Gymnasium and Arcade Learning Environment Maintainer
   affiliation: Anyscale
   image: mark.jpg
   site: https://github.com/pseudo-rnd-thoughts
@@ -47,7 +47,7 @@
   site: https://github.com/LucasAlegre
 
 - name: Jin Huang
-  role: HighwayEnv Maintainer
+  role: Shimmy and HighwayEnv Maintainer
   affiliation: University of Edinburgh
   image: jin.jpg
   site: https://github.com/Trenza1ore
