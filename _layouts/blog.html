@@ -16,7 +16,7 @@
         }
     </style>
     <div style="margin-top: 56px">
-        <img class="w-100 mb-4" src="{{ page.thumbnail | default: site.defaults[0].values.image | relative_url }}">
+        <img class="w-100 mb-4" style="height: clamp(120px, 15vw, 220px); object-fit: cover;" src="{{ page.thumbnail | default: '/assets/images/blog_banner.png' | relative_url }}" alt="">
         <div class="container" style="max-width: 700px;">
             <div>
                 <h1>
