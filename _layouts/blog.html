@@ -16,7 +16,7 @@
         }
     </style>
     <div style="margin-top: 56px">
-        <img class="w-100 mb-4" src="{{ page.thumbnail }}">
+        <img class="w-100 mb-4" src="{{ page.thumbnail | default: site.defaults[0].values.image | relative_url }}">
         <div class="container" style="max-width: 700px;">
             <div>
                 <h1>
@@ -33,6 +33,9 @@
                 </h4>
                 <div style="display: flex">
                     <span style="font-size: 1.25rem;">{{page.date | date: "%-d %B %Y" }}</span>
+                    {% if page.Author %}
+                    <span style="font-size: 1.25rem; margin-left: 24px">{{page.Author}}</span>
+                    {% endif %}
                     <span style="font-size: 1.25rem; margin-left: 24px">
                         {% if page.read_time != ""  %}
                             {{page.read_time}} minutes
