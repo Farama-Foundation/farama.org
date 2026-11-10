@@ -1,0 +1,87 @@
+#farama-december-fundraiser {
+  box-sizing: border-box;
+  border: 1px solid #b28b24;
+  border-block-start: 5px solid #edb930;
+  background: #fff9e8;
+  color: #202122;
+}
+
+#farama-december-fundraiser .farama-fundraiser__inner {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 1.1rem 3.75rem 1.1rem 1.25rem;
+}
+
+#farama-december-fundraiser .farama-fundraiser__copy {
+  flex: 1 1 22rem;
+  max-width: 52rem;
+}
+
+#farama-december-fundraiser .farama-fundraiser__label {
+  margin: 0 0 0.35rem;
+  color: #654900;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+#farama-december-fundraiser #farama-fundraiser-heading {
+  margin: 0 0 0.45rem;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: clamp(1.35rem, 2.3vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+#farama-december-fundraiser p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+#farama-december-fundraiser .farama-fundraiser__donate {
+  box-sizing: border-box;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid #202122;
+  border-radius: 2px;
+  background: #202122;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+#farama-december-fundraiser .farama-fundraiser__donate:hover {
+  background: #3b3d40;
+}
+
+#farama-december-fundraiser .farama-fundraiser__close {
+  position: absolute;
+  inset-block-start: 0.55rem;
+  inset-inline-end: 0.55rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 1.55rem;
+  cursor: pointer;
+}
+
+#farama-december-fundraiser .farama-fundraiser__close:hover {
+  background: #f3e3b4;
+}
+
+#farama-december-fundraiser :is(a, button):focus-visible {
+  outline: 2px solid #202122;
+  outline-offset: 3px;
+}

@@ -26,6 +26,10 @@ a:hover {
     color: var(--bs-primary)
 }
 
+.farama-nav-anchor {
+    position: relative;
+}
+
 #nav {
     position: absolute;
     width: 100%;
