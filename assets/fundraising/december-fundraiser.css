@@ -35,7 +35,7 @@
   margin: 0 0 0.45rem;
   padding: 0;
   color: inherit;
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-size: clamp(1.35rem, 2.3vw, 1.8rem);
   font-weight: 700;
   line-height: 1.15;
