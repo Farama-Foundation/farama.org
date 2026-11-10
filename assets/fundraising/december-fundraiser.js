@@ -1,8 +1,6 @@
 (() => {
-  const campaignStart = Date.UTC(2026, 11, 1);
-  const campaignEnd = Date.UTC(2027, 0, 1);
-  const now = Date.now();
-  if (now < campaignStart || now >= campaignEnd) return;
+  const now = new Date();
+  if (now.getUTCMonth() !== 11) return;
 
   const docsContent = document.querySelector(".main-container, .main > .content");
   const siteNavigation = document.getElementById("nav");
@@ -10,7 +8,7 @@
 
   document.getElementById("farama-donate-banner")?.remove();
 
-  const dismissalKey = "farama-fundraiser-2026-dismissed";
+  const dismissalKey = `farama-fundraiser-${now.getUTCFullYear()}-dismissed`;
   try {
     if (localStorage.getItem(dismissalKey)) return;
   } catch {
@@ -26,8 +24,9 @@
   banner.innerHTML = `
     <div class="farama-fundraiser__inner">
       <div class="farama-fundraiser__copy">
-        <h2 id="farama-fundraiser-heading">Help keep reinforcement learning tools open</h2>
-        <p>Donate to the Farama Foundation this December to support the developers who maintain Gymnasium, PettingZoo, and our other open-source libraries.</p>
+        <p class="farama-fundraiser__label">Farama’s annual December fundraiser</p>
+        <h2 id="farama-fundraiser-heading">Help keep Farama’s tools free and open</h2>
+        <p>If Gymnasium, PettingZoo, or another Farama library has helped you learn, teach, or build, please consider giving this December. Your donation supports the developers who maintain these tools.</p>
       </div>
       <a class="farama-fundraiser__donate" href="https://farama.org/donations">Donate to Farama</a>
       <button class="farama-fundraiser__close" type="button" aria-label="Dismiss fundraising banner">×</button>
