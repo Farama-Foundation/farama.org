@@ -28,7 +28,7 @@ index: true
                 <div style="max-width: 900px; width: 100%; margin: 0 auto;">
                     <div class="row farama-stats me-1 ms-1 text-white"
                         style="height:100%; border: 1px solid rgb(255 255 255 / 25%)">
-                        <div class="col-12 col-sm-4 text-center">
+                        <div class="col-12 col-sm-6 col-lg-3 text-center">
                             <a href="stats/installations" style="text-decoration: none; color: inherit">
                                 <span class="farama-stats__number" id="farama-installations-counter">
                                     {{ site.data.stats.downloads }}
@@ -36,7 +36,7 @@ index: true
                                 <span class="farama-stats__desc">installations</span>
                             </a>
                         </div>
-                        <div class="col-12 col-sm-4 text-center">
+                        <div class="col-12 col-sm-6 col-lg-3 text-center">
                             <a href="stats/contributors" style="text-decoration: none; color: inherit">
 
                                 <span class="farama-stats__number" id="farama-contributers-counter">
@@ -45,13 +45,21 @@ index: true
                                 <span class="farama-stats__desc">GitHub contributors</span>
                             </a>
                         </div>
-                        <div class="col-12 col-sm-4 text-center">
+                        <div class="col-12 col-sm-6 col-lg-3 text-center">
                             <a href="stats/dependents" style="text-decoration: none; color: inherit">
 
                                 <span class="farama-stats__number" id="farama-repos-use-counter">
                                     {{ site.data.stats.repos_use }}
                                 </span>
                                 <span class="farama-stats__desc">repositories use our tools</span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                            <a href="{{ '/stats/stars' | relative_url }}" style="text-decoration: none; color: inherit">
+                                <span class="farama-stats__number" id="farama-stars-counter">
+                                    {{ site.data.stats.stars }}
+                                </span>
+                                <span class="farama-stats__desc">GitHub stars</span>
                             </a>
                         </div>
                     </div>
@@ -90,4 +98,7 @@ index: true
 
     const reposUseElem = document.getElementById("farama-repos-use-counter");
     reposUseElem.innerText = parseInt(reposUseElem.innerText).toLocaleString('en-US');
+
+    const starsElem = document.getElementById("farama-stars-counter");
+    starsElem.innerText = parseInt(starsElem.innerText).toLocaleString('en-US');
 </script>

@@ -58,17 +58,15 @@ def scrape_stars(projects):
     res_dict = {}
     total = 0
 
+    token = os.environ.get("GH_TOKEN")
+    headers = {"Authorization": f"Bearer {token}"} if token else {}
     for project in projects:
-        project = project["repo"]
-        res = requests.get(REPOS_URLS.format(repo=project))
-        res_json = res.json()
-        project_stars = (
-            res_json["stargazers_count"]
-            if "stargazers_count" not in res_json.keys()
-            else 0
-        )
+        repo = project["repo"]
+        response = requests.get(REPOS_URLS.format(repo=repo), headers=headers, timeout=15)
+        response.raise_for_status()
+        project_stars = response.json()["stargazers_count"]
         total += project_stars
-        res_dict[project] = project_stars
+        res_dict[repo] = project_stars
     print(f"Stars: {res_dict}")
     return res_dict, total
 
@@ -245,7 +243,8 @@ def scrape_stats():
             print("Error message:")
             print(e)
 
-        stats[key] = scraped_val or stats[key]
+        if scraped_val or (key == "stars" and scraped_val == 0):
+            stats[key] = scraped_val
 
         # project -> stats -> date -> val
         for project in projects_val_dict.keys():
