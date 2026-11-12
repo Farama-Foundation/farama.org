@@ -3,7 +3,7 @@
         <div class="row">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <div class="d-flex my-auto px-1 px-sm-3 flex-column flex-md-row text-center">
-                    <p class="farama-copyright mb-0">Copyright &copy; {{site.title}} {{ 'now' | date: "%Y" }}</p>
+                    <p class="farama-copyright mb-0">Copyright &copy; {{site.title}} <span data-copyright-year>{{ 'now' | date: "%Y" }}</span></p>
                 </div>
                 <div
                     class="d-flex my-auto px-1 px-sm-3 mt-4 mt-md-3 flex-column flex-md-row text-center align-items-center mt-3 mt-md-0">
@@ -28,3 +28,8 @@
         </div>
     </div>
 </footer>
+<script>
+    for (const year of document.querySelectorAll(".farama-footer [data-copyright-year]")) {
+        year.textContent = new Date().getFullYear();
+    }
+</script>
