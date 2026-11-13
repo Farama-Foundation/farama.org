@@ -486,6 +486,7 @@ img.light-shadow {
 .farama-global-stats__chart {
     height: 85px;
     width: 300px;
+    max-width: 100%;
 }
 
 
