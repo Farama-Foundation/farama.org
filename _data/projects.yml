@@ -77,7 +77,7 @@
   website: https://ale.farama.org/
   desc: A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games
   image: ale.svg
-  type: incubating
+  type: mature
   pip: ale-py
 
 - name: HighwayEnv
@@ -85,7 +85,7 @@
   website: https://highway-env.farama.org/
   desc: A collection of environments for autonomous driving and tactical decision-making tasks
   image: highway.svg
-  type: incubating
+  type: mature
   pip: highway-env
 
 - name: MPE2
