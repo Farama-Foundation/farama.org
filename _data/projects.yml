@@ -97,7 +97,7 @@
 
 - name: Procgen2
   github: https://github.com/Farama-Foundation/procgen2
-  website:
+  website: https://procgen2.farama.org/
   desc: Fast and procedurally generated side-scroller-game-like graphical environments (formerly Procgen)
   image: procgen2.svg
   type: incubating
