@@ -72,17 +72,12 @@
   function buildMenu(projects) {
     const core = [];
     const mature = [];
-    const incubatingDocs = [];
-    const incubatingRepos = [];
+    const incubating = [];
     for (const project of projects) {
       if (project.type === "core") {
         core.push(project);
-      } else if (project.type === "mature") {
-        if (project.website != null) mature.push(project);
       } else if (project.website != null) {
-        incubatingDocs.push(project);
-      } else {
-        incubatingRepos.push(project);
+        (project.type === "mature" ? mature : incubating).push(project);
       }
     }
 
@@ -97,7 +92,7 @@
     return [
       stack,
       group("Mature Projects", { Documentation: mature }),
-      group("Incubating Projects", { Documentation: incubatingDocs, Repositories: incubatingRepos }),
+      group("Incubating Projects", { Documentation: incubating }),
     ];
   }
 
